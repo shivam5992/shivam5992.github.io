@@ -88,7 +88,7 @@
     -ms-transition: all 200ms linear;
     transition: all 200ms linear;
 }
-.ca-menu li:hover{
+.ca-menu:hover{
     background-color: #000;
 }
 .ca-menu li:hover .ca-icon{
