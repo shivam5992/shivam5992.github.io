@@ -52,9 +52,7 @@
    padding:20px;
    color:black;
 }
-#para:hover{
-   color:white;
-}
+
 .ca-content{
     position: absolute;
     left: 0px;
@@ -88,8 +86,9 @@
     -ms-transition: all 200ms linear;
     transition: all 200ms linear;
 }
-.ca-menu:hover{
+.ca-menu li:hover{
     background-color: #000;
+    color:#fff;
 }
 .ca-menu li:hover .ca-icon{
     color: #ff2020;
