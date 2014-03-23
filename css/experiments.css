@@ -1,0 +1,84 @@
+
+.slidingMenu li {
+	display:block;
+	clear:both;
+	position:relative;
+	overflow:hidden;
+}
+
+.slidingMenu li a {
+	font-size:40px;
+	text-decoration: none;
+	color: #ddd;
+	outline: none;
+	text-indent:5px;
+	z-index: 10;
+
+	display: block;
+	
+	line-height: 46px;
+	position: relative;
+	overflow: hidden;
+	padding-right:10px;
+}
+.slidingMenu li a:hover
+{
+	color:#000;
+}
+
+#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8
+{
+	width:160px;
+	height:110px;
+	float:left;
+	padding:10px;
+	margin:5px;
+	webkit-box-shadow: 6px 6px 15px rgba(50, 50, 50, 0.72);
+-moz-box-shadow:    6px 6px 15px rgba(50, 50, 50, 0.72);
+box-shadow:         6px 6px 15px rgba(50, 50, 50, 0.72);
+color:#fff;
+letter-spacing: 1.5px;
+}
+#b1
+{
+	width:320px;
+	background: #37C9FA;
+}
+#b2
+{
+	background: #37FA5E;
+}
+#b3
+{
+	background: #BC37FA;
+}
+#b4
+{
+	width:320px;
+	background: #FA9C37;
+}
+#b5
+{
+	background: #FA9C37;
+}
+#b6
+{
+	width:320px;
+	background: #FA3785;
+}
+#b7
+{
+	width:320px;
+	background: #37FA5E;
+}
+#b8
+{
+	background: #37C9FA;
+}
+#b1:hover,#b2:hover,#b3:hover,#b4:hover,#b5:hover,#b6:hover,#b7:hover,#b8:hover
+{
+	color:#000;
+-webkit-box-shadow: 6px 6px 15px rgba(50, 50, 50, 1);
+-moz-box-shadow:    6px 6px 15px rgba(50, 50, 50, 1);
+box-shadow:         6px 6px 15px rgba(50, 50, 50, 1);
+}
