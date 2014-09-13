@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../css/style6.css" />
     <link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
     <link href="../../css/style.css" rel="stylesheet">
-   
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>   
 </head>
 <body>
     <div class="navbar navbar-fixed-top">
@@ -43,69 +43,59 @@
         </div>
     </div>
 
+    <br><br><br>
+
+    <div class="container">
+
+    <div class="blog" align="center"> 
+        
+        <h1>Android Pc Voice Controller</h1>
+        <h3>09 May, 2013; Shivam Bansal</h3>
+
+    <p>
+    The intent of this blog is to give an outline of my academic android project. 
+    <br><br>
+
+    After scouting for different app ideas, I decided to make a utility application on the android platform which was supposed to control the computers according to voice instructions given by the user on their mobile phones. 
+    <br><br>
+
+    I decided to name this app "APVC", acronym for Android Pc Voice Controller. This application was supposed to operate Pcs, used for quick and accurate text typing, playing audio and video files and a number of more functionalities.
+    <br><br>
+
+    To get a comfort level in android platform, I created some sample applications in android like calculator, text editor and a mini music player. In case of APVC, networking, speech to text voice recognization were important features. For the networking purposes, I used WIFI communication channel to establish a connection between the server and the client ie. mobile and the PC. The app was able to pass textual data between the two. 
+    <br><br>
+
+    To Implement the voice recognition feature, I implemented the speech to text android intent in my application and it seemed very appalling. The app was able to receive the text version of whatever was spoken between the two platforms.
+    <br><br>
+
+    I integrated all the distributed snippets to give a structure to complete project. Later the feature of authentication was added. Only if the correct key was passed, the app server would response. In the server side, multithreading was introduced to execute the functions and process synchronously. I created the methods that manipulated the received input strings. For example if text “Open Notepad” was received, then the methods would execute a command that would open the notepad in the pc. 
+    <br> <br> 
+
+    In the similar manner, I created about 25 functionalities that would perform different tasks. I developed the feature of text typing in my project. The same functionality was replicated on the notepad, browser, chatting, word pad and even command prompt!, which indeed opened up space for many new operations like command line aspects like shutdown, system sleep, opening and closing applications. One interesting feature of this project was opening and playing audio and video files.  The user could explore any directory and play the present audio and video files. Later I added the functions to control sound and speed as well. Features like closing the opened window and entering into new line, special characters typing were also introduced.
+    <br><br>
+     
+    That’s all my about APVC, you can check out the project <a href="https://github.com/shivam5992/AndroidPcVoiceController">Here</a>.
+    Feel free to discuss and comment.
 
 
 
+          </p><br>
+          <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'shivambansal1'; // required: replace example with your forum shortname
 
-
-
-
-
-
-
-<br><br><br>
-<!-- Add the blog in this Portion><!-->
-       <div class="container">
-
-     <div class="blog" align="center"> 
-        <h1>
-                Android Pc Voice Controller
-            </h1>
-            <h3>09 May, 2013</h3>
-        <p>
-In my very first blog post, I'll not mention pure technical terms of computer science, rather I will share my experience and describe an outline of my Android Project. 
-<br><br>
-It was year 2012, 6th semester of my b-tech degree when I along with my fellow companions was given the task to make a project in the field of networking and communication. I decided to prepare something unique and eye catching. As I had experience in Java therefore I picked it up for the coding purpose. While scouting for about 1 month for ideas and after discussing it with my peers and faculty members, I decided to make a utility application on the Android platform which was supposed to control the computer according to voice instructions given by the user, (though this idea came later). When I discussed this idea with my mentor, he was impressed and motivated me to work in the same direction. 
-
-<br><br>
-
-I named it APVC, acronym for Android Pc Voice Controller. As these four words suggest it was a utility tool for people who want to operate their computers comfortably in their relaxed mode by the means of their voice which was given not directly on their pc but on their phones. So now one could operate their Pcs sitting a distance away, comfortably on couch. It was also something that could be used for the fast and accurate text typing purposes, just by speaking in the mobile phones, also serving the physically challenged people ex. those without hands can use their mobile phones to carry on the work on the computers. This project involved the use of both android phone and a computer along with the communication link between them.
- <br><br>
-Within a day of the idea I started working on it. I had knowledge of java but I was not aware of the android platform and how to build apps, but a youtube tutorial series really helped me to learn the basics of android app development. I even bought a book on the same to gain more knowledge in that field. <br><br>
-After following the android for about a month I had developed a keen interest in it. It was something that I found up to my satisfaction and I just loved it. To get more feel about the android i even created some small applications like calculator, text editor and a mini music player, More about these can be found
- <a href="http://shivam5992.github.io/" target="_blank">Here</a>.
-However I still had to include networking in it which was on the tricky part. That was the time when I began learning advanced java and networking portion. I created some similar apps on the server side too. When I was confident enough that I can really code in both android and advanced java, I decided to merge them. With a number of unsuccessful trials I was successfully able to connect the snippets of two technologies, to be very specific, I was able to send and receive the messages between the two platforms. I used a WIFI connection to establish a link between the two and pass the data. This was the first time when my project gave me a proper feel of networking.<br><br>
- I showed the sample app to my mentor and he was impressed. He discussed possible loop holes and told me other functionalities that could be added, how it could be optimized etc. Now he directed me to implement voice recognition in my project. Prior to that, I was using text in the messages but now I had to implement Voice commands! So I began to study about android voice API and more concepts related about it. I found a pretty impressive blog on the internet related to the same and followed it. I implemented the voice commands in my application and it seemed very appalling, in fact awesome! Now I was able to receive the text version of whatever was spoken between the two platforms.<br><br>
-I integrated all the snippets to give my project a basic shape. But now more work had to be done. I was working on both server side and client side in parallel. In the server side I along with my group mate, designed the Server GUI in Java. It contained several tabs which were used to handle the server like Messages, List of commands, Server details, log etc. It also had a functionality to set up a key that would be used to authenticate the user of the client side application in android, in this way I introduced security in my project to some extent. Only if the key passed was correct then further processes would be opened otherwise not. I was able to generate string from my voice in the android, to send those strings on to the server and a secure connection was also established. I guess this was the part which created the base of the project. All the basics were done so now it was the time to extend the functionalities. After quick improvement in GUI of both client application and the java server I began toward something huge. In the server side concept of multithreading was introduced to execute the functions and process synchronously.  I created the methods that would manipulate the received strings. For example if I was able to receive the text “Open Notepad” then my method would execute a command that would open the notepad in the pc. 
-<br> <br> 
-In the similar manner, I created about 25 functionalities that would perform different tasks. Extending the same, I introduced a second step of text typing. Some similar snippets were used to send text and strings, now text was getting printed on the notepad. I implemented the same functionality on the notepad, browser, chatting, word pad and even command prompt!, which indeed opened up space for many new operations like command line aspects like shutdown, system sleep, opening and closing applications. One interesting feature of this project was opening and playing audio and video files.  The user could explore any directory and play the present audio and video files. Later I added the functions to control sound and speed as well. Features like closing the opened window and entering into new line, special characters typing were also introduced.<br><br>
-With most of the stuff in my project completed, I felt great and showed it to many people. 
-The appreciation received from them sparked an inspirational feeling inside me and I was very happy. 
-And finally the day arrived when I had to present it to the faculty panel.  I was confident but at the same time a bit nervous. 
-However in the end the results went in my favor. Teachers were impressed and even awarded me good grades. After success of this project
-I realized that “Work can make you happy, really make you feel good but for that, you have to love what you are doing”. 
-That’s all my experience you can check out the project <a href="https://github.com/shivam5992/AndroidPcVoiceController">Here</a>.
-Feel free to discuss and comment.
-
-
-
-      </p><br>
-      <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'shivambansal1'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    
-  </div>
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+      </div>
     </div>
 <!-- Add the blog in this Portion><!-->
 

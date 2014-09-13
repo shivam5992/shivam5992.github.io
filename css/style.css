@@ -99,8 +99,8 @@ text-align: center;
 text-align: justify;
 text-justify: newspaper;
 font-size: 25px;
-font-family: "calibri";
-line-height: 28px;
+font-family: 'Lato', sans-serif;
+line-height: 32px;
 }
 
 .span6 p,.span8 p
