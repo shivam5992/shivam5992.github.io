@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Shivam Bansal | Portfolio</title>
+    <link href="../../css/bootstrap.css" rel="stylesheet">
+    <link href="../../css/bootstrap-responsive.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+    <link href="../../css/style.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>   
+
+   
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">            
+            <div class="container">          
+                <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+                  <span class="icon-th-list"></span>
+                </a> 
+                <a class="brand" href="../index.html">
+                    <b>ShivamBansal</b>.com</a>
+                <div class="nav-collapse collapse">
+                  <ul class="nav pull-right">
+                        <li >
+                          <a href="../../">Home</a>
+                        </li>
+                        <li class="active">
+                            <a href="../">Blog</a>
+                        </li>
+                                 
+                        <li >
+                            <a href="../../contact/" >Contact</a>
+                        </li>                  
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+<!-- Add the blog in this Portion><!-->
+       <div class="container">
+
+     <div class="blog" align="center"> 
+        <h1>
+            Deploy Flask App on Heroku
+        </h1>
+            <h3>18 Oct, 2013</h3>
+        <p>
+Heroku is one of the most popular cloud hosting service. It can be used to deploy the applications of Python, Php, Ruby, Node.js and many more online. This blog will teach you how to deploy the Python web apps that uses Flask web framework on the Heroku cloud step by step. It requires the use of some tools and some modules along with basic knowledge of git commands.  So here we go…
+<br><br>
+Before procedding make sure that GIT is installed on your machine. If its not then you must setup and install it first. Create an account on <a href="http://www.heroku.com/" target="_blank">Heroku's official website</a>.
+It’s free and quick. After the account setup, let’s get some tools and modules on your local machine, download and install heroku toolbelt from <a href="https://toolbelt.heroku.com/" target="_blank">here</a>. This is the command line support for heroku.
+Some python modules are required which can be easily downloaded using python’s setup-tools. Download the latest version of setup tools from <a href="https://pypi.python.org/pypi/setuptools" target="_blank"> here </a>
+Also install pip from <a href="http://www.pip-installer.org/en/latest/installing.html" target="_blank">here</a>. 
+<br><br>
+
+After installation of setup tools you will see a folder named venv in the downloaded directory. Cd to venv folder and activate the venv to launch virtual environment using entering this command in cmd:</p><br>
+<pre align="left">
+activate.bat 
+</pre><br>
+<p>
+This will prompt a venv shell which is nothing but a virtual environment. In Venv shell Cd to your app directory and add a procfile to it. It’s a text file which contains information about your app. 
+sample Procfile for flask app:</p><br>
+<pre align="left">
+web: gunicorn hello:app
+</pre><br><p>
+Also add requirements.txt file in your repository using this command.</p> <br>
+<pre align="left">
+Pip freeze > requirements.txt
+</pre><p>
+Now all prerequisites are completed and its time to git init in that folder. 
+Add all your files for tracking and commit your files using.</p>
+<br>
+<pre align="left">
+git init<br>
+git add .<br>
+git commit –m “your commit message”
+</pre>
+<br>
+<p>
+In the command prompt login into your heroku account using following commands. After successful authentication
+create a new app in the heroku app dashboard and finally push your app to cloud.<br>
+</p>
+<pre align="left">
+heroku login<br>
+heroku create<br> 
+git push heroku master
+</pre><br>
+<p>
+Make sure you have added ssh keys to heroku account, otherwise you will get error.<br>
+Trobuleshooting for errors related to ssh keys: <br><br>
+First, Check for the existing ssh keys on your machine. 
+In git bash cd to your .ssh folder (usually located in users/ in c drive).
+Check the folder  to see if you have a file named either id_rsa.pub or id_dsa.pub 
+If not then generate a new SSH key, use the command</p>
+<br>
+<pre align="left">
+Ssh-keygen-t rsa –c “youremal@example.com”
+</pre><br><p>
+Now you will be prompted to to enter a passphrase. Its just like a password.
+After key successfully generated you need to add them to heroku account, use following command </p><br>
+<pre align="left">
+Heroku keys:add
+</pre><br>
+<p>
+I Hope that this blog will help you deploy your app on heroku cloud. Feel free to contact :)
+</p><br>
+      <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shivambansal1'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+  </div>
+    </div>
+<!-- Add the blog in this Portion><!-->
+
+
+
+
+
+
+
+
+
+
+    
+<br><br><br>
+<div class="navbar navbar-fixed-bottom">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+                    <span class="icon-th-list"></span></a> <a class="brand" href="index.html">  
+                    Copyright 2013 shivambansal.com
+                </a>
+            </div>
+        </div>
+</div>
+</body>
