@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Everything you need to know about text parsing - Shivam Bansal's Blog</title>
+
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/clean-blog.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,500,600' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Shivam Bansal's Blog</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../../about.html">About</a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="intro-header" style="background-image: url('../../img/post-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Evertying you need to know about text parsing. </h1>
+                        <span class="meta">Posted on 22 Aug, 2014</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 arttext">
+                    <p>
+
+                    <b>What is text parsing ?</b><br>
+
+                    Parsing is the process of analysing an object consisting of various datapoints according to either rules of a formal grammar or syntatical data patterns or both. Parsing is defined as capturing the valuable points, encountered while traversing a data. When data is in textual form, the term is refered as text parsing. It's a common task of Natural Language Processing and is widely used nowdays in various computer specific domains.
+
+
+                    <br><br>
+                    <b>Why there is a need of text parsing ?</b><br>
+
+                    Textual data is growing rapidly. It involves billions of social media conversations, news, customer reviews, product descriptions, companies annual reports, financial reports, intellectual properties, speech transcripts, user search and many more. Most of this data is highly unstructured and non analysable formats. One cannot simply play with this data for research purposes, decision making, analysis or predicting the outcomes. It is text Parsing that gives information and insights from this data, which ultimately creates knowledge and wisdom. So, text parsing means converting unstructured data into structured, analysable, playable formats.
+
+
+                    <br><br>
+                    <b>Approaches for text parsing ?</b><br>
+
+                    Text parsing is generally performed using two approaches. One is Data driven approach, other is grammer driven. For better accuracy purposes, a mix of both is required. Text Parsing is performed in hierarichial manner which starts with removal of unuseful context from the data, the next step is to perform analysis on the left over chunks using number of techniques.
+
+                    <br><br>
+                    <b>Techniques used for text parsing ?</b><br>
+                    </p>
+
+                    <p><b>Lexicon Level</b><br>
+                        <li>Lexicon lookup table - Most widely considered method is to create a domain specific data warehouse of lexicons. While traversing text, each token is looked up into database and results are created accordingly. </li>
+                        <li>Word matching - It involves various methods like fuzzy string matchng, elasticsearch, levenshtein distances, naive string matching algos like KNP, rabin karp.</li>
+                        <li>Key value pairs - Similar to look ups but there is an additional value correspoding to keys(lexicons)</li>
+                        <li>Stemming - Sometimes exact words are not helpful but their lemmas are, so words are stemmed to rool level.</li>
+                        <li>Normalization - invloves both stemming, lemmatization and converting processed words into proper form</li>
+                    </p>
+                        
+                    <p><b>Context level</b><br>
+                        <li>Combinations of words: not single word but their combinations in the sentences are considered, N grams are helpful and are given more priority.</li>
+                        <li>Regex - widely used to find capture insights using patterns for example date matching, number caprturing, particular formats in the text.</li>
+                        <li>Case Checking some rules can be applied by considering upper cases capitalization.</li>
+                        <li>Type Checking alphanumberic, digits etc</li>
+                        <li>Wordlength - sometimes wordlength are helpful</li>
+                    </p>
+
+                    <p><b>Grammer level</b><br>
+                        <li>Pos tags - Beauty of NLP, part of speech tags like verbs, nouns , adjectives helps to identify insights.</li>
+                        <li>Tenses - present future past tenses are also used for rules creation.</li>
+                        <li>Context free grammetical relations - negations, intensifiers, modifiers, nsubjects, complemetries etc.</li>
+                    </p>
+
+                    <p><b>Higher level NLP</b><br>
+                        <li>NER - named entities like location, person name etc.</li>
+                        <li>Dependency parse trees - parsing trees based on grammer rules with syntatcial rules</li>
+                    </p>
+
+                    <p>Please comment if some points are missing and do share your experiences with text parsing.</p>
+                    </p>
+
+                    <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                            var disqus_shortname = 'shivambansal1'; // required: replace example with your forum shortname
+
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function() {
+                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted"><a href="../../index.html">Home</a> <a href="../../about.html">About</a> <br> Copyright &copy; shivambansal.com 2015</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/clean-blog.min.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-45186276-1', 'shivambansal.com');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>

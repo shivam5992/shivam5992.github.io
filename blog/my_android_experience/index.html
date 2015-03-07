@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shivam Bansal's Blog</title>
+
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/clean-blog.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,500,600' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Shivam Bansal's Blog</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../../about.html">About</a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="intro-header" style="background-image: url('../../img/post-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Android Pc Voice Controller</h1>
+                        <span class="meta">Posted on Oct 12, 2013</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 arttext">
+                    <p>
+                    The intent of this blog is to give an outline of my academic android project. 
+                    <br><br>
+
+                    After scouting for different app ideas, I decided to make a utility application on the android platform which was supposed to control the computers according to voice instructions given by the user on their mobile phones. 
+                    <br><br>
+
+                    I decided to name this app "APVC", acronym for Android Pc Voice Controller. This application was supposed to operate Pcs, used for quick and accurate text typing, playing audio and video files and a number of more functionalities.
+                    <br><br>
+
+                    To get a comfort level in android platform, I created some sample applications in android like calculator, text editor and a mini music player. In case of APVC, networking, speech to text voice recognization were important features. For the networking purposes, I used WIFI communication channel to establish a connection between the server and the client ie. mobile and the PC. The app was able to pass textual data between the two. 
+                    <br><br>
+
+                    To Implement the voice recognition feature, I implemented the speech to text android intent in my application and it seemed very appalling. The app was able to receive the text version of whatever was spoken between the two platforms.
+                    <br><br>
+
+                    I integrated all the distributed snippets to give a structure to complete project. Later the feature of authentication was added. Only if the correct key was passed, the app server would response. In the server side, multithreading was introduced to execute the functions and process synchronously. I created the methods that manipulated the received input strings. For example if text “Open Notepad” was received, then the methods would execute a command that would open the notepad in the pc. 
+                    <br> <br> 
+
+                    In the similar manner, I created about 25 functionalities that would perform different tasks. I developed the feature of text typing in my project. The same functionality was replicated on the notepad, browser, chatting, word pad and even command prompt!, which indeed opened up space for many new operations like command line aspects like shutdown, system sleep, opening and closing applications. One interesting feature of this project was opening and playing audio and video files.  The user could explore any directory and play the present audio and video files. Later I added the functions to control sound and speed as well. Features like closing the opened window and entering into new line, special characters typing were also introduced.
+                    <br><br>
+                     
+                    That’s all my about APVC, you can check out the project <a href="https://github.com/shivam5992/AndroidPcVoiceController">Here</a>.
+                    Feel free to discuss and comment.
+                    </p><br>
+                    
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                        var disqus_shortname = 'shivambansal1'; // required: replace example with your forum shortname
+                        (function() {
+                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <hr>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted"><a href="../../index.html">Home</a> <a href="../../about.html">About</a> <br> Copyright &copy; shivambansal.com 2015</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/clean-blog.min.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-45186276-1', 'shivambansal.com');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>
