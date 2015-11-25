@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Notes: Neural Network Notes - 1 Shivam Bansal's Blog</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/clean-blog.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,500,600' rel='stylesheet' type='text/css'>
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Shivam Bansal's Blog</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../../about.html">About</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="intro-header" style="background-image: url('../../img/post-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Notes: Neural Networks - 1</h1>
+                        <span class="meta">Posted on 25 Nov, 2015</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 arttext">
+                    <p>
+                        This blog series will be series of notes about neural networks. Let’s get started with first section about Perceptrons, Sigmoid neurons, gradient descent and neural network architecture.
+                    </p>
+                    <p>
+                        Handwritten Digit Recognition is one of the classic problem of machine learning. It is easy for humans but too complicated for a computer model. But, Neural Networks are a good tool to perform this task with good accuracy. 
+                    </p>
+                    <p>
+                        <b>Perceptrons</b> - It is proven that any logical functions can be derived using NAND gates, in the similar manner, Perceptrons are the universal blocks of any computation models. Perceptrons, sometimes also called activation functions or the neurons which takes several binary units as input and produces single binary output. 
+                    </p>
+
+                    <img src="images/1.png">
+
+                    <p>
+                        In perceptron, all input variables may not be significant to give an output, Hence a weight is assigned to each of them. These weights express the importance of each input with respect to output. Also, a threshold is chosen indicating about the output of perceptron. 
+                    </p>
+                    <p>
+                        The output of a perceptron can be given as weighted sum of inputs. The output equals 1 if the weighted sum of inputs is greater than a threshold value, 0 if it is  lesser than a threshold value. Representing the threshold as negative value of a bias term, gives us the following equation about the perceptron function.
+                    </p>
+
+                    <img src="images/2.png">
+
+                    <p>
+                        This gives an idea that there are two basic parameters of a perceptron function - weight and bias. Weight signifies importance of each input, while bias signifies how easy or difficult it becomes for model to give output value 1 or 0. Higher values of bias will always gives value 1, Lower values of bias will always gives value 0. These values are tuned using learning algorithms such as Stochastic Gradient Descent. 
+                    </p>
+
+                    <p>
+                     <b> Sigmoid Neurons</b> - Since perceptrons accept and produce only binary values. Making small delta changes in inputs will not affect network’s output. Sigmoid Neurons are introduced due to the intuition that a delta change in weights and bias creates delta change in the output. This is also the basic idea about Learning - make numerous delta changes in input parameters to make delta changes in output, keep decreasing cost function by delta changes, until cost function is minimized. 
+
+                 </p>
+
+                 <p>
+                    Sigmoid neurons takes input between 0 and 1, gives output between 0 and 1. In case of sigmoid neurons, activation function is f(w⋅x+b) : sigmoid function. Sigmoid neurons are derived using sigmoid function: 
+                </p>
+
+                <img src="images/3.png">
+
+                <p>
+                    <b>Neural Network Architecture </b>
+                </p>
+
+                <img src="images/4.png">
+
+                <p>
+                    In the network shown above, there are three layers - input layer, hidden layer and output layer. The idea of the network is input to one layer is the output of previous layer, this type of Neural Networks are called Feed Forward Neural Networks. Design of hidden layers is’nt straightforward but follows heuristic design patterns. 
+                </p>
+
+                <p>
+                    <b>Gradient Descent</b> - In MNIST training dataset, there are (x, y) elements, x represents a 784 row vector (28 * 28 ie 784 gray scale image) and y is a ten row vector indicating output. A feed forward neural network is created with this dataset. In order to train the model, we will use Stochastic Gradient Descent to get values of weights and bias parameters. Using Sigmoid Function, we make delta change in input, this creates delta change in output. 
+                </p>
+
+               <img src="images/5.png">
+
+                <p>We also define the cost function, also called MSE - Mean Squared Error</p>
+
+                <img src="images/6.png">
+
+                <p>
+                    This function is always non negative and it measures the current error in hypothesis function. Basically, we need to find the weights and bias that will make this cost function minimum. If the function C(v) is dependent upon input parameters v = [v1, v2]. To compute gradient descent, start taking small steps in direction of v1 and v2 until you reach the minimum. 
+                    <br>
+                    Change in CF is the derivative of CF function with respect to its parameters 
+                </p>
+
+                 <img src="images/7.png">
+
+                <p>
+                    A new parameter is chosen “eta” also called learning rate parameter. If change in CF is delta C, then change in parameters is</p>
+
+                    <img src="images/8.png">
+                    <br>
+                    <img src="images/9.png">
+
+                    <p>To make learning process faster, Stochastic gradient descent chooses small mini batches of training inputs.</p>
+
+                    <p><b>Neural Network in Action</b></p>
+
+                    <p>Though the full code and data implementation is provided at the end, here is a breakdown of how to implement neural network in python. </p>
+
+                    <pre>
+
+# Initialize weights, bias, layers and units
+                        
+def __init__(self,  sizes):
+    self.num_layers = len(sizes)
+    self.sizes = sizes
+    self.biases = [np.random.randn(y, 1) for y in sizes[1:]]
+    self.weights = [np.random.randn(y, x) for x, y in zip(sizes[:-1], sizes[1:])]
+
+# Given the input, calculates output of the network
+                        
+def feedforward(self, a):
+    for b, w in zip(self.biases, self.weights):
+        a = sigmoid(np.dot(w, a)+b)
+    return a
+
+# Learning Algo: Gradient Descent
+                        
+def SGD(self, training_data, epochs, batch_size, eta,test_data=None):
+    for j in xrange(epochs):
+        random.shuffle(training_data)
+
+    mini_batches = [training_data[ k: k + batch_size ] for k in xrange(0, n, batch_size)]
+    for mini_batch in mini_batches:
+        self.update_mini_batch(mini_batch, eta)
+
+# Update Mini Batch, Tune the weights, Decrease Cost Function
+
+def update_mini_batch(self, mini_batch, eta):
+   
+    nabla_b =  [ np.zeros( b.shape ) for b in self.biases ]
+    nabla_w = [ np.zeros( w.shape ) for w in self.weights ]
+
+    for x, y in mini_batch:
+        delta_nabla_b, delta_nabla_w = self.backprop(x, y)
+        nabla_b = [ nb+dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
+        nabla_w = [ nw+dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
+
+    self.weights = [ w-(eta/len(mini_batch))*nw for w, nw in zip(self.weights, nabla_w)]
+    self.biases = [ b-(eta/len(mini_batch))*nb for b, nb in zip(self.biases, nabla_b)]
+
+# function to calculate sigmoid
+
+def sigmoid(z):
+    return 1.0/(1.0+np.exp(-z))
+
+                    </pre>
+
+                    <p>
+                        <a href="https://github.com/shivam5992/neural-networks-notes">Here</a> is the link or complete code and data
+
+
+                        Stay Tuned, More notes coming.
+
+                    </p>
+                    <br>
+
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                        var disqus_shortname = 'shivambansal1'; // required: replace example with your forum shortname
+                        (function() {
+                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <p class="copyright text-muted"><a href="../../index.html">Home</a> <a href="../../about.html">About</a> <br> Copyright &copy; shivambansal.com 2015</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Ends -->
+
+        <script src="../../js/jquery.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/clean-blog.min.js"></script>
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-45186276-1', 'shivambansal.com');
+        ga('send', 'pageview');
+        </script>
+    </body>
+    </html>
