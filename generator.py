@@ -34,6 +34,8 @@ def generate_html(post):
 	txt = txt.replace("""<br /']""","""""")
 	if txt.endswith("']"):
 		txt = txt.replace("""']""", "")
+	if txt.startswith("['"):
+		txt = txt.replace("['","")
 
 	txt = txt.replace("!!!!-","\n")
 	txt = txt.replace("!!!!","\n\t")
@@ -142,7 +144,7 @@ def generate_all_posts():
 		generate_html(post)		
 
 def generate_index():
-	data = open('blogs.txt').read().strip().split("\n")
+	data = open('blog/jsons/blogs.txt').read().strip().split("\n")
 	tagged = ""
 	for line in data:
 		post = ast.literal_eval(line)
@@ -249,4 +251,12 @@ def generate_index():
 	return 
 
 # generate_all_posts() # NN , Voice
-# generate_index()
+generate_index()
+# post = {
+# 	'text' : """<p>Data Mining is the technique of creating a raw data set by capturing data from a data source. The term data mining though has a broader meaning when talked about analytics, but in this blog we will discuss about data mining as the first and initial step of any data science application which deals primarily with data collection and data extraction ... <br><br> Read the complete article on mUniversity Blog official website, <a href="http://muniversity.mobi/blog/getting-started-with-data-science-data-mining/" target="_blank">Here</a> <br /><a href="http://muniversity.mobi/blog/getting-started-with-data-science-data-mining/" target="_blank"><div class="img-post"><img src="http://muniversity.mobi/blog/wp-content/uploads/2015/12/798x398xprocess1-798x398.jpg.pagespeed.ic._ilshEFseU.jpg" /></div></a></p>""",
+# 	'title' : 'Getting Started with Data Science - Data Mining',
+# 	'date' : 'Dec 10, 2015',
+# 	'desc' : 'Data Mining is a process of collecting data, extraction of data and preparation of raw data set. It results in formation of a datasets which are in the ready to analyse formats.',
+# 	'url' : 'blog/data-mining/'
+# }
+# generate_html(post)
