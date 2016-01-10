@@ -52,13 +52,13 @@ def generate_html(post):
 			<meta name="HandheldFriendly" content="True" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			<link rel="shortcut icon" href="../../img/SB.png">
-			<link rel="canonical" href='http://shivambansal.com/""" + post['url'] + """" />
+			<link rel="canonical" href="http://shivambansal.com/""" + post['url'] + """" />
 			<meta name="referrer" content="origin" />
 			<meta property="og:site_name" content="Shivam Bansal" />
 			<meta property="og:type" content="article" />
 			<meta property="og:title" content='""" + post['title'] + """' />
 			<meta property="og:description" content='""" + post['desc'] + """' />
-			<meta property="og:url" content='http://shivambansal.com/'""" + post['url'] + """' />
+			<meta property="og:url" content='http://shivambansal.com/""" + post['url'] + """' />
 			<meta property="og:image" content="../../img/post-bg.jpg" />
 			<meta property="article:published_time" content='""" + post['date'] + """' />
 			<meta property="article:tag" content="" />
@@ -103,6 +103,21 @@ def generate_html(post):
 					<div class="row">
 						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 arttext">
 							""" + txt + """
+
+							<br>
+		                    <div id="disqus_thread"></div>
+		                    <script type="text/javascript">
+		                    /* * * CONFIGURATION VARIABLES * * */
+		                    var disqus_shortname = 'shivambansal';
+
+		                    /* * * DON'T EDIT BELOW THIS LINE * * */
+		                    (function() {
+		                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		                    })();
+		                    </script>
+
 						</div>
 					</div>
 				</div>
@@ -138,7 +153,7 @@ def generate_html(post):
 	return
 
 def generate_all_posts():
-	data = open('blogs.txt').read().strip().split("\n")
+	data = open('blog/jsons/blogs.txt').read().strip().split("\n")
 	for line in data:
 		post = ast.literal_eval(line)
 		generate_html(post)		
@@ -250,8 +265,8 @@ def generate_index():
 
 	return 
 
-# generate_all_posts() # NN , Voice
-generate_index()
+generate_all_posts() # NN , Voice
+# generate_index()
 # post = {
 # 	'text' : """<p>Data Mining is the technique of creating a raw data set by capturing data from a data source. The term data mining though has a broader meaning when talked about analytics, but in this blog we will discuss about data mining as the first and initial step of any data science application which deals primarily with data collection and data extraction ... <br><br> Read the complete article on mUniversity Blog official website, <a href="http://muniversity.mobi/blog/getting-started-with-data-science-data-mining/" target="_blank">Here</a> <br /><a href="http://muniversity.mobi/blog/getting-started-with-data-science-data-mining/" target="_blank"><div class="img-post"><img src="http://muniversity.mobi/blog/wp-content/uploads/2015/12/798x398xprocess1-798x398.jpg.pagespeed.ic._ilshEFseU.jpg" /></div></a></p>""",
 # 	'title' : 'Getting Started with Data Science - Data Mining',
