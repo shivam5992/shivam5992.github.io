@@ -113,7 +113,7 @@ def generate_html(post):
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-							<p class="copyright text-muted">&copy; shivambansal.com 2015</p>
+							<p class="copyright text-muted">&copy; shivambansal.com 2016</p>
 						</div>
 					</div>
 				</div>
