@@ -1,7 +1,4 @@
-.sam 
-{
-  height: 390px;
-}
+
 .lnk
 {
   text-decoration: none;
@@ -127,12 +124,12 @@ hr.small {
     color: #dedede;
   }
   .navbar-custom .nav li a {
-    color: white;
+    /*color: white;*/
     padding: 20px;
   }
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
-    color: rgba(255, 255, 255, 0.8);
+    color: #000;
   }
 }
 @media only screen and (min-width: 1170px) {
@@ -196,7 +193,7 @@ hr.small {
 .intro-header .post-heading,
 .intro-header .page-heading {
   padding: 60px 0 50px;
-  color: white;
+  /*color: white;*/
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
@@ -255,7 +252,7 @@ hr.small {
 }
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
-    font-size: 55px;
+    font-size: 40px;
   }
   .intro-header .post-heading .subheading {
     font-size: 30px;
@@ -466,4 +463,14 @@ img
 .img-post
 {
   text-align: center;
+}
+
+.intro-header
+{
+  margin-bottom: 0px;
+}
+
+.colwhite 
+{
+  color: white;
 }
