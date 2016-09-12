@@ -1,4 +1,4 @@
 shivam5992.github.io
 ====================
 
-static personal webpage
+www.shivambansal.com - A place where my blog lives 
