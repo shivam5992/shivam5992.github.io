@@ -46,7 +46,7 @@
 					<div class="row">
 						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 							<div class="post-heading">
-								<h1>Operational Transform</h1>
+								<h1>Operational Transform - The algo behind google docs collaboration feature</h1>
 								<span class="sub-desc">Posted on  Aug 09, 2014</span>
 							</div>
 						</div>
@@ -58,7 +58,23 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 arttext">
-							<p>  In a recent hackathon at my workplace, I wanted to create a text editor with real time collaborative editing feature similar to that in Google Docs. While researching for this functionality, I came to know about the algorithm behind it known as Operational Trasform. According to Wikipedia, OT is invented for consistency maintenance and concurrency control in collaborative editing of plain text documents.  <br /><br /><b>Operational Transform:</b> When multiple sites are collaborating on a single text document, Order of events occured at thses sites is important. It the the role of OT to maintain the order and execute them. OT supports concurrency by the use of consistency models. These models have features like Causality (Ensuring execution of events in their order), Convergence ( All occured events have been executed at each site) and Intention (Reflecting effects on each site).                        <br /><br /><a href="http://www.firepad.io/#1">Firepad</a> An open source collaborative text editor is designed to add the real time functionality to dynamic websites. It is by deployed on <a href="https://www.firebase.com/">Firebase</a> app platform and  provides true collaborative editing, complete with intelligent operational transform-based merging and conflict resolution.                        <br /></p><p>OT is an awesome algorithm for adding some cool functionalities of modern day web applications. For more knowledge, refer to following links and references .                        <br />                        Resources and links:                        <ul align="left"><li><a href="http://www.firepad.io/#1">Firepad</a></li><li><a href="http://sharejs.org/">ShareJs</a></li><li><a href="https://github.com/Operational-Transformation/ot.js/">ot.js</a></li><li><a href="https://togetherjs.com/source/">TogetherJs</a></li><li><a href="http://www.codecommit.com/blog/java/understanding-and-applying-operational-transformation"> Understanding and applying operational transform</a></li><li><a href="http://en.wikipedia.org/wiki/Operational_transformation">Wikipedia: Operational Transform</a></li><li><a href="http://www.waveprotocol.org/whitepapers/operational-transform">Google Wave Operational Transformation</a></li><li><a href="http://dl.acm.org/citation.cfm?doid=215585.215706">High-latency, low-bandwidth windowing in the Jupiter collaboration system</a></li><ul></ul></ul></
+							<p>  In a recent hackathon at my workplace, I was creating a text editor with real time collaborative editing feature similar to that in Google Docs. While researching for this functionality, I came to know about the algorithm behind it known as Operational Trasform. According to Wikipedia, OT is invented for consistency maintenance and concurrency control in collaborative editing of plain text documents.  <br /><br />
+
+							<p><img src="r.jpg" align="center"></p>
+
+							<br><br>
+							 When multiple sites are collaborating on a single text document, Order of events occured at thses sites becomes an important metric. It the the role of Operational Transform algorithm to maintain the order and execute them. OT supports concurrency by the use of consistency models. These models have features such as Causality (Ensuring execution of events in their order), Convergence ( All occured events have been executed at each site) and Intention (Reflecting effects on each site).                        
+
+							<br /><br />
+
+							<a href="http://www.firepad.io/#1">Firepad</a> An open source collaborative text editor is designed to add the real time functionality to dynamic websites. It is by deployed on <a href="https://www.firebase.com/">Firebase</a> app platform and  provides true collaborative editing, complete with intelligent operational transform-based merging and conflict resolution.                        <br /></p><p>OT is an awesome algorithm for adding some cool functionalities of modern day web applications. For more knowledge, refer to following links and references .       
+
+								<p><img src="s.png" align="center"></p>
+
+														
+
+
+							                   <ul align="left"><li><a href="http://www.firepad.io/#1">Firepad</a></li><li><a href="http://sharejs.org/">ShareJs</a></li><li><a href="https://github.com/Operational-Transformation/ot.js/">ot.js</a></li><li><a href="https://togetherjs.com/source/">TogetherJs</a></li><li><a href="http://www.codecommit.com/blog/java/understanding-and-applying-operational-transformation"> Understanding and applying operational transform</a></li><li><a href="http://en.wikipedia.org/wiki/Operational_transformation">Wikipedia: Operational Transform</a></li><li><a href="http://www.waveprotocol.org/whitepapers/operational-transform">Google Wave Operational Transformation</a></li><ul></ul></ul></
 
 							<br>
 		                    <div id="disqus_thread"></div>
