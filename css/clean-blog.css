@@ -8,13 +8,17 @@
 }
 .box-sub-title-2{
   font-size: 20px;
-  color: #7b7676;
+  line-height: 40px;
+  letter-spacing: 1px;
+  color: #333535;
 }
 .box-li{
   font-size: 13px;
 }
 .box-text{
-  font-size: 16px;
+  font-size: 18px;
+    line-height: 40px;
+      letter-spacing: : 2px;
 }
 .mixli{
   padding-bottom: 10px;
@@ -118,7 +122,7 @@ hr {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Hind', sans-serif;
   /*font-family: Hind,sans-serif;*/
 }
 p {
@@ -134,7 +138,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Lato';
+  font-family: 'Hind';
   /*font-weight: 800;*/
 }
 a {
@@ -164,7 +168,7 @@ hr.small {
   left: 0;
   width: 100%;
   z-index: 3;
-  /*font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  /*font-family: 'Hind', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 }
 .navbar-custom .navbar-brand {
   font-weight: 800;
@@ -280,7 +284,7 @@ hr.small {
   font-size: 24px;
   line-height: 1.1;
   display: block;
-  /*font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  /*font-family: 'Hind', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
   font-weight: 300;
   margin: 10px 0 0;
 }
@@ -288,7 +292,7 @@ hr.small {
   .intro-header .site-heading h1,
   .intro-header .page-heading h1 {
     font-size: 60px;
-    font-family: 'Lato';
+    font-family: 'Hind';
     font-weight: 400;
   }
 }
@@ -301,7 +305,7 @@ hr.small {
   display: block;
 }
 .intro-header .post-heading .subheading {
-  /*font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  /*font-family: 'Hind', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
   font-size: 24px;
   margin: 10px 0 30px;
   font-weight: 600;
@@ -446,7 +450,7 @@ form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
 }
 .btn {
-  /*font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  /*font-family: 'Hind', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 800;
@@ -469,7 +473,7 @@ form .row:first-child .floating-label-form-group {
 }
 .pager li > a,
 .pager li > span {
-  /*font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  /*font-family: 'Hind', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 800;
