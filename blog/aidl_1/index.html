@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+		<html lang="en"><html>
+		<head>
+			<meta charset="utf-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<title>
+			Artificial Intelligence and Deep Learning - 1: Understanding Neural Networks - Shivam Bansal's Blog</title>
+			<meta name="description" content="" />
+			<meta name="HandheldFriendly" content="True" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<link rel="shortcut icon" href="../../img/SB.png">
+			<link rel="canonical" href="http://shivambansal.com/blog/nlp/" />
+			<meta name="referrer" content="origin" />
+			<meta property="og:site_name" content="Shivam Bansal" />
+			<meta property="og:type" content="article" />
+			<meta property="og:title" content='
+			Artificial Intelligence and Deep Learning - 1: Understanding Neural Networks' />
+			<meta property="og:description" content='According to industry estimates, only 21% of the available data is present in structured form...' />
+			<meta property="og:url" content='http://shivambansal.com/blog/nlp/' />
+			<meta property="og:image" content="../../img/post-bg.jpg" />
+			<meta property="article:published_time" content=' 15 Feb, 2018' />
+			<meta property="article:tag" content="" />
+			<meta property="article:tag" content="" />
+			<link href="../../css/bootstrap.min.css" rel="stylesheet">
+			<link href="../../css/clean-blog.css" rel="stylesheet">
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+		</head>
+
+		<body>
+			<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="../../index.html">Home</a>
+							</li>
+							<li>
+								<a href="../../about/">About</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+			<header class="intro-header" style="background-image: url('../../img/post-bg.jpg')">
+				<div class="container sam">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<div class="post-heading">
+								<h1>
+								Artificial Intelligence and Deep Learning - 1: Understanding Neural Networks</h1>
+								<span class="sub-desc">Posted on  15 Feb, 2018</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<article>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 arttext">
+							
+
+							<p>This article is the first among the series of planned articles which focuses on understanding and implementing the concepts of deep learning and artificial intelligence. </p>
+
+<p>“Artificial Intelligence is the new electricity. Similar to how electricity revolutionized a number of industries about hundred years ago, artificial Intelligence will transform and revolutionize different industries” - Andrew NG</p>
+
+<p>Artificial Intelligence and Deep Learning are becoming one of the most important components of modern day businesses. A large number of smart and intelligent systems are regularly built to solve the use cases that were earlier thought to be complex to solve. Some examples include automatic speech recognition in smartphones, conversation chatbots, image classification and clustering in search engines, natural language generation and understanding. </p>
+
+<p>At a broader level, Artificial Intelligence and Deep Learning aims to create intelligent machines. However at a much deeper level, it comprises of Mathematical relationships, sophisticated optimization algorithms, and models that generate intelligence in the form of predictions, segmentations, clustering, forecasting, classifications etc. </p>
+
+<p>The building blocks of every Artificial Intelligence and Deep Learning models are Neural Networks. In this article, we will understand everything about the neural networks and the science behind them. </p>
+
+<p>
+<b>Contents:</b>
+
+<br>
+<br>- Introduction of Neural Networks
+<br>- Single Processing Units - Neurons
+<br>- Activation Functions
+<br>- Forward Propagation
+<br>- Back Propagation
+</p>
+
+<p>
+<b>Introduction of Neural Networks</b></p>
+
+<p>A neural network is a mathematical model that is designed to behave similar to biological neurons and nervous system. These models are used to recognize complex patterns and relationships that exists within a labelled data. A labelled dataset contains two types of variables - predictors (some columns which are used as independent features in the model) and target (some features which are treated as dependent variables of the model).  </p>
+
+<p>
+1. Employees data containing their information such as age, gender, experience, skills and labelled with their salary amount (example of numerical data)
+<br>2. Tweets labelled as positive, negative or neutral (example of text data)
+<br>3. Images of Animals labelled with Name of the Animal (example of image data)
+<br>4. Audios of Music labelled with the Genere of the Music (example of audio data)
+</p>
+
+<p>The core structure of a Neural Network model is comprised of a large number of simple processing nodes which are interconnected and organized in different layers. An individual node in a layer is connected to several other nodes in the previous and the next layer. The inputs form one layer are received and processed to generate the output which is passed to the next layer. </p>
+
+							<div class="img-post"><img src="1.png"></div>
+
+
+<p>The first layer of this architecture is often named as input layer which accepts the inputs, the last layer is named as the output layer which produces the output and every other layer between input and output layer is named is hidden layers. Let us now understand the working of neural networks. </p>
+
+
+<b>Single Processing Units - Neuron</b>
+
+<p>A neuron is the smallest unit in a neural network. It accepts various inputs, applies an function and computes the output. </p>
+
+<p>Each incoming connection corresponds to different inputs to a node, To each of its connections, the node assigns a number known as a “weight”. The weight of every input variable signifies the importance or the priority of that variable among all other variables. For different values of input variables, the node multiplies the value with its associated weight and adds the resulting products together. It also add another term called “bias” which helps the learning function to adjust to left or right. This summed number is then passed through an activation function (described in next section) which maps the inputs to the target output values. </p>
+
+<p>Lets understand this through an example. Take a situation in which the you want to purchase a new house and you will make the decision based upon the following factors in the order of their priority. </p>
+
+<p>
+- Cost of the Property<br> 
+- Square Feet Area<br>
+- Construction Year<br>
+- Availability of Security Systems<br>
+- Nearby Amenities<br>
+- Climate Factors in the Locality<br>
+- Crime Rate in the Locality<br>
+</p>
+
+<p>The best way to formalize the decision making based in this situation is to formulate a mathematical equation with:
+<br><br>- Every factor is represented as x1, x2, x3, … 
+<br>- Every factor’s priority is represented as the weight: w1, w2, w3
+<br>- Node Input is represented as the weighted sum of factors and their weights (Z)
+<br>- Node Output is represented as the value of mapping function g (Z) <br>
+
+<br>- Inputs: x1,x2, x3, … 
+<br>- Weights: w1, w2, w3, … 
+<br>- Node Bias term: “b”
+<br>- Node Input (Z) = w1*x1 + w2*x2 + w3*x3 + w4*x4 + … + w7*x7 + b
+<br>- Node Output (A) = g (Z)
+
+<br><br>Here the function “g” is known as Activation Function. Let’s understand how these activation function works. </p>
+
+<p>
+<b>Activation Functions - Applying Non Linear Transformations</b><br><br>
+
+The main goal of an activation function is to apply non-linear transformation on input to map it to output. For example a linear combination of 7 variables related to house are mapped into two target output classes: “Buy the Property” and “Do not buy the Property”. </p>
+
+<p>The decision boundary of the output can be given by a threshold value. If the generated value is below a threshold value, the node outputs 0, otherwise 1. The generated outputs (0, 1) belongs to the decision. If A is the generated output (Activation), and “b” is the threshold, In our example, if weighted sum of inputs and their weights comes out to be greater than “b” you will buy the property otherwise not. ie. <br>
+
+<br> if A > 0, then interpretation = “buy house” 
+<br> else A < 0, then interpretation =  “do not buy”
+<br>
+<br> WX + b > 0, 1(“buy house”)
+<br> WX + b < 0, 0(“do not buy”)
+<br><br>
+This is the basic equation of the activation function which is applied at each neuron. In the above example, we have applied Step Function as the activation function. <br>
+
+There are other choices of non linear activation functions such as relu, sigmoid, tanh:</p>
+ 
+ <div class="img-post"><img src="2.png"></div>
+
+<p>
+<b>Forward Propagation</b> <br><br>
+
+Neural Network model goes through process called forward propagation in which it forward propagate the inputs and their activations through the layers to get the final output. The computation steps involved are:<br><br>
+
+Z = W*X + b 
+<br>A = g(Z)
+<br>
+
+<br>- g is the activation function
+<br>- A is the predicted output using the input variables X. 
+<br>- W is the weight matrix 
+<br>- B is the bias matrix 
+
+<br>
+To optimize the weights and bias matrices used in the neural network, the model computes the error in the output and makes small changes in the values. These changes are made so that the overall error can be reduced. This process of error computation and weights optimization is represented in functions called loss function and cost function.</p>
+
+<p>
+<b>Error Computation: Loss Function and Cost Function</b><br><br>
+
+Loss function measures the error in the prediction and the actual value. One simplistic loss function is the difference of actual value and predicted value. </p>
+
+<p>
+Loss = Y - A  </br>
+Y = Actual Value, A = Predicted Value <br>
+
+Cost function computes the summation of loss function values for every training data example.<br>
+
+Cost Function =  Summation (Loss Function) <br></p>
+
+<p>
+<b>Backpropagation: Minimizing the Cost Function using Gradient Descent</b><br>
+
+<p>The final step is to minimize the error term (cost function) and obtain the optimal values of weights and bias terms. A neural net model does this through a process called backpropagation using gradient descent. 
+<br><br>
+In this process, it computes the error of the final layer, back passes it to the previous layer. The previous layer associated weights and biases are adjusted to tackle the error. The values of weights and bias are updated using the process called gradient descent. In this algorithm, the derivative of error in the final layer is computed with respect to each weight. This error derivative is then used to find the derivative of weights and bias which are  then subtracted from the original values to get the updated new values. 
+<br><br>
+Then, the model again forward propagate to compute the new error with new weights and then will backward propagate to update the weights again. This will go on until some minima for error value is achieved. The process is repeated several times to achieve the minimum error term. This process is also termed as training. During training, the weights and thresholds are continually adjusted until training data with the same labels consistently yield similar outputs.
+</p>
+
+<p><b>Recap </b><br><br>
+
+To train a neural network model, following steps are implemented. <br>
+
+<br>1. Design the architecture of a neural network model with number of layers, number of neurons in each layer, activation functions etc. 
+<br>2. For every training example in the input data, compute the activations using activation functions. 
+<br>3. Forward propagate the activations through the input layers to hidden layers to output layer 
+<br>4. Compute the error of the final layer using Loss Function
+<br>5. Compute the sum of errors for every training example in the input data using Cost Function
+<br>6. Backpropagate the error to the previous layers and compute the derivative of error with respect to weights and bias parameters.
+<br>7. Using Gradient Descent algorithm subtract the weight and bias derivative terms from the original values.
+<br>8. Perform this operation for a large number of iterations (epochs) to obtain a stable neural network model.
+</p>
+
+<p>
+In this article, we discussed the overall working of a neural network model. In the next article I will talk about implementing a neural network model in python. Feel free to share your comments. In the next part, we will discuss about how to implement a neural network in python.
+</p>
+
+
+
+
+
+							<br><br>
+		                    <div id="disqus_thread"></div>
+		                    <script type="text/javascript">
+		                    /* * * CONFIGURATION VARIABLES * * */
+		                    var disqus_shortname = 'shivambansal';
+
+		                    /* * * DON'T EDIT BELOW THIS LINE * * */
+		                    (function() {
+		                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		                    })();
+		                    </script>
+
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<hr>
+			<footer>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<p class="copyright text-muted">&copy; shivambansal.com 2017</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+			<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-45186276-1', 'shivambansal.com');
+			ga('send', 'pageview');
+			</script>
+		</body>
+		</html>
