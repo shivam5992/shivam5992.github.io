@@ -101,6 +101,7 @@ hr {
 }
 .post-subtitle{
   margin-top: 15px;
+  font-size: 16px;
 }
 
 
@@ -348,7 +349,7 @@ hr.small {
 }
 .post-preview > .post-meta {
   color: #808080;
-  font-size: 12px;
+  font-size: 14px;
   /*font-style: italic;*/
   margin-top: -12px;
   text-align: right;
