@@ -1,0 +1,246 @@
+	<!DOCTYPE html>
+			<html lang="en"><html>
+			<head>
+				<meta charset="utf-8" />
+				<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+				<title>
+				Artificial Intelligence and Deep Learning - 5: How to Structure Machine Learning Projects - Shivam Bansal's Blog</title>
+				<meta name="description" content="" />
+				<meta name="HandheldFriendly" content="True" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<link rel="shortcut icon" href="../../img/SB.png">
+				<link rel="canonical" href="http://shivambansal.com/blog/nlp/" />
+				<meta name="referrer" content="origin" />
+				<meta property="og:site_name" content="Shivam Bansal" />
+				<meta property="og:type" content="article" />
+				<meta property="og:title" content='
+				Artificial Intelligence and Deep Learning - 5: How to Structure Machine Learning Projects' />
+				<meta property="og:description" content='According to industry estimates, only 21% of the available data is present in structured form...' />
+				<meta property="og:url" content='http://shivambansal.com/blog/nlp/' />
+				<meta property="og:image" content="../../img/post-bg.jpg" />
+				<meta property="article:published_time" content=' 05 Mar, 2018' />
+				<meta property="article:tag" content="" />
+				<meta property="article:tag" content="" />
+				<link href="../../css/bootstrap.min.css" rel="stylesheet">
+				<link href="../../css/clean-blog.css" rel="stylesheet">
+				<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+			</head>
+
+			<body>
+				<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+					<div class="container-fluid">
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="../../index.html">Home</a>
+								</li>
+								<li>
+									<a href="../../about/">About</a>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</nav>
+
+				<header class="intro-header" style="background-image: url('../../img/post-bg.jpg')">
+					<div class="container sam">
+						<div class="row">
+							<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+								<div class="post-heading">
+									<h1>
+									Artificial Intelligence and Deep Learning - 5: How to Structure Machine Learning Projects</h1>
+									<span class="sub-desc">Posted on  11 Mar, 2018</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+
+				<article>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 arttext">
+								
+
+								<p>This article is the fifth among the series of artificial intelligence and deep learning articles. In this article, I will describes best practices to structure machine learning projects which can be helpful for building production ready models, improvements in accuracies, and creating robust models</p>
+
+	<p>
+	<b>Iterative Implementation of Different Ideas: </b><br>
+	<br>
+	For improving the results and performance of a machine learning model, one need to iterate and try a number of different ideas. For instance, collecting more data, training a bigger network, hyperparameter tuning, training for longer epooches etc. </p>
+	<p>
+	A state when the deep learning developers are clear about which idea (among number of different ideas) they need to implement in order to improve the performance is called Orthogonalization. Another best practice is to try one idea at a time instead of multiple ideas at once. 
+	</p>
+
+	<p><b>Chain of assumptions in the machine learning.</b></p>
+	<p>
+	- Model should fit very well on the training set (near to human level if possible)
+	<br>- Model should fit dev set well on cost function (if not, try regularization, bigger network) 
+	<br>- Model should fit well on test set (if not, try a bigger dev set) 
+	<br>- Model should perform well in real world (if not, change the data distribution and cost function)
+	</p>
+
+	<p>These four assumptions act as the four knobs of a complete machine learning model and one should aim to fine tune these nodes individually. </p>
+
+	<p><b>Choosing the Evaluation Metric</b><br><br>
+
+	It is possible that there are multiple evaluation metrics which indicates different levels of results. For example, in a classification problem, Precision represents the proportion of correctly classified labels among all classified labels and Recall represents the proportion of correctly classified labels among all the true labels in the dataset. </p>
+
+	<p>
+	In a given problem it is possible that the model is producing a good recall but a poor precision or a good precision but a poor recall. To resolve such challenges, one good practice is to combine the individual evaluation metrics together. The idea is to work on single evaluation metric instead of multiple ones. For instance, the precision and recall can be combined together to generate F1 score. </p>
+
+	<p>
+	F1 score = average of P and R (harmonic mean)</p>
+
+	<p>In some cases, it is possible that there are more than one important metrics that needs to be considered in order to output a best possible model. One possible example is when a team expects a model with good accuracy and less running time. In such cases, the evaluation metric can be treated as optimizing metric and the other one can be treated as Satisficing Metric. For example, the team will pick a classifier having good optimizing metric value say 85% and satisfying satisficing metric value say less than 20 seconds.  </p>
+
+	<p><b>Distributions of the entire Data </b></p>
+
+	<p>Splitting a dataset into train, test and dev distributions can impact the performance of a dataset greatly. For a morel with good results and faster training, It should be ensured that dev and test should come from same distributions (example - source of data, location, demographics of data). In deep learning models with big data sizes, one can split the dataset into ratio of 98%, 1%, and 1% for train-set, test-set, and dev-set. </p>
+
+	<p><b>Human Level Performance</b><p>
+
+	<p>
+	In the recent days, The performance of a lot of deep learning models is greater than human level error. Hence, human level performance is an important benchmark to consider. The maximum possible saturation for all types of models is defined as the the Bayes optimal error. It is the benchmark through which the models or even humans cannot surpass.
+	</p>
+	<p>In many cases, human error can be taken as a proxy for bayes error ( as it is very close to bayes error ). </p>
+
+	<p>
+	<b>Improving the Model</b><br><br>
+
+	The difference between human error and training error is an indicator of  Avoidable Bias. The difference between training and test/dev error is an indicator of  variance</p>
+
+	<p>If Avoidable bias is large, then one can try: Train large network, tune hyperparameters, train the model on bigger dataset</p>
+	<p>If variance is large, then one can Try regularization, parameter tuning and more training data. </p>
+
+	<p><b>Error Analysis</b></p>
+
+	<p>
+	Error Analysis is a technique to measure the true accuracy of a model. For example, in cat classification problem if the overall test error is 10%, one would analyse the mislabel examples to measure how much of this 10% contains sub-types of errors. Some examples of sub-type errors are detecting dogs instead of cats, blurry image errors etc. In error analysis, one would create a detailed table to measure the number of rows mislabelled due to one of a particular subtype error. </p>
+
+	<p>
+	The advantage of error analysis is that it gives a sense to the user on what type of operations can be performed to reduce the specific types of error. </p>
+
+	<p><b>Mislabelled Labelled Set</b></p>
+
+	<p>In the training and test datasets it is possible that a number of rows are mislabelled. Deep learning models are quite robust to random error (different from system error, example - all white dogs are labelled as cats). It is ok to leave such examples as it is. </p>
+
+	<p>However if the mislabels are present in the test dataset, then it is better to correct them. Error analysis can help the users to give the relevant accuracy of your models</p>
+
+	<p><b>Transfer Learning</b></p>
+
+	<p>Transfer Learning is defined as the process of utilizing knowledge from one model to another model. In Transfer learning, weights of earlier layers are kept as it is and the weight of last layer of a model are retrained. </p>
+
+	<p>Transfer Learning: Pre-training (earlier layers) + Fine-Tuning (training last layer)</p>
+
+	<p>Transfer Learning is possible because earlier layers of a model learns the low level features from the images. Transfer Learning is applied when there is a lot of data for the problem that is already trained and relatively less data for the problem transferring to. Both of the models have same input type and low level features from previous model can be helpful for learning a new model. </p>
+
+	<p><b>Multi task learning</b></p>
+
+	<p>In the example of self driving car, the machine learning model needs to identify pedestrians, cars, stop signs, traffic lights. One option is to train individual models for every target variable, other option is to use transfer learning, and one another option is to use multi task learning. In Multi Task learning, the learned features can be used for different target variables. In this type of training, the loss becomes average loss of all classes. Multi-Task learning is different from softmax as softmax is multi-class problem. It works well when the amount of data for each task is quite similar and large in size. </p>
+
+	<p><b>End to End Deep Learning</b></p>
+
+	<p>In many systems, there are different stages of model compiled together. For example in speech to text, one option is to create different components given as : </p>
+
+	<p>
+	A : Audio -> features -> phonemes -> words -> transcript <br>
+	Or another model can be trained in which one model is: <br>
+	B : Audio -> transcript <br><br>
+
+	B is an example of end-to-end deep learning. It works well when the amount of training data is large. You can also simplify the data. Example in face detection: <br>
+
+	Image -> zoom on image -> detect <br>
+
+	2 step approach works because one task is very simpler and makes task 2 simple as well <br><br>
+
+	In end to end learning, we allow let the data speak (complete blackbox) and less effort is required to design new components. Non end to end deep learning requires large amount of data before it start making sense. </p>
+
+	<p><b>Training and testing on different distributions</b></p>
+
+	 > Web data (200K), Mobile data (10K) <br>
+	Training : web <br>
+	Test / dev : mobile data <br>
+
+	<p>Will work best instead of combining and shuffling together</p>
+
+	(Training + Training-Dev) -> same distributions <br>
+	(Dev + Test) -> Different distributions <br>
+
+	If train error : 1% <br>
+	training -dev error : 9% >> variance problem <br>
+	Dev error : 10% → variance <br><br>
+
+	If train error : 1%<br>
+	training -dev error : 1.5% -- bias <br>
+	Dev error : 10% → data mismatch error <br><br>
+
+	Human level error : 4%<br>
+	Training set error : 7% <br>
+	Training-dev error : 10%<br>
+	Dev error : 12 %<br>
+	Test error : 12 %<br>
+	</p>
+
+
+
+
+
+
+
+
+
+
+								
+
+
+
+
+								
+
+
+
+
+
+
+								<br><br>
+			                    <div id="disqus_thread"></div>
+			                    <script type="text/javascript">
+			                    /* * * CONFIGURATION VARIABLES * * */
+			                    var disqus_shortname = 'shivambansal';
+
+			                    /* * * DON'T EDIT BELOW THIS LINE * * */
+			                    (function() {
+			                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			                    })();
+			                    </script>
+
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<hr>
+				<footer>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+								<p class="copyright text-muted">&copy; shivambansal.com 2017</p>
+							</div>
+						</div>
+					</div>
+				</footer>
+
+				<script>
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+				ga('create', 'UA-45186276-1', 'shivambansal.com');
+				ga('send', 'pageview');
+				</script>
+			</body>
+			</html>

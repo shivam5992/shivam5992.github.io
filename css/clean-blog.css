@@ -1,10 +1,10 @@
 .box-title{
   font-size: 35px;
-    font-weight: normal;
+  font-weight: normal;
 }
 .box-sub-title{
   font-size: 25px;
-  color: #3c6e8e;
+  color: #1071f1;
 }
 .box-sub-title-2{
   font-size: 20px;
@@ -17,7 +17,7 @@
 }
 .box-text{
   font-size: 18px;
-    line-height: 40px;
+    line-height: 30px;
       letter-spacing: : 2px;
 }
 .mixli{
