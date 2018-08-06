@@ -100,8 +100,8 @@ hr {
   font-weight: 700;
 }
 .post-subtitle{
-  margin-top: 15px;
-  font-size: 16px;
+  margin-top: 0px;
+  font-size: 15px;
 }
 
 
@@ -349,9 +349,9 @@ hr.small {
 }
 .post-preview > .post-meta {
   color: #808080;
-  font-size: 14px;
+  font-size: 12px;
   /*font-style: italic;*/
-  margin-top: -12px;
+  margin-top: -25px;
   text-align: right;
 }
 .post-preview > .post-meta > a {
@@ -365,7 +365,7 @@ hr.small {
 }
 @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .arttext
