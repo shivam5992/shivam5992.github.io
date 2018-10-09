@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+		<html lang="en"><html>
+		<head>
+			<meta charset="utf-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<title>Android Pc Voice Controller - Shivam Bansal's Blog</title>
+			<meta name="description" content="" />
+			<meta name="HandheldFriendly" content="True" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<link rel="shortcut icon" href="../../img/SB.png">
+			<link rel="canonical" href="http://shivambansal.com/blog/my_android_experience/" />
+			<meta name="referrer" content="origin" />
+			<meta property="og:site_name" content="Shivam Bansal" />
+			<meta property="og:type" content="article" />
+			<meta property="og:title" content='Android Pc Voice Controller' />
+			<meta property="og:description" content='The intent of this blog is to give an outline of my academic android project. After scouting for different app ideas, I decided to make a utility application on the android platform ...' />
+			<meta property="og:url" content='http://shivambansal.com/blog/my_android_experience/' />
+			<meta property="og:image" content="../../img/post-bg.jpg" />
+			<meta property="article:published_time" content=' Oct 12, 2013' />
+			<meta property="article:tag" content="" />
+			<meta property="article:tag" content="" />
+			<link href="../../css/bootstrap.min.css" rel="stylesheet">
+			<link href="../../css/clean-blog.css" rel="stylesheet">
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+		</head>
+
+		<body>
+			<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="../../index.html">Home</a>
+							</li>
+							<li>
+								<a href="../../about/">About</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+			<header class="intro-header" style="background-image: url('../../img/post-bg.jpg')">
+				<div class="container sam">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<div class="post-heading">
+								<h1>Android Pc Voice Controller</h1>
+								<span class="sub-desc">Posted on  Oct 12, 2013</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<article>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 arttext">
+							<p>The intent of this blog is to give an breif outline of one of my academic android project.<br /><br />                    
+
+							After scouting for number of android app ideas, I decided to make a utility application on the android platform which was capable of controlling and operating the computers according to voice instructions given by the user on their mobile phones.<br /><br />                    
+
+							I decided to name the app "APVC", acronym for Android Pc Voice Controller. The application was fully capable of operating computers, used for quick and accurate text typing using voice, performing various system functionalities such as - playing audio and video files, searching web browsers, performing calculator operations etc.<br /><br />                    
+
+
+							Since I was new to android development, to get started and getting use to the platform, I created various mini applications such as calculator, text editor and a mini music player. For the main application "APVC", the key features were "end-to-end data networking" and "speech to text voice recognization". I used a common wifi network as the communication channel to establish connection between server and the client (PC and the mobile). The app was able to pass textual data between the two. To Implement the voice recognition feature, I used speech to text android intent powered by Google search in the app. It was configured easily and its working was really appalling.<br /><br />                    
+
+
+							With the two main features implemented in a good state, The app was able to receive the text version of human speech as produced on the mobile. I integrated all the distributed snippets to give a structure to complete project. Later I added a two way authentication as the key security feature in the app. Now the app server would only response, if the correct key was passed and received at both ends. 
+
+							On the server side, most of the processes were getting executed sequentially, to reduce the overhead I wrapped the processes into multiprocess channels. Now the app was able to perform all the functions smoothly. For instance if text "Open Notepad" was provided as speech input, then the methods would execute a command that would open the notepad in the pc.<br /> <br />                     
+
+							In the similar manner, I created about 25 differeny functionalities that would perform different tasks. I developed the feature of text typing in my project. The same functionality was replicated on the notepad, browser, chatting, word pad and even command prompt!, which indeed opened up space for many new operations like command line aspects like shutdown, system sleep, opening and closing applications. One interesting feature of this project was opening and playing audio and video files.  The user could explore any directory and play the present audio and video files. Later I added the functions to control sound and speed as well. Features like closing the opened window and entering into new line, special characters typing were also introduced.                    
+							<br /><br />                                         
+
+							That's all my the project APVC, This app is extendable for a number of scenarios. You can check out the project <a href="https://github.com/shivam5992/AndroidPcVoiceController">Here</a>. Feel free to discuss and comment.</p>
+
+							<br>
+		                    <div id="disqus_thread"></div>
+		                    <script type="text/javascript">
+		                    /* * * CONFIGURATION VARIABLES * * */
+		                    var disqus_shortname = 'shivambansal';
+
+		                    /* * * DON'T EDIT BELOW THIS LINE * * */
+		                    (function() {
+		                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		                    })();
+		                    </script>
+
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<hr>
+			<footer>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<p class="copyright text-muted">&copy; shivambansal.com 2017</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+			<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-45186276-1', 'shivambansal.com');
+			ga('send', 'pageview');
+			</script>
+		</body>
+		</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+		<html lang="en"><html>
+		<head>
+			<meta charset="utf-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<title>Operational Transform - Shivam Bansal's Blog</title>
+			<meta name="description" content="" />
+			<meta name="HandheldFriendly" content="True" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<link rel="shortcut icon" href="../../img/SB.png">
+			<link rel="canonical" href="http://shivambansal.com/blog/operational_transform/" />
+			<meta name="referrer" content="origin" />
+			<meta property="og:site_name" content="Shivam Bansal" />
+			<meta property="og:type" content="article" />
+			<meta property="og:title" content='Operational Transform' />
+			<meta property="og:description" content='When multiple sites are collaborating on a single text document, Order of events occured at thses sites is important ...' />
+			<meta property="og:url" content='http://shivambansal.com/blog/operational_transform/' />
+			<meta property="og:image" content="../../img/post-bg.jpg" />
+			<meta property="article:published_time" content=' Aug 09, 2014' />
+			<meta property="article:tag" content="" />
+			<meta property="article:tag" content="" />
+			<link href="../../css/bootstrap.min.css" rel="stylesheet">
+			<link href="../../css/clean-blog.css" rel="stylesheet">
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+		</head>
+
+		<body>
+			<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="../../index.html">Home</a>
+							</li>
+							<li>
+								<a href="../../about/">About</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+			<header class="intro-header" style="background-image: url('../../img/post-bg.jpg')">
+				<div class="container sam">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<div class="post-heading">
+								<h1>Operational Transform - The algo behind google docs collaboration feature</h1>
+								<span class="sub-desc">Posted on  Aug 09, 2014</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<article>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 arttext">
+							<p>  In a recent hackathon at my workplace, I was creating a text editor with real time collaborative editing feature similar to that in Google Docs. While researching for this functionality, I came to know about the algorithm behind it known as Operational Trasform. According to Wikipedia, OT is invented for consistency maintenance and concurrency control in collaborative editing of plain text documents.  <br /><br />
+
+							<p><img src="r.jpg" align="center"></p>
+
+							<br><br>
+							 When multiple sites are collaborating on a single text document, Order of events occured at thses sites becomes an important metric. It the the role of Operational Transform algorithm to maintain the order and execute them. OT supports concurrency by the use of consistency models. These models have features such as Causality (Ensuring execution of events in their order), Convergence ( All occured events have been executed at each site) and Intention (Reflecting effects on each site).                        
+
+							<br /><br />
+
+							<a href="http://www.firepad.io/#1">Firepad</a> An open source collaborative text editor is designed to add the real time functionality to dynamic websites. It is by deployed on <a href="https://www.firebase.com/">Firebase</a> app platform and  provides true collaborative editing, complete with intelligent operational transform-based merging and conflict resolution.                        <br /></p><p>OT is an awesome algorithm for adding some cool functionalities of modern day web applications. For more knowledge, refer to following links and references .       
+
+								<p><img src="s.png" align="center"></p>
+
+														
+
+
+							                   <ul align="left"><li><a href="http://www.firepad.io/#1">Firepad</a></li><li><a href="http://sharejs.org/">ShareJs</a></li><li><a href="https://github.com/Operational-Transformation/ot.js/">ot.js</a></li><li><a href="https://togetherjs.com/source/">TogetherJs</a></li><li><a href="http://www.codecommit.com/blog/java/understanding-and-applying-operational-transformation"> Understanding and applying operational transform</a></li><li><a href="http://en.wikipedia.org/wiki/Operational_transformation">Wikipedia: Operational Transform</a></li><li><a href="http://www.waveprotocol.org/whitepapers/operational-transform">Google Wave Operational Transformation</a></li><ul></ul></ul></
+
+							<br>
+		                    <div id="disqus_thread"></div>
+		                    <script type="text/javascript">
+		                    /* * * CONFIGURATION VARIABLES * * */
+		                    var disqus_shortname = 'shivambansal';
+
+		                    /* * * DON'T EDIT BELOW THIS LINE * * */
+		                    (function() {
+		                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		                    })();
+		                    </script>
+
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<hr>
+			<footer>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<p class="copyright text-muted">&copy; shivambansal.com 2017</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+			<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-45186276-1', 'shivambansal.com');
+			ga('send', 'pageview');
+			</script>
+		</body>
+		</html>

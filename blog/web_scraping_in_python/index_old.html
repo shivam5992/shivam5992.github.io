@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+		<html lang="en"><html>
+		<head>
+			<meta charset="utf-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<title>Web Scraping in Python - Shivam Bansal's Blog</title>
+			<meta name="description" content="" />
+			<meta name="HandheldFriendly" content="True" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<link rel="shortcut icon" href="../../img/SB.png">
+			<link rel="canonical" href="http://shivambansal.com/blog/web_scraping_in_python/" />
+			<meta name="referrer" content="origin" />
+			<meta property="og:site_name" content="Shivam Bansal" />
+			<meta property="og:type" content="article" />
+			<meta property="og:title" content='Web Scraping in Python' />
+			<meta property="og:description" content='Web Scraping is a process of extracting out useful information form any website. Sometimes it is also refered as web mining, web crawling and web parsing ...' />
+			<meta property="og:url" content='http://shivambansal.com/blog/web_scraping_in_python/' />
+			<meta property="og:image" content="../../img/post-bg.jpg" />
+			<meta property="article:published_time" content=' Jan 01, 2014' />
+			<meta property="article:tag" content="" />
+			<meta property="article:tag" content="" />
+			<link href="../../css/bootstrap.min.css" rel="stylesheet">
+			<link href="../../css/clean-blog.css" rel="stylesheet">
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+		</head>
+
+		<body>
+			<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="../../index.html">Home</a>
+							</li>
+							<li>
+								<a href="../../about/">About</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+			<header class="intro-header" style="background-image: url('../../img/post-bg.jpg')">
+				<div class="container sam">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<div class="post-heading">
+								<h1>Web Scraping in Python</h1>
+								<span class="sub-desc">Posted on  Jan 01, 2014</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<article>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 arttext">
+							<p>                        Web Scraping is a process of extracting out useful information form any website. Sometimes it is also refered as web mining, web crawling and web parsing, but all of them have the same meaning.                        Python provides many different modules and liberaries to achieve the purpose. Using techniques and proper modules of web scraping one can extract out useful information from the html text.                        Modules like urllib, requests etc are used to get the complete html text of a webpage from which data can be extracted.                         Beautiful Soup is a python liberary which is used for the purpose of web data mining. The scraping process starts with requesting a webpage from python script,                        parsing the reponse to html text followed by making Beautiful Soup object using html text and finally applying techniques to get useful data.                         The following tutorial will guide you to scrap a webpage.                        <br /><br /><b>Modules required:</b> urrlib(or requests, mechanize etc) and BeautifulSoup.                         <br />                        To Install these modules on your machine run the following scripts on your machine.                    </p><blockquote>                    pip install BeautifulSpup <br />                    pip install urllib                    </blockquote><p><b>Setup:</b> First, import the required modules</p><blockquote>                        from BeautifulSoup import BeautifulSoup<br />                        import urllib                    </blockquote><p><b>HTML Response:</b> The next step is to send a request to a webpage and get the response in the form of html text. For this purpose i have used urllib. The basic snippet is like this                     </p><blockquote>                    url = "http://www.google.com" <br />                    htmlfile = urllib.urlopen(url) <br />                    htmltext = htmlfile.read()                                </blockquote><p><b>The soup:</b> Using html text, we need to create an object of Beautiful Soup, the soup variable is now ready to apply methods and functions to get data.</p><blockquote>                    soup = BeautifulSoup(htmltext)                     </blockquote><p>Once soup object is initialied, we have got access to various methods and sytaxes to retrieve the data. Here is a small list:<br />                    Selecting by Tags:                    <blockquote>                    soup.head <br />                    soup.head.title <br />                    soup.body.h2.a                    </blockquote></p><p>Selecting all particular tags:</p><blockquote>                    soup.findAll(\'p\') <br />                    for anchor in soup.findAll(\'a\'): <br />                    &nbsp;&nbsp;&nbsp;&nbsp;print anchor                    </blockquote><p>Selcting a particular tag with some attribute</p><blockquote>                    soup.find(\'div\',attrs={"class":"classname"}) <br />                    soup.findAll(\'p\',attrs={"id":"idname"})                    </blockquote><p>Parent, Children and Sibling</p><blockquote>                    for the following scenario: <br />                     &lt;head&gt;  <br />                        &lt;title&gt; titlename &lt;/title&gt; <br />                        &lt;a&gt;random&lt;/a&gt; <br />                    &lt;/head&gt; <br /> <br />                    soup.title.parent # head <br />                    soup.head.children # title <br />                    soup.title.next_sibling # a <br />                    soup.a.prev_sibling # title <br />                    soup.a.string # random <br /></blockquote><br /><p>Here is the full code to scrap all anchor tags in google.com </p><blockquote>                    import urllib <br />                    from BeautifulSoup import BeautifulSoup <br />                    url = "http://www.google.com"<br />                    htmlfile = urllib.urlopen(url)<br />                    htmltext = htmlfile.read()<br />                    soup = BeautifulSoup(htmltext)<br />                    print soup.head.title.string<br />                    for link in soup.findAll(\'a\'):<br />                        &nbsp;&nbsp;&nbsp;&nbsp;print link<br /></blockquote><p>Check out my web scrapping series in python repository on github. i have scrapped webistes like google.finance, yahoo.finance, bloomberg, google.movies, horoscope websites,                    nytimes.com, irctc.gov.in, weather websites etc.                    <a href="https://github.com/shivam5992/PyScrapper" target="_blank">Here</a> is the link.                    Feel free to discuss and share.                    </p>
+
+							<br>
+		                    <div id="disqus_thread"></div>
+		                    <script type="text/javascript">
+		                    /* * * CONFIGURATION VARIABLES * * */
+		                    var disqus_shortname = 'shivambansal';
+
+		                    /* * * DON'T EDIT BELOW THIS LINE * * */
+		                    (function() {
+		                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		                    })();
+		                    </script>
+
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<hr>
+			<footer>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<p class="copyright text-muted">&copy; shivambansal.com 2017</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+			<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-45186276-1', 'shivambansal.com');
+			ga('send', 'pageview');
+			</script>
+		</body>
+		</html>

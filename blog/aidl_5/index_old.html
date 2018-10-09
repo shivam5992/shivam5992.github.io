@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+		<html lang="en"><html>
+		<head>
+			<meta charset="utf-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<title>
+			Artificial Intelligence and Deep Learning - 2: Implementing Neural Networks in python - Shivam Bansal's Blog</title>
+			<meta name="description" content="" />
+			<meta name="HandheldFriendly" content="True" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<link rel="shortcut icon" href="../../img/SB.png">
+			<link rel="canonical" href="http://shivambansal.com/blog/nlp/" />
+			<meta name="referrer" content="origin" />
+			<meta property="og:site_name" content="Shivam Bansal" />
+			<meta property="og:type" content="article" />
+			<meta property="og:title" content='
+			Artificial Intelligence and Deep Learning - 2: Implementing Neural Networks in python' />
+			<meta property="og:description" content='According to industry estimates, only 21% of the available data is present in structured form...' />
+			<meta property="og:url" content='http://shivambansal.com/blog/nlp/' />
+			<meta property="og:image" content="../../img/post-bg.jpg" />
+			<meta property="article:published_time" content=' 21 Feb, 2018' />
+			<meta property="article:tag" content="" />
+			<meta property="article:tag" content="" />
+			<link href="../../css/bootstrap.min.css" rel="stylesheet">
+			<link href="../../css/clean-blog.css" rel="stylesheet">
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+		</head>
+
+		<body>
+			<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="../../index.html">Home</a>
+							</li>
+							<li>
+								<a href="../../about/">About</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+			<header class="intro-header" style="background-image: url('../../img/post-bg.jpg')">
+				<div class="container sam">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<div class="post-heading">
+								<h1>
+								Artificial Intelligence and Deep Learning - 2: Implementing Neural Networks in python</h1>
+								<span class="sub-desc">Posted on  21 Feb, 2018</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<article>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 arttext">
+							
+
+							<p>This article is the second among the series of artificial intelligence and deep learning articles </p>
+
+<p>Before implementing a Neural Network model in python, It is important to understand a the working and implementation of Logistic Regression model. Logistic Regression is a supervised learning model used in classification problems. 
+</p>
+
+<p>The logit function (or sigmoid function) is defined as 1/ (1 + exp(-Z)) where z is the input vector. The output value of a logit function always takes values between 0 and 1 as represented in the following graph:
+ </p>
+
+<p>A dataset of labelled images is provided which contains two types of labels - Cat and Non Cat images. We need to build a classifier that predicts if a given image is a Cat Image or a Non Cat. 
+ </p>
+
+
+<p>
+<b>Dataset Preparation:</b></p>
+
+
+<pre>
+def load_dataset(name = ''train''):
+   dataset = h5py.File('datasets/'+name+'_catvnoncat.h5', "r")
+   x_orig = np.array(dataset[name + "_set_x"][:])
+   y_orig = np.array(dataset[name + "_set_y"][:])
+   classes = np.array(test_dataset["list_classes"][:])
+</pre>
+
+
+
+<p>To implement a Logistic Regression classification model, four key steps are required:
+<br>
+<br>1. Initialize the model weights to small values
+<br>2. Compute the sigmoid activation of inputs
+<br>3. Compute the error term (cost function)
+<br>4. Optimize the model weights by adjusting the weight with respect to cost function </p>
+
+1. Initialize the model weights<br><br>
+
+<pre>
+dim = X_train.shape[0]
+w = np.zeros((dim, 1))
+b = 0
+</pre>
+
+<br>
+2. Compute the sigmoid activation of inputs<br><br>
+
+<pre>
+def sigmoid(z):
+    s = 1.0/(1+np.exp(-z))    
+    return s
+
+Z = np.dot(w.T, X) + b
+A = sigmoid(Z)
+</pre>
+
+<br>
+3. Compute the error term (cost function)<br>
+
+<p>To compute the cost function, we first need to compute the loss function. Loss function is the measure of error in the prediction value (activation) computed using sigmoid activation. A simplest loss function can be defined as the mean of square of difference in predicted value and the actual value. If A is the activation (prediction), and Y is the actual value, loss function can be defined as:
+
+<br><br>Loss = (1/m) * (A - Y )^2<br><br>
+
+We will discuss in the next step that we need to find the global minima of this function using optimization algorithms. One problem with this loss function is that the optimization problem becomes non convex. This means that there exists multiple local minimas in the cost function and the gradient descent may not converge to the global minimum value. A better loss function which overcomes this problem is the log loss function which is defined as:
+
+<br><br>Loss = -Y * Log (A) - (1-Y) * Log (1 - A)<br><br>
+
+Cost function is defined as the sum of loss function values for every input in the training data. 
+
+
+
+<pre>
+m = X.shape[1]
+cost = -np.sum((Y*np.log(A)+(1-Y)*np.log(1-A)))/m
+</pre>
+
+<br>
+4. Optimize the model weights by adjusting the weight with respect to cost function 
+
+Finally to train the model, an optimization algorithm is used which minimises the cost function and updates the model weights with the optimized values. An optimization algorithm such as gradient descent is used for this purpose. 
+
+<br><br>
+
+Gradient Descent minimises the Cost function value by making small adjustments in the model weights. It iterates over different inputs in the training examples and computes the derivatives (small change) of model weights so that the cost is minimised. This derivatives of model weights are then subtracted from original model weights to get the updated values. 
+<br><br>
+
+<pre>
+def get_derivative_weights(w, b, X, Y):
+	A = sigmoid(np.dot(w.T,X)+b)
+	m = X.shape[1]
+	dw = np.dot(X,(A-Y).T)/m 
+	db = np.sum(A-Y)/m
+      return dw, db 
+
+def optimize(w, b, X, Y, num_iterations, learning_rate):
+    for i in range(num_iterations):
+        dw, db = get_derivate_weights(w, b, X, Y)
+        w = w - learning_rate*dw
+        b = b - learning_rate*db
+    return w, b
+</pre>
+
+<p>Lets compile the entire code together to get the most optimized values of model weights
+</p>
+
+<pre>
+def logit_model(X_train, Y_train, X_test, Y_test):
+    num_iterations = 20000
+    learning_rate = 0.005
+    
+    w, b = initialize_with_zeros(X_train.shape[0])
+    w, b = optimize(w, b, X_train, Y_train, num_iterations, learning_rate,)
+      
+    modelled = {"w" : w, "b" : b}
+    return modelled
+</pre>
+
+<p>Let's define a predict function which can be used to make predictions on test data</p>
+
+<pre>
+def predict(w, b, X):
+    m = X.shape[1]
+    Y_prediction = np.zeros((1,m))
+    w = w.reshape(X.shape[0], 1)
+    A = sigmoid(np.dot(w.T,X)+b)    
+    for i in range(A.shape[1]):
+        Y_prediction = np.around(A)
+    return Y_prediction
+</pre>
+
+<pre>
+Y_pred_test = predict(w, b, X_test)
+Y_pred_train = predict(w, b, X_train)
+
+print("train accuracy: {} %".format(100 - np.mean(np.abs(Y_pred_train - Y_train)) * 100))
+print("test accuracy: {} %".format(100 - np.mean(np.abs(Y_pred_test - Y_test)) * 100))
+</pre>
+
+<pre>
+>>> train accuracy: 100.0 %
+>>> test accuracy: 72.0 %
+</pre>
+
+</p>
+
+
+<p>
+Now, its time to implement a neural network model on the same lines. The architecture of the neural network is: 
+</p>
+
+<div class="img-post"><img src="1.png" width="400px"></div>
+
+<p>
+The first layer is called the input layer which consists of inputs. The next layer consists of hidden layer which comprises of different neurons. Every neuron computes the activation functions values using the tanh activation function. The final layer is the output layer which computes the sigmoid activation of the received input from the hidden layer. The Steps to implement Neural Network are as follows:</p>
+
+<p>
+1. Define the neural network structure ( # of input units,  # of hidden units, etc)<br>
+2. Initialize the model's parameters<br>
+3. For a number of epochs:<br>
+    - Implement forward propagation<br>
+    - Compute loss<br>
+    - Implement backward propagation to get the gradients<br>
+    - Update parameters (gradient descent)<br>
+</p>
+
+
+<p>
+1. Define the neural network architecture</p>
+
+<p>In the first step, we define the architecture of neural network which consists of defining the number of nodes in the input layer, the output layer, and the hidden layer.</p>
+
+<pre>
+def layer_sizes(X, Y):
+    n_x = X.shape[0] # size of input layer
+    n_h = 4 # size of the hidden layer
+    n_y = Y.shape[0] # size of output layer
+    return (n_x, n_h, n_y)
+</pre>
+
+<p>2. Initialize the parameters </p>
+
+<p>Next we need to implement a function that initialize the weights and bias of the models to random values. It is important to initialize the weights to a small random values to break the symmetry among different neurons. The meaning of symmetry among the neurons means if the weights values are all initialized to zeros, then every neuron is likely to behave similar. Thus, the neural network may not compute complex non linear activation function values, but it will merely be a logistic regression implementation. </p>
+
+<pre>
+def initialize_parameters(n_x, n_h, n_y):
+    np.random.seed(2) 
+
+    W1 = np.random.randn(n_h,n_x)*0.01
+    b1 = np.zeros((n_h,1))
+    W2 = np.random.randn(n_y,n_h)*0.01
+    b2 = np.zeros((n_y,1))
+    
+    parameters = {"W1": W1,  "b1": b1, "W2": W2,  "b2": b2}
+    return parameters
+</pre>
+
+<p>3.1 Implement Forward Propagation : </p>
+
+<p>The next step is to compute the forward propagation activations. We will use tanh in the hidden layer and sigmoid function in the output layer. </p>
+
+<pre>
+def forward_propagation(X, parameters):
+    W1 = parameters['W1']
+    b1 = parameters['b1']
+    W2 = parameters['W2']
+    b2 = parameters['b2']
+    
+    Z1 = np.dot(W1,X)+b1
+    A1 = np.tanh(Z1)
+    Z2 = np.dot(W2,A1)+b2
+    A2 = sigmoid(Z2)
+    
+    cache = {"Z1": Z1, "A1": A1, "Z2": Z2, "A2": A2}
+    return A2, cache
+</pre>
+
+<p>3.2 Compute the cost </p>
+<p>Now, we need to compute the cost (error term) which can be computed using the log loss function that we discussed in the logistic regression article. To recap, cost function is the sum of loss function values for every input in the training example. Loss function is defined by the following formula. </p>
+
+<p>Loss = -Y * Log A - (1-Y) * log (1-A)</p>
+
+<pre>
+def compute_cost(A2, Y, parameters):
+    m = Y.shape[1]
+    logprobs = np.multiply(np.log(A2),Y)+ np.multiply(np.log(1-A2),1-Y)
+    cost = -np.sum(logprobs)/m    
+    cost = np.squeeze(cost)   
+    return cost
+</pre>
+
+<p>3.3 Compute Back Propagation</p>
+
+<p>Now, the cost term will be used to obtain the derivative of model weights (small change in model weight to compensate the error term). The derivative values will be used to update the original values of model weights during the optimization (training) process.</p>
+
+<pre>
+def backward_propagation(parameters, cache, X, Y):
+    m = X.shape[1]
+    
+    W1 = parameters['W1']
+    W2 = parameters['W2']
+        
+    A1 = cache['A1']
+    A2 = cache['A2']
+    
+    dZ2= A2-Y
+    dW2 = np.dot(dZ2,A1.T)/m
+    db2 = np.sum(dZ2,axis=1,keepdims=True)/m
+    dZ1 = np.dot(W2.T,dZ2)*(1-np.power(A1,2))
+    dW1 = np.dot(dZ1,X.T)/m
+    db1 = np.sum(dZ1,axis=1,keepdims=True)/m
+    
+    grads = {"dW1": dW1, "db1": db1, "dW2": dW2, "db2": db2}
+    return grads
+</pre>
+
+<p>3.4 Update the parameters</p>
+
+<p>In the final step, we need to run an optimization algorithm in which a number of iterations are performed. In every iteration, the cost function and the derivatives of weights and bias with respect to cost function are computed. These derivatives are used to update the original values of weights and bias. The process is repeated for many iterations with the aim to minimise the cost function value.</p>
+
+<pre>
+def update_parameters(parameters, grads, learning_rate = 1.2):
+    W1 = parameters['W1']
+    b1 = parameters['b1']
+    W2 = parameters['W2']
+    b2 = parameters['b2']
+    
+    dW1 = grads['dW1']
+    db1 = grads['db1']
+    dW2 = grads['dW2']
+    db2 = grads['db2']
+    
+    W1 = W1-learning_rate*dW1
+    b1 = b1-learning_rate*db1
+    W2 = W2-learning_rate*dW2
+    b2 = b2-learning_rate*db2
+    
+    parameters = {"W1": W1, "b1": b1, "W2": W2, "b2": b2}
+    return parameters
+</pre>
+
+<p>The essential components of cost function are implemented. Lets compile all of the above to implement a neural network</p>
+
+<pre>
+def nn_model(X, Y, n_h, num_iterations = 10000, print_cost=False):
+    
+    np.random.seed(3)
+    n_x = layer_sizes(X, Y)[0]
+    n_y = layer_sizes(X, Y)[2]
+    parameters = initialize_parameters(n_x, n_h, n_y)
+    W1 = parameters['W1']
+    b1 = parameters['b1']
+    W2 = parameters['W2']
+    b2 = parameters['b2']
+    
+    for i in range(0, num_iterations):
+        A2, cache = forward_propagation(X, parameters)
+        cost = compute_cost(A2, Y, parameters)
+        grads = backward_propagation(parameters, cache, X, Y)
+        parameters = update_parameters(parameters, grads)
+return parameters
+</pre>
+
+<p>Implement a function that predicts the values and compute the accuracy </p>
+
+<pre>def predict(parameters, X):
+    A2, cache = forward_propagation(X, parameters)
+    predictions = np.around(A2)    
+    return predictions
+
+parameters = nn_model(X, Y, n_h = 4, num_iterations = 10000)
+</pre>
+
+<p>Compute the accuracy on test set</p>
+
+<pre>
+predictions = predict(parameters, X)
+print ('Accuracy: %d' % float((np.dot(Y,predictions.T) + np.dot(1-Y,1-predictions.T))/float(Y.size)*100) + '%')
+</pre>
+
+<p>Thanks for reading, stay tuned for next articles</p>
+
+
+
+
+
+
+
+
+							
+
+
+
+
+							
+
+
+
+
+
+
+							<br><br>
+		                    <div id="disqus_thread"></div>
+		                    <script type="text/javascript">
+		                    /* * * CONFIGURATION VARIABLES * * */
+		                    var disqus_shortname = 'shivambansal';
+
+		                    /* * * DON'T EDIT BELOW THIS LINE * * */
+		                    (function() {
+		                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		                    })();
+		                    </script>
+
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<hr>
+			<footer>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<p class="copyright text-muted">&copy; shivambansal.com 2017</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+			<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-45186276-1', 'shivambansal.com');
+			ga('send', 'pageview');
+			</script>
+		</body>
+		</html>

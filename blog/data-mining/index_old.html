@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+		<html lang="en"><html>
+		<head>
+			<meta charset="utf-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<title>Getting Started with Data Science - Data Mining - Shivam Bansal's Blog</title>
+			<meta name="description" content="" />
+			<meta name="HandheldFriendly" content="True" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<link rel="shortcut icon" href="../../img/SB.png">
+			<link rel="canonical" href="http://shivambansal.com/blog/data-mining/" />
+			<meta name="referrer" content="origin" />
+			<meta property="og:site_name" content="Shivam Bansal" />
+			<meta property="og:type" content="article" />
+			<meta property="og:title" content='Getting Started with Data Science - Data Mining' />
+			<meta property="og:description" content='Data Mining is a process of collecting data, extraction of data and preparation of raw data set. It results in formation of a datasets which are in the ready to analyse formats.' />
+			<meta property="og:url" content='http://shivambansal.com/blog/data-mining/' />
+			<meta property="og:image" content="../../img/post-bg.jpg" />
+			<meta property="article:published_time" content='Dec 10, 2015' />
+			<meta property="article:tag" content="" />
+			<meta property="article:tag" content="" />
+			<link href="../../css/bootstrap.min.css" rel="stylesheet">
+			<link href="../../css/clean-blog.css" rel="stylesheet">
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+		</head>
+
+		<body>
+			<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="../../index.html">Home</a>
+							</li>
+							<li>
+								<a href="../../about/">About</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+			<header class="intro-header">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<div class="post-heading">
+								<h1>Getting Started with Data Science - Data Mining</h1>
+								<span class="sub-desc">Posted on Dec 10, 2015</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<article>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 arttext">
+<br><br>
+Data is available everywhere – in websites, in documents, in social media, in news, in sensors, in machines, in robots and in this blog post as well. With this huge amount of data in place, number of data science applications exploiting this data and producing useful information is also very high. Analytics scenarios such as exploring the author’s personality by analyzing his vocabulary in a blog post, or building the social networks of twitter and facebook friends, or digitization of old documents are the classic examples where data is exploited to find insights.
+<br><br>
+In each of these scenarios, there always exists an important portion to start with – data mining. Data Mining is the technique of creating a raw data set by capturing data from a data source. The term data mining though has a broader meaning when talked about analytics, but in this blog we will discuss about data mining as the first and initial step of any data science application which deals primarily with data collection and data extraction. And We will also look at the some of the techniques of data mining.
+<br><br>
+<b>Data Mining</b><br><br>
+Data Mining is a process of collecting data, extraction of data and preparation of raw data set. It results in formation of a datasets which are in the ready to analyse formats. Computational process of discovering patterns in large data sets or big data and methods involving machine learning, statistics and natural language processing are used in Data Mining. The overall aim is to fetch information from the data sources and transform them into defined structures for further use. Following are some of the important areas of data mining in action.
+<br><br>
+<b>Web Data Mining</b><br><br>
+Data mining from web is sometimes also termed as data crawling or web scraping. In this process, data which is available on the web, embedded in html tags, tables and graphs is extracted. For large scale web data mining in large scale, a seeding, crawling and parsing data architecture is a good practice to adopt. In seeding phase all the links and urls (seeds) are collected, in crawling phase scrapers and crawlers are developed  to pull out data corresponding to each seed, this data is generally html, xml or json formatted, and in parsing phase, the useful data points are extracted from the crawled data.
+<br><br>
+Some of the useful libraries for the purpose of web data mining are beautifulsoup (python), requests (python), mechanize (python), selenium (java) and phantomjs (automation libraries, but can also be used for extraction). Following is the python code to extract data from www.google.com using python
+<br><br>
+<pre>
+from BeautifulSoup import BeautifulSoup
+import urllib
+url = "http://www.google.com" 
+htmlfile = urllib.urlopen(url) 
+htmltext = htmlfile.read()
+soup = BeautifulSoup(htmltext)
+soup.find('div',attrs={"class":"classname"})
+</pre>
+<br><br> 
+<b>Social Media Data Mining</b><br><br>
+There is enormous amount of data available on social media sources such as twitter, facebook and linkedin. These platforms act as big data houses with open gates to push and pull interaction. The relevant data extraction APIs are these open gates for pulling the social data from these sources. Twitter provides Streaming and Rest APIs for data extraction purposes while Facebook provides Graph API for the same. Packages such as twython, tweepy, twitter-api (python) are used for this purpose
+<br><br>
+
+<pre>
+from twitter import Twitter
+twitter = Twitter(access_key , access_secret ,consumer_key, consumer_secret)
+query = twitter.search.tweets(q = "data science")
+for result in query["statuses"]:
+    print result[‘text’]
+</pre>
+<br><br>
+
+<b>Data Mining from Documents</b><br><br>
+Lots of text data is available in the pdf files, word documents, text files or other formats such as xml or json. Sometimes data is also present in the scanned images. Though with comparatively less accuracy, this data can also be mined and used for data driven applications and tools . The techniques such as pdf parsing and optical character recognition are useful to extract this type of data. For example, most of the old data of citizens and policies provided by government sector is stored in the form of pdf reports. This data can be digitized to machine readable text and analyzable format to make important decisions such as providing beneficial services to the poors who are deprived of major facilities.
+<br><br>
+<pre>
+import pdfminer libraries 
+def convert_pdf_to_txt(path):
+    rsrcmgr = PDFResourceManager()
+    retstr = StringIO()
+    codec = 'utf-8'
+    laparams = LAParams()
+    device = TextConverter(rsrcmgr, retstr, codec=codec, laparams=laparams)
+    fp = file(path, 'rb')
+    interpreter = PDFPageInterpreter(rsrcmgr, device)
+    password = ""
+    maxpages = 0
+    caching = True
+    pagenos=set()
+    
+    for page in PDFPage.get_pages(fp, pagenos, maxpages, password, caching):
+        interpreter.process_page(page)
+    text = retstr.getvalue()
+    
+    fp.close()
+    device.close()
+    retstr.close()
+    return text
+</pre>
+
+<br><br>
+
+<b>Mobile Data Collection</b><br><br>
+Recently mobiles have come out as an important source of data. Following tools can be used to get mobile data:
+<br><br>
+Open Data Kit (ODK) is a free and open-source set of tools which help in management of user metadata and mobile data collection solutions.<br><br>
+Commcare is an open-source mobile platform designed for data collection, client management, decision support, and behavior change communication.
+<br><br>
+GeoODK provides a way to capture and store geo-referenced information, along with a suite of tools to visualize, analyze and manipulate ground data for specific needs.
+The main role of data mining is to convert data that is either semi-structured or completely unstructured into structured data and make it easily use-able for further processing. There may be number of sources of data and different techniques to get this data. In next blogs we will discuss about further processes of data science and how to use this mined data.  
+<br><br>
+
+
+
+
+
+
+
+							<br>
+		                    <div id="disqus_thread"></div>
+		                    <script type="text/javascript">
+		                    /* * * CONFIGURATION VARIABLES * * */
+		                    var disqus_shortname = 'shivambansal';
+
+		                    /* * * DON'T EDIT BELOW THIS LINE * * */
+		                    (function() {
+		                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		                    })();
+		                    </script>
+
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<hr>
+			<footer>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<p class="copyright text-muted">&copy; shivambansal.com 2017</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+			<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-45186276-1', 'shivambansal.com');
+			ga('send', 'pageview');
+			</script>
+		</body>
+		</html>

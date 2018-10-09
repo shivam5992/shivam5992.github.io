@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+		<html lang="en"><html>
+		<head>
+			<meta charset="utf-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<title>Deploy Flask Application on Heroku - Shivam Bansal's Blog</title>
+			<meta name="description" content="" />
+			<meta name="HandheldFriendly" content="True" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<link rel="shortcut icon" href="../../img/SB.png">
+			<link rel="canonical" href="http://shivambansal.com/blog/deploy_flask_on_heroku/" />
+			<meta name="referrer" content="origin" />
+			<meta property="og:site_name" content="Shivam Bansal" />
+			<meta property="og:type" content="article" />
+			<meta property="og:title" content='Deploy Flask Application on Heroku' />
+			<meta property="og:description" content='Heroku is one of the most popular cloud hosting service. It can be used to deploy the applications of Python, Php, Ruby, Node.js and many more online ...' />
+			<meta property="og:url" content='http://shivambansal.com/blog/deploy_flask_on_heroku/' />
+			<meta property="og:image" content="../../img/post-bg.jpg" />
+			<meta property="article:published_time" content=' Oct 18, 2013' />
+			<meta property="article:tag" content="" />
+			<meta property="article:tag" content="" />
+			<link href="../../css/bootstrap.min.css" rel="stylesheet">
+			<link href="../../css/clean-blog.css" rel="stylesheet">
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+		</head>
+
+		<body>
+			<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="../../index.html">Home</a>
+							</li>
+							<li>
+								<a href="../../about/">About</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+			<header class="intro-header" style="background-image: url('../../img/post-bg.jpg')">
+				<div class="container sam">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<div class="post-heading">
+								<h1>Deploy Flask Application on Heroku</h1>
+								<span class="sub-desc">Posted on  Oct 18, 2013</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<article>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 arttext">
+							<p>                        Heroku is one of the popular cloud hosting service. It can be used to deploy the applications of Python, Php, Ruby, Node.js and many more online. This blog will teach you how to deploy the simple python web applications on heroku step by step. I will use Flask web framework for this blog. It requires the use of some tools and some modules along with basic knowledge of git commands. So here we go:                        <br /><br />                        Before procedding make sure that GIT is installed on your machine. If its not then you must setup and install it first. Once git is ready on the machine, Create an account on <a href="http://www.heroku.com/" target="_blank">Heroku's official website</a>. It's free and quick. After the setup, we need to install some modules on local machine. Firstly, we need to install heroku tool belt - command line support for heroku. Download and install heroku toolbelt from <a href="https://toolbelt.heroku.com/" target="_blank">here</a>. Next, we need to install few python modules using pip Download the latest version of python's setup tools from <a href="https://pypi.python.org/pypi/setuptools" target="_blank"> here </a>. Also install pip from <a href="http://www.pip-installer.org/en/latest/installing.html" target="_blank">here</a>.                         <br /><br />                        
+
+
+						    We will use python's virtual environment for the deployment purposes. After installation of setup tools you will see a folder named venv in the downloaded directory. CD to venv folder and activate the venv to launch virtual environment using entering this command in cmd:                    </p><blockquote>                        activate.bat                     </blockquote><p>                        This will prompt a venv shell which is nothing but a virtual environment. In Venv shell Cd to your app directory and add a procfile to it. It\'s a text file which contains information about your app.sample Procfile for flask app:                    </p><blockquote>                    web: gunicorn hello:app                    </blockquote><p>                    Also add requirements.txt file in your repository using this command.                    </p><blockquote>                    Pip freeze &gt; requirements.txt                    </blockquote><p>                    Now all prerequisites are completed and its time to git init in that folder.                     Add all your files for tracking and commit your files using.                    </p><blockquote>                    git init<br />                    git add .<br />                    git commit -m "your commit message"                    </blockquote><p>                    In the command prompt login into your heroku account using following commands. After successful authentication                    create a new app in the heroku app dashboard and finally push your app to cloud.<br /></p><blockquote>                    heroku login<br />                    heroku create<br />                     git push heroku master                    </blockquote><p>                    Make sure you have added ssh keys to heroku account, otherwise you will get error.<br />                    Trobuleshooting for errors related to ssh keys: <br /><br />                    First, Check for the existing ssh keys on your machine.                     In git bash cd to your .ssh folder (usually located in users/ in c drive).                    Check the folder  to see if you have a file named either id_rsa.pub or id_dsa.pub                     If not then generate a new SSH key, use the command                    </p><blockquote>                    Ssh-keygen-t rsa -c "youremal@example.com"                    </blockquote><p>                    Now you will be prompted to to enter a passphrase. Its just like a password.                    After key successfully generated you need to add them to heroku account, use following command                     </p><blockquote>                    Heroku keys:add                    </blockquote><p>                    And we are done. I Hope that this blog will help you deploy your app on heroku cloud. Feel free to contact :)                    </
+
+							<br>
+		                    <div id="disqus_thread"></div>
+		                    <script type="text/javascript">
+		                    /* * * CONFIGURATION VARIABLES * * */
+		                    var disqus_shortname = 'shivambansal';
+
+		                    /* * * DON'T EDIT BELOW THIS LINE * * */
+		                    (function() {
+		                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		                    })();
+		                    </script>
+
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<hr>
+			<footer>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<p class="copyright text-muted">&copy; shivambansal.com 2017</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+			<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-45186276-1', 'shivambansal.com');
+			ga('send', 'pageview');
+			</script>
+		</body>
+		</html>

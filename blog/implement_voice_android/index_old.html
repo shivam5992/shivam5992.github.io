@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+		<html lang="en"><html>
+		<head>
+			<meta charset="utf-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<title>Implement Voice in Android Apps - Shivam Bansal's Blog</title>
+			<meta name="description" content="" />
+			<meta name="HandheldFriendly" content="True" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<link rel="shortcut icon" href="../../img/SB.png">
+			<link rel="canonical" href='http://shivambansal.com/blog/implement_voice_android/" />
+			<meta name="referrer" content="origin" />
+			<meta property="og:site_name" content="Shivam Bansal" />
+			<meta property="og:type" content="article" />
+			<meta property="og:title" content='Implement Voice in Android Apps' />
+			<meta property="og:description" content='Google Projects and Android provides an interesting feature of voice recognition. This feature can be easily implemented in applications and can be extended further in many directions to make some killer apps ...' />
+			<meta property="og:url" content='http://shivambansal.com/'blog/implement_voice_android/' />
+			<meta property="og:image" content="../../img/post-bg.jpg" />
+			<meta property="article:published_time" content=' Oct 13, 2013' />
+			<meta property="article:tag" content="" />
+			<meta property="article:tag" content="" />
+			<link href="../../css/bootstrap.min.css" rel="stylesheet">
+			<link href="../../css/clean-blog.css" rel="stylesheet">
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+		</head>
+
+		<body>
+			<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="../../index.html">Home</a>
+							</li>
+							<li>
+								<a href="../../about/">About</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+			<header class="intro-header" style="background-image: url('../../img/post-bg.jpg')">
+				<div class="container sam">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<div class="post-heading">
+								<h1>Implement Voice in Android Apps</h1>
+								<span class="sub-desc">Posted on  Oct 13, 2013</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<article>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 arttext">
+							<p>                    Google Projects and Android provides an interesting feature of voice recognition. This feature can be easily implemented in applications and can be extended further in many directions to make some killer apps.                    The <a href="http://developer.android.com/reference/android/speech/package-summary.html">Android official documentation</a> though provides a brief description about the classes involved in voice reorganization API, but don\'t explain them in much detail. There are no examples available as well. In this blog post, I\'ll discuss how to implement voice reorganization in your android apps.<br /><br />                    Prior to implementing voice, I am assuming that you have all the basics clear about the development of android apps. Follow the procedure to create android application projects in eclipse or any other platform. If you are completely novice then you can start from <a href="http://developer.android.com/training/basics/firstapp/index.html"> here</a>.<br /><br />                    Once the blank project is created, follow these steps.                    First, Design the User Interface, create two xml files in layout folder, namely main.xml and voice.xml. Main.xml is the layout design for home activity and voice.xml is the layout design for the results page. </p><h5 align="left">main.xml file</h5><pre align="left">                    &lt;?xml version="1.0" encoding="utf-8"?&gt;                    &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"                        android:orientation="vertical"                        android:layout_width="fill_parent"                         android:layout_height="fill_parent" &gt;                    &lt;TextView                         android:layout_width="fill_parent"                        android:layout_height="wrap_content"                        android:text="VoiceRecognition" /&gt;                    &lt;/LinearLayout&gt;                    </pre><h5 align="left">voice.xml file </h5><pre align="left">                    &lt;?xml version="1.0" encoding="utf-8"?&gt;                    &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"                        android:layout_width="fill_parent"                        android:layout_height="fill_parent"                        android:orientation="vertical"&gt;                        &lt;TextView                            android:layout_width="fill_parent"                            android:layout_height="wrap_content"                            android:paddingBottom="4dip"                            android:text="Click the button and start speaking" /&gt;                                             &lt;Button android:id="@+id/Speak"                            android:layout_width="fill_parent"                            android:onClick="SpeakClicked"                            android:layout_height="wrap_content"                            android:text="Click Me!" /&gt;                                             &lt;ListView android:id="@+id/list"                            android:layout_width="fill_parent"                            android:layout_height="0dip"                            android:layout_weight="1" /&gt;                                          &lt;/LinearLayout&gt;                    </pre><p>                    Next create a manifest file which will map the activities of the application to different actions. This is the configuration file for the activities. This file should be created in the root folder. </p><h5 align="left">manifest.xml file </h5><pre align="left">                        &lt;?xml version="1.0" encoding="utf-8"?&gt;                    &lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"                          package="com.shivam"                          android:versionCode="1"                          android:versionName="1.0"&gt;                        &lt;application android:label="ImplementVoice" android:icon="@drawable/icon"                                android:debuggable="true"&gt;                            &lt;activity android:name=".ImplementVoice"                                      android:label="@string/app_name"&gt;                                &lt;intent-filter&gt;                                    &lt;action android:name="android.intent.action.MAIN" /&gt;                                    &lt;category android:name="android.intent.category.LAUNCHER" /&gt;                                &lt;/intent-filter&gt;                            &lt;/activity&gt;                        &lt;/application&gt;                    &lt;/manifest&gt;                         </pre><p> Now comes the main portion of the application, main.java file. Create a class called ImplementVoice and declare a variable named request_code in it. This variable is a checksum that is used to confirm the response when the user calls out to the voice recognition engine and it can take any value.                     Create an onCreate method which does the usual initialization on the start of the activity. This method is important as it also searches the android                     <a href="http://developer.android.com/reference/android/content/pm/PackageManager.html"> packageManager </a> to check if there are any packages installed that can handle intents for ACTION_RECOGNIZE_SPEECH. This is done because to check we have a package installed that can do the translation, and if not we will disable the button.                    <br /><br />                    Create another function named SpeakClicked and map it to the button, so this method is invoked when the button is clicked. This method starts VoiceRecognitionActivity intent which further invokes an activity that can handle the voice recognition.                    The onActivityResult is the callback function from the above chain calls, it first checks to see that the request code matches the one that was passed in, and ensures that the result is not erroneous.                    Next, the results are pulled out of the intent and set into the ListView to be displayed on the screen.</p><h5 align="left">main.java file </h5><pre align="left">                    // add the package name and the imports required (Eclipse will do that for you)                     public class ImplementVoice extends Activity                    {                        private static final int REQUEST_CODE = 1234;                        private ListView resultArray;                        //first function, called at the start of application                        @Override                        public void onCreate(Bundle savedInstanceState)                        {                            super.onCreate(savedInstanceState);                            setContentView(R.layout.voice);                            Button Speak = (Button) findViewById(R.id.Speak);                            resultArray = (ListView) findViewById(R.id.list);                            // Disable button if no recognition service is present, example in emulators                            PackageManager pm = getPackageManager();                            List<resolveinfo> activities = pm.queryIntentActivities(                                    new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0);                            if (activities.size() == 0)                            {                                Speak.setEnabled(false);                                Speak.setText("Recognizer is not present in your device");                            }                        }                        // on buttonclick                        public void SpeakClicked(View v)                        {                            startVoiceRecognitionActivity();                        }                        private void startVoiceRecognitionActivity()                        {                            Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);                            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,                                    RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);                            intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Voice recognition");                            startActivityForResult(intent, REQUEST_CODE);                        }                        //Get the results and display on the scree in listview                        @Override                        protected void onActivityResult(int requestCode, int resultCode, Intent data)                        {                            if (requestCode == REQUEST_CODE &amp;&amp; resultCode == RESULT_OK)                            {                                // Populate the resultArray with the String values the recognition engine thought it heard                                ArrayList<string> matches = data.getStringArrayListExtra(                                        RecognizerIntent.EXTRA_RESULTS);                                resultArray.setAdapter(new ArrayAdapter</string><string>(this, android.R.layout.simple_list_item_1,                                        matches));                            }                            super.onActivityResult(requestCode, resultCode, data);                        }                    }                    </string></resolveinfo></pre>                    Feel free to discuss and share.This blogpost/tutorial is inspired from <a href="http://www.jameselsey.co.uk/blogs/techblog/android-how-to-implement-voice-recognition-a-nice-easy-tutorial/">Here</a>.                    <br />
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<hr>
+			<footer>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<p class="copyright text-muted">&copy; shivambansal.com 2015</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+			<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-45186276-1', 'shivambansal.com');
+			ga('send', 'pageview');
+			</script>
+		</body>
+		</html>

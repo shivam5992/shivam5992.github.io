@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+		<html lang="en"><html>
+		<head>
+			<meta charset="utf-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<title>Building a Recommendation Engine To Find Similar Brands - Shivam Bansal's Blog</title>
+			<meta name="description" content="" />
+			<meta name="HandheldFriendly" content="True" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<link rel="shortcut icon" href="../../img/SB.png">
+			<link rel="canonical" href="http://shivambansal.com/blog/finding_similar_brands/" />
+			<meta name="referrer" content="origin" />
+			<meta property="og:site_name" content="Shivam Bansal" />
+			<meta property="og:type" content="article" />
+			<meta property="og:title" content='Building a Recommendation Engine To Find Similar Brands' />
+			<meta property="og:description" content='Ever wondered, what algorithm google uses to maximize its target ads revenue?. What about the e-commerce websites which advocates you through options such as ...' />
+			<meta property="og:url" content='http://analyticsindiamag.com/building-collaborative-filtering-recommendation-engine-15-minutes/' />
+			<meta property="og:image" content="../../img/post-bg.jpg" />
+			<meta property="article:published_time" content=' 11 Oct, 2015' />
+			<meta property="article:tag" content="" />
+			<meta property="article:tag" content="" />
+			<link href="../../css/bootstrap.min.css" rel="stylesheet">
+			<link href="../../css/clean-blog.css" rel="stylesheet">
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+		</head>
+
+		<body>
+			<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="../../index.html">Home</a>
+							</li>
+							<li>
+								<a href="../../about/">About</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+			<header class="intro-header" style="background-image: url('../../img/post-bg.jpg')">
+				<div class="container sam">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<div class="post-heading">
+								<h1>Building a Recommendation Engine To Find Similar Brands</h1>
+								<span class="sub-desc">Posted on  24 Jul, 2016</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<article>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 arttext">
+							<p>   
+
+
+
+							Since the amount of data has grown massively in last few years, the task of obtaining relevant information has become a challenge. Recommendation engines are one solution to such problem, where they aim to deliver accurate and relevant pieces of information to the users.
+							<br><br>
+Recommendation engines are widely observed today, for example – youtube’s video suggestions lists, amazon’s recommended products and facebook’s friends and ads suggestions.<br><br>
+
+<b>Types of Recommendation Engines</b><br><br>
+There are generally two types of recommendation engines – Collaborative Filtering Based and Content Based. Sometimes the hybrid models are also used.<br><br>
+
+<b>Collaborative Filtering Models:</b> are based on actions and behaviour of users. For example if a person having interest in thriller movies, is purchasing a set of thriller movies, another person having similar interests is also likely to buy same set of movies.<br><br>
+
+<b>Content Based Models:</b> are based on the features of the products, items with similar content are clustered together, and recommended together. For example – Apple Iphone and Apple Ipad belongs to one cluster of apple products, samsung phone and apple iphone belongs to one cluster of smartphones.<br><br>
+
+In each of the algorithms, the similarities between different items are calculated using any similarity measurement technique, such as – cosine similarity, vector similarity, levenshtein distance and edit distance etc. These similarity values are used to predict ratings for unobserved user-item pairs.<br><br>
+
+<b>Recommendation Engine in Python</b><br><br>
+Let’s take a scenario for an ecommerce company, where a large number of users actively buy large number of products/items. To maximize their sales, The company wants to identify which of the brands are similar according to user behaviours and their buying patterns.<br><br>
+For this task, company has collected a data for users of random shoppers and the brands they purchased. The task is to create a model, that will recommend most similar brands with respect to a new brand.<br><br>
+
+The complete data can be downloaded from this link. It contains three columns – “User Id”,”Brand Id”, “Brand Name”.
+<br><br>
+
+<b>Hypothesis Generation:</b><br><br>
+Before exploring the data, generating the hypothesis around the problem statement is really helpful. In our case, the problem statement is to create a collaborative filtering based brand recommendation engine. The hypothesis can be generated around the factors that will make two brands similar. For example
+<br><br>
+
+&bull; Type of Products sold by them, example – cloths brands, sports brands, cars brands etc. <br>
+&bull; Gender – for which gender the brands are famous for ? example – male brands, female brands. <br>
+&bull; Parent Company – which is the main parent company for the brands. ? <br>
+&bull; Do they belong to the category of expensive brands vs average brands ? <br>
+&bull; People Interests – which people interests are important. <br>
+
+<br>
+<b>Exploratory Data Analysis:</b>
+Now that problem statement and hypothesis is generated, it is the time for data exploration which is one of the important component of any data science model. Some descriptive stats from the data can be obtained as –
+<br><br>
+
+&bull; Total Records: 4,322,841<br>
+&bull; Unique Users: 576,809<br>
+&bull; Unique Brands: 11,288<br>
+<br>
+
+<b>Most purchased brands:</b><br>
+
+&bull; Marc by Marc Jacobs	119644<br>
+&bull; Christian Louboutin	115665<br>
+&bull; Burberry	112238<br>
+&bull; Gucci	102444<br>
+&bull; Marc Jacobs	93478<br>
+&bull; Jimmy Choo	88514<br>
+&bull; Prada	86677<br>
+&bull; Diane von Furstenberg	82491<br>
+&bull; Yves Saint Laurent	82203<br>
+&bull; Chlo	82130<br>
+ 
+<br>
+<b>Least purchased Brands</b><br>
+
+&bull; Zita	1<br>
+&bull; Personalized With Luv	1<br>
+&bull; 9 Months up, 9 Months down	1<br>
+&bull; Amy Zerner	1<br>
+&bull; Petit Chapeau	1<br>
+&bull; Atos Lombardini	1<br>
+&bull; Caran d’Ache	1<br>
+&bull; Yang Li	1<br>
+&bull; Tiedeken	1<br>
+&bull; Laura G	1<br>
+
+<br>
+Since the data consists of about 11K brands, it is important step to normalize the data and get rid of weak data points, Hence all the brands below a certain threshold value are ignored from the data. For example – in this data, bottom 10% portion is discarded. Please feel free to suggest more data normalization techniques in the comments section.
+<br><br>
+
+
+<b>Approach:</b><br><br>
+First of all, we need to transform the data into a User – Brand matrix, where each row represents a user, and each column represents a brand. Every cell indicates if the user has purchased that brand or not. The dimension of this matrix is U*B where U is the total number of unique users and B is the total number of unique brands. The resultant matrix is shown as –
+
+<div class="img-post"><img src="1.png" /></div><br>
+where, Mij = {1, if user i has purchased brand j, ” ” otherwise}
+<br><br>
+
+<pre>
+def prepare_dataset(self):
+	user_brand = {}
+	data = open(self.input_file).read().split("\n")
+	
+	for i,line in enumerate(data):
+		row = line.split("\t")
+		userId = row[0]
+		brandId = row[1]
+		brandName = row[2]
+
+		if userId not in user_brand:
+			user_brand[userId] = []
+		user_brand[userId].append(brandId)
+
+	return user_brand
+</pre>
+
+<br>
+
+Next, we need to create Brand – Brand similarity matrix. This User – Brand matrix is converted to Brand – Brand matrix, where both rows and columns represents the brands. Every cell contains represents the frequency count – number of times both brands appeared together OR When both brands were purchased by single user. The dimension of this matrix are B*B where B is the number of unique brands. Example –
+
+<br><br>
+<div class="img-post"><img src="2.png" /></div><br>
+where, Bij = {n, if brand i brand j are co-purchased together n number of times, 0 otherwise}<br><br>
+
+<pre>
+
+def get_cartesian_pairs(self, lstA, lstB):
+	pairs = [sorted(z) for z in list(itertools.product(lstA, lstB)) if z[0]!=z[1]]
+	return list(pairs for pairs,_ in itertools.groupby(pairs))
+
+def create_brand_similarity_matrix(self):
+	similarity_matrix = {}
+	for x,y in self.user_brand_matrix.iteritems():
+		cartesian = self.get_cartesian_pairs(y, y)
+		for pair in cartesian:
+			if pair[0] not in similarity_matrix:
+				similarity_matrix[pair[0]] = {}
+			if pair[1] not in similarity_matrix[pair[0]]:
+				similarity_matrix[pair[0]][pair[1]] = 0
+			similarity_matrix[pair[0]][pair[1]] += 1
+	return similarity_matrix
+
+</pre>
+<br>
+Next, we need to perform similarity measurements and identify the possible similar items for one item. For every row, the sorted values will indicate the possible similar brands.
+
+<br><br>
+
+<div class="img-post"><img src="3.png" /></div>
+<br>where, Possible Similar Brands = MAX[Brand j’s with respect to brand i]
+
+
+<br><br>
+
+
+<pre>
+def update_similarity_matrix():
+	for bid, similar in self.similarity_matrix.iteritems():
+		for simid, score in similar.iteritems():
+			similarBrandName = self.brand_mapper.get(simid)
+			brandName = self.brand_mapper.get(bid)
+			doc = { '_id' : bid+" "+simid, 'brandId' : bid, 'similarId' : simid, 'score' : score, 'brandName' : brandName, 'similarBrandName': similarBrandName}
+			push_data(document = doc, collection_name = "BrandSimilarity")
+
+def get_most_similar(brandId, limit):
+	pipeline = [{'$match' : {'brandId' : brandId}}, {'$sort' : {'score' : -1}}, {'$limit': limit}]
+	result = db['BrandSimilarity'].aggregate(pipeline)
+	return result
+</pre>
+
+<br>
+The function named get_most_similar performs aggregation over the brand – brand matrix, sorts the data and find the most relevant – similar brand. The full code can be downloaded here.
+
+<br><br>
+
+This tutorial explained the basics of collaborative filtering in python, obviously there exists more complicated and advanced techniques to cluster items based on user behaviour such as singular vector decomposition.
+
+Feel free to shoot out your queries in the comments section.
+
+
+
+
+
+							<br>
+		                    <div id="disqus_thread"></div>
+		                    <script type="text/javascript">
+		                    /* * * CONFIGURATION VARIABLES * * */
+		                    var disqus_shortname = 'shivambansal';
+
+		                    /* * * DON'T EDIT BELOW THIS LINE * * */
+		                    (function() {
+		                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		                    })();
+		                    </script>
+
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<hr>
+			<footer>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<p class="copyright text-muted">&copy; shivambansal.com 2017</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+			<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-45186276-1', 'shivambansal.com');
+			ga('send', 'pageview');
+			</script>
+		</body>
+		</html>
