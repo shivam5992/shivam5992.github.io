@@ -1,0 +1,61 @@
+body {
+    /*background-image: url("../images/back.jpg");*/
+}
+
+.project-tagline h2{
+    margin-bottom: 2rem;
+    font-weight: normal;
+    opacity: 0.7;
+font-size: 1.25rem;
+}
+.page-header h1{
+    font-size:40px;
+    font-weight: 900;
+}
+
+.page-header {
+    color: #fff;
+    text-align: center;
+    background-color: #159957;
+    background-image: linear-gradient(120deg, #155799, #159957);
+    padding: 5rem 6rem;
+    margin: 0;
+    min-height: 1000px;
+}
+
+.navbar
+{
+    margin: 0;
+}
+
+.project-name {
+    font-size: 3.25rem;
+}
+
+.project-name {
+    margin-top: 0;
+    margin-bottom: 0.1rem;
+}
+
+}
+
+.btn .btn a{
+    padding: 0.75rem 1rem;
+
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.3rem;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+
+.btn-default
+{
+    width: 250px;
+    text-align: left;
+}
