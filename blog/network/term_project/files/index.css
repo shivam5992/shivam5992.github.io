@@ -1,0 +1,22 @@
+.node {
+	stroke: #fff;
+	stroke-width: 1.5px;
+}
+
+.link {
+ 	stroke: #999;
+	stroke-opacity: .6;
+}
+
+.form-group {
+	margin-bottom: 0px;
+}
+
+#legendTable {
+	margin-top:15px;
+	margin-left:40px;
+}
+
+#legendTable td {
+	border-top:none ;
+}

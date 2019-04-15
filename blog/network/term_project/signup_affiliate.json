@@ -1,0 +1,269 @@
+{
+"params":{"numExamples":10000,"linksPerNode":1,"age":0.0,"gender":0.0,"language":0.0,"signupMethod":1.0,"signupApp":1.0,"signupFlow":1.0,"affiliateChannel":1.0,"affiliateProvider":1.0,"actions":0.0,"charge":10,"gravity":0.01,"linkDistance0":60,"linkDistance1":30,"linkDistance2":15,"linkDistance3":10,"linkDistance4":5},
+"benchmark":0.6961,
+"scores":[0.6423, 0.695, 0.6812, 0.6962, 0.6945, 0.6954, 0.6929, 0.6949, 0.6928, 0.6926, 0.6108, 0.6925, 0.6091, 0.6936, 0.6939, 0.6933, 0.6926, 0.6919, 0.693, 0.6959, 0.6958, 0.6962, 0.6951, 0.6945, 0.6947, 0.6938, 0.6953, 0.6939, 0.6939, 0.6964, 0.6964, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961, 0.6961],
+"bestK":30,
+"bestScore":0.6964,
+"root":{"id":1,"label":"size=10000 age=36 males=46% NAs=55% NDFs=69%","level":0,"size":10000,"ndf":0.6961,"age":36.085827,"male":0.46980155,"na":0.5572,"children":[
+{"id":2,"label":"size=4459 age=36 males=45% NAs=71% NDFs=67%","level":1,"size":4459,"ndf":0.6793003,"age":36.157135,"male":0.4591241,"na":0.711146,"children":[
+{"id":3,"label":"size=3187 age=36 males=46% NAs=68% NDFs=62%\n1 view/dashboard/dashboard\n1 view/show/p1","level":2,"size":3187,"ndf":0.62786317,"age":36.86893,"male":0.46005508,"na":0.6802636,"children":[
+{"id":4,"label":"size=3187 age=36 males=46% NAs=68% NDFs=62%\n1 view/dashboard/dashboard\n1 view/show/p1","level":3,"size":3187,"ndf":0.62786317,"age":36.86893,"male":0.46005508,"na":0.6802636,"children":[
+{"id":5,"label":"size=3187 age=36 males=46% NAs=68% NDFs=62%\n1 view/dashboard/dashboard\n1 view/show/p1","level":4,"size":3187,"ndf":0.62786317,"age":36.86893,"male":0.46005508,"na":0.6802636}
+]
+}
+]
+}
+,{"id":6,"label":"size=1246 age=33 males=45% NAs=79% NDFs=81%","level":2,"size":1246,"ndf":0.81380415,"age":33.380116,"male":0.45864663,"na":0.79614764,"children":[
+{"id":7,"label":"size=1246 age=33 males=45% NAs=79% NDFs=81%","level":3,"size":1246,"ndf":0.81380415,"age":33.380116,"male":0.45864663,"na":0.79614764,"children":[
+{"id":8,"label":"size=1246 age=33 males=45% NAs=79% NDFs=81%","level":4,"size":1246,"ndf":0.81380415,"age":33.380116,"male":0.45864663,"na":0.79614764}
+]
+}
+]
+}
+]
+,"links":[
+{"sourceId":3,"targetId":6,"similarity":0.6}
+]
+}
+,{"id":9,"label":"size=2566 age=39 males=43% NAs=63% NDFs=69%\n8 view/show/p3\n6 click/this_hosting_reviews/listing_reviews_page\n5 data/personalize/wishlist_content_update\n4 -empty-/show/null\n4 data/similar_listings/similar_listings","level":1,"size":2566,"ndf":0.6909587,"age":39.44528,"male":0.43075356,"na":0.6309431,"children":[
+{"id":10,"label":"size=1230 age=40 males=41% NAs=67% NDFs=66%\n8 view/show/p3\n6 click/this_hosting_reviews/listing_reviews_page\n5 data/personalize/wishlist_content_update\n4 -empty-/show/null\n4 data/similar_listings/similar_listings","level":2,"size":1230,"ndf":0.6658537,"age":40.40109,"male":0.4180929,"na":0.6780488,"children":[
+{"id":11,"label":"size=1230 age=40 males=41% NAs=67% NDFs=66%\n8 view/show/p3\n6 click/this_hosting_reviews/listing_reviews_page\n5 data/personalize/wishlist_content_update\n4 -empty-/show/null\n4 data/similar_listings/similar_listings","level":3,"size":1230,"ndf":0.6658537,"age":40.40109,"male":0.4180929,"na":0.6780488,"children":[
+{"id":12,"label":"size=1230 age=40 males=41% NAs=67% NDFs=66%\n8 view/show/p3\n6 click/this_hosting_reviews/listing_reviews_page\n5 data/personalize/wishlist_content_update\n4 -empty-/show/null\n4 data/similar_listings/similar_listings","level":4,"size":1230,"ndf":0.6658537,"age":40.40109,"male":0.4180929,"na":0.6780488}
+]
+}
+]
+}
+,{"id":13,"label":"size=515 age=43 males=37% NAs=76% NDFs=72%\n2 data/personalize/wishlist_content_update\n1 -empty-/show/null\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 data/header_userpic/header_userpic\n1 data/similar_listings/similar_listings","level":2,"size":515,"ndf":0.7223301,"age":43.563637,"male":0.3740458,"na":0.76893204,"children":[
+{"id":14,"label":"size=515 age=43 males=37% NAs=76% NDFs=72%\n2 data/personalize/wishlist_content_update\n1 -empty-/show/null\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 data/header_userpic/header_userpic\n1 data/similar_listings/similar_listings","level":3,"size":515,"ndf":0.7223301,"age":43.563637,"male":0.3740458,"na":0.76893204,"children":[
+{"id":15,"label":"size=515 age=43 males=37% NAs=76% NDFs=72%\n2 data/personalize/wishlist_content_update\n1 -empty-/show/null\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 data/header_userpic/header_userpic\n1 data/similar_listings/similar_listings","level":4,"size":515,"ndf":0.7223301,"age":43.563637,"male":0.3740458,"na":0.76893204}
+]
+}
+]
+}
+,{"id":16,"label":"size=324 age=36 males=47% NAs=1% NDFs=63%\n5 click/search_results/view_search_results\n2 data/personalize/wishlist_content_update\n2 submit/authenticate/login\n2 view/requested/p5\n1 -empty-/lookup/null","level":2,"size":324,"ndf":0.63271606,"age":36.504673,"male":0.47987616,"na":0.012345679,"children":[
+{"id":17,"label":"size=324 age=36 males=47% NAs=1% NDFs=63%\n5 click/search_results/view_search_results\n2 data/personalize/wishlist_content_update\n2 submit/authenticate/login\n2 view/requested/p5\n1 -empty-/lookup/null","level":3,"size":324,"ndf":0.63271606,"age":36.504673,"male":0.47987616,"na":0.012345679,"children":[
+{"id":18,"label":"size=324 age=36 males=47% NAs=1% NDFs=63%\n5 click/search_results/view_search_results\n2 data/personalize/wishlist_content_update\n2 submit/authenticate/login\n2 view/requested/p5\n1 -empty-/lookup/null","level":4,"size":324,"ndf":0.63271606,"age":36.504673,"male":0.47987616,"na":0.012345679}
+]
+}
+]
+}
+,{"id":19,"label":"size=248 age=37 males=46% NAs=70% NDFs=66%\n8 click/ajax_refresh_subtotal/change_trip_characteristics\n8 data/similar_listings/similar_listings\n7 data/personalize/wishlist_content_update\n5 -empty-/show/null\n4 view/index/view_search_results","level":2,"size":248,"ndf":0.66129035,"age":37.14706,"male":0.46153846,"na":0.70564514,"children":[
+{"id":20,"label":"size=248 age=37 males=46% NAs=70% NDFs=66%\n8 click/ajax_refresh_subtotal/change_trip_characteristics\n8 data/similar_listings/similar_listings\n7 data/personalize/wishlist_content_update\n5 -empty-/show/null\n4 view/index/view_search_results","level":3,"size":248,"ndf":0.66129035,"age":37.14706,"male":0.46153846,"na":0.70564514,"children":[
+{"id":21,"label":"size=248 age=37 males=46% NAs=70% NDFs=66%\n8 click/ajax_refresh_subtotal/change_trip_characteristics\n8 data/similar_listings/similar_listings\n7 data/personalize/wishlist_content_update\n5 -empty-/show/null\n4 view/index/view_search_results","level":4,"size":248,"ndf":0.66129035,"age":37.14706,"male":0.46153846,"na":0.70564514}
+]
+}
+]
+}
+,{"id":22,"label":"size=117 age=35 males=14% NAs=88% NDFs=94%\n4 view/dashboard/dashboard\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 partner_callback/callback/oauth_response","level":2,"size":117,"ndf":0.94017094,"age":35.588234,"male":0.14285715,"na":0.8888889,"children":[
+{"id":23,"label":"size=117 age=35 males=14% NAs=88% NDFs=94%\n4 view/dashboard/dashboard\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 partner_callback/callback/oauth_response","level":3,"size":117,"ndf":0.94017094,"age":35.588234,"male":0.14285715,"na":0.8888889,"children":[
+{"id":24,"label":"size=117 age=35 males=14% NAs=88% NDFs=94%\n4 view/dashboard/dashboard\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 partner_callback/callback/oauth_response","level":4,"size":117,"ndf":0.94017094,"age":35.588234,"male":0.14285715,"na":0.8888889}
+]
+}
+]
+}
+,{"id":25,"label":"size=66 age=33 males=27% NAs=84% NDFs=81%\n5 -empty-/lookup/null\n4 click/search_results/view_search_results\n3 data/personalize/wishlist_content_update\n2 view/index/view_search_results\n1 -empty-/show/null","level":2,"size":66,"ndf":0.8181818,"age":33.466667,"male":0.27272728,"na":0.8484849,"children":[
+{"id":26,"label":"size=66 age=33 males=27% NAs=84% NDFs=81%\n5 -empty-/lookup/null\n4 click/search_results/view_search_results\n3 data/personalize/wishlist_content_update\n2 view/index/view_search_results\n1 -empty-/show/null","level":3,"size":66,"ndf":0.8181818,"age":33.466667,"male":0.27272728,"na":0.8484849,"children":[
+{"id":27,"label":"size=66 age=33 males=27% NAs=84% NDFs=81%\n5 -empty-/lookup/null\n4 click/search_results/view_search_results\n3 data/personalize/wishlist_content_update\n2 view/index/view_search_results\n1 -empty-/show/null","level":4,"size":66,"ndf":0.8181818,"age":33.466667,"male":0.27272728,"na":0.8484849}
+]
+}
+]
+}
+,{"id":28,"label":"size=58 age=45 males=50% NAs=75% NDFs=72%\n14 view/qt2/message_thread\n6 message_post/-empty-/message_post\n5 click/ajax_refresh_subtotal/change_trip_characteristics\n5 data/similar_listings/similar_listings\n5 view/show/p3","level":2,"size":58,"ndf":0.7241379,"age":45.25,"male":0.5,"na":0.7586207,"children":[
+{"id":29,"label":"size=58 age=45 males=50% NAs=75% NDFs=72%\n14 view/qt2/message_thread\n6 message_post/-empty-/message_post\n5 click/ajax_refresh_subtotal/change_trip_characteristics\n5 data/similar_listings/similar_listings\n5 view/show/p3","level":3,"size":58,"ndf":0.7241379,"age":45.25,"male":0.5,"na":0.7586207,"children":[
+{"id":30,"label":"size=58 age=45 males=50% NAs=75% NDFs=72%\n14 view/qt2/message_thread\n6 message_post/-empty-/message_post\n5 click/ajax_refresh_subtotal/change_trip_characteristics\n5 data/similar_listings/similar_listings\n5 view/show/p3","level":4,"size":58,"ndf":0.7241379,"age":45.25,"male":0.5,"na":0.7586207}
+]
+}
+]
+}
+]
+,"links":[
+{"sourceId":10,"targetId":13,"similarity":0.8}
+,{"sourceId":10,"targetId":16,"similarity":0.8}
+,{"sourceId":10,"targetId":19,"similarity":0.8}
+,{"sourceId":10,"targetId":22,"similarity":0.8}
+,{"sourceId":10,"targetId":25,"similarity":0.8}
+,{"sourceId":10,"targetId":28,"similarity":0.8}
+]
+}
+,{"id":31,"label":"size=1048 age=34 males=49% NAs=4% NDFs=64%\n47 view/show/user_profile\n43 data/social_connections/user_social_connections\n22 view/show/p3\n18 data/reviews/listing_reviews\n6 click/search/view_search_results","level":1,"size":1048,"ndf":0.64694655,"age":34.696728,"male":0.4936832,"na":0.047709923,"children":[
+{"id":32,"label":"size=928 age=34 males=50% NAs=2% NDFs=63%\n1 message_post/-empty-/message_post\n1 submit/ask_question/contact_host","level":2,"size":928,"ndf":0.63577586,"age":34.76284,"male":0.5021978,"na":0.02586207,"children":[
+{"id":33,"label":"size=928 age=34 males=50% NAs=2% NDFs=63%\n1 message_post/-empty-/message_post\n1 submit/ask_question/contact_host","level":3,"size":928,"ndf":0.63577586,"age":34.76284,"male":0.5021978,"na":0.02586207,"children":[
+{"id":34,"label":"size=928 age=34 males=50% NAs=2% NDFs=63%\n1 message_post/-empty-/message_post\n1 submit/ask_question/contact_host","level":4,"size":928,"ndf":0.63577586,"age":34.76284,"male":0.5021978,"na":0.02586207}
+]
+}
+]
+}
+,{"id":35,"label":"size=57 age=32 males=50% NAs=0% NDFs=80%\n76 view/show/user_profile\n50 data/social_connections/user_social_connections\n33 submit/update/update_listing\n32 -unknown-/settings/-unknown-\n23 view/show/p3","level":2,"size":57,"ndf":0.80701756,"age":32.31579,"male":0.50877196,"na":0.0,"children":[
+{"id":36,"label":"size=57 age=32 males=50% NAs=0% NDFs=80%\n76 view/show/user_profile\n50 data/social_connections/user_social_connections\n33 submit/update/update_listing\n32 -unknown-/settings/-unknown-\n23 view/show/p3","level":3,"size":57,"ndf":0.80701756,"age":32.31579,"male":0.50877196,"na":0.0,"children":[
+{"id":37,"label":"size=57 age=32 males=50% NAs=0% NDFs=80%\n76 view/show/user_profile\n50 data/social_connections/user_social_connections\n33 submit/update/update_listing\n32 -unknown-/settings/-unknown-\n23 view/show/p3","level":4,"size":57,"ndf":0.80701756,"age":32.31579,"male":0.50877196,"na":0.0}
+]
+}
+]
+}
+,{"id":38,"label":"size=34 age=33 males=29% NAs=67% NDFs=67%\n2 view/index/view_search_results\n1 -unknown-/active/-unknown-\n1 -unknown-/create/-unknown-\n1 -unknown-/tos_confirm/-unknown-\n1 data/header_userpic/header_userpic","level":2,"size":34,"ndf":0.6764706,"age":33.909092,"male":0.29411766,"na":0.6764706,"children":[
+{"id":39,"label":"size=34 age=33 males=29% NAs=67% NDFs=67%\n2 view/index/view_search_results\n1 -unknown-/active/-unknown-\n1 -unknown-/create/-unknown-\n1 -unknown-/tos_confirm/-unknown-\n1 data/header_userpic/header_userpic","level":3,"size":34,"ndf":0.6764706,"age":33.909092,"male":0.29411766,"na":0.6764706,"children":[
+{"id":40,"label":"size=34 age=33 males=29% NAs=67% NDFs=67%\n2 view/index/view_search_results\n1 -unknown-/active/-unknown-\n1 -unknown-/create/-unknown-\n1 -unknown-/tos_confirm/-unknown-\n1 data/header_userpic/header_userpic","level":4,"size":34,"ndf":0.6764706,"age":33.909092,"male":0.29411766,"na":0.6764706}
+]
+}
+]
+}
+]
+,"links":[
+{"sourceId":32,"targetId":38,"similarity":0.8}
+,{"sourceId":32,"targetId":35,"similarity":0.6}
+]
+}
+,{"id":41,"label":"size=435 age=32 males=53% NAs=23% NDFs=77%\n3 -unknown-/active/-unknown-\n2 -empty-/show/null\n2 click/search/view_search_results\n2 view/collections/user_wishlists\n1 -empty-/campaigns/null","level":1,"size":435,"ndf":0.77931035,"age":32.029587,"male":0.5331492,"na":0.23908046,"children":[
+{"id":42,"label":"size=255 age=31 males=51% NAs=0% NDFs=76%\n2 -unknown-/show/-unknown-\n1 -empty-/localization_settings/null\n1 -unknown-/active/-unknown-","level":2,"size":255,"ndf":0.7647059,"age":31.309803,"male":0.51778656,"na":0.007843138,"children":[
+{"id":43,"label":"size=255 age=31 males=51% NAs=0% NDFs=76%\n2 -unknown-/show/-unknown-\n1 -empty-/localization_settings/null\n1 -unknown-/active/-unknown-","level":3,"size":255,"ndf":0.7647059,"age":31.309803,"male":0.51778656,"na":0.007843138,"children":[
+{"id":44,"label":"size=255 age=31 males=51% NAs=0% NDFs=76%\n2 -unknown-/show/-unknown-\n1 -empty-/localization_settings/null\n1 -unknown-/active/-unknown-","level":4,"size":255,"ndf":0.7647059,"age":31.309803,"male":0.51778656,"na":0.007843138}
+]
+}
+]
+}
+,{"id":45,"label":"size=80 age=33 males=90% NAs=86% NDFs=88%\n19 click/search/view_search_results\n14 -unknown-/active/-unknown-\n13 -unknown-/index/-unknown-\n13 data/social_connections/user_social_connections\n13 view/collections/user_wishlists","level":2,"size":80,"ndf":0.8875,"age":33.0,"male":0.90909094,"na":0.8625,"children":[
+{"id":46,"label":"size=80 age=33 males=90% NAs=86% NDFs=88%\n19 click/search/view_search_results\n14 -unknown-/active/-unknown-\n13 -unknown-/index/-unknown-\n13 data/social_connections/user_social_connections\n13 view/collections/user_wishlists","level":3,"size":80,"ndf":0.8875,"age":33.0,"male":0.90909094,"na":0.8625,"children":[
+{"id":47,"label":"size=80 age=33 males=90% NAs=86% NDFs=88%\n19 click/search/view_search_results\n14 -unknown-/active/-unknown-\n13 -unknown-/index/-unknown-\n13 data/social_connections/user_social_connections\n13 view/collections/user_wishlists","level":4,"size":80,"ndf":0.8875,"age":33.0,"male":0.90909094,"na":0.8625}
+]
+}
+]
+}
+,{"id":48,"label":"size=54 age=35 males=57% NAs=3% NDFs=74%\n3 -unknown-/active/-unknown-\n2 -empty-/show/null\n2 click/search/view_search_results\n2 view/collections/user_wishlists\n1 -empty-/campaigns/null","level":2,"size":54,"ndf":0.7407407,"age":35.018867,"male":0.5769231,"na":0.037037037,"children":[
+{"id":49,"label":"size=54 age=35 males=57% NAs=3% NDFs=74%\n3 -unknown-/active/-unknown-\n2 -empty-/show/null\n2 click/search/view_search_results\n2 view/collections/user_wishlists\n1 -empty-/campaigns/null","level":3,"size":54,"ndf":0.7407407,"age":35.018867,"male":0.5769231,"na":0.037037037,"children":[
+{"id":50,"label":"size=54 age=35 males=57% NAs=3% NDFs=74%\n3 -unknown-/active/-unknown-\n2 -empty-/show/null\n2 click/search/view_search_results\n2 view/collections/user_wishlists\n1 -empty-/campaigns/null","level":4,"size":54,"ndf":0.7407407,"age":35.018867,"male":0.5769231,"na":0.037037037}
+]
+}
+]
+}
+,{"id":51,"label":"size=44 age=32 males=50% NAs=65% NDFs=70%\n6 click/search/view_search_results\n6 data/unavailabilities/unavailable_dates\n5 -empty-/show/null\n5 -unknown-/active/-unknown-\n3 view/collections/user_wishlists","level":2,"size":44,"ndf":0.70454544,"age":32.733334,"male":0.5,"na":0.65909094,"children":[
+{"id":52,"label":"size=44 age=32 males=50% NAs=65% NDFs=70%\n6 click/search/view_search_results\n6 data/unavailabilities/unavailable_dates\n5 -empty-/show/null\n5 -unknown-/active/-unknown-\n3 view/collections/user_wishlists","level":3,"size":44,"ndf":0.70454544,"age":32.733334,"male":0.5,"na":0.65909094,"children":[
+{"id":53,"label":"size=44 age=32 males=50% NAs=65% NDFs=70%\n6 click/search/view_search_results\n6 data/unavailabilities/unavailable_dates\n5 -empty-/show/null\n5 -unknown-/active/-unknown-\n3 view/collections/user_wishlists","level":4,"size":44,"ndf":0.70454544,"age":32.733334,"male":0.5,"na":0.65909094}
+]
+}
+]
+}
+]
+,"links":[
+{"sourceId":42,"targetId":48,"similarity":0.8}
+,{"sourceId":45,"targetId":48,"similarity":0.8}
+,{"sourceId":42,"targetId":51,"similarity":0.8}
+]
+}
+,{"id":54,"label":"size=332 age=36 males=41% NAs=1% NDFs=75%\n7 view/show/p3\n6 view/index/view_search_results\n5 data/personalize/wishlist_content_update\n4 -empty-/show/null\n4 click/ajax_refresh_subtotal/change_trip_characteristics","level":1,"size":332,"ndf":0.7590361,"age":36.554546,"male":0.41337386,"na":0.012048192,"children":[
+{"id":55,"label":"size=104 age=39 males=40% NAs=1% NDFs=71%\n39 submit/update/update_listing\n4 view/manage_listing/manage_listing\n2 data/header_userpic/header_userpic\n2 submit/set_user/create_listing\n2 submit/update/update_listing_description","level":2,"size":104,"ndf":0.71153843,"age":39.213593,"male":0.4019608,"na":0.01923077,"children":[
+{"id":56,"label":"size=104 age=39 males=40% NAs=1% NDFs=71%\n39 submit/update/update_listing\n4 view/manage_listing/manage_listing\n2 data/header_userpic/header_userpic\n2 submit/set_user/create_listing\n2 submit/update/update_listing_description","level":3,"size":104,"ndf":0.71153843,"age":39.213593,"male":0.4019608,"na":0.01923077,"children":[
+{"id":57,"label":"size=104 age=39 males=40% NAs=1% NDFs=71%\n39 submit/update/update_listing\n4 view/manage_listing/manage_listing\n2 data/header_userpic/header_userpic\n2 submit/set_user/create_listing\n2 submit/update/update_listing_description","level":4,"size":104,"ndf":0.71153843,"age":39.213593,"male":0.4019608,"na":0.01923077}
+]
+}
+]
+}
+,{"id":58,"label":"size=88 age=38 males=30% NAs=1% NDFs=97%\n1 data/header_userpic/header_userpic\n1 submit/authenticate/login","level":2,"size":88,"ndf":0.97727275,"age":38.471264,"male":0.3068182,"na":0.011363637,"children":[
+{"id":59,"label":"size=88 age=38 males=30% NAs=1% NDFs=97%\n1 data/header_userpic/header_userpic\n1 submit/authenticate/login","level":3,"size":88,"ndf":0.97727275,"age":38.471264,"male":0.3068182,"na":0.011363637,"children":[
+{"id":60,"label":"size=88 age=38 males=30% NAs=1% NDFs=97%\n1 data/header_userpic/header_userpic\n1 submit/authenticate/login","level":4,"size":88,"ndf":0.97727275,"age":38.471264,"male":0.3068182,"na":0.011363637}
+]
+}
+]
+}
+,{"id":61,"label":"size=74 age=31 males=45% NAs=1% NDFs=64%\n7 view/show/p3\n6 view/index/view_search_results\n5 data/personalize/wishlist_content_update\n4 -empty-/show/null\n4 click/ajax_refresh_subtotal/change_trip_characteristics","level":2,"size":74,"ndf":0.6486486,"age":31.905405,"male":0.4520548,"na":0.013513514,"children":[
+{"id":62,"label":"size=74 age=31 males=45% NAs=1% NDFs=64%\n7 view/show/p3\n6 view/index/view_search_results\n5 data/personalize/wishlist_content_update\n4 -empty-/show/null\n4 click/ajax_refresh_subtotal/change_trip_characteristics","level":3,"size":74,"ndf":0.6486486,"age":31.905405,"male":0.4520548,"na":0.013513514,"children":[
+{"id":63,"label":"size=74 age=31 males=45% NAs=1% NDFs=64%\n7 view/show/p3\n6 view/index/view_search_results\n5 data/personalize/wishlist_content_update\n4 -empty-/show/null\n4 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":74,"ndf":0.6486486,"age":31.905405,"male":0.4520548,"na":0.013513514}
+]
+}
+]
+}
+,{"id":64,"label":"size=31 age=36 males=41% NAs=0% NDFs=70%\n3 click/search_results/view_search_results\n3 view/index/view_search_results\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 submit/authenticate/login","level":2,"size":31,"ndf":0.7096774,"age":36.0,"male":0.41935483,"na":0.0,"children":[
+{"id":65,"label":"size=31 age=36 males=41% NAs=0% NDFs=70%\n3 click/search_results/view_search_results\n3 view/index/view_search_results\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 submit/authenticate/login","level":3,"size":31,"ndf":0.7096774,"age":36.0,"male":0.41935483,"na":0.0,"children":[
+{"id":66,"label":"size=31 age=36 males=41% NAs=0% NDFs=70%\n3 click/search_results/view_search_results\n3 view/index/view_search_results\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 submit/authenticate/login","level":4,"size":31,"ndf":0.7096774,"age":36.0,"male":0.41935483,"na":0.0}
+]
+}
+]
+}
+]
+,"links":[
+{"sourceId":55,"targetId":58,"similarity":0.8}
+,{"sourceId":55,"targetId":61,"similarity":0.8}
+,{"sourceId":55,"targetId":64,"similarity":0.8}
+]
+}
+,{"id":67,"label":"size=293 age=34 males=55% NAs=67% NDFs=81%\n49 -unknown-/index/-unknown-\n36 view/collections/user_wishlists\n27 data/social_connections/user_social_connections\n27 view/show/user_profile\n26 -unknown-/active/-unknown-","level":1,"size":293,"ndf":0.8122867,"age":34.81739,"male":0.55445546,"na":0.6757679,"children":[
+{"id":68,"label":"size=237 age=34 males=53% NAs=81% NDFs=82%","level":2,"size":237,"ndf":0.8270042,"age":34.953846,"male":0.53333336,"na":0.8101266,"children":[
+{"id":69,"label":"size=237 age=34 males=53% NAs=81% NDFs=82%","level":3,"size":237,"ndf":0.8270042,"age":34.953846,"male":0.53333336,"na":0.8101266,"children":[
+{"id":70,"label":"size=237 age=34 males=53% NAs=81% NDFs=82%","level":4,"size":237,"ndf":0.8270042,"age":34.953846,"male":0.53333336,"na":0.8101266}
+]
+}
+]
+}
+,{"id":71,"label":"size=50 age=34 males=56% NAs=0% NDFs=72%\n49 -unknown-/index/-unknown-\n36 view/collections/user_wishlists\n27 data/social_connections/user_social_connections\n27 view/show/user_profile\n26 -unknown-/active/-unknown-","level":2,"size":50,"ndf":0.72,"age":34.64,"male":0.56,"na":0.0,"children":[
+{"id":72,"label":"size=50 age=34 males=56% NAs=0% NDFs=72%\n49 -unknown-/index/-unknown-\n36 view/collections/user_wishlists\n27 data/social_connections/user_social_connections\n27 view/show/user_profile\n26 -unknown-/active/-unknown-","level":3,"size":50,"ndf":0.72,"age":34.64,"male":0.56,"na":0.0,"children":[
+{"id":73,"label":"size=50 age=34 males=56% NAs=0% NDFs=72%\n49 -unknown-/index/-unknown-\n36 view/collections/user_wishlists\n27 data/social_connections/user_social_connections\n27 view/show/user_profile\n26 -unknown-/active/-unknown-","level":4,"size":50,"ndf":0.72,"age":34.64,"male":0.56,"na":0.0}
+]
+}
+]
+}
+]
+,"links":[
+{"sourceId":68,"targetId":71,"similarity":0.8}
+]
+}
+,{"id":74,"label":"size=286 age=34 males=32% NAs=73% NDFs=74%\n5 -unknown-/calendar_tab_inner2/-unknown-\n4 data/personalize/wishlist_content_update\n4 view/show/p3\n4 view/show/user_profile\n2 -empty-/show/null","level":1,"size":286,"ndf":0.74475527,"age":34.865383,"male":0.32142857,"na":0.7307692,"children":[
+{"id":75,"label":"size=206 age=33 males=33% NAs=75% NDFs=72%\n5 -unknown-/index/-unknown-\n4 -unknown-/identity/-unknown-\n4 data/social_connections/user_social_connections\n4 view/show/user_profile\n3 -unknown-/active/-unknown-","level":2,"size":206,"ndf":0.723301,"age":33.942028,"male":0.33333334,"na":0.75728154,"children":[
+{"id":76,"label":"size=206 age=33 males=33% NAs=75% NDFs=72%\n5 -unknown-/index/-unknown-\n4 -unknown-/identity/-unknown-\n4 data/social_connections/user_social_connections\n4 view/show/user_profile\n3 -unknown-/active/-unknown-","level":3,"size":206,"ndf":0.723301,"age":33.942028,"male":0.33333334,"na":0.75728154,"children":[
+{"id":77,"label":"size=206 age=33 males=33% NAs=75% NDFs=72%\n5 -unknown-/index/-unknown-\n4 -unknown-/identity/-unknown-\n4 data/social_connections/user_social_connections\n4 view/show/user_profile\n3 -unknown-/active/-unknown-","level":4,"size":206,"ndf":0.723301,"age":33.942028,"male":0.33333334,"na":0.75728154}
+]
+}
+]
+}
+,{"id":78,"label":"size=63 age=35 males=45% NAs=82% NDFs=80%\n5 -unknown-/calendar_tab_inner2/-unknown-\n4 data/personalize/wishlist_content_update\n4 view/show/p3\n4 view/show/user_profile\n2 -empty-/show/null","level":2,"size":63,"ndf":0.8095238,"age":35.68421,"male":0.45454547,"na":0.82539684,"children":[
+{"id":79,"label":"size=63 age=35 males=45% NAs=82% NDFs=80%\n5 -unknown-/calendar_tab_inner2/-unknown-\n4 data/personalize/wishlist_content_update\n4 view/show/p3\n4 view/show/user_profile\n2 -empty-/show/null","level":3,"size":63,"ndf":0.8095238,"age":35.68421,"male":0.45454547,"na":0.82539684,"children":[
+{"id":80,"label":"size=63 age=35 males=45% NAs=82% NDFs=80%\n5 -unknown-/calendar_tab_inner2/-unknown-\n4 data/personalize/wishlist_content_update\n4 view/show/p3\n4 view/show/user_profile\n2 -empty-/show/null","level":4,"size":63,"ndf":0.8095238,"age":35.68421,"male":0.45454547,"na":0.82539684}
+]
+}
+]
+}
+]
+,"links":[
+{"sourceId":75,"targetId":78,"similarity":0.8}
+]
+}
+,{"id":81,"label":"size=248 age=31 males=60% NAs=5% NDFs=78%\n28 view/show/user_profile\n14 data/social_connections/user_social_connections\n14 view/show/p3\n6 data/reviews/listing_reviews\n4 click/search/view_search_results","level":1,"size":248,"ndf":0.7822581,"age":31.535866,"male":0.6,"na":0.052419353,"children":[
+{"id":82,"label":"size=231 age=31 males=59% NAs=0% NDFs=77%\n85 click/search/view_search_results\n11 view/show/user_profile\n9 data/reviews/listing_reviews\n8 -unknown-/settings/-unknown-\n8 data/social_connections/user_social_connections","level":2,"size":231,"ndf":0.77922076,"age":31.60606,"male":0.59825325,"na":0.008658009,"children":[
+{"id":83,"label":"size=231 age=31 males=59% NAs=0% NDFs=77%\n85 click/search/view_search_results\n11 view/show/user_profile\n9 data/reviews/listing_reviews\n8 -unknown-/settings/-unknown-\n8 data/social_connections/user_social_connections","level":3,"size":231,"ndf":0.77922076,"age":31.60606,"male":0.59825325,"na":0.008658009,"children":[
+{"id":84,"label":"size=231 age=31 males=59% NAs=0% NDFs=77%\n85 click/search/view_search_results\n11 view/show/user_profile\n9 data/reviews/listing_reviews\n8 -unknown-/settings/-unknown-\n8 data/social_connections/user_social_connections","level":4,"size":231,"ndf":0.77922076,"age":31.60606,"male":0.59825325,"na":0.008658009}
+]
+}
+]
+}
+]
+}
+,{"id":85,"label":"size=119 age=33 males=41% NAs=62% NDFs=66%\n12 click/ajax_refresh_subtotal/change_trip_characteristics\n12 data/personalize/wishlist_content_update\n11 view/show/p3\n10 -empty-/lookup/null\n9 -empty-/show/null","level":1,"size":119,"ndf":0.66386557,"age":33.153847,"male":0.41304347,"na":0.62184876,"children":[
+{"id":86,"label":"size=49 age=31 males=52% NAs=67% NDFs=77%\n12 -empty-/track_page_view/null\n7 data/personalize/wishlist_content_update\n6 -unknown-/index/-unknown-\n6 click/search_results/view_search_results\n4 -unknown-/tell_a_friend/-unknown-","level":2,"size":49,"ndf":0.7755102,"age":31.333334,"male":0.5294118,"na":0.67346936,"children":[
+{"id":87,"label":"size=49 age=31 males=52% NAs=67% NDFs=77%\n12 -empty-/track_page_view/null\n7 data/personalize/wishlist_content_update\n6 -unknown-/index/-unknown-\n6 click/search_results/view_search_results\n4 -unknown-/tell_a_friend/-unknown-","level":3,"size":49,"ndf":0.7755102,"age":31.333334,"male":0.5294118,"na":0.67346936,"children":[
+{"id":88,"label":"size=49 age=31 males=52% NAs=67% NDFs=77%\n12 -empty-/track_page_view/null\n7 data/personalize/wishlist_content_update\n6 -unknown-/index/-unknown-\n6 click/search_results/view_search_results\n4 -unknown-/tell_a_friend/-unknown-","level":4,"size":49,"ndf":0.7755102,"age":31.333334,"male":0.5294118,"na":0.67346936}
+]
+}
+]
+}
+,{"id":89,"label":"size=45 age=35 males=40% NAs=55% NDFs=57%\n9 -unknown-/index/-unknown-\n7 view/index/message_thread\n6 view/edit/edit_profile\n5 view/dashboard/dashboard\n4 -unknown-/transaction_history_paginated/-unknown-","level":2,"size":45,"ndf":0.5777778,"age":35.086956,"male":0.4,"na":0.5555556,"children":[
+{"id":90,"label":"size=45 age=35 males=40% NAs=55% NDFs=57%\n9 -unknown-/index/-unknown-\n7 view/index/message_thread\n6 view/edit/edit_profile\n5 view/dashboard/dashboard\n4 -unknown-/transaction_history_paginated/-unknown-","level":3,"size":45,"ndf":0.5777778,"age":35.086956,"male":0.4,"na":0.5555556,"children":[
+{"id":91,"label":"size=45 age=35 males=40% NAs=55% NDFs=57%\n9 -unknown-/index/-unknown-\n7 view/index/message_thread\n6 view/edit/edit_profile\n5 view/dashboard/dashboard\n4 -unknown-/transaction_history_paginated/-unknown-","level":4,"size":45,"ndf":0.5777778,"age":35.086956,"male":0.4,"na":0.5555556}
+]
+}
+]
+}
+]
+,"links":[
+{"sourceId":86,"targetId":89,"similarity":0.6}
+]
+}
+]
+,"links":[
+{"sourceId":2,"targetId":31,"similarity":0.6}
+,{"sourceId":9,"targetId":54,"similarity":0.6}
+,{"sourceId":31,"targetId":41,"similarity":0.4}
+,{"sourceId":31,"targetId":67,"similarity":0.6}
+,{"sourceId":2,"targetId":74,"similarity":0.6}
+,{"sourceId":31,"targetId":81,"similarity":0.6}
+,{"sourceId":9,"targetId":85,"similarity":0.6}
+]
+}
+}

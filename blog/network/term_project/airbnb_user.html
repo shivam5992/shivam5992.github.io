@@ -1,0 +1,102 @@
+
+<!doctype html>
+<html ng-app="aerograph">
+
+  <head>
+
+	<!--JQuery core -->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	
+	<!-- Hisghcharts.js -->
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	
+	<!-- Angular JS 1.4.8 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    
+    <!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous" />
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- Angular Bootstrap UI 1.1.0 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.1.0/ui-bootstrap-tpls.min.js"></script>
+  
+  	<!-- d3js -->
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+  	
+  	<!-- Project CSS -->
+  	<link rel="stylesheet" href="files/index.css" />
+  
+  	<!-- Project JS -->
+  	<script src="files/graph.js"></script>
+  	<script src="files/controllers.js"></script>
+  	
+  </head>
+  
+  <body ng-controller="RootController">
+  
+  	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+	      	<img src="files/logo.png" style="height:40px;display:inline"/>
+	      	<span style="font-size:20px;vertical-align:middle;margin-left:10px;">
+	      		DSC5104 : Network Science and Analytics : Airbnb New User Bookings
+	      	</span>
+	      	<p> </p>
+	      	<p> A User-User Similarity Network made from a sample of data </p>
+	      </a>
+	    </div>
+	   	<div >
+	    </div>
+	  </div>
+	</nav>
+
+    <div class="container-fluid">
+    	
+    	<div class="row-fluid">
+    	
+    		<div class="col-lg-2">
+    			<form class="form-horizontal">
+				  <br><br>
+				  <div class="form-group">
+				    <label class="col-sm-6 control-label">Zoom </label>
+				    <div class="col-sm-6">
+				       <input type="range" min="0" max="250" step="1" ng-model="params.linkDistance3" ng-change="updateLinkDistance()" />
+				    </div>
+				  </div>
+				  
+				</form>
+    		</div>
+    		
+    		<div id="d3js-column" class="col-lg-8">
+    			<div id="d3js-fdgraph">
+	    			<script>
+	    			
+						
+						
+					</script>
+				</div>
+    		</div>
+    		
+    		<div id="third-column" class="col-lg-2">
+    			<h4>Color</h4>
+    			<select class="form-control" ng-model="input.legendSelection" ng-change="setLegendSelection()">
+				  <option>Country</option>
+				  <option>Age</option>
+				</select>
+				<div id="legendTable">
+				</div>
+    			<hr>
+
+    			<h4>Size</h4>
+    			<p>Total Seconds Elapsed in Combined Sessions</p>
+    		</div>	
+    			
+    	</div>
+    	
+    </div>
+    
+  </body>
+  
+</html>

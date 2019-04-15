@@ -1,0 +1,1163 @@
+{
+"params":{"numExamples":10000,"linksPerNode":1,"age":0.5,"gender":0.25,"language":0.05,"signupMethod":0.01,"signupApp":0.01,"signupFlow":0.01,"affiliateChannel":0.01,"affiliateProvider":0.01,"actions":1.0,"charge":1,"gravity":0.01,"linkDistance0":60,"linkDistance1":30,"linkDistance2":15,"linkDistance3":10,"linkDistance4":5},
+"benchmark":0.6961,
+"scores":[0.7084, 0.7301, 0.7332, 0.7389, 0.7436, 0.7422, 0.7473, 0.7468, 0.7486, 0.7487, 0.7533, 0.7514, 0.7536, 0.7517, 0.7522, 0.7507, 0.7541, 0.7542, 0.7543, 0.7534, 0.752, 0.7524, 0.7559, 0.7566, 0.7559, 0.7558, 0.7555, 0.7555, 0.7583, 0.7545, 0.7556, 0.7544, 0.7535, 0.7533, 0.7534, 0.7509, 0.7548, 0.7543, 0.7523, 0.7525, 0.7551, 0.7541, 0.7543, 0.7539, 0.754, 0.7537, 0.7532, 0.7518, 0.7527, 0.7517, 0.752, 0.7524, 0.7546, 0.7537, 0.7543, 0.7525, 0.7541, 0.7529, 0.755, 0.7537, 0.7544, 0.7527, 0.7536, 0.7534, 0.754, 0.7536, 0.7542, 0.7531, 0.7544, 0.7518, 0.7518, 0.7523, 0.7529, 0.7531, 0.7532, 0.7532, 0.7535, 0.7538, 0.7537, 0.7532, 0.7552, 0.7539, 0.7555, 0.7539, 0.7542, 0.7547, 0.7547, 0.7531, 0.7536, 0.7531, 0.753, 0.7532, 0.753, 0.7526, 0.7533, 0.7513, 0.752, 0.7535, 0.7548, 0.7534, 0.7532, 0.7532, 0.7534, 0.7513, 0.7521, 0.7515, 0.7525, 0.7538, 0.7537, 0.7535, 0.7522, 0.752, 0.7521, 0.7526, 0.7532, 0.7525, 0.7535, 0.7533, 0.752, 0.7537, 0.7535, 0.754, 0.7543, 0.7532, 0.753, 0.7526, 0.753, 0.7542, 0.7529, 0.7538, 0.7526, 0.7534, 0.7537, 0.7547, 0.7552, 0.7534, 0.754, 0.7537, 0.7535, 0.7535, 0.7531, 0.7539, 0.7537, 0.7544, 0.7539, 0.7547, 0.7528, 0.7551, 0.7541, 0.7564, 0.7551, 0.7563, 0.7554, 0.7559, 0.7562, 0.7562, 0.7555, 0.7549, 0.7554, 0.7546, 0.7549, 0.7552, 0.7546, 0.7549, 0.7548, 0.7553, 0.7557, 0.7559, 0.7553, 0.7544, 0.7549, 0.7548, 0.7547, 0.7556, 0.755, 0.7551, 0.755, 0.754, 0.7539, 0.7543, 0.7541, 0.7541, 0.7529, 0.7537, 0.7534, 0.7529, 0.7527, 0.7539, 0.7523, 0.7537, 0.7545, 0.7538, 0.7535, 0.7547, 0.7535, 0.7541, 0.7534, 0.7536, 0.7532, 0.7531, 0.7536, 0.7539, 0.7544, 0.7533, 0.7543, 0.7532, 0.7535, 0.7529, 0.7539, 0.7517, 0.7523, 0.7525, 0.7523, 0.7526, 0.7532, 0.7531, 0.7542, 0.7539, 0.7534, 0.753, 0.753, 0.7521, 0.7528, 0.7514, 0.7516, 0.7509, 0.7518, 0.7514, 0.7524, 0.7519, 0.7523, 0.7515, 0.7511, 0.7518, 0.7513, 0.7518, 0.753, 0.7526, 0.7513, 0.7522, 0.7522, 0.751, 0.7518, 0.7511, 0.7511, 0.751, 0.7501, 0.7498, 0.7495, 0.7502, 0.7501, 0.7511, 0.751, 0.7501, 0.7496, 0.7503, 0.7504, 0.7503, 0.751, 0.75, 0.7502, 0.7506, 0.7503, 0.7507, 0.7505, 0.7493, 0.7495, 0.7485, 0.7499, 0.7487, 0.7501, 0.7497, 0.7506, 0.7497, 0.7507, 0.7501, 0.7506, 0.7508, 0.7513, 0.7508, 0.7514, 0.7509, 0.7509, 0.7509, 0.7503, 0.75, 0.7503, 0.749, 0.7502, 0.7505, 0.7508, 0.7507, 0.7508, 0.7497, 0.7506, 0.75, 0.7493, 0.7492, 0.7498, 0.7492, 0.7501, 0.7494, 0.7496, 0.7494, 0.75, 0.7489, 0.7498, 0.7493, 0.7489, 0.7483, 0.7491, 0.7487, 0.7497, 0.7482, 0.7494, 0.7494, 0.7497, 0.7498, 0.75, 0.75, 0.75, 0.7495, 0.7494, 0.7496, 0.7489, 0.7498, 0.7499, 0.7492, 0.7506, 0.7484, 0.749, 0.7495, 0.7493, 0.7493, 0.7497, 0.7487, 0.7494, 0.749, 0.7494, 0.7493, 0.7487, 0.7485, 0.7494, 0.7487, 0.7486, 0.7479, 0.7484, 0.7481, 0.7479, 0.7488, 0.7486, 0.7492, 0.7487, 0.7491, 0.7495, 0.7498, 0.7484, 0.7492, 0.7492, 0.7496, 0.7499, 0.7504, 0.7504, 0.7495, 0.7491, 0.7493, 0.7491, 0.7489, 0.7488, 0.7491, 0.7489, 0.7491, 0.7498, 0.7493, 0.7496, 0.749, 0.7494, 0.7495, 0.7493, 0.7486, 0.7486, 0.749, 0.7488, 0.7491, 0.7493, 0.7496, 0.7494, 0.7495, 0.749, 0.7486, 0.7482, 0.7482, 0.7484, 0.748, 0.7473, 0.7481, 0.7471, 0.7476, 0.7477, 0.7471, 0.7469, 0.7482, 0.7472, 0.7465, 0.7466, 0.7468, 0.7475, 0.7471, 0.7471, 0.7474, 0.7478, 0.7472, 0.7474, 0.7474, 0.7467, 0.7472, 0.747, 0.7472, 0.7467, 0.7466, 0.7468, 0.7468, 0.7472, 0.7466, 0.7468, 0.7466, 0.7467, 0.7468, 0.7473, 0.7467, 0.747, 0.7466, 0.7469, 0.7474, 0.747, 0.7469, 0.7469, 0.7469, 0.7471, 0.7469, 0.7467, 0.746, 0.7459, 0.7462, 0.7463, 0.7465, 0.7465, 0.7461, 0.7457, 0.7461, 0.7459, 0.7472, 0.7456, 0.7465, 0.7455, 0.7464, 0.7452, 0.7458, 0.7454, 0.7458, 0.7451, 0.7445, 0.7445, 0.7447, 0.7442, 0.7447, 0.7452, 0.7456, 0.7463, 0.7459, 0.7457, 0.7454, 0.7453, 0.7447, 0.7452, 0.745, 0.7453, 0.7453, 0.7448, 0.7449, 0.7441, 0.7438, 0.7435, 0.7435, 0.7437, 0.7436, 0.7439, 0.7439, 0.7439, 0.7433, 0.7436, 0.7432, 0.7429, 0.743, 0.743, 0.743, 0.7439, 0.7433, 0.7435, 0.7425, 0.7426, 0.7427, 0.7424, 0.7434, 0.7431, 0.7429, 0.7429, 0.7434, 0.7427, 0.7426, 0.7431, 0.743, 0.7431, 0.743, 0.7432, 0.7431, 0.7426, 0.7426, 0.7428, 0.7426, 0.7427, 0.7429, 0.7426, 0.743, 0.7424, 0.7419, 0.7425, 0.7419, 0.7418, 0.7422, 0.7422, 0.742, 0.7422, 0.7427, 0.7428, 0.7431, 0.7431, 0.7431, 0.7428, 0.7429, 0.7436, 0.743, 0.7439, 0.7436, 0.7433, 0.7428, 0.7427, 0.7425, 0.7425, 0.7425, 0.7425, 0.7421, 0.7422, 0.7428, 0.7428, 0.743, 0.7426, 0.7425, 0.7428, 0.7426, 0.7432, 0.7435, 0.7435, 0.7434, 0.7435, 0.7437, 0.7439, 0.7434, 0.744, 0.7438, 0.7438, 0.7436, 0.7438, 0.7431, 0.7431, 0.743, 0.7428, 0.7434, 0.7438, 0.7437, 0.7435, 0.7431, 0.7427, 0.743, 0.7428, 0.743, 0.7426, 0.7428, 0.7432, 0.743, 0.7433, 0.742, 0.7429, 0.7428, 0.7427, 0.7422, 0.7423, 0.742, 0.7418, 0.7417, 0.7417, 0.7411, 0.7416, 0.7418, 0.7426, 0.7421, 0.7423, 0.7423, 0.7428, 0.7422, 0.7421, 0.7428, 0.7424, 0.7418, 0.7417, 0.7421, 0.7415, 0.742, 0.7419, 0.7418, 0.7409, 0.7422, 0.742, 0.7427, 0.7417, 0.7423, 0.7415, 0.7417, 0.7413, 0.7409, 0.7417, 0.7412, 0.7413, 0.7417, 0.7411, 0.7417, 0.7416, 0.7417, 0.7409, 0.7418, 0.7414, 0.7417, 0.7418, 0.7416, 0.7414, 0.7417, 0.7414, 0.7416, 0.7415, 0.7423, 0.7421, 0.7421, 0.7418, 0.7426, 0.7425, 0.7423, 0.7428, 0.7423, 0.7422, 0.7425, 0.7426, 0.7429, 0.7421, 0.7424, 0.7425, 0.7428, 0.7429, 0.7421, 0.7424, 0.7427, 0.7434, 0.7437, 0.7435, 0.7435, 0.7436, 0.7444, 0.7445, 0.7444, 0.7438, 0.7445, 0.7443, 0.7443, 0.7436, 0.7445, 0.7435, 0.7439, 0.7433, 0.7438, 0.744, 0.7442, 0.7446, 0.7445, 0.7442, 0.7439, 0.744, 0.7439, 0.7443, 0.7443, 0.7442, 0.7442, 0.7443, 0.7438, 0.7435, 0.7435, 0.744, 0.7436, 0.7429, 0.7431, 0.7426, 0.7432, 0.7433, 0.7436, 0.7432, 0.7434, 0.7429, 0.7433, 0.7431, 0.7432, 0.7422, 0.742, 0.7418, 0.7425, 0.7425, 0.7423, 0.742, 0.7417, 0.7424, 0.7416, 0.7416, 0.7419, 0.7422, 0.7421, 0.742, 0.7414, 0.7424, 0.7421, 0.7418, 0.7426, 0.7425, 0.7424, 0.742, 0.7424, 0.7423, 0.7419, 0.7418, 0.7423, 0.7426, 0.7428, 0.7421, 0.7421, 0.7424, 0.7421, 0.7421, 0.7416, 0.742, 0.7417, 0.7419, 0.7422, 0.7421, 0.7427, 0.7422, 0.7424, 0.7424, 0.7429, 0.7426, 0.7428, 0.7426, 0.7431, 0.7428, 0.743, 0.7425, 0.7428, 0.7426, 0.743, 0.7431, 0.7439, 0.7436, 0.7434, 0.7429, 0.7432, 0.7427, 0.743, 0.7425, 0.7429, 0.7429, 0.7432, 0.7428, 0.7427, 0.7425, 0.743, 0.7428, 0.7429, 0.7431, 0.7428, 0.7428, 0.7433, 0.7429, 0.7433, 0.7427, 0.743, 0.7434, 0.7444, 0.7439, 0.7443, 0.7435, 0.7442, 0.7434, 0.744, 0.7436, 0.7435, 0.743, 0.7437, 0.7432, 0.7436, 0.7428, 0.744, 0.7432, 0.7436, 0.7433, 0.7442, 0.7437, 0.7441, 0.7434, 0.7433, 0.7437, 0.7434, 0.743, 0.7436, 0.7434, 0.7439, 0.7432, 0.7431, 0.7427, 0.7431, 0.7427, 0.7427, 0.7429, 0.7433, 0.7431, 0.7433, 0.7431, 0.7431, 0.7425, 0.7422, 0.7423, 0.7421, 0.7429, 0.7421, 0.7417, 0.7414, 0.7416, 0.7419, 0.7417, 0.7418, 0.7418, 0.7415, 0.7415, 0.7424, 0.742, 0.7418, 0.7413, 0.7417, 0.7417, 0.7419, 0.7412, 0.7414, 0.7413, 0.7412, 0.7407, 0.7406, 0.7397, 0.7405, 0.7412, 0.7409, 0.7414, 0.7413, 0.7416, 0.7411, 0.7411, 0.7417, 0.7412, 0.7408, 0.741, 0.7413, 0.7418, 0.7414, 0.7418, 0.7418, 0.7415, 0.7413, 0.7409, 0.7406, 0.7411, 0.7412, 0.7407, 0.7412, 0.7408, 0.7413, 0.7406, 0.7412, 0.7409, 0.7408, 0.7408, 0.7413, 0.7409, 0.742, 0.7402, 0.7412, 0.7407, 0.7413, 0.7407, 0.7409, 0.7405, 0.7405, 0.74, 0.7407, 0.74, 0.7402, 0.7402, 0.7408, 0.7404, 0.7405, 0.7403, 0.7407, 0.74, 0.7405, 0.7394, 0.74, 0.7398, 0.7407, 0.7402, 0.7414, 0.7405, 0.7416, 0.7407, 0.7414, 0.7411, 0.7418, 0.7411, 0.7411, 0.7404, 0.7412, 0.7406, 0.741, 0.7406, 0.7413, 0.7413, 0.7418, 0.7412, 0.7418, 0.7408, 0.7415, 0.7408, 0.7414, 0.7406, 0.7405, 0.7406, 0.7409, 0.7405, 0.7406, 0.7398, 0.7397, 0.7398, 0.74, 0.7398, 0.7404, 0.7398, 0.7406, 0.7406, 0.7407, 0.7405, 0.7408, 0.7406, 0.7405, 0.7403, 0.7399, 0.7394, 0.7396, 0.7395, 0.7401, 0.7397, 0.7395, 0.7397, 0.7395, 0.7394, 0.7398, 0.7396, 0.7402, 0.7394, 0.74, 0.7396, 0.7397, 0.7394, 0.7393, 0.7397, 0.7394, 0.7394, 0.7396, 0.7397, 0.7398],
+"bestK":29,
+"bestScore":0.7583,
+"root":{"id":1,"label":"size=10000 age=36 males=46% NAs=55% NDFs=69%","level":0,"size":10000,"ndf":0.6961,"age":36.085827,"male":0.46980155,"na":0.5572,"children":[
+{"id":2,"label":"size=1773 age=0 males=32% NAs=100% NDFs=87%\n8 data/personalize/wishlist_content_update\n7 click/ajax_refresh_subtotal/change_trip_characteristics\n7 click/search_results/view_search_results\n6 -empty-/lookup/null\n6 -empty-/show/null","level":1,"size":1773,"ndf":0.8781726,"age":0.0,"male":0.32,"na":1.0,"children":[
+{"id":3,"label":"size=1490 age=0 males=25% NAs=100% NDFs=88%\n10 click/search_results/view_search_results\n10 data/personalize/wishlist_content_update\n9 -empty-/show/null\n9 click/ajax_refresh_subtotal/change_trip_characteristics\n7 data/similar_listings/similar_listings","level":2,"size":1490,"ndf":0.8892617,"age":0.0,"male":0.25,"na":1.0,"children":[
+{"id":4,"label":"size=1181 age=0 males=0% NAs=100% NDFs=90%\n10 data/personalize/wishlist_content_update\n9 click/search_results/view_search_results\n9 view/index/view_search_results\n8 -empty-/show/null\n8 click/ajax_refresh_subtotal/change_trip_characteristics","level":3,"size":1181,"ndf":0.9000847,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":5,"label":"size=758 age=0 males=0% NAs=100% NDFs=90%\n10 data/personalize/wishlist_content_update\n9 click/search_results/view_search_results\n9 view/index/view_search_results\n8 -empty-/show/null\n8 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":758,"ndf":0.9023747,"age":0.0,"male":0.0,"na":1.0}
+,{"id":6,"label":"size=130 age=0 males=0% NAs=100% NDFs=89%\n90 view/show/p3\n72 data/similar_listings/similar_listings\n66 data/personalize/wishlist_content_update\n53 -empty-/show/null\n49 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":130,"ndf":0.8923077,"age":0.0,"male":0.0,"na":1.0}
+,{"id":7,"label":"size=91 age=0 males=0% NAs=100% NDFs=92%\n13 click/search_results/view_search_results\n7 -empty-/lookup/null\n4 data/personalize/wishlist_content_update\n4 view/index/view_search_results\n3 -empty-/show/null","level":4,"size":91,"ndf":0.9230769,"age":0.0,"male":0.0,"na":1.0}
+,{"id":8,"label":"size=37 age=0 males=0% NAs=100% NDFs=83%\n6 data/personalize/wishlist_content_update\n6 view/index/view_search_results\n5 view/show/p3\n2 -empty-/show/null\n2 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":37,"ndf":0.8378378,"age":0.0,"male":0.0,"na":1.0}
+,{"id":9,"label":"size=21 age=0 males=0% NAs=100% NDFs=90%\n6 click/search_results/view_search_results\n6 data/personalize/wishlist_content_update\n4 view/show/p3\n3 -empty-/show/null\n3 data/similar_listings/similar_listings","level":4,"size":21,"ndf":0.9047619,"age":0.0,"male":0.0,"na":1.0}
+,{"id":10,"label":"size=19 age=0 males=0% NAs=100% NDFs=89%\n18 data/personalize/wishlist_content_update\n15 data/similar_listings/similar_listings\n13 click/ajax_refresh_subtotal/change_trip_characteristics\n12 -empty-/show/null\n8 -empty-/track_page_view/null","level":4,"size":19,"ndf":0.8947368,"age":0.0,"male":0.0,"na":1.0}
+,{"id":11,"label":"size=16 age=0 males=0% NAs=100% NDFs=93%\n26 click/search_results/view_search_results\n13 click/ajax_refresh_subtotal/change_trip_characteristics\n10 -empty-/show/null\n10 data/personalize/wishlist_content_update\n4 view/show/p3","level":4,"size":16,"ndf":0.9375,"age":0.0,"male":0.0,"na":1.0}
+,{"id":12,"label":"size=14 age=0 males=0% NAs=100% NDFs=85%\n11 data/personalize/wishlist_content_update\n8 -empty-/lookup/null\n6 -empty-/show/null\n6 view/show/p3\n5 view/index/view_search_results","level":4,"size":14,"ndf":0.85714287,"age":0.0,"male":0.0,"na":1.0}
+,{"id":13,"label":"size=13 age=0 males=0% NAs=100% NDFs=92%\n9 view/index/view_search_results\n7 click/search_results/view_search_results\n4 data/personalize/wishlist_content_update\n2 -empty-/show/null\n2 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":13,"ndf":0.9230769,"age":0.0,"male":0.0,"na":1.0}
+,{"id":14,"label":"size=8 age=0 males=0% NAs=100% NDFs=87%\n35 view/show/p3\n31 -empty-/similar_listings_v2/null\n31 click/ajax_refresh_subtotal/change_trip_characteristics\n26 -empty-/show/null\n26 data/personalize/wishlist_content_update","level":4,"size":8,"ndf":0.875,"age":0.0,"male":0.0,"na":1.0}
+,{"id":15,"label":"size=7 age=0 males=0% NAs=100% NDFs=100%\n8 view/index/view_search_results\n8 view/show/p3\n4 click/search_results/view_search_results\n3 -empty-/show/null\n3 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":7,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":16,"label":"size=7 age=0 males=0% NAs=100% NDFs=100%\n4 click/ajax_refresh_subtotal/change_trip_characteristics\n3 -empty-/lookup/null\n3 click/search_results/view_search_results\n3 data/personalize/wishlist_content_update\n2 -empty-/show/null","level":4,"size":7,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":17,"label":"size=6 age=0 males=0% NAs=100% NDFs=83%\n29 click/search_results/view_search_results\n26 -empty-/track_page_view/null\n20 data/personalize/wishlist_content_update\n13 -empty-/show/null\n13 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":6,"ndf":0.8333333,"age":0.0,"male":0.0,"na":1.0}
+,{"id":18,"label":"size=6 age=0 males=0% NAs=100% NDFs=100%\n4 data/personalize/wishlist_content_update\n4 view/index/view_search_results\n3 -unknown-/recommended_listings/-unknown-\n3 click/ajax_refresh_subtotal/change_trip_characteristics\n3 data/similar_listings/similar_listings","level":4,"size":6,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":19,"label":"size=5 age=0 males=0% NAs=100% NDFs=60%\n3 click/ajax_refresh_subtotal/change_trip_characteristics\n3 data/personalize/wishlist_content_update\n3 view/show/p3\n2 -empty-/show/null\n1 data/header_userpic/header_userpic","level":4,"size":5,"ndf":0.6,"age":0.0,"male":0.0,"na":1.0}
+,{"id":20,"label":"size=3 age=0 males=0% NAs=100% NDFs=66%\n4 click/ajax_refresh_subtotal/change_trip_characteristics\n4 data/similar_listings/similar_listings\n4 view/index/view_search_results\n3 view/show/p3\n2 -empty-/show/null","level":4,"size":3,"ndf":0.6666667,"age":0.0,"male":0.0,"na":1.0}
+,{"id":21,"label":"size=3 age=0 males=0% NAs=100% NDFs=66%\n5 view/show/p3\n4 data/personalize/wishlist_content_update\n4 view/qt2/message_thread\n3 -empty-/lookup/null\n3 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":3,"ndf":0.6666667,"age":0.0,"male":0.0,"na":1.0}
+,{"id":22,"label":"size=2 age=0 males=0% NAs=100% NDFs=50%\n9 click/search_results/view_search_results\n7 view/show/p3\n5 view/index/view_search_results\n4 -empty-/show/null\n3 -empty-/similar_listings_v2/null","level":4,"size":2,"ndf":0.5,"age":0.0,"male":0.0,"na":1.0}
+,{"id":23,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n2 data/personalize/wishlist_content_update\n2 view/index/view_search_results\n2 view/show/p3\n1 -empty-/show/null\n1 -unknown-/ajax_get_referrals_amt/-unknown-","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":24,"label":"size=2 age=0 males=0% NAs=100% NDFs=50%\n6 data/personalize/wishlist_content_update\n4 view/index/view_search_results\n3 -empty-/show/null\n3 click/ajax_refresh_subtotal/change_trip_characteristics\n1 click/search_results/view_search_results","level":4,"size":2,"ndf":0.5,"age":0.0,"male":0.0,"na":1.0}
+,{"id":25,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n2 -empty-/lookup/null\n2 click/search_results/view_search_results\n2 view/index/view_search_results\n2 view/show/p3\n1 -empty-/show/null","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":26,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n2 -empty-/lookup/null\n2 data/personalize/wishlist_content_update\n1 -empty-/show/null\n1 click/confirm_email/confirm_email_link\n1 click/search_results/view_search_results","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":27,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n10 data/similar_listings/similar_listings\n9 click/ajax_refresh_subtotal/change_trip_characteristics\n7 click/ajax_check_dates/change_contact_host_dates\n6 view/index/view_search_results\n4 -empty-/lookup/null","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":28,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n7 view/show/p3\n4 -empty-/show/null\n4 click/ajax_refresh_subtotal/change_trip_characteristics\n4 data/similar_listings/similar_listings\n4 view/index/view_search_results","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":29,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n5 data/personalize/wishlist_content_update\n5 view/show/p3\n3 -empty-/show/null\n3 data/similar_listings/similar_listings\n2 -empty-/track_page_view/null","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":30,"label":"7i41mjpu64 NDF\n6 -empty-/show/null\n6 data/personalize/wishlist_content_update\n6 view/show/p3\n4 click/ajax_refresh_subtotal/change_trip_characteristics\n3 -empty-/lookup/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":31,"label":"r1y0io3pub NDF\n15 click/ajax_refresh_subtotal/change_trip_characteristics\n13 click/search_results/view_search_results\n11 data/personalize/wishlist_content_update\n10 -empty-/show/null\n9 -unknown-/calendar_tab_inner2/-unknown-","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":32,"label":"6p8dkxt9u6 NDF\n9 view/show/p3\n7 -unknown-/index/-unknown-\n7 data/personalize/wishlist_content_update\n6 -empty-/show/null\n6 data/similar_listings/similar_listings","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":33,"label":"n8bgdz4dey NDF\n29 data/personalize/wishlist_content_update\n28 -empty-/track_page_view/null\n15 -empty-/lookup/null\n15 -empty-/show/null\n14 view/index/your_listings","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":34,"label":"wvlb5pe00k NDF\n20 data/personalize/wishlist_content_update\n20 view/show/p3\n14 -empty-/show/null\n7 click/ajax_refresh_subtotal/change_trip_characteristics\n6 -empty-/lookup/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":35,"label":"j98j5lri97 US\n31 data/similar_listings/similar_listings\n28 click/search_results/view_search_results\n25 click/ajax_refresh_subtotal/change_trip_characteristics\n22 view/index/view_search_results\n22 view/travel_plans_current/your_trips","level":4,"size":1,"ndf":0.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":36,"label":"0gnqwq2tjf NDF\n6 view/index/view_search_results\n4 click/search_results/view_search_results\n3 -empty-/show/null\n3 click/ajax_refresh_subtotal/change_trip_characteristics\n3 data/header_userpic/header_userpic","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":37,"label":"da89j371j4 NDF\n3 data/personalize/wishlist_content_update\n2 -empty-/show/null\n2 data/similar_listings/similar_listings\n2 view/cancellation_policies/cancellation_policies\n2 view/index/view_search_results","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":38,"label":"3hlclykk8u NDF\n58 view/show/p3\n54 data/header_userpic/header_userpic\n48 data/personalize/wishlist_content_update\n33 -empty-/show/null\n31 -empty-/lookup/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":39,"label":"k9azi1d1ag NDF\n21 click/search_results/view_search_results\n12 view/index/view_search_results\n9 click/ajax_refresh_subtotal/change_trip_characteristics\n8 click/ajax_check_dates/change_contact_host_dates\n8 data/personalize/wishlist_content_update","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":40,"label":"2evgtsyou7 NDF\n26 view/index/view_search_results\n18 -empty-/show/null\n18 click/ajax_refresh_subtotal/change_trip_characteristics\n18 data/header_userpic/header_userpic\n16 data/personalize/wishlist_content_update","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":41,"label":"k8mfmzwba2 NDF\n13 data/personalize/wishlist_content_update\n12 -empty-/show/null\n12 view/show/p3\n10 -empty-/lookup/null\n8 data/similar_listings/similar_listings","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":42,"label":"xoorjcpyib NDF\n4 data/personalize/wishlist_content_update\n3 -empty-/show/null\n3 click/ajax_refresh_subtotal/change_trip_characteristics\n3 click/search_results/view_search_results\n2 data/header_userpic/header_userpic","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":43,"label":"micom0mcue NDF\n3 data/personalize/wishlist_content_update\n2 click/search_results/view_search_results\n2 view/index/message_thread\n2 view/index/view_search_results\n2 view/show/p3","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":44,"label":"vx3ffp0gyc NDF\n2 click/ajax_refresh_subtotal/change_trip_characteristics\n2 data/personalize/wishlist_content_update\n2 data/similar_listings/similar_listings\n1 -empty-/show/null\n1 -unknown-/open_graph_setting/-unknown-","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":45,"label":"juj6aoh1m7 NDF\n4 click/search_results/view_search_results\n4 view/dashboard/dashboard\n3 data/personalize/wishlist_content_update\n3 view/show/p3\n2 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":46,"label":"76sv6irpe8 NDF\n24 view/show/p3\n17 -empty-/show/null\n17 click/ajax_refresh_subtotal/change_trip_characteristics\n16 click/search_results/view_search_results\n16 data/similar_listings/similar_listings","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":47,"label":"1ff14l7dnn NDF\n6 data/personalize/wishlist_content_update\n4 submit/authenticate/login\n3 -empty-/show/null\n3 click/ajax_refresh_subtotal/change_trip_characteristics\n3 data/similar_listings/similar_listings","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":48,"label":"28d6z4wi7m NDF\n4 click/search_results/view_search_results\n2 -unknown-/identity/-unknown-\n2 data/personalize/wishlist_content_update\n2 view/index/view_search_results\n2 view/show/p3","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":49,"label":"00g52q8uim NDF\n13 view/show/p3\n12 data/personalize/wishlist_content_update\n10 -unknown-/calendar_tab_inner2/-unknown-\n8 -empty-/show/null\n7 -empty-/lookup/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":50,"label":"dp53hfczby NDF\n5 view/requested/p5\n4 click/search_results/view_search_results\n4 data/personalize/wishlist_content_update\n4 view/index/view_search_results\n4 view/show/p3","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":5,"targetId":13,"similarity":0.8989031}
+,{"sourceId":6,"targetId":32,"similarity":0.89747304}
+,{"sourceId":7,"targetId":25,"similarity":0.89144546}
+,{"sourceId":8,"targetId":23,"similarity":0.8991587}
+,{"sourceId":5,"targetId":9,"similarity":0.8966156}
+,{"sourceId":6,"targetId":10,"similarity":0.89715517}
+,{"sourceId":11,"targetId":31,"similarity":0.895591}
+,{"sourceId":12,"targetId":26,"similarity":0.89823174}
+,{"sourceId":14,"targetId":19,"similarity":0.88782984}
+,{"sourceId":15,"targetId":22,"similarity":0.8935738}
+,{"sourceId":16,"targetId":31,"similarity":0.89838356}
+,{"sourceId":17,"targetId":33,"similarity":0.88804483}
+,{"sourceId":10,"targetId":18,"similarity":0.8881859}
+,{"sourceId":19,"targetId":34,"similarity":0.8890427}
+,{"sourceId":20,"targetId":36,"similarity":0.89467955}
+,{"sourceId":5,"targetId":21,"similarity":0.87877715}
+,{"sourceId":24,"targetId":40,"similarity":0.88092166}
+,{"sourceId":20,"targetId":27,"similarity":0.88530517}
+,{"sourceId":20,"targetId":28,"similarity":0.88056296}
+,{"sourceId":6,"targetId":29,"similarity":0.88292515}
+,{"sourceId":30,"targetId":34,"similarity":0.8996357}
+,{"sourceId":10,"targetId":33,"similarity":0.8896466}
+,{"sourceId":5,"targetId":35,"similarity":0.891876}
+,{"sourceId":13,"targetId":36,"similarity":0.89776456}
+,{"sourceId":8,"targetId":37,"similarity":0.8988717}
+,{"sourceId":12,"targetId":38,"similarity":0.8892314}
+,{"sourceId":11,"targetId":39,"similarity":0.8924486}
+,{"sourceId":5,"targetId":41,"similarity":0.8987597}
+,{"sourceId":11,"targetId":42,"similarity":0.88650954}
+,{"sourceId":5,"targetId":43,"similarity":0.8838492}
+,{"sourceId":10,"targetId":44,"similarity":0.8955555}
+,{"sourceId":5,"targetId":45,"similarity":0.8905384}
+,{"sourceId":15,"targetId":46,"similarity":0.88361734}
+,{"sourceId":37,"targetId":47,"similarity":0.8969441}
+,{"sourceId":5,"targetId":48,"similarity":0.879475}
+,{"sourceId":12,"targetId":49,"similarity":0.89093703}
+,{"sourceId":35,"targetId":50,"similarity":0.87773585}
+]
+}
+,{"id":51,"label":"size=109 age=0 males=0% NAs=100% NDFs=83%\n7 -empty-/show/null\n7 click/ajax_refresh_subtotal/change_trip_characteristics\n7 data/header_userpic/header_userpic\n7 data/personalize/wishlist_content_update\n7 data/similar_listings/similar_listings","level":3,"size":109,"ndf":0.8348624,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":52,"label":"size=35 age=0 males=0% NAs=100% NDFs=77%\n12 click/ajax_refresh_subtotal/change_trip_characteristics\n12 data/similar_listings/similar_listings\n12 view/show/p3\n7 -empty-/show/null\n7 data/personalize/wishlist_content_update","level":4,"size":35,"ndf":0.7714286,"age":0.0,"male":0.0,"na":1.0}
+,{"id":53,"label":"size=31 age=0 males=0% NAs=100% NDFs=87%\n2 -empty-/show/null\n2 data/personalize/wishlist_content_update\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 data/header_userpic/header_userpic\n1 data/similar_listings/similar_listings","level":4,"size":31,"ndf":0.87096775,"age":0.0,"male":0.0,"na":1.0}
+,{"id":54,"label":"size=9 age=0 males=0% NAs=100% NDFs=77%\n4 click/ajax_refresh_subtotal/change_trip_characteristics\n3 data/similar_listings/similar_listings\n2 data/personalize/wishlist_content_update\n1 -empty-/show/null\n1 data/header_userpic/header_userpic","level":4,"size":9,"ndf":0.7777778,"age":0.0,"male":0.0,"na":1.0}
+,{"id":55,"label":"size=6 age=0 males=0% NAs=100% NDFs=66%\n2 -empty-/show/null\n2 data/personalize/wishlist_content_update\n2 view/dashboard/dashboard\n2 view/show/p3\n1 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":6,"ndf":0.6666667,"age":0.0,"male":0.0,"na":1.0}
+,{"id":56,"label":"size=5 age=0 males=0% NAs=100% NDFs=100%\n13 data/header_userpic/header_userpic\n10 data/personalize/wishlist_content_update\n10 view/show/p3\n7 -empty-/show/null\n4 data/similar_listings/similar_listings","level":4,"size":5,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":57,"label":"size=4 age=0 males=0% NAs=100% NDFs=100%\n4 view/show/p3\n2 -empty-/show/null\n2 -unknown-/other_hosting_reviews_first/-unknown-\n2 click/ajax_refresh_subtotal/change_trip_characteristics\n2 data/personalize/wishlist_content_update","level":4,"size":4,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":58,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n2 -empty-/show/null\n2 data/personalize/wishlist_content_update\n2 data/similar_listings/similar_listings\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 click/confirm_email/confirm_email_link","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":59,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n4 view/show/p3\n2 -empty-/show/null\n2 data/personalize/wishlist_content_update\n2 data/similar_listings/similar_listings\n1 -unknown-/calendar_tab_inner2/-unknown-","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":60,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n8 data/personalize/wishlist_content_update\n7 -empty-/show/null\n7 view/show/p3\n5 click/ajax_refresh_subtotal/change_trip_characteristics\n5 message_post/-empty-/message_post","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":61,"label":"size=2 age=0 males=0% NAs=100% NDFs=50%\n33 click/ajax_refresh_subtotal/change_trip_characteristics\n28 -empty-/show/null\n28 data/personalize/wishlist_content_update\n7 view/show/p3\n4 -unknown-/ajax_image_upload/-unknown-","level":4,"size":2,"ndf":0.5,"age":0.0,"male":0.0,"na":1.0}
+,{"id":62,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n13 data/personalize/wishlist_content_update\n13 data/similar_listings/similar_listings\n12 view/show/user_profile\n11 -empty-/show/null\n9 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":63,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n2 data/header_userpic/header_userpic\n2 data/personalize/wishlist_content_update\n2 view/dashboard/dashboard\n2 view/show/p3\n1 -empty-/show/null","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":64,"label":"syg25cp6ur US\n10 -empty-/track_page_view/null\n9 data/similar_listings/similar_listings\n8 data/personalize/wishlist_content_update\n8 view/show/p3\n5 -empty-/show/null","level":4,"size":1,"ndf":0.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":65,"label":"e95t56l4am NDF\n2 data/header_userpic/header_userpic\n2 data/personalize/wishlist_content_update\n1 -empty-/lookup/null\n1 -empty-/show/null\n1 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":66,"label":"okc0h7e0ia NDF\n30 data/similar_listings/similar_listings\n23 click/ajax_refresh_subtotal/change_trip_characteristics\n22 -empty-/show/null\n22 view/show/p3\n8 -unknown-/calendar_tab_inner2/-unknown-","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":67,"label":"45o46vnwq7 NDF\n1 -empty-/show/null\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":68,"label":"ejuwqztsjw NDF\n18 view/show/p3\n12 data/similar_listings/similar_listings\n11 click/ajax_refresh_subtotal/change_trip_characteristics\n10 view/qt2/message_thread\n9 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":69,"label":"vuwy40jxsf NDF\n2 click/ajax_refresh_subtotal/change_trip_characteristics\n2 data/header_userpic/header_userpic\n1 -empty-/show/null\n1 data/personalize/wishlist_content_update\n1 data/similar_listings/similar_listings","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":70,"label":"ipcrr1ycvj NDF\n3 -empty-/show/null\n3 -unknown-/other_hosting_reviews_first/-unknown-\n3 data/personalize/wishlist_content_update\n3 submit/update/update_listing\n2 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":52,"targetId":66,"similarity":0.897942}
+,{"sourceId":53,"targetId":67,"similarity":0.8984056}
+,{"sourceId":52,"targetId":54,"similarity":0.8949853}
+,{"sourceId":55,"targetId":63,"similarity":0.89274806}
+,{"sourceId":56,"targetId":65,"similarity":0.89714766}
+,{"sourceId":56,"targetId":57,"similarity":0.8624166}
+,{"sourceId":53,"targetId":58,"similarity":0.8726836}
+,{"sourceId":53,"targetId":59,"similarity":0.89027935}
+,{"sourceId":52,"targetId":60,"similarity":0.89182305}
+,{"sourceId":53,"targetId":61,"similarity":0.8969727}
+,{"sourceId":52,"targetId":62,"similarity":0.8814021}
+,{"sourceId":64,"targetId":67,"similarity":0.84887725}
+,{"sourceId":60,"targetId":68,"similarity":0.88254213}
+,{"sourceId":56,"targetId":69,"similarity":0.88708895}
+,{"sourceId":67,"targetId":70,"similarity":0.8941424}
+]
+}
+,{"id":71,"label":"size=86 age=0 males=0% NAs=100% NDFs=88%\n8 click/search_results/view_search_results\n3 data/personalize/wishlist_content_update\n2 -empty-/show/null\n2 click/ajax_refresh_subtotal/change_trip_characteristics\n2 data/header_userpic/header_userpic","level":3,"size":86,"ndf":0.88372093,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":72,"label":"size=70 age=0 males=0% NAs=100% NDFs=90%\n8 click/search_results/view_search_results\n2 data/personalize/wishlist_content_update\n2 view/qt2/message_thread\n1 -empty-/lookup/null\n1 -empty-/show/null","level":4,"size":70,"ndf":0.9,"age":0.0,"male":0.0,"na":1.0}
+,{"id":73,"label":"size=3 age=0 males=0% NAs=100% NDFs=66%\n4 click/search_results/view_search_results\n4 data/personalize/wishlist_content_update\n3 submit/update/update_listing\n2 data/header_userpic/header_userpic\n1 -empty-/show/null","level":4,"size":3,"ndf":0.6666667,"age":0.0,"male":0.0,"na":1.0}
+,{"id":74,"label":"size=3 age=0 males=0% NAs=100% NDFs=100%\n24 click/search_results/view_search_results\n24 data/personalize/wishlist_content_update\n22 -empty-/track_page_view/null\n15 -empty-/show/null\n10 data/similar_listings/similar_listings","level":4,"size":3,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":75,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n6 click/search_results/view_search_results\n6 data/similar_listings/similar_listings\n5 click/ajax_refresh_subtotal/change_trip_characteristics\n3 click/ajax_lwlb_contact/contact_host\n2 view/index/view_search_results","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":76,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n2 click/search_results/view_search_results\n1 -empty-/show/null\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 submit/create/create_user","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":77,"label":"objdvgwn8x NDF\n7 click/search_results/view_search_results\n5 data/personalize/wishlist_content_update\n2 -empty-/show/null\n2 -empty-/track_page_view/null\n2 data/header_userpic/header_userpic","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":78,"label":"yxgzuctoj6 NDF\n5 click/search_results/view_search_results\n2 -empty-/similar_listings_v2/null\n2 -unknown-/identity/-unknown-\n2 click/ajax_refresh_subtotal/change_trip_characteristics\n2 data/personalize/wishlist_content_update","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":79,"label":"s4acmu569b NDF\n16 click/search_results/view_search_results\n14 -empty-/lookup/null\n7 -unknown-/calendar_tab_inner2/-unknown-\n4 data/personalize/wishlist_content_update\n3 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":80,"label":"s86pq25qzu NDF\n13 click/search_results/view_search_results\n7 view/dashboard/dashboard\n5 click/ajax_refresh_subtotal/change_trip_characteristics\n5 data/similar_listings/similar_listings\n4 view/show/p3","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":81,"label":"xyuv19pxm4 US\n6 click/search_results/view_search_results\n4 -unknown-/calendar_tab_inner2/-unknown-\n4 click/ajax_refresh_subtotal/change_trip_characteristics\n3 click/ajax_check_dates/change_contact_host_dates\n3 data/similar_listings/similar_listings","level":4,"size":1,"ndf":0.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":82,"label":"4jmu17mgzn US\n5 click/search_results/view_search_results\n4 view/requested/p5\n2 -empty-/show/null\n2 click/ajax_refresh_subtotal/change_trip_characteristics\n2 data/personalize/wishlist_content_update","level":4,"size":1,"ndf":0.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":72,"targetId":78,"similarity":0.8740818}
+,{"sourceId":73,"targetId":76,"similarity":0.88723665}
+,{"sourceId":74,"targetId":77,"similarity":0.87037325}
+,{"sourceId":75,"targetId":81,"similarity":0.86493343}
+,{"sourceId":79,"targetId":81,"similarity":0.8683412}
+,{"sourceId":75,"targetId":80,"similarity":0.84815854}
+,{"sourceId":72,"targetId":82,"similarity":0.8336551}
+]
+}
+,{"id":83,"label":"size=19 age=0 males=0% NAs=100% NDFs=94%\n3 data/personalize/wishlist_content_update\n2 submit/update/update_listing\n2 view/index/view_search_results\n2 view/show/p3\n1 -empty-/show/null","level":3,"size":19,"ndf":0.94736844,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":84,"label":"size=8 age=0 males=0% NAs=100% NDFs=100%\n3 data/personalize/wishlist_content_update\n2 submit/update/update_listing\n2 view/index/view_search_results\n2 view/show/p3\n1 -empty-/show/null","level":4,"size":8,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":85,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n9 data/personalize/wishlist_content_update\n5 -empty-/show/null\n5 data/similar_listings/similar_listings\n4 -empty-/track_page_view/null\n4 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":86,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n4 view/index/view_search_results\n2 view/show/p3\n1 -empty-/show/null\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 data/header_userpic/header_userpic","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":87,"label":"zqkjb0rume NDF\n3 view/show/p3\n2 click/search_results/view_search_results\n2 data/personalize/wishlist_content_update\n2 submit/update/update_listing\n2 view/index/view_search_results","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":88,"label":"bz2u79a6y2 NDF\n5 data/personalize/wishlist_content_update\n4 view/dashboard/dashboard\n4 view/index/view_search_results\n4 view/show/p3\n2 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":89,"label":"0m2wnbsd64 NDF\n2 data/personalize/wishlist_content_update\n2 view/show/p3\n1 -empty-/show/null\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 click/confirm_email/confirm_email_link","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":90,"label":"s239f2xkhi NDF\n6 data/personalize/wishlist_content_update\n4 view/show/user_profile\n3 view/index/view_search_results\n3 view/show/p3\n2 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":91,"label":"rc2vco3oyo NDF\n8 view/show/p3\n5 view/index/view_search_results\n4 -empty-/show/null\n4 data/similar_listings/similar_listings\n2 -unknown-/calendar_tab_inner2/-unknown-","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":92,"label":"az49054qi0 US\n3 data/personalize/wishlist_content_update\n2 view/index/view_search_results\n1 -empty-/show/null\n1 -empty-/track_page_view/null\n1 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":1,"ndf":0.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":93,"label":"4wz5f0ie8e NDF\n8 view/show/p3\n7 data/personalize/wishlist_content_update\n6 -empty-/show/null\n1 -empty-/lookup/null\n1 data/header_userpic/header_userpic","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":84,"targetId":87,"similarity":0.8810811}
+,{"sourceId":85,"targetId":92,"similarity":0.89181787}
+,{"sourceId":86,"targetId":91,"similarity":0.89081484}
+,{"sourceId":88,"targetId":89,"similarity":0.8830821}
+,{"sourceId":89,"targetId":93,"similarity":0.8872671}
+,{"sourceId":85,"targetId":90,"similarity":0.8805577}
+]
+}
+,{"id":94,"label":"size=11 age=0 males=0% NAs=100% NDFs=72%\n102 data/similar_listings/similar_listings\n75 click/ajax_refresh_subtotal/change_trip_characteristics\n72 click/ajax_check_dates/change_contact_host_dates\n36 view/show/p3\n32 data/personalize/wishlist_content_update","level":3,"size":11,"ndf":0.72727275,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":95,"label":"size=4 age=0 males=0% NAs=100% NDFs=75%\n6 click/ajax_refresh_subtotal/change_trip_characteristics\n6 data/similar_listings/similar_listings\n2 -empty-/show/null\n2 click/ajax_check_dates/change_contact_host_dates\n2 data/personalize/wishlist_content_update","level":4,"size":4,"ndf":0.75,"age":0.0,"male":0.0,"na":1.0}
+,{"id":96,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n5 data/similar_listings/similar_listings\n4 click/ajax_check_dates/change_contact_host_dates\n4 click/ajax_refresh_subtotal/change_trip_characteristics\n4 data/personalize/wishlist_content_update\n4 view/index/view_search_results","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":97,"label":"6dkmns4jux NDF\n6 click/ajax_refresh_subtotal/change_trip_characteristics\n5 data/similar_listings/similar_listings\n5 view/index/view_search_results\n5 view/show/p3\n4 view/index/message_thread","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":98,"label":"ntvtcvutf4 US\n8 data/similar_listings/similar_listings\n6 click/ajax_refresh_subtotal/change_trip_characteristics\n6 view/index/view_search_results\n5 view/show/p3\n2 -empty-/show/null","level":4,"size":1,"ndf":0.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":99,"label":"xmyshbwz0w US\n43 click/ajax_refresh_subtotal/change_trip_characteristics\n25 click/ajax_check_dates/change_contact_host_dates\n22 data/personalize/wishlist_content_update\n21 -empty-/show/null\n16 -unknown-/other_hosting_reviews_first/-unknown-","level":4,"size":1,"ndf":0.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":100,"label":"ijx7zojc0p NDF\n58 data/similar_listings/similar_listings\n57 click/ajax_refresh_subtotal/change_trip_characteristics\n45 click/search_results/view_search_results\n31 click/ajax_check_dates/change_contact_host_dates\n26 view/index/view_search_results","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":101,"label":"uies4k9v9x NDF\n10 click/ajax_refresh_subtotal/change_trip_characteristics\n9 click/ajax_check_dates/change_contact_host_dates\n9 data/personalize/wishlist_content_update\n7 -unknown-/calendar_tab_inner2/-unknown-\n6 data/similar_listings/similar_listings","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":95,"targetId":100,"similarity":0.87603086}
+,{"sourceId":96,"targetId":100,"similarity":0.87416244}
+,{"sourceId":97,"targetId":100,"similarity":0.8908451}
+,{"sourceId":97,"targetId":98,"similarity":0.86108845}
+,{"sourceId":99,"targetId":101,"similarity":0.8884489}
+]
+}
+,{"id":102,"label":"size=10 age=0 males=0% NAs=100% NDFs=100%\n8 -empty-/track_page_view/null\n5 -empty-/show/null\n5 data/personalize/wishlist_content_update\n3 click/search_results/view_search_results\n3 view/show/p3","level":3,"size":10,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":103,"label":"size=5 age=0 males=0% NAs=100% NDFs=100%\n12 -empty-/track_page_view/null\n9 -empty-/lookup/null\n9 data/personalize/wishlist_content_update\n8 click/search_results/view_search_results\n5 -empty-/show/null","level":4,"size":5,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":104,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n22 -empty-/track_page_view/null\n15 click/ajax_refresh_subtotal/change_trip_characteristics\n15 data/similar_listings/similar_listings\n12 data/personalize/wishlist_content_update\n10 view/show/p3","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":105,"label":"1jhklmchl3 NDF\n16 data/personalize/wishlist_content_update\n11 -empty-/show/null\n11 view/show/p3\n10 view/collections/user_wishlists\n8 -empty-/track_page_view/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":106,"label":"dambyf3i3c NDF\n7 view/show/p3\n6 data/personalize/wishlist_content_update\n4 -empty-/show/null\n4 -empty-/track_page_view/null\n3 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":107,"label":"mo7ubxsbe0 NDF\n19 submit/update/update_listing\n18 data/personalize/wishlist_content_update\n17 click/search_results/view_search_results\n14 -empty-/track_page_view/null\n10 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":103,"targetId":104,"similarity":0.8839332}
+,{"sourceId":105,"targetId":106,"similarity":0.8788063}
+,{"sourceId":103,"targetId":107,"similarity":0.8331633}
+]
+}
+]
+,"links":[
+{"sourceId":4,"targetId":71,"similarity":0.84888625}
+,{"sourceId":4,"targetId":51,"similarity":0.8485012}
+,{"sourceId":4,"targetId":83,"similarity":0.8351328}
+,{"sourceId":51,"targetId":94,"similarity":0.8374412}
+,{"sourceId":4,"targetId":102,"similarity":0.8091946}
+]
+}
+,{"id":108,"label":"size=102 age=0 males=0% NAs=100% NDFs=90%\n3 click/search_results/view_search_results\n2 view/index/view_search_results\n1 -empty-/lookup/null\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update","level":2,"size":102,"ndf":0.9019608,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":109,"label":"size=87 age=0 males=0% NAs=100% NDFs=94%\n2 click/search_results/view_search_results\n1 -empty-/lookup/null\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 submit/create/create_user","level":3,"size":87,"ndf":0.9425287,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":110,"label":"size=58 age=0 males=0% NAs=100% NDFs=93%\n24 click/search_results/view_search_results\n14 -empty-/lookup/null\n5 data/personalize/wishlist_content_update\n4 view/index/view_search_results\n3 -unknown-/faq_category/-unknown-","level":4,"size":58,"ndf":0.9310345,"age":0.0,"male":0.0,"na":1.0}
+,{"id":111,"label":"size=14 age=0 males=0% NAs=100% NDFs=100%\n10 click/search_results/view_search_results\n5 view/index/view_search_results\n4 data/personalize/wishlist_content_update\n2 data/header_userpic/header_userpic\n2 view/dashboard/dashboard","level":4,"size":14,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":112,"label":"size=12 age=0 males=0% NAs=100% NDFs=91%\n2 -empty-/lookup/null\n1 click/search_results/view_search_results\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 submit/create/create_user","level":4,"size":12,"ndf":0.9166667,"age":0.0,"male":0.0,"na":1.0}
+,{"id":113,"label":"ntikauoqsj NDF\n1 click/search_results/view_search_results\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 submit/create/create_user\n1 view/cancellation_policies/cancellation_policies","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":114,"label":"ecrfzekk7t NDF\n2 click/search_results/view_search_results\n2 view/dashboard/dashboard\n2 view/index/view_search_results\n1 -empty-/lookup/null\n1 click/confirm_email/confirm_email_link","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":115,"label":"5ikorv0m4u NDF\n2 data/personalize/wishlist_content_update\n2 view/index/view_search_results\n1 -empty-/lookup/null\n1 -unknown-/open_graph_setting/-unknown-\n1 -unknown-/update/-unknown-","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":110,"targetId":111,"similarity":0.8971275}
+,{"sourceId":112,"targetId":115,"similarity":0.8820453}
+,{"sourceId":113,"targetId":115,"similarity":0.83086854}
+,{"sourceId":111,"targetId":114,"similarity":0.8912246}
+]
+}
+]
+}
+,{"id":116,"label":"size=65 age=0 males=0% NAs=100% NDFs=81%\n4 click/ajax_refresh_subtotal/change_trip_characteristics\n3 data/header_userpic/header_userpic\n2 -empty-/show/null\n2 data/personalize/wishlist_content_update\n2 message_post/-empty-/message_post","level":2,"size":65,"ndf":0.8153846,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":117,"label":"size=35 age=0 males=0% NAs=100% NDFs=77%\n4 click/ajax_refresh_subtotal/change_trip_characteristics\n3 data/header_userpic/header_userpic\n2 -empty-/show/null\n2 data/personalize/wishlist_content_update\n2 message_post/-empty-/message_post","level":3,"size":35,"ndf":0.7714286,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":118,"label":"size=14 age=0 males=0% NAs=100% NDFs=57%\n2 click/ajax_refresh_subtotal/change_trip_characteristics\n2 message_post/-empty-/message_post\n2 submit/ask_question/contact_host\n1 -empty-/show/null\n1 click/ajax_check_dates/change_contact_host_dates","level":4,"size":14,"ndf":0.5714286,"age":0.0,"male":0.0,"na":1.0}
+,{"id":119,"label":"size=7 age=0 males=0% NAs=100% NDFs=85%\n3 click/ajax_refresh_subtotal/change_trip_characteristics\n2 click/ajax_check_dates/change_contact_host_dates\n2 click/ajax_lwlb_contact/contact_host\n2 data/personalize/wishlist_content_update\n1 -empty-/show/null","level":4,"size":7,"ndf":0.85714287,"age":0.0,"male":0.0,"na":1.0}
+,{"id":120,"label":"size=6 age=0 males=0% NAs=100% NDFs=83%\n9 data/header_userpic/header_userpic\n9 view/show/p3\n5 -empty-/show/null\n5 click/ajax_refresh_subtotal/change_trip_characteristics\n5 data/personalize/wishlist_content_update","level":4,"size":6,"ndf":0.8333333,"age":0.0,"male":0.0,"na":1.0}
+,{"id":121,"label":"sieds81zp3 NDF\n2 click/ajax_refresh_subtotal/change_trip_characteristics\n2 data/similar_listings/similar_listings\n1 -empty-/show/null\n1 click/ajax_check_dates/change_contact_host_dates\n1 click/ajax_lwlb_contact/contact_host","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":122,"label":"w4yjpd5ooy NDF\n3 view/show/p3\n2 view/dashboard/dashboard\n1 -empty-/show/null\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 click/confirm_email/confirm_email_link","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":123,"label":"iphuh1lxfc NDF\n3 data/header_userpic/header_userpic\n3 view/index/view_search_results\n2 click/ajax_refresh_subtotal/change_trip_characteristics\n2 data/similar_listings/similar_listings\n2 message_post/-empty-/message_post","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":124,"label":"d4oq0u47yy NDF\n1 -empty-/show/null\n1 -unknown-/populate_help_dropdown/-unknown-\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":125,"label":"vxgag19t98 NDF\n2 data/personalize/wishlist_content_update\n1 -empty-/show/null\n1 -unknown-/other_hosting_reviews_first/-unknown-\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 data/header_userpic/header_userpic","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":126,"label":"mbg1sadv3i NDF\n3 click/ajax_refresh_subtotal/change_trip_characteristics\n3 data/header_userpic/header_userpic\n3 data/personalize/wishlist_content_update\n2 -empty-/show/null\n2 click/confirm_email/confirm_email_link","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":127,"label":"p1yopsfqn0 NDF\n1 -empty-/show/null\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":128,"label":"2ey3cbz72o NDF\n5 message_post/-empty-/message_post\n4 data/personalize/wishlist_content_update\n3 -empty-/show/null\n3 click/ajax_refresh_subtotal/change_trip_characteristics\n3 submit/qt_reply_v2/send_message","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":118,"targetId":121,"similarity":0.8934872}
+,{"sourceId":118,"targetId":119,"similarity":0.87218755}
+,{"sourceId":120,"targetId":122,"similarity":0.8797583}
+,{"sourceId":123,"targetId":128,"similarity":0.85725075}
+,{"sourceId":118,"targetId":124,"similarity":0.8739437}
+,{"sourceId":125,"targetId":128,"similarity":0.8648852}
+,{"sourceId":119,"targetId":126,"similarity":0.86839706}
+,{"sourceId":118,"targetId":127,"similarity":0.87542814}
+,{"sourceId":118,"targetId":128,"similarity":0.87118155}
+]
+}
+]
+}
+,{"id":129,"label":"size=37 age=0 males=0% NAs=100% NDFs=81%\n5 data/personalize/wishlist_content_update\n5 view/show/p3\n4 view/dashboard/dashboard\n4 view/index/view_search_results\n3 -empty-/show/null","level":2,"size":37,"ndf":0.8108108,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":130,"label":"size=15 age=0 males=0% NAs=100% NDFs=93%\n4 data/personalize/wishlist_content_update\n3 data/header_userpic/header_userpic\n3 view/index/view_search_results\n2 view/dashboard/dashboard\n1 -empty-/show/null","level":3,"size":15,"ndf":0.93333334,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":131,"label":"size=5 age=0 males=0% NAs=100% NDFs=80%\n2 data/personalize/wishlist_content_update\n2 view/index/view_search_results\n1 -empty-/show/null\n1 data/header_userpic/header_userpic\n1 submit/create/create_user","level":4,"size":5,"ndf":0.8,"age":0.0,"male":0.0,"na":1.0}
+,{"id":132,"label":"q9y1sasc2s NDF\n2 data/personalize/wishlist_content_update\n2 view/dashboard/dashboard\n2 view/index/view_search_results\n2 view/qt2/message_thread\n1 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":133,"label":"b7nlyu8pw4 NDF\n4 data/personalize/wishlist_content_update\n2 -empty-/track_page_view/null\n2 data/header_userpic/header_userpic\n2 submit/update/update_listing\n1 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":134,"label":"yxrufxafgt NDF\n2 data/personalize/wishlist_content_update\n1 -empty-/show/null\n1 -unknown-/open_graph_setting/-unknown-\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":135,"label":"bt7hv6lbou NDF\n4 data/personalize/wishlist_content_update\n4 view/dashboard/dashboard\n4 view/index/view_search_results\n3 view/show/user_profile\n2 -unknown-/position/-unknown-","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":136,"label":"vi0253pvja NDF\n4 view/dashboard/dashboard\n2 data/personalize/wishlist_content_update\n2 view/index/view_search_results\n2 view/show/p3\n1 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":137,"label":"fpgukooji1 NDF\n2 -empty-/lookup/null\n2 data/header_userpic/header_userpic\n2 data/personalize/wishlist_content_update\n2 view/dashboard/dashboard\n2 view/index/view_search_results","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":138,"label":"xzanp4aoc6 NDF\n5 data/personalize/wishlist_content_update\n5 view/show/p3\n4 view/dashboard/dashboard\n4 view/index/view_search_results\n3 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":139,"label":"6a3ynml907 NDF\n8 data/header_userpic/header_userpic\n8 data/personalize/wishlist_content_update\n4 -empty-/show/null\n4 view/show/p3\n3 view/index/view_search_results","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":140,"label":"h5617oa207 NDF\n3 view/index/view_search_results\n2 data/personalize/wishlist_content_update\n2 submit/update/update_listing\n2 view/show/p3\n1 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":141,"label":"r1wgxcpucl NDF\n7 view/index/view_search_results\n4 data/personalize/wishlist_content_update\n2 view/dashboard/dashboard\n2 view/show/p1\n2 view/show/p3","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":131,"targetId":141,"similarity":0.89058787}
+,{"sourceId":132,"targetId":136,"similarity":0.8667967}
+,{"sourceId":133,"targetId":139,"similarity":0.89726055}
+,{"sourceId":133,"targetId":134,"similarity":0.8620899}
+,{"sourceId":135,"targetId":141,"similarity":0.8643992}
+,{"sourceId":136,"targetId":138,"similarity":0.8864984}
+,{"sourceId":137,"targetId":138,"similarity":0.81468546}
+,{"sourceId":140,"targetId":141,"similarity":0.887915}
+]
+}
+]
+}
+]
+,"links":[
+{"sourceId":3,"targetId":129,"similarity":0.7932434}
+,{"sourceId":3,"targetId":108,"similarity":0.78583425}
+,{"sourceId":3,"targetId":116,"similarity":0.77550596}
+]
+}
+,{"id":142,"label":"size=655 age=0 males=33% NAs=100% NDFs=94%\n3 -unknown-/active/-unknown-\n2 -empty-/campaigns/null\n2 click/search/view_search_results\n2 view/show/user_profile\n1 -empty-/show/null","level":1,"size":655,"ndf":0.94961834,"age":0.0,"male":0.33333334,"na":1.0,"children":[
+{"id":143,"label":"size=481 age=0 males=50% NAs=100% NDFs=95%\n5 click/search/view_search_results\n4 view/show/user_profile\n2 -empty-/campaigns/null\n2 -unknown-/active/-unknown-\n2 -unknown-/index/-unknown-","level":2,"size":481,"ndf":0.95010394,"age":0.0,"male":0.5,"na":1.0,"children":[
+{"id":144,"label":"size=375 age=0 males=0% NAs=100% NDFs=94%\n4 click/search/view_search_results\n4 view/show/user_profile\n2 -unknown-/active/-unknown-\n2 data/reviews/listing_reviews\n2 data/social_connections/user_social_connections","level":3,"size":375,"ndf":0.94666666,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":145,"label":"size=274 age=0 males=0% NAs=100% NDFs=95%\n16 view/show/user_profile\n13 click/search/view_search_results\n10 data/reviews/listing_reviews\n10 view/show/p3\n9 data/social_connections/user_social_connections","level":4,"size":274,"ndf":0.95255476,"age":0.0,"male":0.0,"na":1.0}
+,{"id":146,"label":"size=38 age=0 males=0% NAs=100% NDFs=97%\n19 click/search/view_search_results\n7 -unknown-/active/-unknown-\n6 view/collections/user_wishlists\n5 -unknown-/index/-unknown-\n5 view/show/p3","level":4,"size":38,"ndf":0.9736842,"age":0.0,"male":0.0,"na":1.0}
+,{"id":147,"label":"size=19 age=0 males=0% NAs=100% NDFs=94%\n3 view/show/user_profile\n2 data/social_connections/user_social_connections\n1 -empty-/campaigns/null\n1 -empty-/show/null\n1 -unknown-/active/-unknown-","level":4,"size":19,"ndf":0.94736844,"age":0.0,"male":0.0,"na":1.0}
+,{"id":148,"label":"size=12 age=0 males=0% NAs=100% NDFs=100%\n3 -unknown-/active/-unknown-\n2 -empty-/campaigns/null\n2 click/search/view_search_results\n2 view/show/user_profile\n1 -empty-/show/null","level":4,"size":12,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":149,"label":"size=11 age=0 males=0% NAs=100% NDFs=90%\n7 click/search/view_search_results\n5 view/show/user_profile\n4 data/reviews/listing_reviews\n4 view/show/p3\n2 -unknown-/show/-unknown-","level":4,"size":11,"ndf":0.90909094,"age":0.0,"male":0.0,"na":1.0}
+,{"id":150,"label":"size=6 age=0 males=0% NAs=100% NDFs=83%\n18 view/show/user_profile\n9 data/reviews/listing_reviews\n9 data/social_connections/user_social_connections\n9 data/unavailabilities/unavailable_dates\n9 view/show/p3","level":4,"size":6,"ndf":0.8333333,"age":0.0,"male":0.0,"na":1.0}
+,{"id":151,"label":"size=5 age=0 males=0% NAs=100% NDFs=100%\n6 -unknown-/active/-unknown-\n5 -unknown-/index/-unknown-\n5 click/search/view_search_results\n5 data/social_connections/user_social_connections\n5 view/collections/user_wishlists","level":4,"size":5,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":152,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n7 view/show/user_profile\n4 data/social_connections/user_social_connections\n4 submit/update/update_listing\n3 click/search/view_search_results\n2 view/collections/user_wishlists","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":153,"label":"jxxtz6j2ng NDF\n2 -unknown-/active/-unknown-\n1 -empty-/campaigns/null\n1 click/search/view_search_results\n1 data/index/reservations\n1 data/payment_instruments/payment_instruments","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":154,"label":"qov8mndpcw US\n4 click/search/view_search_results\n3 view/show/user_profile\n2 click/click/book_it\n2 data/social_connections/user_social_connections\n1 -empty-/campaigns/null","level":4,"size":1,"ndf":0.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":155,"label":"8pen5zztv2 NDF\n7 click/search/view_search_results\n3 -empty-/show/null\n3 view/listings/user_listings\n3 view/show/p3\n2 -unknown-/active/-unknown-","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":156,"label":"27l3yl6h90 NDF\n4 view/show/user_profile\n3 click/search/view_search_results\n3 data/header_userpic/header_userpic\n2 data/reviews/listing_reviews\n2 data/social_connections/user_social_connections","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":157,"label":"ds9cde81wl NDF\n4 click/search/view_search_results\n3 click/click/instant_book\n2 -empty-/campaigns/null\n2 -unknown-/active/-unknown-\n2 data/unavailabilities/unavailable_dates","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":158,"label":"jh2yfzmfd2 NDF\n42 view/show/user_profile\n23 data/social_connections/user_social_connections\n21 data/reviews/listing_reviews\n20 view/show/p3\n19 -unknown-/show/-unknown-","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":159,"label":"bokyeth4hm US\n2 view/show/user_profile\n1 -empty-/campaigns/null\n1 -unknown-/active/-unknown-\n1 -unknown-/create/-unknown-\n1 click/search/view_search_results","level":4,"size":1,"ndf":0.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":160,"label":"ty0n45ffrm US\n5 view/show/p3\n4 click/search/view_search_results\n4 view/show/user_profile\n3 -unknown-/active/-unknown-\n2 -unknown-/index/-unknown-","level":4,"size":1,"ndf":0.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":145,"targetId":160,"similarity":0.89835596}
+,{"sourceId":146,"targetId":155,"similarity":0.89534754}
+,{"sourceId":147,"targetId":152,"similarity":0.8968885}
+,{"sourceId":148,"targetId":153,"similarity":0.89628226}
+,{"sourceId":145,"targetId":149,"similarity":0.8958446}
+,{"sourceId":150,"targetId":159,"similarity":0.89746904}
+,{"sourceId":151,"targetId":160,"similarity":0.89604384}
+,{"sourceId":147,"targetId":154,"similarity":0.85444325}
+,{"sourceId":145,"targetId":156,"similarity":0.8723382}
+,{"sourceId":157,"targetId":159,"similarity":0.8607904}
+,{"sourceId":145,"targetId":158,"similarity":0.89365333}
+]
+}
+,{"id":161,"label":"size=61 age=0 males=0% NAs=100% NDFs=98%\n12 click/search/view_search_results\n12 view/collections/user_wishlists\n10 -unknown-/active/-unknown-\n9 -empty-/show/null\n6 -unknown-/index/-unknown-","level":3,"size":61,"ndf":0.9836066,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":162,"label":"size=48 age=0 males=0% NAs=100% NDFs=97%\n10 -unknown-/active/-unknown-\n9 view/collections/user_wishlists\n8 -unknown-/index/-unknown-\n8 click/search/view_search_results\n8 data/social_connections/user_social_connections","level":4,"size":48,"ndf":0.9791667,"age":0.0,"male":0.0,"na":1.0}
+,{"id":163,"label":"size=9 age=0 males=0% NAs=100% NDFs=100%\n18 click/search/view_search_results\n7 view/collections/user_wishlists\n5 -unknown-/active/-unknown-\n4 -empty-/show/null\n3 -empty-/campaigns/null","level":4,"size":9,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":164,"label":"size=3 age=0 males=0% NAs=100% NDFs=100%\n4 -unknown-/index/-unknown-\n4 data/recommendations/listing_recommendations\n4 data/social_connections/user_social_connections\n4 view/show/user_profile\n3 data/reviews/listing_reviews","level":4,"size":3,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":165,"label":"b1s05s82mm NDF\n4 -unknown-/active/-unknown-\n4 click/search/view_search_results\n3 view/collections/user_wishlists\n1 -empty-/campaigns/null\n1 -unknown-/index/-unknown-","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":162,"targetId":165,"similarity":0.8759028}
+,{"sourceId":163,"targetId":165,"similarity":0.890833}
+,{"sourceId":162,"targetId":164,"similarity":0.873164}
+]
+}
+,{"id":166,"label":"size=13 age=0 males=0% NAs=100% NDFs=92%\n5 click/search/view_search_results\n1 -empty-/campaigns/null\n1 -empty-/show/null\n1 -unknown-/active/-unknown-\n1 submit/create/signup","level":3,"size":13,"ndf":0.9230769,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":167,"label":"size=12 age=0 males=0% NAs=100% NDFs=91%\n2 click/search/view_search_results\n1 -empty-/campaigns/null\n1 -empty-/show/null\n1 -unknown-/active/-unknown-\n1 submit/create/signup","level":4,"size":12,"ndf":0.9166667,"age":0.0,"male":0.0,"na":1.0}
+,{"id":168,"label":"zfjwj2yr5k NDF\n7 click/search/view_search_results\n4 submit/update/update_user\n2 -unknown-/active/-unknown-\n2 -unknown-/create/-unknown-\n2 data/payment_instruments/payment_instruments","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":167,"targetId":168,"similarity":0.81745315}
+]
+}
+,{"id":169,"label":"size=11 age=0 males=0% NAs=100% NDFs=100%\n5 -empty-/campaigns/null\n5 -unknown-/active/-unknown-\n4 view/show/user_profile\n2 data/reviews/listing_reviews\n2 data/social_connections/user_social_connections","level":3,"size":11,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":170,"label":"size=5 age=0 males=0% NAs=100% NDFs=100%\n5 -empty-/campaigns/null\n5 -unknown-/active/-unknown-\n4 view/show/user_profile\n2 data/reviews/listing_reviews\n2 data/social_connections/user_social_connections","level":4,"size":5,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":171,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n2 -empty-/campaigns/null\n2 data/index/reservations\n2 data/social_connections/user_social_connections\n2 view/show/user_profile\n1 -unknown-/active/-unknown-","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":172,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n3 -empty-/campaigns/null\n3 -unknown-/active/-unknown-\n3 -unknown-/referrer_status/-unknown-\n2 click/search/view_search_results\n2 data/reviews/user_reviews","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":173,"label":"fqpba051u6 NDF\n19 view/show/user_profile\n13 -unknown-/show/-unknown-\n13 data/reviews/listing_reviews\n13 data/social_connections/user_social_connections\n11 view/show/p3","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":174,"label":"md3bjevosj NDF\n3 view/show/p3\n2 -empty-/campaigns/null\n2 -unknown-/active/-unknown-\n2 -unknown-/index/-unknown-\n2 view/show/user_profile","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":170,"targetId":171,"similarity":0.8653699}
+,{"sourceId":170,"targetId":172,"similarity":0.86025345}
+,{"sourceId":171,"targetId":173,"similarity":0.86050856}
+,{"sourceId":170,"targetId":174,"similarity":0.85878104}
+]
+}
+]
+,"links":[
+{"sourceId":144,"targetId":161,"similarity":0.837584}
+,{"sourceId":144,"targetId":166,"similarity":0.7983581}
+,{"sourceId":144,"targetId":169,"similarity":0.8202342}
+]
+}
+,{"id":175,"label":"size=108 age=0 males=0% NAs=100% NDFs=94%\n4 -unknown-/active/-unknown-\n3 -empty-/campaigns/null\n1 -empty-/show/null\n1 click/search/view_search_results\n1 submit/create/signup","level":2,"size":108,"ndf":0.9444444,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":176,"label":"size=79 age=0 males=0% NAs=100% NDFs=97%\n4 -unknown-/active/-unknown-\n3 -empty-/campaigns/null\n1 -empty-/show/null\n1 click/search/view_search_results\n1 submit/create/signup","level":3,"size":79,"ndf":0.9746835,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":177,"label":"size=30 age=0 males=0% NAs=100% NDFs=96%\n4 -unknown-/active/-unknown-\n3 -empty-/campaigns/null\n1 -empty-/show/null\n1 click/search/view_search_results\n1 submit/create/signup","level":4,"size":30,"ndf":0.96666664,"age":0.0,"male":0.0,"na":1.0}
+,{"id":178,"label":"size=14 age=0 males=0% NAs=100% NDFs=100%\n3 -unknown-/active/-unknown-\n3 view/listings/user_listings\n2 -empty-/campaigns/null\n1 submit/create/signup\n1 submit/notifications/notifications","level":4,"size":14,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":179,"label":"size=10 age=0 males=0% NAs=100% NDFs=100%\n2 -empty-/show/null\n2 -unknown-/active/-unknown-\n1 -empty-/campaigns/null\n1 submit/create/signup\n1 submit/notifications/notifications","level":4,"size":10,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":180,"label":"size=8 age=0 males=0% NAs=100% NDFs=100%\n1 -unknown-/active/-unknown-","level":4,"size":8,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":181,"label":"size=3 age=0 males=0% NAs=100% NDFs=100%\n1 -empty-/campaigns/null\n1 -empty-/show/null\n1 -unknown-/active/-unknown-\n1 submit/create/signup\n1 view/listings/user_listings","level":4,"size":3,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":182,"label":"size=3 age=0 males=0% NAs=100% NDFs=100%\n6 -unknown-/active/-unknown-\n5 -empty-/campaigns/null\n4 -unknown-/payment_methods/-unknown-\n3 -unknown-/create/-unknown-\n2 data/unavailabilities/unavailable_dates","level":4,"size":3,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":183,"label":"size=3 age=0 males=0% NAs=100% NDFs=100%\n2 -unknown-/active/-unknown-\n1 -empty-/campaigns/null\n1 -unknown-/domains/-unknown-\n1 click/search/view_search_results\n1 submit/notifications/notifications","level":4,"size":3,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":184,"label":"size=2 age=0 males=0% NAs=100% NDFs=50%\n4 -unknown-/active/-unknown-\n2 -empty-/campaigns/null\n2 data/index/reservations\n2 data/unavailabilities/unavailable_dates\n2 submit/update/update_user","level":4,"size":2,"ndf":0.5,"age":0.0,"male":0.0,"na":1.0}
+,{"id":185,"label":"h6dhdd2gtx NDF\n6 -unknown-/active/-unknown-\n6 data/reviews/user_reviews\n4 -empty-/campaigns/null\n3 submit/notifications/notifications\n3 submit/update/update_user","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":186,"label":"uwab2ibva5 NDF\n23 -unknown-/active/-unknown-\n19 -empty-/campaigns/null\n17 submit/update/update_listing\n15 view/show/p3\n3 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":187,"label":"bqwushyhug NDF\n4 -empty-/campaigns/null\n3 -unknown-/active/-unknown-\n3 click/search/view_search_results\n2 -unknown-/create/-unknown-\n2 data/unavailabilities/unavailable_dates","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":188,"label":"ubxvkttb01 NDF\n2 -empty-/campaigns/null\n1 -unknown-/active/-unknown-\n1 submit/create/signup","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":189,"label":"bb63c90db5 NDF\n5 -empty-/campaigns/null\n4 -unknown-/active/-unknown-\n3 view/show/user_profile\n2 data/reviews/listing_reviews\n2 view/show/p3","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":190,"label":"7vcepkt45o NDF\n6 -empty-/campaigns/null\n6 -unknown-/active/-unknown-\n5 -unknown-/authorize/-unknown-\n2 -unknown-/show_code/-unknown-\n1 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":177,"targetId":188,"similarity":0.89183336}
+,{"sourceId":178,"targetId":181,"similarity":0.89458627}
+,{"sourceId":177,"targetId":179,"similarity":0.8759835}
+,{"sourceId":177,"targetId":180,"similarity":0.8542145}
+,{"sourceId":177,"targetId":182,"similarity":0.8803131}
+,{"sourceId":177,"targetId":183,"similarity":0.8747516}
+,{"sourceId":177,"targetId":184,"similarity":0.87048125}
+,{"sourceId":177,"targetId":185,"similarity":0.8525933}
+,{"sourceId":177,"targetId":186,"similarity":0.8686191}
+,{"sourceId":177,"targetId":187,"similarity":0.88143444}
+,{"sourceId":177,"targetId":189,"similarity":0.87990135}
+,{"sourceId":177,"targetId":190,"similarity":0.8852575}
+]
+}
+,{"id":191,"label":"size=10 age=0 males=0% NAs=100% NDFs=90%\n4 -unknown-/active/-unknown-\n3 view/collections/user_wishlists\n2 -empty-/campaigns/null\n2 -empty-/show/null\n1 -unknown-/domains/-unknown-","level":3,"size":10,"ndf":0.9,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":192,"label":"size=7 age=0 males=0% NAs=100% NDFs=85%\n6 -unknown-/active/-unknown-\n5 -empty-/show/null\n5 view/collections/user_wishlists\n3 click/search/view_search_results\n2 -empty-/campaigns/null","level":4,"size":7,"ndf":0.85714287,"age":0.0,"male":0.0,"na":1.0}
+,{"id":193,"label":"fz9rmwdhoh NDF\n5 -empty-/campaigns/null\n5 -unknown-/active/-unknown-\n4 -unknown-/index/-unknown-\n4 data/unavailabilities/unavailable_dates\n3 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":194,"label":"kcmw1xm3oo NDF\n3 -unknown-/active/-unknown-\n1 -empty-/campaigns/null\n1 -empty-/show/null\n1 -unknown-/index/-unknown-\n1 -unknown-/show/-unknown-","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":195,"label":"gys28dl146 NDF\n1 -empty-/campaigns/null\n1 -empty-/show/null\n1 -unknown-/active/-unknown-\n1 submit/create/signup\n1 submit/notifications/notifications","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":192,"targetId":193,"similarity":0.8730123}
+,{"sourceId":192,"targetId":194,"similarity":0.86149335}
+,{"sourceId":192,"targetId":195,"similarity":0.84741145}
+]
+}
+]
+,"links":[
+{"sourceId":176,"targetId":191,"similarity":0.8445768}
+]
+}
+]
+,"links":[
+{"sourceId":143,"targetId":175,"similarity":0.7185175}
+]
+}
+,{"id":196,"label":"size=458 age=28 males=8% NAs=2% NDFs=44%\n8 click/search_results/view_search_results\n6 -empty-/show/null\n6 click/ajax_refresh_subtotal/change_trip_characteristics\n6 data/personalize/wishlist_content_update\n6 data/similar_listings/similar_listings","level":1,"size":458,"ndf":0.44978166,"age":28.646288,"male":0.085011184,"na":0.024017468,"children":[
+{"id":197,"label":"size=264 age=28 males=3% NAs=0% NDFs=46%\n8 click/search_results/view_search_results\n6 -empty-/show/null\n6 click/ajax_refresh_subtotal/change_trip_characteristics\n6 data/personalize/wishlist_content_update\n6 data/similar_listings/similar_listings","level":2,"size":264,"ndf":0.46212122,"age":28.700758,"male":0.03409091,"na":0.0,"children":[
+{"id":198,"label":"size=132 age=28 males=0% NAs=0% NDFs=45%\n8 click/search_results/view_search_results\n6 -empty-/show/null\n6 click/ajax_refresh_subtotal/change_trip_characteristics\n6 data/personalize/wishlist_content_update\n6 data/similar_listings/similar_listings","level":3,"size":132,"ndf":0.45454547,"age":28.901516,"male":0.0,"na":0.0,"children":[
+{"id":199,"label":"size=43 age=28 males=0% NAs=0% NDFs=34%\n56 view/show/p3\n39 click/ajax_refresh_subtotal/change_trip_characteristics\n38 data/personalize/wishlist_content_update\n36 data/similar_listings/similar_listings\n29 -empty-/show/null","level":4,"size":43,"ndf":0.3488372,"age":28.186047,"male":0.0,"na":0.0}
+,{"id":200,"label":"size=30 age=29 males=0% NAs=0% NDFs=46%\n16 click/search_results/view_search_results\n11 view/show/p3\n10 view/index/view_search_results\n9 data/personalize/wishlist_content_update\n6 -empty-/show/null","level":4,"size":30,"ndf":0.46666667,"age":29.133333,"male":0.0,"na":0.0}
+,{"id":201,"label":"size=22 age=30 males=0% NAs=0% NDFs=54%\n22 data/personalize/wishlist_content_update\n22 data/similar_listings/similar_listings\n20 -empty-/show/null\n20 click/ajax_refresh_subtotal/change_trip_characteristics\n15 view/show/p3","level":4,"size":22,"ndf":0.54545456,"age":30.272728,"male":0.0,"na":0.0}
+,{"id":202,"label":"size=9 age=26 males=0% NAs=0% NDFs=55%\n31 click/search_results/view_search_results\n13 view/show/p3\n10 data/personalize/wishlist_content_update\n10 view/index/view_search_results\n9 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":9,"ndf":0.5555556,"age":26.88889,"male":0.0,"na":0.0}
+,{"id":203,"label":"size=6 age=27 males=0% NAs=0% NDFs=50%\n27 data/personalize/wishlist_content_update\n21 click/ajax_refresh_subtotal/change_trip_characteristics\n15 -empty-/lookup/null\n15 click/search_results/view_search_results\n14 -empty-/show/null","level":4,"size":6,"ndf":0.5,"age":27.166666,"male":0.0,"na":0.0}
+,{"id":204,"label":"size=5 age=30 males=0% NAs=0% NDFs=60%\n28 view/show/p3\n22 view/index/view_search_results\n19 click/search_results/view_search_results\n14 data/personalize/wishlist_content_update\n13 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":5,"ndf":0.6,"age":30.6,"male":0.0,"na":0.0}
+,{"id":205,"label":"size=4 age=31 males=0% NAs=0% NDFs=25%\n34 click/search_results/view_search_results\n16 data/personalize/wishlist_content_update\n15 view/index/view_search_results\n14 click/ajax_refresh_subtotal/change_trip_characteristics\n12 -empty-/show/null","level":4,"size":4,"ndf":0.25,"age":31.75,"male":0.0,"na":0.0}
+,{"id":206,"label":"size=3 age=29 males=0% NAs=0% NDFs=33%\n39 -empty-/lookup/null\n33 click/search_results/view_search_results\n31 data/personalize/wishlist_content_update\n19 click/ajax_refresh_subtotal/change_trip_characteristics\n16 -empty-/show/null","level":4,"size":3,"ndf":0.33333334,"age":29.666666,"male":0.0,"na":0.0}
+,{"id":207,"label":"size=2 age=29 males=0% NAs=0% NDFs=100%\n23 data/personalize/wishlist_content_update\n18 view/index/view_search_results\n13 -empty-/show/null\n13 data/similar_listings/similar_listings\n10 view/show/p3","level":4,"size":2,"ndf":1.0,"age":29.0,"male":0.0,"na":0.0}
+,{"id":208,"label":"lf1eu9ahxh FEMALE 29 NDF\n5 click/search_results/view_search_results\n3 -empty-/lookup/null\n2 -unknown-/recommended_listings/-unknown-\n2 click/ajax_refresh_subtotal/change_trip_characteristics\n2 data/header_userpic/header_userpic","level":4,"size":1,"ndf":1.0,"age":29.0,"male":0.0,"na":0.0}
+,{"id":209,"label":"1h8xl9b747 FEMALE 28 NDF\n2 submit/authenticate/login\n1 -empty-/show/null\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 click/search_results/view_search_results\n1 data/personalize/wishlist_content_update","level":4,"size":1,"ndf":1.0,"age":28.0,"male":0.0,"na":0.0}
+,{"id":210,"label":"yl4kdpjada FEMALE 29 US\n9 data/header_userpic/header_userpic\n6 click/search_results/view_search_results\n5 data/similar_listings/similar_listings\n4 click/ajax_refresh_subtotal/change_trip_characteristics\n4 view/show/p3","level":4,"size":1,"ndf":0.0,"age":29.0,"male":0.0,"na":0.0}
+,{"id":211,"label":"erzs93fskv FEMALE 30 US\n12 view/show/p3\n10 data/personalize/wishlist_content_update\n9 click/search_results/view_search_results\n8 view/show/user_profile\n7 view/index/view_search_results","level":4,"size":1,"ndf":0.0,"age":30.0,"male":0.0,"na":0.0}
+,{"id":212,"label":"5yyshcbfkf FEMALE 29 US\n4 view/show/p3\n3 -empty-/show/null\n3 click/ajax_refresh_subtotal/change_trip_characteristics\n3 data/personalize/wishlist_content_update\n3 data/similar_listings/similar_listings","level":4,"size":1,"ndf":0.0,"age":29.0,"male":0.0,"na":0.0}
+,{"id":213,"label":"5wwjrdkbso FEMALE 26 NDF\n62 view/show/p3\n52 click/search_results/view_search_results\n50 data/similar_listings/similar_listings\n45 click/ajax_refresh_subtotal/change_trip_characteristics\n32 data/personalize/wishlist_content_update","level":4,"size":1,"ndf":1.0,"age":26.0,"male":0.0,"na":0.0}
+,{"id":214,"label":"kesxac34p6 FEMALE 28 US\n5 data/personalize/wishlist_content_update\n3 click/search_results/view_search_results\n2 -empty-/lookup/null\n2 -empty-/show/null\n2 data/similar_listings/similar_listings","level":4,"size":1,"ndf":0.0,"age":28.0,"male":0.0,"na":0.0}
+,{"id":215,"label":"l72f1x0e9g FEMALE 32 NDF\n14 data/personalize/wishlist_content_update\n13 -empty-/show/null\n13 view/show/p3\n11 click/ajax_refresh_subtotal/change_trip_characteristics\n9 -empty-/lookup/null","level":4,"size":1,"ndf":1.0,"age":32.0,"male":0.0,"na":0.0}
+]
+,"links":[
+{"sourceId":199,"targetId":201,"similarity":0.89478254}
+,{"sourceId":200,"targetId":202,"similarity":0.89990926}
+,{"sourceId":201,"targetId":207,"similarity":0.89894}
+,{"sourceId":203,"targetId":214,"similarity":0.8858547}
+,{"sourceId":200,"targetId":204,"similarity":0.8952044}
+,{"sourceId":204,"targetId":205,"similarity":0.892377}
+,{"sourceId":200,"targetId":206,"similarity":0.87412155}
+,{"sourceId":200,"targetId":208,"similarity":0.8860916}
+,{"sourceId":199,"targetId":209,"similarity":0.8261187}
+,{"sourceId":208,"targetId":210,"similarity":0.85644215}
+,{"sourceId":200,"targetId":211,"similarity":0.8992079}
+,{"sourceId":199,"targetId":212,"similarity":0.89303446}
+,{"sourceId":202,"targetId":213,"similarity":0.8852164}
+,{"sourceId":201,"targetId":215,"similarity":0.8937752}
+]
+}
+,{"id":216,"label":"size=49 age=25 males=0% NAs=0% NDFs=55%\n16 view/show/p3\n12 click/search_results/view_search_results\n10 data/personalize/wishlist_content_update\n9 view/index/view_search_results\n8 click/ajax_refresh_subtotal/change_trip_characteristics","level":3,"size":49,"ndf":0.5510204,"age":25.55102,"male":0.0,"na":0.0,"children":[
+{"id":217,"label":"size=26 age=25 males=0% NAs=0% NDFs=53%\n8 data/personalize/wishlist_content_update\n7 -empty-/show/null\n7 click/ajax_refresh_subtotal/change_trip_characteristics\n6 click/search_results/view_search_results\n6 view/show/p3","level":4,"size":26,"ndf":0.53846157,"age":25.0,"male":0.0,"na":0.0}
+,{"id":218,"label":"size=12 age=26 males=0% NAs=0% NDFs=66%\n60 view/index/view_search_results\n59 data/personalize/wishlist_content_update\n52 view/show/p3\n26 -empty-/show/null\n26 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":12,"ndf":0.6666667,"age":26.75,"male":0.0,"na":0.0}
+,{"id":219,"label":"size=5 age=25 males=0% NAs=0% NDFs=40%\n197 click/search_results/view_search_results\n121 view/show/p3\n78 data/personalize/wishlist_content_update\n77 view/index/view_search_results\n73 data/similar_listings/similar_listings","level":4,"size":5,"ndf":0.4,"age":25.6,"male":0.0,"na":0.0}
+,{"id":220,"label":"size=2 age=25 males=0% NAs=0% NDFs=100%\n11 click/ajax_refresh_subtotal/change_trip_characteristics\n11 data/similar_listings/similar_listings\n8 -empty-/show/null\n7 view/show/p3\n6 click/search_results/view_search_results","level":4,"size":2,"ndf":1.0,"age":25.5,"male":0.0,"na":0.0}
+,{"id":221,"label":"cos6ekjz2r FEMALE 26 US\n39 view/show/p3\n28 data/personalize/wishlist_content_update\n27 view/index/view_search_results\n26 click/ajax_refresh_subtotal/change_trip_characteristics\n24 click/search_results/view_search_results","level":4,"size":1,"ndf":0.0,"age":26.0,"male":0.0,"na":0.0}
+,{"id":222,"label":"1b4ncox9rz FEMALE 26 US\n18 -empty-/lookup/null\n17 data/personalize/wishlist_content_update\n16 click/search_results/view_search_results\n11 -empty-/show/null\n11 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":1,"ndf":0.0,"age":26.0,"male":0.0,"na":0.0}
+,{"id":223,"label":"t18hw3s7aa FEMALE 26 US\n4 data/personalize/wishlist_content_update\n3 view/show/p3\n2 -empty-/show/null\n2 click/ajax_refresh_subtotal/change_trip_characteristics\n2 data/header_userpic/header_userpic","level":4,"size":1,"ndf":0.0,"age":26.0,"male":0.0,"na":0.0}
+,{"id":224,"label":"lridy8x5on FEMALE 24 NDF\n6 -empty-/show/null\n6 data/personalize/wishlist_content_update\n4 data/similar_listings/similar_listings\n3 view/index/view_search_results\n3 view/show/p3","level":4,"size":1,"ndf":1.0,"age":24.0,"male":0.0,"na":0.0}
+]
+,"links":[
+{"sourceId":217,"targetId":219,"similarity":0.89398956}
+,{"sourceId":218,"targetId":221,"similarity":0.89278084}
+,{"sourceId":217,"targetId":220,"similarity":0.88427556}
+,{"sourceId":217,"targetId":222,"similarity":0.8798397}
+,{"sourceId":218,"targetId":223,"similarity":0.878068}
+,{"sourceId":217,"targetId":224,"similarity":0.89125264}
+]
+}
+,{"id":225,"label":"size=31 age=32 males=0% NAs=0% NDFs=38%\n23 view/show/p3\n18 view/index/view_search_results\n17 data/personalize/wishlist_content_update\n14 click/search_results/view_search_results\n13 data/similar_listings/similar_listings","level":3,"size":31,"ndf":0.38709676,"age":32.612904,"male":0.0,"na":0.0,"children":[
+{"id":226,"label":"size=20 age=33 males=0% NAs=0% NDFs=30%\n11 click/search_results/view_search_results\n9 view/index/view_search_results\n8 view/show/p3\n6 -empty-/show/null\n6 data/personalize/wishlist_content_update","level":4,"size":20,"ndf":0.3,"age":33.05,"male":0.0,"na":0.0}
+,{"id":227,"label":"size=4 age=32 males=0% NAs=0% NDFs=75%\n9 data/personalize/wishlist_content_update\n7 -empty-/lookup/null\n5 -empty-/show/null\n5 click/ajax_refresh_subtotal/change_trip_characteristics\n5 view/show/p3","level":4,"size":4,"ndf":0.75,"age":32.25,"male":0.0,"na":0.0}
+,{"id":228,"label":"size=4 age=30 males=0% NAs=0% NDFs=25%\n44 view/show/p3\n22 data/personalize/wishlist_content_update\n22 view/index/view_search_results\n17 -empty-/show/null\n16 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":4,"ndf":0.25,"age":30.75,"male":0.0,"na":0.0}
+,{"id":229,"label":"size=2 age=32 males=0% NAs=0% NDFs=50%\n18 click/search_results/view_search_results\n11 click/ajax_refresh_subtotal/change_trip_characteristics\n8 -empty-/show/null\n8 data/personalize/wishlist_content_update\n8 data/similar_listings/similar_listings","level":4,"size":2,"ndf":0.5,"age":32.5,"male":0.0,"na":0.0}
+,{"id":230,"label":"zmpzxso742 FEMALE 33 NDF\n28 data/personalize/wishlist_content_update\n16 click/ajax_refresh_subtotal/change_trip_characteristics\n15 -empty-/show/null\n15 data/similar_listings/similar_listings\n15 view/show/p3","level":4,"size":1,"ndf":1.0,"age":33.0,"male":0.0,"na":0.0}
+]
+,"links":[
+{"sourceId":226,"targetId":230,"similarity":0.89694107}
+,{"sourceId":227,"targetId":230,"similarity":0.8920212}
+,{"sourceId":228,"targetId":230,"similarity":0.86886805}
+,{"sourceId":226,"targetId":229,"similarity":0.89340764}
+]
+}
+]
+,"links":[
+{"sourceId":198,"targetId":216,"similarity":0.8474811}
+,{"sourceId":198,"targetId":225,"similarity":0.82005674}
+]
+}
+,{"id":231,"label":"size=58 age=24 males=0% NAs=0% NDFs=34%\n28 data/personalize/wishlist_content_update\n27 click/ajax_refresh_subtotal/change_trip_characteristics\n25 view/show/p3\n23 -empty-/show/null\n18 -empty-/lookup/null","level":2,"size":58,"ndf":0.3448276,"age":24.344828,"male":0.0,"na":0.0,"children":[
+{"id":232,"label":"size=33 age=24 males=0% NAs=0% NDFs=33%\n52 click/ajax_refresh_subtotal/change_trip_characteristics\n38 data/personalize/wishlist_content_update\n35 -empty-/show/null\n31 data/similar_listings/similar_listings\n27 view/show/p3","level":3,"size":33,"ndf":0.33333334,"age":24.030304,"male":0.0,"na":0.0,"children":[
+{"id":233,"label":"size=11 age=22 males=0% NAs=0% NDFs=45%\n37 view/show/p3\n36 data/personalize/wishlist_content_update\n23 view/index/view_search_results\n21 click/ajax_refresh_subtotal/change_trip_characteristics\n20 data/similar_listings/similar_listings","level":4,"size":11,"ndf":0.45454547,"age":22.90909,"male":0.0,"na":0.0}
+,{"id":234,"label":"size=10 age=25 males=0% NAs=0% NDFs=30%\n23 data/similar_listings/similar_listings\n21 click/ajax_refresh_subtotal/change_trip_characteristics\n13 data/personalize/wishlist_content_update\n13 view/show/p3\n10 -empty-/show/null","level":4,"size":10,"ndf":0.3,"age":25.0,"male":0.0,"na":0.0}
+,{"id":235,"label":"size=5 age=24 males=0% NAs=0% NDFs=20%\n28 data/personalize/wishlist_content_update\n27 click/ajax_refresh_subtotal/change_trip_characteristics\n25 view/show/p3\n23 -empty-/show/null\n18 -empty-/lookup/null","level":4,"size":5,"ndf":0.2,"age":24.0,"male":0.0,"na":0.0}
+,{"id":236,"label":"size=2 age=25 males=0% NAs=0% NDFs=50%\n37 view/show/p3\n20 data/personalize/wishlist_content_update\n20 view/edit/edit_profile\n19 data/similar_listings/similar_listings\n17 -empty-/show/null","level":4,"size":2,"ndf":0.5,"age":25.0,"male":0.0,"na":0.0}
+,{"id":237,"label":"size=2 age=22 males=0% NAs=0% NDFs=0%\n7 data/personalize/wishlist_content_update\n6 click/ajax_refresh_subtotal/change_trip_characteristics\n5 -empty-/show/null\n5 click/search_results/view_search_results\n3 data/similar_listings/similar_listings","level":4,"size":2,"ndf":0.0,"age":22.5,"male":0.0,"na":0.0}
+,{"id":238,"label":"size=2 age=25 males=0% NAs=0% NDFs=50%\n22 view/qt2/message_thread\n21 data/similar_listings/similar_listings\n20 click/search_results/view_search_results\n19 click/ajax_refresh_subtotal/change_trip_characteristics\n17 view/show/p3","level":4,"size":2,"ndf":0.5,"age":25.0,"male":0.0,"na":0.0}
+,{"id":239,"label":"o33o82zhtg FEMALE 26 US\n26 click/ajax_refresh_subtotal/change_trip_characteristics\n19 data/personalize/wishlist_content_update\n16 -empty-/show/null\n16 view/show/p3\n14 data/similar_listings/similar_listings","level":4,"size":1,"ndf":0.0,"age":26.0,"male":0.0,"na":0.0}
+]
+,"links":[
+{"sourceId":233,"targetId":235,"similarity":0.89541686}
+,{"sourceId":234,"targetId":239,"similarity":0.8985088}
+,{"sourceId":234,"targetId":236,"similarity":0.88482606}
+,{"sourceId":233,"targetId":237,"similarity":0.88880557}
+,{"sourceId":234,"targetId":238,"similarity":0.8777711}
+]
+}
+,{"id":240,"label":"size=11 age=25 males=0% NAs=0% NDFs=45%\n31 click/search_results/view_search_results\n24 -empty-/lookup/null\n12 click/ajax_refresh_subtotal/change_trip_characteristics\n12 data/personalize/wishlist_content_update\n12 view/show/p3","level":3,"size":11,"ndf":0.45454547,"age":25.09091,"male":0.0,"na":0.0,"children":[
+{"id":241,"label":"size=7 age=25 males=0% NAs=0% NDFs=42%\n133 -empty-/lookup/null\n125 click/search_results/view_search_results\n81 view/show/p3\n78 data/personalize/wishlist_content_update\n45 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":7,"ndf":0.42857143,"age":25.714285,"male":0.0,"na":0.0}
+,{"id":242,"label":"k2uhjk3vpi FEMALE 23 NDF\n77 click/search_results/view_search_results\n30 view/show/p3\n26 view/index/view_search_results\n23 data/similar_listings/similar_listings\n22 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":1,"ndf":1.0,"age":23.0,"male":0.0,"na":0.0}
+,{"id":243,"label":"4vpu4ecrpq FEMALE 25 US\n5 click/search_results/view_search_results\n3 -empty-/lookup/null\n3 data/personalize/wishlist_content_update\n2 -empty-/show/null\n2 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":1,"ndf":0.0,"age":25.0,"male":0.0,"na":0.0}
+,{"id":244,"label":"spv23uq1cb FEMALE 23 NDF\n19 -empty-/lookup/null\n19 data/personalize/wishlist_content_update\n16 click/search_results/view_search_results\n15 -empty-/show/null\n15 view/show/p3","level":4,"size":1,"ndf":1.0,"age":23.0,"male":0.0,"na":0.0}
+,{"id":245,"label":"eful75ogye FEMALE 25 US\n17 click/search_results/view_search_results\n9 view/index/view_search_results\n7 click/ajax_refresh_subtotal/change_trip_characteristics\n6 data/personalize/wishlist_content_update\n4 -empty-/show/null","level":4,"size":1,"ndf":0.0,"age":25.0,"male":0.0,"na":0.0}
+]
+,"links":[
+{"sourceId":241,"targetId":243,"similarity":0.8855899}
+,{"sourceId":242,"targetId":245,"similarity":0.896505}
+,{"sourceId":241,"targetId":244,"similarity":0.8792863}
+]
+}
+]
+,"links":[
+{"sourceId":232,"targetId":240,"similarity":0.7906708}
+]
+}
+,{"id":246,"label":"size=41 age=33 males=0% NAs=0% NDFs=60%\n22 view/index/view_search_results\n18 view/show/p3\n15 data/personalize/wishlist_content_update\n11 click/search_results/view_search_results\n10 -empty-/show/null","level":2,"size":41,"ndf":0.6097561,"age":33.560974,"male":0.0,"na":0.0,"children":[
+{"id":247,"label":"size=28 age=33 males=0% NAs=0% NDFs=57%\n13 view/show/p3\n11 view/index/view_search_results\n7 data/personalize/wishlist_content_update\n6 -empty-/show/null\n6 click/ajax_refresh_subtotal/change_trip_characteristics","level":3,"size":28,"ndf":0.5714286,"age":33.607143,"male":0.0,"na":0.0,"children":[
+{"id":248,"label":"size=14 age=34 males=0% NAs=0% NDFs=64%\n22 view/index/view_search_results\n18 view/show/p3\n15 data/personalize/wishlist_content_update\n11 click/search_results/view_search_results\n10 -empty-/show/null","level":4,"size":14,"ndf":0.64285713,"age":34.0,"male":0.0,"na":0.0}
+,{"id":249,"label":"size=3 age=33 males=0% NAs=0% NDFs=66%\n3 data/personalize/wishlist_content_update\n2 -empty-/show/null\n2 click/ajax_refresh_subtotal/change_trip_characteristics\n2 data/similar_listings/similar_listings\n2 submit/update/update_listing","level":4,"size":3,"ndf":0.6666667,"age":33.0,"male":0.0,"na":0.0}
+,{"id":250,"label":"size=3 age=35 males=0% NAs=0% NDFs=33%\n102 click/ajax_refresh_subtotal/change_trip_characteristics\n72 data/personalize/wishlist_content_update\n71 view/show/p3\n69 -empty-/show/null\n69 data/similar_listings/similar_listings","level":4,"size":3,"ndf":0.33333334,"age":35.333332,"male":0.0,"na":0.0}
+,{"id":251,"label":"size=3 age=32 males=0% NAs=0% NDFs=0%\n62 view/show/p3\n41 data/personalize/wishlist_content_update\n32 -empty-/show/null\n31 click/ajax_refresh_subtotal/change_trip_characteristics\n13 -empty-/lookup/null","level":4,"size":3,"ndf":0.0,"age":32.333332,"male":0.0,"na":0.0}
+,{"id":252,"label":"size=2 age=33 males=0% NAs=0% NDFs=50%\n3 view/show/p3\n2 click/search_results/view_search_results\n2 data/header_userpic/header_userpic\n2 data/personalize/wishlist_content_update\n2 view/index/view_search_results","level":4,"size":2,"ndf":0.5,"age":33.0,"male":0.0,"na":0.0}
+,{"id":253,"label":"v06q91gx5a FEMALE 33 NDF\n32 view/show/p3\n20 view/index/view_search_results\n18 data/similar_listings/similar_listings\n16 click/ajax_refresh_subtotal/change_trip_characteristics\n14 click/search_results/view_search_results","level":4,"size":1,"ndf":1.0,"age":33.0,"male":0.0,"na":0.0}
+,{"id":254,"label":"zbk73fkkc2 FEMALE 33 NDF\n16 click/ajax_refresh_subtotal/change_trip_characteristics\n16 data/similar_listings/similar_listings\n16 view/index/view_search_results\n16 view/show/p3\n15 data/personalize/wishlist_content_update","level":4,"size":1,"ndf":1.0,"age":33.0,"male":0.0,"na":0.0}
+,{"id":255,"label":"65alihdbu2 FEMALE 31 NDF\n6 view/index/view_search_results\n6 view/show/p3\n3 -empty-/show/null\n3 click/ajax_refresh_subtotal/change_trip_characteristics\n3 data/header_userpic/header_userpic","level":4,"size":1,"ndf":1.0,"age":31.0,"male":0.0,"na":0.0}
+]
+,"links":[
+{"sourceId":248,"targetId":252,"similarity":0.8814884}
+,{"sourceId":248,"targetId":249,"similarity":0.87522596}
+,{"sourceId":250,"targetId":251,"similarity":0.8555057}
+,{"sourceId":249,"targetId":251,"similarity":0.8598958}
+,{"sourceId":248,"targetId":253,"similarity":0.8768359}
+,{"sourceId":253,"targetId":254,"similarity":0.8763579}
+,{"sourceId":253,"targetId":255,"similarity":0.8587547}
+]
+}
+]
+}
+,{"id":256,"label":"size=31 age=29 males=100% NAs=12% NDFs=54%\n13 data/personalize/wishlist_content_update\n12 -empty-/show/null\n12 click/ajax_refresh_subtotal/change_trip_characteristics\n11 data/similar_listings/similar_listings\n11 view/show/p3","level":2,"size":31,"ndf":0.5483871,"age":29.129032,"male":1.0,"na":0.12903225,"children":[
+{"id":257,"label":"size=23 age=29 males=100% NAs=0% NDFs=56%\n13 data/personalize/wishlist_content_update\n12 -empty-/show/null\n12 click/ajax_refresh_subtotal/change_trip_characteristics\n11 data/similar_listings/similar_listings\n11 view/show/p3","level":3,"size":23,"ndf":0.5652174,"age":29.130434,"male":1.0,"na":0.0,"children":[
+{"id":258,"label":"size=11 age=28 males=100% NAs=0% NDFs=72%\n24 data/personalize/wishlist_content_update\n22 view/show/p3\n21 -empty-/show/null\n21 click/ajax_refresh_subtotal/change_trip_characteristics\n17 data/similar_listings/similar_listings","level":4,"size":11,"ndf":0.72727275,"age":28.181818,"male":1.0,"na":0.0}
+,{"id":259,"label":"size=7 age=30 males=100% NAs=0% NDFs=28%\n77 click/search_results/view_search_results\n52 view/show/p3\n50 view/index/view_search_results\n32 click/ajax_refresh_subtotal/change_trip_characteristics\n32 data/similar_listings/similar_listings","level":4,"size":7,"ndf":0.2857143,"age":30.142857,"male":1.0,"na":0.0}
+,{"id":260,"label":"size=3 age=30 males=100% NAs=0% NDFs=66%\n30 click/search_results/view_search_results\n19 click/ajax_refresh_subtotal/change_trip_characteristics\n18 data/similar_listings/similar_listings\n10 click/ajax_check_dates/change_contact_host_dates\n9 -empty-/show/null","level":4,"size":3,"ndf":0.6666667,"age":30.0,"male":1.0,"na":0.0}
+,{"id":261,"label":"lywivpwv5m MALE 30 US\n60 click/ajax_refresh_subtotal/change_trip_characteristics\n60 data/similar_listings/similar_listings\n52 data/personalize/wishlist_content_update\n50 -empty-/show/null\n50 view/show/p3","level":4,"size":1,"ndf":0.0,"age":30.0,"male":1.0,"na":0.0}
+,{"id":262,"label":"uc770nxa7b MALE 29 NDF\n14 data/similar_listings/similar_listings\n12 click/ajax_refresh_subtotal/change_trip_characteristics\n9 view/show/p3\n8 -empty-/show/null\n7 data/personalize/wishlist_content_update","level":4,"size":1,"ndf":1.0,"age":29.0,"male":1.0,"na":0.0}
+]
+,"links":[
+{"sourceId":258,"targetId":261,"similarity":0.8963747}
+,{"sourceId":259,"targetId":260,"similarity":0.8935778}
+,{"sourceId":261,"targetId":262,"similarity":0.8897333}
+]
+}
+]
+}
+]
+,"links":[
+{"sourceId":197,"targetId":256,"similarity":0.7977785}
+,{"sourceId":197,"targetId":231,"similarity":0.7829289}
+,{"sourceId":197,"targetId":246,"similarity":0.77296144}
+]
+}
+,{"id":263,"label":"size=437 age=0 males=0% NAs=100% NDFs=89%\n3 data/header_userpic/header_userpic\n2 view/dashboard/dashboard\n1 click/confirm_email/confirm_email_link\n1 data/personalize/wishlist_content_update\n1 submit/create/create_user","level":1,"size":437,"ndf":0.8947368,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":264,"label":"size=308 age=0 males=0% NAs=100% NDFs=90%\n2 data/header_userpic/header_userpic\n2 view/dashboard/dashboard\n1 click/confirm_email/confirm_email_link\n1 submit/create/create_user","level":2,"size":308,"ndf":0.9025974,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":265,"label":"size=179 age=0 males=0% NAs=100% NDFs=89%\n2 data/header_userpic/header_userpic\n1 click/confirm_email/confirm_email_link\n1 submit/create/create_user\n1 view/dashboard/dashboard","level":3,"size":179,"ndf":0.89944136,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":266,"label":"size=93 age=0 males=0% NAs=100% NDFs=88%\n2 data/header_userpic/header_userpic\n1 submit/create/create_user","level":4,"size":93,"ndf":0.8817204,"age":0.0,"male":0.0,"na":1.0}
+,{"id":267,"label":"size=57 age=0 males=0% NAs=100% NDFs=91%\n2 data/header_userpic/header_userpic\n2 view/dashboard/dashboard\n1 click/confirm_email/confirm_email_link\n1 submit/create/create_user","level":4,"size":57,"ndf":0.9122807,"age":0.0,"male":0.0,"na":1.0}
+,{"id":268,"label":"size=7 age=0 males=0% NAs=100% NDFs=100%\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 submit/create/create_user","level":4,"size":7,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":269,"label":"size=4 age=0 males=0% NAs=100% NDFs=75%\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 data/show_personalize/user_profile_content_update\n1 submit/create/create_user\n1 view/dashboard/dashboard","level":4,"size":4,"ndf":0.75,"age":0.0,"male":0.0,"na":1.0}
+,{"id":270,"label":"size=3 age=0 males=0% NAs=100% NDFs=100%\n2 data/header_userpic/header_userpic\n2 view/dashboard/dashboard\n2 view/index/view_search_results\n1 -empty-/lookup/null\n1 click/confirm_email/confirm_email_link","level":4,"size":3,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":271,"label":"size=2 age=0 males=0% NAs=100% NDFs=50%\n2 data/header_userpic/header_userpic\n2 view/dashboard/dashboard\n1 -unknown-/recommended_listings/-unknown-\n1 click/confirm_email/confirm_email_link\n1 message_post/-empty-/message_post","level":4,"size":2,"ndf":0.5,"age":0.0,"male":0.0,"na":1.0}
+,{"id":272,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n2 data/header_userpic/header_userpic\n1 -empty-/show/null\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 click/confirm_email/confirm_email_link\n1 data/personalize/wishlist_content_update","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":273,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n1 -unknown-/ajax_get_referrals_amt/-unknown-\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 submit/create/create_user","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":274,"label":"golxxspa4a NDF\n22 data/header_userpic/header_userpic\n8 view/notifications/account_notification_settings\n6 view/dashboard/dashboard\n4 -unknown-/account/-unknown-\n4 view/edit/edit_profile","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":275,"label":"aho2qbti5o NDF\n5 data/header_userpic/header_userpic\n2 -unknown-/identity/-unknown-\n2 view/dashboard/dashboard\n1 -unknown-/jumio_token/-unknown-\n1 click/confirm_email/confirm_email_link","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":276,"label":"i1kfr5pli8 NDF\n3 data/header_userpic/header_userpic\n2 view/index/view_search_results\n1 click/confirm_email/confirm_email_link\n1 data/personalize/wishlist_content_update\n1 submit/create/create_user","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":277,"label":"9327zulknf NDF\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 submit/create/create_user\n1 view/cancellation_policies/cancellation_policies","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":278,"label":"rdgwdr9oak NDF\n2 data/header_userpic/header_userpic\n1 -unknown-/active/-unknown-\n1 -unknown-/contact_new/-unknown-\n1 -unknown-/pending_tickets/-unknown-\n1 click/confirm_email/confirm_email_link","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":279,"label":"79qg7go78s NDF\n1 -unknown-/update/-unknown-\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 submit/create/create_user","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":280,"label":"4sy6d193jg NDF\n2 data/header_userpic/header_userpic\n2 view/cancellation_policies/cancellation_policies\n2 view/dashboard/dashboard\n1 click/cancellation_policy_click/cancellation_policy_click\n1 click/confirm_email/confirm_email_link","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":281,"label":"bhqv82z9y9 NDF\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 submit/create/create_user\n1 view/dashboard/dashboard\n1 view/index/message_thread","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":282,"label":"51dk6lb2cm NDF\n3 data/header_userpic/header_userpic\n2 -empty-/track_page_view/null\n2 view/dashboard/dashboard\n2 view/show/wishlist\n1 click/confirm_email/confirm_email_link","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":266,"targetId":268,"similarity":0.87816036}
+,{"sourceId":267,"targetId":271,"similarity":0.88613635}
+,{"sourceId":267,"targetId":269,"similarity":0.87816036}
+,{"sourceId":270,"targetId":276,"similarity":0.8878378}
+,{"sourceId":267,"targetId":272,"similarity":0.8434037}
+,{"sourceId":273,"targetId":277,"similarity":0.89909905}
+,{"sourceId":274,"targetId":275,"similarity":0.87040347}
+,{"sourceId":267,"targetId":275,"similarity":0.88097996}
+,{"sourceId":267,"targetId":278,"similarity":0.8810811}
+,{"sourceId":273,"targetId":279,"similarity":0.89909905}
+,{"sourceId":277,"targetId":280,"similarity":0.87682056}
+,{"sourceId":267,"targetId":281,"similarity":0.86734957}
+,{"sourceId":267,"targetId":282,"similarity":0.8588901}
+]
+}
+,{"id":283,"label":"size=78 age=0 males=0% NAs=100% NDFs=89%\n4 view/dashboard/dashboard\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 message_post/-empty-/message_post\n1 submit/ask_question/contact_host","level":3,"size":78,"ndf":0.8974359,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":284,"label":"size=43 age=0 males=0% NAs=100% NDFs=81%\n2 view/dashboard/dashboard\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 message_post/-empty-/message_post","level":4,"size":43,"ndf":0.81395346,"age":0.0,"male":0.0,"na":1.0}
+,{"id":285,"label":"size=22 age=0 males=0% NAs=100% NDFs=100%\n2 view/dashboard/dashboard\n1 data/header_userpic/header_userpic\n1 partner_callback/callback/oauth_response","level":4,"size":22,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":286,"label":"size=5 age=0 males=0% NAs=100% NDFs=100%\n3 view/dashboard/dashboard\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 data/show_personalize/user_profile_content_update\n1 submit/create/create_user","level":4,"size":5,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":287,"label":"size=3 age=0 males=0% NAs=100% NDFs=100%\n2 data/header_userpic/header_userpic\n2 view/dashboard/dashboard\n2 view/qt2/message_thread\n1 -unknown-/recommended_listings/-unknown-\n1 click/confirm_email/confirm_email_link","level":4,"size":3,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":288,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n3 view/dashboard/dashboard\n2 view/edit/edit_profile\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 message_post/-empty-/message_post","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":289,"label":"o6edl5zvy1 NDF\n4 view/dashboard/dashboard\n2 -unknown-/identity/-unknown-\n2 click/confirm_email/confirm_email_link\n2 view/edit_verification/profile_verifications\n1 -unknown-/jumio_token/-unknown-","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":290,"label":"coirc8vmwn NDF\n2 view/dashboard/dashboard\n1 -unknown-/recommended_listings/-unknown-\n1 click/ajax_check_dates/change_contact_host_dates\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 click/confirm_email/confirm_email_link","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":291,"label":"uwp1iutq7d NDF\n4 view/dashboard/dashboard\n2 -unknown-/issue/-unknown-\n1 -empty-/localization_settings/null\n1 -unknown-/active/-unknown-\n1 -unknown-/contact_new/-unknown-","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":284,"targetId":286,"similarity":0.88547146}
+,{"sourceId":285,"targetId":291,"similarity":0.89223826}
+,{"sourceId":284,"targetId":287,"similarity":0.86266434}
+,{"sourceId":284,"targetId":288,"similarity":0.8820453}
+,{"sourceId":284,"targetId":289,"similarity":0.8754282}
+,{"sourceId":284,"targetId":290,"similarity":0.845297}
+]
+}
+]
+,"links":[
+{"sourceId":265,"targetId":283,"similarity":0.7684368}
+]
+}
+,{"id":292,"label":"size=88 age=0 males=0% NAs=100% NDFs=89%\n2 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 submit/create/create_user\n1 submit/update/update_listing","level":2,"size":88,"ndf":0.89772725,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":293,"label":"size=54 age=0 males=0% NAs=100% NDFs=88%\n2 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 submit/create/create_user\n1 submit/update/update_listing","level":3,"size":54,"ndf":0.8888889,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":294,"label":"size=38 age=0 males=0% NAs=100% NDFs=84%\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 submit/create/create_user\n1 submit/update/update_listing","level":4,"size":38,"ndf":0.84210527,"age":0.0,"male":0.0,"na":1.0}
+,{"id":295,"label":"size=3 age=0 males=0% NAs=100% NDFs=100%\n1 data/header_userpic/header_userpic\n1 submit/create/create_user","level":4,"size":3,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":296,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n14 data/header_userpic/header_userpic\n5 submit/update/update_listing\n3 click/search_results/view_search_results\n2 -empty-/lookup/null\n2 submit/create/create_user","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":297,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n3 data/header_userpic/header_userpic\n2 view/index/view_search_results\n1 click/search_results/view_search_results\n1 data/personalize/wishlist_content_update\n1 submit/create/create_user","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":298,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 submit/create/create_user\n1 view/show/p3","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":299,"label":"lyjwgqnzhq NDF\n2 data/header_userpic/header_userpic\n2 submit/update/update_listing\n1 submit/create/create_user\n1 submit/set_user/create_listing\n1 view/manage_listing/manage_listing","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":300,"label":"ozoscexg7e NDF\n2 data/personalize/wishlist_content_update\n1 -unknown-/open_graph_setting/-unknown-\n1 data/header_userpic/header_userpic\n1 submit/create/create_user\n1 submit/update/update_listing","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":301,"label":"mlal7qpkl1 NDF\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 submit/create/create_user\n1 view/cancellation_policies/cancellation_policies","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":302,"label":"f7vveaidkh NDF\n1 -unknown-/update/-unknown-\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 submit/create/create_user","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":303,"label":"efanuxofwb NDF\n1 -unknown-/create/-unknown-\n1 data/header_userpic/header_userpic\n1 submit/create/create_user\n1 submit/update/update_listing","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":304,"label":"8wcfdoot58 NDF\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 data/similar_listings/similar_listings\n1 submit/create/create_user","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":305,"label":"b65ddumduf NDF\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 submit/create/create_user","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":294,"targetId":300,"similarity":0.8990991}
+,{"sourceId":295,"targetId":305,"similarity":0.8899982}
+,{"sourceId":296,"targetId":299,"similarity":0.8811491}
+,{"sourceId":296,"targetId":297,"similarity":0.8790354}
+,{"sourceId":298,"targetId":305,"similarity":0.8897435}
+,{"sourceId":301,"targetId":305,"similarity":0.8897435}
+,{"sourceId":302,"targetId":305,"similarity":0.8897435}
+,{"sourceId":299,"targetId":303,"similarity":0.86690724}
+,{"sourceId":294,"targetId":304,"similarity":0.8899982}
+,{"sourceId":294,"targetId":305,"similarity":0.89514893}
+]
+}
+]
+}
+]
+,"links":[
+{"sourceId":264,"targetId":292,"similarity":0.77168345}
+]
+}
+,{"id":306,"label":"size=229 age=37 males=87% NAs=6% NDFs=52%\n12 data/personalize/wishlist_content_update\n11 view/show/p3\n10 -empty-/show/null\n10 click/ajax_refresh_subtotal/change_trip_characteristics\n8 data/similar_listings/similar_listings","level":1,"size":229,"ndf":0.52401745,"age":37.676857,"male":0.8744186,"na":0.06113537,"children":[
+{"id":307,"label":"size=117 age=36 males=95% NAs=0% NDFs=51%\n14 view/show/p3\n11 click/search_results/view_search_results\n10 click/ajax_refresh_subtotal/change_trip_characteristics\n10 data/personalize/wishlist_content_update\n10 data/similar_listings/similar_listings","level":2,"size":117,"ndf":0.51282054,"age":36.82906,"male":0.95726496,"na":0.0,"children":[
+{"id":308,"label":"size=59 age=36 males=100% NAs=0% NDFs=47%\n14 view/show/p3\n11 click/search_results/view_search_results\n10 click/ajax_refresh_subtotal/change_trip_characteristics\n10 data/personalize/wishlist_content_update\n10 data/similar_listings/similar_listings","level":3,"size":59,"ndf":0.47457626,"age":36.847458,"male":1.0,"na":0.0,"children":[
+{"id":309,"label":"size=18 age=37 males=100% NAs=0% NDFs=44%\n12 data/personalize/wishlist_content_update\n11 view/show/p3\n10 -empty-/show/null\n10 click/ajax_refresh_subtotal/change_trip_characteristics\n8 data/similar_listings/similar_listings","level":4,"size":18,"ndf":0.44444445,"age":37.61111,"male":1.0,"na":0.0}
+,{"id":310,"label":"size=12 age=36 males=100% NAs=0% NDFs=41%\n10 click/search_results/view_search_results\n8 view/index/view_search_results\n7 data/personalize/wishlist_content_update\n6 view/show/p3\n3 -empty-/show/null","level":4,"size":12,"ndf":0.41666666,"age":36.0,"male":1.0,"na":0.0}
+,{"id":311,"label":"size=7 age=35 males=100% NAs=0% NDFs=42%\n5 data/personalize/wishlist_content_update\n4 -empty-/show/null\n3 click/ajax_refresh_subtotal/change_trip_characteristics\n3 click/search_results/view_search_results\n2 data/similar_listings/similar_listings","level":4,"size":7,"ndf":0.42857143,"age":35.42857,"male":1.0,"na":0.0}
+,{"id":312,"label":"size=4 age=34 males=100% NAs=0% NDFs=50%\n31 view/show/p3\n22 view/index/view_search_results\n17 data/personalize/wishlist_content_update\n16 click/ajax_refresh_subtotal/change_trip_characteristics\n16 data/similar_listings/similar_listings","level":4,"size":4,"ndf":0.5,"age":34.0,"male":1.0,"na":0.0}
+,{"id":313,"label":"size=3 age=40 males=100% NAs=0% NDFs=100%\n51 view/show/p3\n25 -empty-/show/null\n25 click/ajax_refresh_subtotal/change_trip_characteristics\n25 data/personalize/wishlist_content_update\n25 data/similar_listings/similar_listings","level":4,"size":3,"ndf":1.0,"age":40.0,"male":1.0,"na":0.0}
+,{"id":314,"label":"size=3 age=38 males=100% NAs=0% NDFs=33%\n18 click/search_results/view_search_results\n10 -empty-/lookup/null\n10 data/personalize/wishlist_content_update\n7 -empty-/show/null\n7 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":3,"ndf":0.33333334,"age":38.333332,"male":1.0,"na":0.0}
+,{"id":315,"label":"t5b8x3hqcg MALE 42 NDF\n78 view/show/p3\n50 view/index/view_search_results\n48 click/search_results/view_search_results\n42 click/ajax_refresh_subtotal/change_trip_characteristics\n42 data/similar_listings/similar_listings","level":4,"size":1,"ndf":1.0,"age":42.0,"male":1.0,"na":0.0}
+,{"id":316,"label":"jqdke6dyeg MALE 37 NDF\n12 -empty-/lookup/null\n8 click/search_results/view_search_results\n8 data/personalize/wishlist_content_update\n5 click/ajax_refresh_subtotal/change_trip_characteristics\n5 data/similar_listings/similar_listings","level":4,"size":1,"ndf":1.0,"age":37.0,"male":1.0,"na":0.0}
+,{"id":317,"label":"ueow9bukgj MALE 38 NDF\n20 view/show/p3\n16 view/index/view_search_results\n12 click/search_results/view_search_results\n11 data/similar_listings/similar_listings\n10 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":38.0,"male":1.0,"na":0.0}
+,{"id":318,"label":"ju0ja78j15 MALE 36 NDF\n12 data/similar_listings/similar_listings\n9 data/personalize/wishlist_content_update\n9 view/show/p3\n8 click/ajax_refresh_subtotal/change_trip_characteristics\n8 view/index/view_search_results","level":4,"size":1,"ndf":1.0,"age":36.0,"male":1.0,"na":0.0}
+,{"id":319,"label":"jaom1wy1k5 MALE 38 US\n49 click/search_results/view_search_results\n49 view/show/p3\n39 view/index/view_search_results\n28 data/personalize/wishlist_content_update\n26 -empty-/show/null","level":4,"size":1,"ndf":0.0,"age":38.0,"male":1.0,"na":0.0}
+,{"id":320,"label":"f5qi9620zi MALE 36 US\n18 view/show/p3\n11 -unknown-/identity/-unknown-\n11 data/similar_listings/similar_listings\n10 click/ajax_refresh_subtotal/change_trip_characteristics\n9 data/personalize/wishlist_content_update","level":4,"size":1,"ndf":0.0,"age":36.0,"male":1.0,"na":0.0}
+,{"id":321,"label":"h8nxvmwxwv MALE 37 US\n61 data/personalize/wishlist_content_update\n57 view/index/view_search_results\n49 view/show/p3\n31 -empty-/show/null\n30 -empty-/similar_listings_v2/null","level":4,"size":1,"ndf":0.0,"age":37.0,"male":1.0,"na":0.0}
+,{"id":322,"label":"o7x0v0sysa MALE 37 US\n13 view/show/p3\n12 view/qt2/message_thread\n9 data/similar_listings/similar_listings\n8 click/ajax_refresh_subtotal/change_trip_characteristics\n8 data/personalize/wishlist_content_update","level":4,"size":1,"ndf":0.0,"age":37.0,"male":1.0,"na":0.0}
+,{"id":323,"label":"zxey2nfqkf MALE 34 US\n50 click/search_results/view_search_results\n37 view/show/p3\n34 data/similar_listings/similar_listings\n33 click/ajax_refresh_subtotal/change_trip_characteristics\n19 -empty-/show/null","level":4,"size":1,"ndf":0.0,"age":34.0,"male":1.0,"na":0.0}
+,{"id":324,"label":"0fdjp780ot MALE 37 NDF\n21 click/search_results/view_search_results\n16 view/show/p3\n14 data/header_userpic/header_userpic\n10 data/personalize/wishlist_content_update\n9 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":37.0,"male":1.0,"na":0.0}
+,{"id":325,"label":"47l5vm0ulu MALE 37 US\n78 view/show/p3\n27 -unknown-/index/-unknown-\n27 data/personalize/wishlist_content_update\n23 data/similar_listings/similar_listings\n23 view/show/user_profile","level":4,"size":1,"ndf":0.0,"age":37.0,"male":1.0,"na":0.0}
+,{"id":326,"label":"o5wrfrb76c MALE 37 NDF\n10 view/show/p3\n5 -empty-/show/null\n5 data/similar_listings/similar_listings\n5 view/index/message_thread\n4 data/personalize/wishlist_content_update","level":4,"size":1,"ndf":1.0,"age":37.0,"male":1.0,"na":0.0}
+]
+,"links":[
+{"sourceId":309,"targetId":314,"similarity":0.89486426}
+,{"sourceId":310,"targetId":324,"similarity":0.87389845}
+,{"sourceId":309,"targetId":311,"similarity":0.886801}
+,{"sourceId":312,"targetId":318,"similarity":0.89210284}
+,{"sourceId":313,"targetId":315,"similarity":0.8998187}
+,{"sourceId":314,"targetId":316,"similarity":0.8838372}
+,{"sourceId":317,"targetId":319,"similarity":0.8773149}
+,{"sourceId":318,"targetId":320,"similarity":0.8718643}
+,{"sourceId":319,"targetId":321,"similarity":0.86889607}
+,{"sourceId":309,"targetId":322,"similarity":0.8426262}
+,{"sourceId":323,"targetId":324,"similarity":0.8515553}
+,{"sourceId":325,"targetId":326,"similarity":0.88098466}
+]
+}
+,{"id":327,"label":"size=16 age=33 males=100% NAs=0% NDFs=43%\n21 click/search_results/view_search_results\n16 data/personalize/wishlist_content_update\n14 -empty-/lookup/null\n14 -empty-/show/null\n14 click/ajax_refresh_subtotal/change_trip_characteristics","level":3,"size":16,"ndf":0.4375,"age":33.3125,"male":1.0,"na":0.0,"children":[
+{"id":328,"label":"size=9 age=33 males=100% NAs=0% NDFs=66%\n18 click/search_results/view_search_results\n18 data/personalize/wishlist_content_update\n18 view/index/view_search_results\n14 click/ajax_refresh_subtotal/change_trip_characteristics\n13 -empty-/show/null","level":4,"size":9,"ndf":0.6666667,"age":33.11111,"male":1.0,"na":0.0}
+,{"id":329,"label":"size=4 age=34 males=100% NAs=0% NDFs=25%\n15 click/search_results/view_search_results\n12 -empty-/lookup/null\n9 data/personalize/wishlist_content_update\n7 -empty-/show/null\n7 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":4,"ndf":0.25,"age":34.25,"male":1.0,"na":0.0}
+,{"id":330,"label":"size=2 age=32 males=100% NAs=0% NDFs=0%\n7 data/personalize/wishlist_content_update\n7 view/index/view_search_results\n7 view/show/p3\n5 click/ajax_refresh_subtotal/change_trip_characteristics\n5 data/similar_listings/similar_listings","level":4,"size":2,"ndf":0.0,"age":32.0,"male":1.0,"na":0.0}
+,{"id":331,"label":"0hkhnjzu20 MALE 34 US\n28 click/search_results/view_search_results\n21 click/ajax_refresh_subtotal/change_trip_characteristics\n19 view/show/p3\n14 -empty-/similar_listings_v2/null\n14 data/personalize/wishlist_content_update","level":4,"size":1,"ndf":0.0,"age":34.0,"male":1.0,"na":0.0}
+]
+,"links":[
+{"sourceId":328,"targetId":329,"similarity":0.89987785}
+,{"sourceId":328,"targetId":330,"similarity":0.88754547}
+,{"sourceId":328,"targetId":331,"similarity":0.8934525}
+]
+}
+,{"id":332,"label":"size=15 age=41 males=100% NAs=0% NDFs=60%\n17 view/index/view_search_results\n14 click/ajax_refresh_subtotal/change_trip_characteristics\n14 data/similar_listings/similar_listings\n13 data/personalize/wishlist_content_update\n12 -empty-/show/null","level":3,"size":15,"ndf":0.6,"age":41.133335,"male":1.0,"na":0.0,"children":[
+{"id":333,"label":"size=8 age=41 males=100% NAs=0% NDFs=75%\n17 view/show/p3\n14 click/search_results/view_search_results\n10 click/ajax_refresh_subtotal/change_trip_characteristics\n10 data/personalize/wishlist_content_update\n10 data/similar_listings/similar_listings","level":4,"size":8,"ndf":0.75,"age":41.625,"male":1.0,"na":0.0}
+,{"id":334,"label":"size=2 age=41 males=100% NAs=0% NDFs=50%\n9 data/personalize/wishlist_content_update\n7 -empty-/show/null\n6 data/similar_listings/similar_listings\n6 view/show/p3\n4 view/index/view_search_results","level":4,"size":2,"ndf":0.5,"age":41.0,"male":1.0,"na":0.0}
+,{"id":335,"label":"70n7zucp9d MALE 40 US\n14 view/index/view_search_results\n14 view/show/p3\n12 click/search_results/view_search_results\n11 data/personalize/wishlist_content_update\n10 -empty-/show/null","level":4,"size":1,"ndf":0.0,"age":40.0,"male":1.0,"na":0.0}
+,{"id":336,"label":"m7xmxcft2g MALE 40 NDF\n14 view/index/view_search_results\n10 click/search_results/view_search_results\n10 view/show/p3\n7 data/personalize/wishlist_content_update\n4 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":40.0,"male":1.0,"na":0.0}
+,{"id":337,"label":"nyqhz9q4qa MALE 40 US\n13 data/similar_listings/similar_listings\n12 click/ajax_refresh_subtotal/change_trip_characteristics\n8 click/ajax_check_dates/change_contact_host_dates\n8 view/show/p3\n7 data/personalize/wishlist_content_update","level":4,"size":1,"ndf":0.0,"age":40.0,"male":1.0,"na":0.0}
+,{"id":338,"label":"t39jsby2it MALE 41 US\n79 click/search_results/view_search_results\n52 data/personalize/wishlist_content_update\n49 view/show/p3\n48 view/index/view_search_results\n28 -empty-/similar_listings_v2/null","level":4,"size":1,"ndf":0.0,"age":41.0,"male":1.0,"na":0.0}
+,{"id":339,"label":"0pem7rm58l MALE 41 NDF\n17 view/index/view_search_results\n14 click/ajax_refresh_subtotal/change_trip_characteristics\n14 data/similar_listings/similar_listings\n13 data/personalize/wishlist_content_update\n12 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":41.0,"male":1.0,"na":0.0}
+]
+,"links":[
+{"sourceId":333,"targetId":339,"similarity":0.8766939}
+,{"sourceId":334,"targetId":339,"similarity":0.8904268}
+,{"sourceId":335,"targetId":336,"similarity":0.8797655}
+,{"sourceId":336,"targetId":338,"similarity":0.89297366}
+,{"sourceId":337,"targetId":339,"similarity":0.8931213}
+]
+}
+]
+,"links":[
+{"sourceId":308,"targetId":332,"similarity":0.8437686}
+,{"sourceId":308,"targetId":327,"similarity":0.82644033}
+]
+}
+,{"id":340,"label":"size=31 age=42 males=100% NAs=3% NDFs=45%\n13 data/personalize/wishlist_content_update\n8 -empty-/lookup/null\n7 click/ajax_refresh_subtotal/change_trip_characteristics\n6 -empty-/show/null\n6 click/search_results/view_search_results","level":2,"size":31,"ndf":0.4516129,"age":42.129032,"male":1.0,"na":0.032258064,"children":[
+{"id":341,"label":"size=16 age=42 males=100% NAs=0% NDFs=37%\n13 data/personalize/wishlist_content_update\n8 -empty-/lookup/null\n7 click/ajax_refresh_subtotal/change_trip_characteristics\n6 -empty-/show/null\n6 click/search_results/view_search_results","level":3,"size":16,"ndf":0.375,"age":42.1875,"male":1.0,"na":0.0,"children":[
+{"id":342,"label":"size=4 age=44 males=100% NAs=0% NDFs=25%\n12 data/personalize/wishlist_content_update\n9 -empty-/show/null\n9 click/ajax_refresh_subtotal/change_trip_characteristics\n9 view/show/p3\n8 click/search_results/view_search_results","level":4,"size":4,"ndf":0.25,"age":44.25,"male":1.0,"na":0.0}
+,{"id":343,"label":"size=4 age=41 males=100% NAs=0% NDFs=25%\n18 -empty-/lookup/null\n13 click/search_results/view_search_results\n10 data/personalize/wishlist_content_update\n5 -empty-/show/null\n5 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":4,"ndf":0.25,"age":41.25,"male":1.0,"na":0.0}
+,{"id":344,"label":"size=2 age=42 males=100% NAs=0% NDFs=100%\n9 data/personalize/wishlist_content_update\n5 view/index/view_search_results\n4 -empty-/show/null\n4 click/ajax_refresh_subtotal/change_trip_characteristics\n3 view/show/p3","level":4,"size":2,"ndf":1.0,"age":42.0,"male":1.0,"na":0.0}
+,{"id":345,"label":"v6hea2ij15 MALE 41 NDF\n3 data/personalize/wishlist_content_update\n2 -empty-/show/null\n2 view/show/p3\n1 -unknown-/open_graph_setting/-unknown-\n1 data/header_userpic/header_userpic","level":4,"size":1,"ndf":1.0,"age":41.0,"male":1.0,"na":0.0}
+,{"id":346,"label":"f0vxcxi7r3 MALE 43 NDF\n7 data/personalize/wishlist_content_update\n5 -empty-/lookup/null\n4 -empty-/show/null\n4 view/index/view_search_results\n4 view/show/p3","level":4,"size":1,"ndf":1.0,"age":43.0,"male":1.0,"na":0.0}
+,{"id":347,"label":"u5mxvi7h3q MALE 42 US\n7 click/ajax_refresh_subtotal/change_trip_characteristics\n5 data/personalize/wishlist_content_update\n5 data/similar_listings/similar_listings\n3 -empty-/show/null\n3 view/show/p3","level":4,"size":1,"ndf":0.0,"age":42.0,"male":1.0,"na":0.0}
+,{"id":348,"label":"0kzdud7zb7 MALE 41 US\n2 click/search_results/view_search_results\n2 data/personalize/wishlist_content_update\n1 -empty-/lookup/null\n1 -empty-/show/null\n1 click/confirm_email/confirm_email_link","level":4,"size":1,"ndf":0.0,"age":41.0,"male":1.0,"na":0.0}
+,{"id":349,"label":"346q8114vy MALE 40 US\n4 -empty-/lookup/null\n3 click/search_results/view_search_results\n3 data/personalize/wishlist_content_update\n2 data/similar_listings/similar_listings\n2 view/index/view_search_results","level":4,"size":1,"ndf":0.0,"age":40.0,"male":1.0,"na":0.0}
+,{"id":350,"label":"mpnpdzdrre MALE 42 US\n63 click/search_results/view_search_results\n32 click/ajax_refresh_subtotal/change_trip_characteristics\n31 data/personalize/wishlist_content_update\n28 -empty-/show/null\n20 data/similar_listings/similar_listings","level":4,"size":1,"ndf":0.0,"age":42.0,"male":1.0,"na":0.0}
+]
+,"links":[
+{"sourceId":342,"targetId":346,"similarity":0.887309}
+,{"sourceId":343,"targetId":349,"similarity":0.8979647}
+,{"sourceId":344,"targetId":346,"similarity":0.8976808}
+,{"sourceId":345,"targetId":346,"similarity":0.8134088}
+,{"sourceId":342,"targetId":347,"similarity":0.8605909}
+,{"sourceId":348,"targetId":349,"similarity":0.8606044}
+,{"sourceId":342,"targetId":350,"similarity":0.85834247}
+]
+}
+]
+}
+]
+,"links":[
+{"sourceId":307,"targetId":340,"similarity":0.7972072}
+]
+}
+,{"id":351,"label":"size=204 age=26 males=99% NAs=6% NDFs=51%\n35 data/personalize/wishlist_content_update\n33 -empty-/show/null\n33 view/show/p3\n31 click/ajax_refresh_subtotal/change_trip_characteristics\n25 data/similar_listings/similar_listings","level":1,"size":204,"ndf":0.5147059,"age":26.078432,"male":0.9947644,"na":0.063725494,"children":[
+{"id":352,"label":"size=129 age=25 males=100% NAs=1% NDFs=47%\n35 data/personalize/wishlist_content_update\n33 -empty-/show/null\n33 view/show/p3\n31 click/ajax_refresh_subtotal/change_trip_characteristics\n25 data/similar_listings/similar_listings","level":2,"size":129,"ndf":0.4728682,"age":25.930233,"male":1.0,"na":0.015503876,"children":[
+{"id":353,"label":"size=63 age=25 males=100% NAs=0% NDFs=49%\n35 data/personalize/wishlist_content_update\n33 -empty-/show/null\n33 view/show/p3\n31 click/ajax_refresh_subtotal/change_trip_characteristics\n25 data/similar_listings/similar_listings","level":3,"size":63,"ndf":0.4920635,"age":25.587301,"male":1.0,"na":0.0,"children":[
+{"id":354,"label":"size=24 age=25 males=100% NAs=0% NDFs=41%\n29 view/show/p3\n18 data/personalize/wishlist_content_update\n15 data/similar_listings/similar_listings\n13 -empty-/show/null\n13 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":24,"ndf":0.41666666,"age":25.125,"male":1.0,"na":0.0}
+,{"id":355,"label":"size=7 age=23 males=100% NAs=0% NDFs=28%\n27 data/personalize/wishlist_content_update\n22 -empty-/show/null\n19 click/search_results/view_search_results\n15 view/index/view_search_results\n12 view/show/p3","level":4,"size":7,"ndf":0.2857143,"age":23.142857,"male":1.0,"na":0.0}
+,{"id":356,"label":"size=6 age=26 males=100% NAs=0% NDFs=66%\n30 click/search_results/view_search_results\n25 click/ajax_refresh_subtotal/change_trip_characteristics\n24 -empty-/lookup/null\n21 data/personalize/wishlist_content_update\n19 -empty-/show/null","level":4,"size":6,"ndf":0.6666667,"age":26.0,"male":1.0,"na":0.0}
+,{"id":357,"label":"size=4 age=26 males=100% NAs=0% NDFs=75%\n100 view/index/view_search_results\n62 data/personalize/wishlist_content_update\n50 click/search_results/view_search_results\n28 view/show/p3\n26 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":4,"ndf":0.75,"age":26.75,"male":1.0,"na":0.0}
+,{"id":358,"label":"size=4 age=26 males=100% NAs=0% NDFs=50%\n11 click/ajax_refresh_subtotal/change_trip_characteristics\n10 data/similar_listings/similar_listings\n9 view/show/p3\n8 view/index/view_search_results\n6 data/personalize/wishlist_content_update","level":4,"size":4,"ndf":0.5,"age":26.5,"male":1.0,"na":0.0}
+,{"id":359,"label":"size=3 age=28 males=100% NAs=0% NDFs=100%\n4 view/index/view_search_results\n4 view/show/p3\n3 data/personalize/wishlist_content_update\n2 -empty-/show/null\n2 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":3,"ndf":1.0,"age":28.0,"male":1.0,"na":0.0}
+,{"id":360,"label":"size=2 age=27 males=100% NAs=0% NDFs=100%\n38 data/personalize/wishlist_content_update\n32 -empty-/show/null\n32 click/ajax_refresh_subtotal/change_trip_characteristics\n32 view/show/p3\n25 -unknown-/calendar_tab_inner2/-unknown-","level":4,"size":2,"ndf":1.0,"age":27.0,"male":1.0,"na":0.0}
+,{"id":361,"label":"ucii64h97g MALE 24 US\n9 click/ajax_refresh_subtotal/change_trip_characteristics\n9 data/similar_listings/similar_listings\n6 view/show/p3\n5 data/personalize/wishlist_content_update\n4 -empty-/show/null","level":4,"size":1,"ndf":0.0,"age":24.0,"male":1.0,"na":0.0}
+,{"id":362,"label":"drldzdp38z MALE 25 NDF\n5 data/personalize/wishlist_content_update\n3 -empty-/show/null\n2 click/ajax_refresh_subtotal/change_trip_characteristics\n2 data/header_userpic/header_userpic\n2 data/similar_listings/similar_listings","level":4,"size":1,"ndf":1.0,"age":25.0,"male":1.0,"na":0.0}
+,{"id":363,"label":"yu246xqcyg MALE 25 US\n2 data/personalize/wishlist_content_update\n1 -empty-/show/null\n1 -unknown-/other_hosting_reviews_first/-unknown-\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 click/confirm_email/confirm_email_link","level":4,"size":1,"ndf":0.0,"age":25.0,"male":1.0,"na":0.0}
+,{"id":364,"label":"4utqa4isx5 MALE 26 US\n11 data/personalize/wishlist_content_update\n9 view/edit/edit_profile\n7 -empty-/lookup/null\n7 -empty-/show/null\n7 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":1,"ndf":0.0,"age":26.0,"male":1.0,"na":0.0}
+,{"id":365,"label":"db1z9ojnot MALE 26 NDF\n36 click/ajax_refresh_subtotal/change_trip_characteristics\n23 data/personalize/wishlist_content_update\n22 -empty-/show/null\n22 view/show/p3\n21 data/similar_listings/similar_listings","level":4,"size":1,"ndf":1.0,"age":26.0,"male":1.0,"na":0.0}
+,{"id":366,"label":"wvhm0gfb92 MALE 27 US\n24 data/personalize/wishlist_content_update\n13 -empty-/show/null\n13 view/show/p3\n11 -empty-/lookup/null\n7 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":1,"ndf":0.0,"age":27.0,"male":1.0,"na":0.0}
+,{"id":367,"label":"i2nldsy2jh MALE 24 NDF\n34 data/personalize/wishlist_content_update\n29 -empty-/lookup/null\n18 -empty-/show/null\n18 view/index/view_search_results\n18 view/show/p3","level":4,"size":1,"ndf":1.0,"age":24.0,"male":1.0,"na":0.0}
+,{"id":368,"label":"4u05pv1sy7 MALE 25 US\n6 view/index/view_search_results\n4 view/show/p3\n3 data/personalize/wishlist_content_update\n2 -empty-/show/null\n2 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":1,"ndf":0.0,"age":25.0,"male":1.0,"na":0.0}
+,{"id":369,"label":"fp0ztsyzex MALE 27 US\n1 -empty-/show/null\n1 click/ajax_refresh_subtotal/change_trip_characteristics\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update\n1 data/similar_listings/similar_listings","level":4,"size":1,"ndf":0.0,"age":27.0,"male":1.0,"na":0.0}
+,{"id":370,"label":"93nykega9s MALE 28 NDF\n33 view/show/p3\n24 click/ajax_refresh_subtotal/change_trip_characteristics\n24 data/similar_listings/similar_listings\n19 data/personalize/wishlist_content_update\n17 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":28.0,"male":1.0,"na":0.0}
+,{"id":371,"label":"o0cj7rwko0 MALE 26 US\n4 click/ajax_refresh_subtotal/change_trip_characteristics\n4 data/similar_listings/similar_listings\n4 view/show/p3\n3 -unknown-/tos_confirm/-unknown-\n2 -empty-/show/null","level":4,"size":1,"ndf":0.0,"age":26.0,"male":1.0,"na":0.0}
+,{"id":372,"label":"1x2mxrg2go MALE 30 NDF\n18 view/show/p3\n11 data/personalize/wishlist_content_update\n10 -empty-/show/null\n10 click/ajax_refresh_subtotal/change_trip_characteristics\n10 data/similar_listings/similar_listings","level":4,"size":1,"ndf":1.0,"age":30.0,"male":1.0,"na":0.0}
+,{"id":373,"label":"tjrfjgf6ru MALE 27 US\n6 view/show/p3\n5 -empty-/show/null\n5 click/ajax_refresh_subtotal/change_trip_characteristics\n5 data/personalize/wishlist_content_update\n2 click/this_hosting_reviews/listing_reviews_page","level":4,"size":1,"ndf":0.0,"age":27.0,"male":1.0,"na":0.0}
+]
+,"links":[
+{"sourceId":354,"targetId":358,"similarity":0.8990804}
+,{"sourceId":355,"targetId":367,"similarity":0.8834486}
+,{"sourceId":356,"targetId":360,"similarity":0.8959459}
+,{"sourceId":357,"targetId":368,"similarity":0.8985971}
+,{"sourceId":359,"targetId":370,"similarity":0.8637406}
+,{"sourceId":361,"targetId":365,"similarity":0.87956184}
+,{"sourceId":354,"targetId":362,"similarity":0.8908306}
+,{"sourceId":362,"targetId":363,"similarity":0.8833466}
+,{"sourceId":360,"targetId":364,"similarity":0.86797464}
+,{"sourceId":360,"targetId":366,"similarity":0.890277}
+,{"sourceId":356,"targetId":367,"similarity":0.89246476}
+,{"sourceId":369,"targetId":373,"similarity":0.8643633}
+,{"sourceId":370,"targetId":372,"similarity":0.8954978}
+,{"sourceId":358,"targetId":371,"similarity":0.87162745}
+,{"sourceId":366,"targetId":373,"similarity":0.88978386}
+]
+}
+,{"id":374,"label":"size=11 age=27 males=100% NAs=0% NDFs=54%\n45 click/search_results/view_search_results\n34 -empty-/lookup/null\n21 data/personalize/wishlist_content_update\n20 -empty-/show/null\n20 click/ajax_refresh_subtotal/change_trip_characteristics","level":3,"size":11,"ndf":0.54545456,"age":27.0,"male":1.0,"na":0.0,"children":[
+{"id":375,"label":"size=5 age=26 males=100% NAs=0% NDFs=60%\n119 click/search_results/view_search_results\n52 data/similar_listings/similar_listings\n45 data/personalize/wishlist_content_update\n40 -empty-/show/null\n39 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":5,"ndf":0.6,"age":26.4,"male":1.0,"na":0.0}
+,{"id":376,"label":"size=3 age=27 males=100% NAs=0% NDFs=33%\n45 click/search_results/view_search_results\n34 -empty-/lookup/null\n21 data/personalize/wishlist_content_update\n20 -empty-/show/null\n20 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":3,"ndf":0.33333334,"age":27.333334,"male":1.0,"na":0.0}
+,{"id":377,"label":"oj2tt82tnt MALE 30 NDF\n24 -empty-/lookup/null\n23 data/personalize/wishlist_content_update\n22 view/show/p3\n17 click/search_results/view_search_results\n13 view/index/view_search_results","level":4,"size":1,"ndf":1.0,"age":30.0,"male":1.0,"na":0.0}
+,{"id":378,"label":"39gj4sliyi MALE 26 NDF\n5 click/search_results/view_search_results\n4 data/personalize/wishlist_content_update\n3 -empty-/show/null\n3 data/header_userpic/header_userpic\n3 data/similar_listings/similar_listings","level":4,"size":1,"ndf":1.0,"age":26.0,"male":1.0,"na":0.0}
+,{"id":379,"label":"tlxy2q9szg MALE 27 US\n2 -empty-/lookup/null\n2 -empty-/show/null\n2 click/search_results/view_search_results\n2 data/personalize/wishlist_content_update\n2 view/show/p3","level":4,"size":1,"ndf":0.0,"age":27.0,"male":1.0,"na":0.0}
+]
+,"links":[
+{"sourceId":375,"targetId":378,"similarity":0.8745368}
+,{"sourceId":376,"targetId":379,"similarity":0.88710403}
+,{"sourceId":376,"targetId":377,"similarity":0.8501976}
+]
+}
+,{"id":380,"label":"size=10 age=28 males=100% NAs=0% NDFs=30%\n8 click/ajax_refresh_subtotal/change_trip_characteristics\n7 data/personalize/wishlist_content_update\n6 -empty-/show/null\n6 view/show/p3\n3 click/ajax_check_dates/change_contact_host_dates","level":3,"size":10,"ndf":0.3,"age":28.8,"male":1.0,"na":0.0,"children":[
+{"id":381,"label":"size=3 age=30 males=100% NAs=0% NDFs=0%\n21 view/show/p3\n16 view/index/view_search_results\n14 click/ajax_refresh_subtotal/change_trip_characteristics\n14 data/similar_listings/similar_listings\n12 data/personalize/wishlist_content_update","level":4,"size":3,"ndf":0.0,"age":30.0,"male":1.0,"na":0.0}
+,{"id":382,"label":"size=2 age=29 males=100% NAs=0% NDFs=100%\n8 click/ajax_refresh_subtotal/change_trip_characteristics\n7 data/personalize/wishlist_content_update\n6 -empty-/show/null\n6 view/show/p3\n3 click/ajax_check_dates/change_contact_host_dates","level":4,"size":2,"ndf":1.0,"age":29.0,"male":1.0,"na":0.0}
+,{"id":383,"label":"3gcqvk21dj MALE 27 NDF\n10 view/show/p3\n5 -empty-/show/null\n5 click/ajax_refresh_subtotal/change_trip_characteristics\n5 data/personalize/wishlist_content_update\n2 click/ajax_check_dates/change_contact_host_dates","level":4,"size":1,"ndf":1.0,"age":27.0,"male":1.0,"na":0.0}
+,{"id":384,"label":"02j4ylsh0c MALE 29 US\n3 -empty-/show/null\n3 data/personalize/wishlist_content_update\n3 view/show/p3\n1 -unknown-/open_graph_setting/-unknown-\n1 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":1,"ndf":0.0,"age":29.0,"male":1.0,"na":0.0}
+,{"id":385,"label":"rtebba48oy MALE 29 US\n18 view/show/p3\n9 click/ajax_refresh_subtotal/change_trip_characteristics\n8 data/similar_listings/similar_listings\n7 data/personalize/wishlist_content_update\n5 -empty-/show/null","level":4,"size":1,"ndf":0.0,"age":29.0,"male":1.0,"na":0.0}
+,{"id":386,"label":"1vrxtnuzqp MALE 27 US\n13 click/ajax_refresh_subtotal/change_trip_characteristics\n10 data/personalize/wishlist_content_update\n9 click/ajax_check_dates/change_contact_host_dates\n8 data/similar_listings/similar_listings\n6 -empty-/show/null","level":4,"size":1,"ndf":0.0,"age":27.0,"male":1.0,"na":0.0}
+,{"id":387,"label":"pf47poq8po MALE 28 US\n16 click/ajax_refresh_subtotal/change_trip_characteristics\n16 data/personalize/wishlist_content_update\n14 -empty-/show/null\n11 view/show/p3\n10 submit/apply_reservation/apply_coupon","level":4,"size":1,"ndf":0.0,"age":28.0,"male":1.0,"na":0.0}
+]
+,"links":[
+{"sourceId":381,"targetId":385,"similarity":0.86345637}
+,{"sourceId":382,"targetId":384,"similarity":0.87231135}
+,{"sourceId":383,"targetId":385,"similarity":0.87109804}
+,{"sourceId":384,"targetId":385,"similarity":0.8927845}
+,{"sourceId":382,"targetId":386,"similarity":0.850555}
+,{"sourceId":382,"targetId":387,"similarity":0.86623013}
+]
+}
+]
+,"links":[
+{"sourceId":353,"targetId":374,"similarity":0.8187346}
+,{"sourceId":353,"targetId":380,"similarity":0.81590515}
+]
+}
+]
+}
+,{"id":388,"label":"size=164 age=29 males=83% NAs=1% NDFs=68%\n9 view/show/user_profile\n7 click/search/view_search_results\n5 data/reviews/listing_reviews\n5 data/social_connections/user_social_connections\n5 view/show/p3","level":1,"size":164,"ndf":0.6890244,"age":29.0,"male":0.83229816,"na":0.018292682,"children":[
+{"id":389,"label":"size=97 age=28 males=93% NAs=1% NDFs=67%\n9 view/show/user_profile\n7 click/search/view_search_results\n5 data/reviews/listing_reviews\n5 data/social_connections/user_social_connections\n5 view/show/p3","level":2,"size":97,"ndf":0.6701031,"age":28.927835,"male":0.9375,"na":0.010309278,"children":[
+{"id":390,"label":"size=55 age=29 males=100% NAs=0% NDFs=69%\n42 view/show/user_profile\n24 click/search/view_search_results\n21 data/social_connections/user_social_connections\n21 view/show/p3\n13 data/reviews/listing_reviews","level":3,"size":55,"ndf":0.6909091,"age":29.672728,"male":1.0,"na":0.0,"children":[
+{"id":391,"label":"size=33 age=28 males=100% NAs=0% NDFs=69%\n9 view/show/user_profile\n7 click/search/view_search_results\n5 data/reviews/listing_reviews\n5 data/social_connections/user_social_connections\n5 view/show/p3","level":4,"size":33,"ndf":0.6969697,"age":28.969696,"male":1.0,"na":0.0}
+,{"id":392,"label":"size=9 age=32 males=100% NAs=0% NDFs=66%\n5 view/show/user_profile\n4 data/social_connections/user_social_connections\n3 click/search/view_search_results\n2 data/reviews/listing_reviews\n2 submit/update/update_listing","level":4,"size":9,"ndf":0.6666667,"age":32.11111,"male":1.0,"na":0.0}
+,{"id":393,"label":"size=5 age=29 males=100% NAs=0% NDFs=80%\n14 view/show/user_profile\n9 data/social_connections/user_social_connections\n4 view/show/p3\n2 -unknown-/active/-unknown-\n2 data/index/reservations","level":4,"size":5,"ndf":0.8,"age":29.4,"male":1.0,"na":0.0}
+,{"id":394,"label":"size=3 age=27 males=100% NAs=0% NDFs=33%\n25 view/show/user_profile\n19 data/reviews/listing_reviews\n14 data/social_connections/user_social_connections\n13 view/show/p3\n7 click/search/view_search_results","level":4,"size":3,"ndf":0.33333334,"age":27.0,"male":1.0,"na":0.0}
+,{"id":395,"label":"size=2 age=31 males=100% NAs=0% NDFs=50%\n25 click/search/view_search_results\n9 view/show/user_profile\n6 data/reviews/listing_reviews\n6 data/social_connections/user_social_connections\n6 view/show/p3","level":4,"size":2,"ndf":0.5,"age":31.0,"male":1.0,"na":0.0}
+,{"id":396,"label":"w2usx21kqb MALE 31 NDF\n10 view/show/user_profile\n7 -unknown-/active/-unknown-\n5 -empty-/campaigns/null\n5 data/reviews/listing_reviews\n5 view/show/p3","level":4,"size":1,"ndf":1.0,"age":31.0,"male":1.0,"na":0.0}
+,{"id":397,"label":"5sqahvh1go MALE 34 NDF\n16 view/show/user_profile\n9 click/search/view_search_results\n8 data/reviews/listing_reviews\n8 data/social_connections/user_social_connections\n8 view/show/p3","level":4,"size":1,"ndf":1.0,"age":34.0,"male":1.0,"na":0.0}
+,{"id":398,"label":"uvqaub96ra MALE 32 NDF\n10 view/show/user_profile\n6 click/search/view_search_results\n6 data/social_connections/user_social_connections\n5 data/reviews/listing_reviews\n5 data/unavailabilities/unavailable_dates","level":4,"size":1,"ndf":1.0,"age":32.0,"male":1.0,"na":0.0}
+]
+,"links":[
+{"sourceId":391,"targetId":394,"similarity":0.88859713}
+,{"sourceId":392,"targetId":397,"similarity":0.8963972}
+,{"sourceId":391,"targetId":393,"similarity":0.86591315}
+,{"sourceId":391,"targetId":395,"similarity":0.8883903}
+,{"sourceId":396,"targetId":398,"similarity":0.87284136}
+,{"sourceId":392,"targetId":398,"similarity":0.8945083}
+]
+}
+,{"id":399,"label":"size=17 age=25 males=100% NAs=0% NDFs=64%\n64 view/show/user_profile\n38 data/reviews/listing_reviews\n38 data/social_connections/user_social_connections\n37 view/show/p3\n27 click/search/view_search_results","level":3,"size":17,"ndf":0.64705884,"age":25.058823,"male":1.0,"na":0.0,"children":[
+{"id":400,"label":"size=15 age=25 males=100% NAs=0% NDFs=73%\n64 view/show/user_profile\n38 data/reviews/listing_reviews\n38 data/social_connections/user_social_connections\n37 view/show/p3\n27 click/search/view_search_results","level":4,"size":15,"ndf":0.73333335,"age":25.0,"male":1.0,"na":0.0}
+,{"id":401,"label":"218t6yedcb MALE 25 US\n79 click/search/view_search_results\n33 view/show/user_profile\n20 data/social_connections/user_social_connections\n17 data/reviews/listing_reviews\n17 view/show/p3","level":4,"size":1,"ndf":0.0,"age":25.0,"male":1.0,"na":0.0}
+,{"id":402,"label":"e1crv4247a MALE 26 US\n6 view/show/user_profile\n4 -unknown-/active/-unknown-\n4 data/reviews/listing_reviews\n3 -empty-/campaigns/null\n3 click/search/view_search_results","level":4,"size":1,"ndf":0.0,"age":26.0,"male":1.0,"na":0.0}
+]
+,"links":[
+{"sourceId":400,"targetId":402,"similarity":0.89009625}
+,{"sourceId":400,"targetId":401,"similarity":0.8506688}
+]
+}
+,{"id":403,"label":"size=10 age=28 males=100% NAs=0% NDFs=50%\n31 click/search/view_search_results\n8 -unknown-/settings/-unknown-\n8 submit/update/update_listing\n7 data/social_connections/user_social_connections\n7 view/show/user_profile","level":3,"size":10,"ndf":0.5,"age":28.9,"male":1.0,"na":0.0,"children":[
+{"id":404,"label":"size=6 age=28 males=100% NAs=0% NDFs=50%\n14 click/search/view_search_results\n3 data/reviews/listing_reviews\n3 view/show/user_profile\n2 -empty-/campaigns/null\n2 -unknown-/active/-unknown-","level":4,"size":6,"ndf":0.5,"age":28.333334,"male":1.0,"na":0.0}
+,{"id":405,"label":"size=2 age=31 males=100% NAs=0% NDFs=50%\n52 click/search/view_search_results\n22 view/show/user_profile\n13 view/show/p3\n12 data/reviews/listing_reviews\n11 data/social_connections/user_social_connections","level":4,"size":2,"ndf":0.5,"age":31.0,"male":1.0,"na":0.0}
+,{"id":406,"label":"size=2 age=28 males=100% NAs=0% NDFs=50%\n93 click/search/view_search_results\n57 view/collections/user_wishlists\n46 -unknown-/active/-unknown-\n44 -unknown-/index/-unknown-\n44 view/show/user_profile","level":4,"size":2,"ndf":0.5,"age":28.5,"male":1.0,"na":0.0}
+]
+,"links":[
+{"sourceId":404,"targetId":405,"similarity":0.8732136}
+,{"sourceId":404,"targetId":406,"similarity":0.84278214}
+]
+}
+]
+,"links":[
+{"sourceId":390,"targetId":399,"similarity":0.83140016}
+,{"sourceId":390,"targetId":403,"similarity":0.76691943}
+]
+}
+]
+}
+,{"id":407,"label":"size=152 age=0 males=50% NAs=100% NDFs=98%\n5 submit/update/update_listing\n2 data/header_userpic/header_userpic\n2 view/manage_listing/manage_listing\n1 submit/create/create_user\n1 submit/set_user/create_listing","level":1,"size":152,"ndf":0.9868421,"age":0.0,"male":0.5,"na":1.0,"children":[
+{"id":408,"label":"size=138 age=0 males=33% NAs=100% NDFs=99%\n4 submit/update/update_listing\n1 data/header_userpic/header_userpic\n1 submit/create/create_user\n1 submit/set_user/create_listing\n1 view/manage_listing/manage_listing","level":2,"size":138,"ndf":0.9927536,"age":0.0,"male":0.33333334,"na":1.0,"children":[
+{"id":409,"label":"size=122 age=0 males=0% NAs=100% NDFs=99%\n24 submit/update/update_listing\n6 view/manage_listing/manage_listing\n3 submit/update/update_listing_description\n3 view/index/your_listings\n2 data/header_userpic/header_userpic","level":3,"size":122,"ndf":0.9918033,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":410,"label":"size=100 age=0 males=0% NAs=100% NDFs=99%\n24 submit/update/update_listing\n6 view/manage_listing/manage_listing\n3 submit/update/update_listing_description\n3 view/index/your_listings\n2 data/header_userpic/header_userpic","level":4,"size":100,"ndf":0.99,"age":0.0,"male":0.0,"na":1.0}
+,{"id":411,"label":"size=8 age=0 males=0% NAs=100% NDFs=100%\n2 submit/update/update_listing\n1 data/header_userpic/header_userpic\n1 submit/create/create_user\n1 submit/set_user/create_listing\n1 view/manage_listing/manage_listing","level":4,"size":8,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":412,"label":"size=6 age=0 males=0% NAs=100% NDFs=100%\n49 submit/update/update_listing\n25 view/show/p3\n15 data/similar_listings/similar_listings\n14 -empty-/show/null\n12 data/personalize/wishlist_content_update","level":4,"size":6,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":413,"label":"size=3 age=0 males=0% NAs=100% NDFs=100%\n12 submit/update/update_listing\n11 submit/update/update_listing_description\n5 view/manage_listing/manage_listing\n3 view/index/your_listings\n2 data/header_userpic/header_userpic","level":4,"size":3,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":414,"label":"size=3 age=0 males=0% NAs=100% NDFs=100%\n6 submit/update/update_listing\n3 view/collections/user_wishlists\n1 -empty-/campaigns/null\n1 -unknown-/active/-unknown-\n1 submit/create/signup","level":4,"size":3,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":415,"label":"h1q5dmnkeo NDF\n40 submit/update/update_listing\n22 click/search_results/view_search_results\n20 submit/update/update_listing_description\n12 view/new/list_your_space\n11 view/manage_listing/manage_listing","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":416,"label":"y7ze3vtlcp NDF\n5 submit/update/update_listing\n4 view/manage_listing/manage_listing\n2 data/personalize/wishlist_content_update\n2 view/index/view_search_results\n2 view/show/p3","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":410,"targetId":411,"similarity":0.89829415}
+,{"sourceId":410,"targetId":412,"similarity":0.88292694}
+,{"sourceId":413,"targetId":415,"similarity":0.8865001}
+,{"sourceId":410,"targetId":414,"similarity":0.88445693}
+,{"sourceId":410,"targetId":415,"similarity":0.8940753}
+,{"sourceId":411,"targetId":416,"similarity":0.8655681}
+]
+}
+]
+}
+]
+}
+,{"id":417,"label":"size=145 age=0 males=60% NAs=100% NDFs=23%\n4 view/requested/p5\n2 data/header_userpic/header_userpic\n2 submit/requested/post_checkout_action\n1 -empty-/show/null\n1 -unknown-/verify/-unknown-","level":1,"size":145,"ndf":0.23448277,"age":0.0,"male":0.6,"na":1.0,"children":[
+{"id":418,"label":"size=123 age=0 males=0% NAs=100% NDFs=25%\n4 view/requested/p5\n2 data/header_userpic/header_userpic\n2 submit/create/create_phone_numbers\n2 view/travel_plans_current/your_trips\n1 -empty-/show/null","level":2,"size":123,"ndf":0.25203252,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":419,"label":"size=101 age=0 males=0% NAs=100% NDFs=26%\n4 view/requested/p5\n2 data/header_userpic/header_userpic\n1 -unknown-/verify/-unknown-\n1 booking_request/pending/pending\n1 click/confirm_email/confirm_email_link","level":3,"size":101,"ndf":0.26732674,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":420,"label":"size=62 age=0 males=0% NAs=100% NDFs=24%\n5 view/requested/p5\n2 data/header_userpic/header_userpic\n2 view/dashboard/dashboard\n2 view/travel_plans_current/your_trips\n1 -unknown-/verify/-unknown-","level":4,"size":62,"ndf":0.24193548,"age":0.0,"male":0.0,"na":1.0}
+,{"id":421,"label":"size=13 age=0 males=0% NAs=100% NDFs=30%\n2 submit/create/create_phone_numbers\n2 view/requested/p5\n1 -unknown-/verify/-unknown-\n1 booking_request/pending/pending\n1 data/header_userpic/header_userpic","level":4,"size":13,"ndf":0.30769232,"age":0.0,"male":0.0,"na":1.0}
+,{"id":422,"label":"size=7 age=0 males=0% NAs=100% NDFs=28%\n4 view/requested/p5\n2 data/personalize/wishlist_content_update\n1 -empty-/lookup/null\n1 -empty-/show/null\n1 -unknown-/verify/-unknown-","level":4,"size":7,"ndf":0.2857143,"age":0.0,"male":0.0,"na":1.0}
+,{"id":423,"label":"size=4 age=0 males=0% NAs=100% NDFs=25%\n5 view/requested/p5\n2 click/message_to_host_change/message_to_host_change\n2 click/message_to_host_focus/message_to_host_focus\n2 view/travel_plans_current/your_trips\n1 -unknown-/agree_terms_check/-unknown-","level":4,"size":4,"ndf":0.25,"age":0.0,"male":0.0,"na":1.0}
+,{"id":424,"label":"size=3 age=0 males=0% NAs=100% NDFs=33%\n2 view/dashboard/dashboard\n2 view/requested/p5\n1 -unknown-/verify/-unknown-\n1 booking_request/pending/pending\n1 click/confirm_email/confirm_email_link","level":4,"size":3,"ndf":0.33333334,"age":0.0,"male":0.0,"na":1.0}
+,{"id":425,"label":"size=2 age=0 males=0% NAs=100% NDFs=0%\n5 view/qt2/message_thread\n5 view/requested/p5\n3 submit/create/create_phone_numbers\n2 message_post/-empty-/message_post\n2 view/dashboard/dashboard","level":4,"size":2,"ndf":0.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":426,"label":"size=2 age=0 males=0% NAs=100% NDFs=0%\n3 view/requested/p5\n2 submit/requested/post_checkout_action\n1 -unknown-/active/-unknown-\n1 -unknown-/faq/-unknown-\n1 -unknown-/faq_experiment_ids/-unknown-","level":4,"size":2,"ndf":0.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":427,"label":"zkpys2r6j9 US\n4 view/requested/p5\n2 data/header_userpic/header_userpic\n2 data/personalize/wishlist_content_update\n2 view/dashboard/dashboard\n2 view/index/view_search_results","level":4,"size":1,"ndf":0.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":428,"label":"uoj4oc5qcx US\n5 view/requested/p5\n3 click/forgot_password/forgot_password\n2 view/cancellation_policies/cancellation_policies\n2 view/travel_plans_current/your_trips\n1 -unknown-/verify/-unknown-","level":4,"size":1,"ndf":0.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":429,"label":"n8i32i98y6 NDF\n4 view/requested/p5\n2 data/similar_listings/similar_listings\n2 message_post/12/message_post\n2 submit/create/create_phone_numbers\n2 view/dashboard/dashboard","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":430,"label":"nnlwlnyt59 NDF\n8 view/requested/p5\n3 -unknown-/tos_confirm/-unknown-\n2 submit/requested/post_checkout_action\n2 view/travel_plans_current/your_trips\n1 -unknown-/active/-unknown-","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":431,"label":"mf5rgfizgm NDF\n4 view/requested/p5\n2 view/dashboard/dashboard\n2 view/index/message_thread\n2 view/qt2/message_thread\n1 -unknown-/verify/-unknown-","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":432,"label":"0hqh2eexfs NDF\n5 view/requested/p5\n4 view/travel_plans_current/your_trips\n2 view/cancellation_policies/cancellation_policies\n2 view/dashboard/dashboard\n2 view/index/message_thread","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":433,"label":"ioy7gk27jr US\n3 data/header_userpic/header_userpic\n2 message_post/-empty-/message_post\n2 view/requested/p5\n1 -unknown-/verify/-unknown-\n1 booking_request/pending/pending","level":4,"size":1,"ndf":0.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":434,"label":"j4o6kqtlzj US\n5 view/requested/p5\n3 message_post/12/message_post\n2 view/travel_plans_current/your_trips\n1 -empty-/show/null\n1 -unknown-/verify/-unknown-","level":4,"size":1,"ndf":0.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":420,"targetId":424,"similarity":0.89503944}
+,{"sourceId":421,"targetId":426,"similarity":0.8759835}
+,{"sourceId":422,"targetId":427,"similarity":0.8958542}
+,{"sourceId":420,"targetId":423,"similarity":0.8786241}
+,{"sourceId":425,"targetId":431,"similarity":0.88942254}
+,{"sourceId":420,"targetId":428,"similarity":0.87937915}
+,{"sourceId":427,"targetId":429,"similarity":0.89353275}
+,{"sourceId":420,"targetId":430,"similarity":0.88298947}
+,{"sourceId":420,"targetId":431,"similarity":0.8926951}
+,{"sourceId":420,"targetId":432,"similarity":0.89351606}
+,{"sourceId":421,"targetId":433,"similarity":0.8394362}
+,{"sourceId":429,"targetId":434,"similarity":0.8874803}
+]
+}
+]
+}
+]
+}
+,{"id":435,"label":"size=139 age=44 males=7% NAs=8% NDFs=60%\n6 data/personalize/wishlist_content_update\n6 view/index/view_search_results\n6 view/show/p3\n4 -empty-/show/null\n4 click/ajax_refresh_subtotal/change_trip_characteristics","level":1,"size":139,"ndf":0.60431653,"age":44.179855,"male":0.070866145,"na":0.086330935,"children":[
+{"id":436,"label":"size=89 age=44 males=2% NAs=2% NDFs=60%\n6 data/personalize/wishlist_content_update\n6 view/index/view_search_results\n6 view/show/p3\n4 -empty-/show/null\n4 click/ajax_refresh_subtotal/change_trip_characteristics","level":2,"size":89,"ndf":0.60674155,"age":44.05618,"male":0.022988506,"na":0.02247191,"children":[
+{"id":437,"label":"size=57 age=44 males=0% NAs=0% NDFs=61%\n6 data/personalize/wishlist_content_update\n6 view/index/view_search_results\n6 view/show/p3\n4 -empty-/show/null\n4 click/ajax_refresh_subtotal/change_trip_characteristics","level":3,"size":57,"ndf":0.61403507,"age":44.070175,"male":0.0,"na":0.0,"children":[
+{"id":438,"label":"size=29 age=44 males=0% NAs=0% NDFs=65%\n6 data/personalize/wishlist_content_update\n6 view/index/view_search_results\n6 view/show/p3\n4 -empty-/show/null\n4 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":29,"ndf":0.6551724,"age":44.275864,"male":0.0,"na":0.0}
+,{"id":439,"label":"size=6 age=46 males=0% NAs=0% NDFs=66%\n12 view/show/p3\n9 -empty-/show/null\n9 click/ajax_refresh_subtotal/change_trip_characteristics\n8 data/personalize/wishlist_content_update\n8 data/similar_listings/similar_listings","level":4,"size":6,"ndf":0.6666667,"age":46.833332,"male":0.0,"na":0.0}
+,{"id":440,"label":"size=5 age=41 males=0% NAs=0% NDFs=60%\n15 click/ajax_refresh_subtotal/change_trip_characteristics\n15 data/similar_listings/similar_listings\n14 view/show/p3\n12 data/personalize/wishlist_content_update\n11 -empty-/show/null","level":4,"size":5,"ndf":0.6,"age":41.2,"male":0.0,"na":0.0}
+,{"id":441,"label":"size=3 age=42 males=0% NAs=0% NDFs=33%\n21 -empty-/lookup/null\n20 click/search_results/view_search_results\n17 data/personalize/wishlist_content_update\n14 click/ajax_refresh_subtotal/change_trip_characteristics\n13 view/show/p3","level":4,"size":3,"ndf":0.33333334,"age":42.666668,"male":0.0,"na":0.0}
+,{"id":442,"label":"size=2 age=45 males=0% NAs=0% NDFs=50%\n36 click/search_results/view_search_results\n21 data/personalize/wishlist_content_update\n11 -empty-/show/null\n11 click/ajax_refresh_subtotal/change_trip_characteristics\n11 view/show/p3","level":4,"size":2,"ndf":0.5,"age":45.0,"male":0.0,"na":0.0}
+,{"id":443,"label":"size=2 age=43 males=0% NAs=0% NDFs=100%\n3 click/search_results/view_search_results\n2 data/personalize/wishlist_content_update\n2 view/dashboard/dashboard\n2 view/index/view_search_results\n2 view/show/p3","level":4,"size":2,"ndf":1.0,"age":43.0,"male":0.0,"na":0.0}
+,{"id":444,"label":"1fsg34jzfn FEMALE 42 US\n9 view/index/view_search_results\n8 data/personalize/wishlist_content_update\n4 -empty-/show/null\n4 -empty-/track_page_view/null\n4 data/similar_listings/similar_listings","level":4,"size":1,"ndf":0.0,"age":42.0,"male":0.0,"na":0.0}
+,{"id":445,"label":"ipt62wa3oh FEMALE 46 US\n17 data/personalize/wishlist_content_update\n10 data/similar_listings/similar_listings\n10 view/index/view_search_results\n9 click/ajax_refresh_subtotal/change_trip_characteristics\n8 -empty-/track_page_view/null","level":4,"size":1,"ndf":0.0,"age":46.0,"male":0.0,"na":0.0}
+,{"id":446,"label":"ll2bux2cal FEMALE 46 US\n58 data/personalize/wishlist_content_update\n51 -empty-/lookup/null\n50 view/show/p3\n31 view/index/view_search_results\n25 -empty-/show/null","level":4,"size":1,"ndf":0.0,"age":46.0,"male":0.0,"na":0.0}
+,{"id":447,"label":"k29cl4rew8 FEMALE 42 NDF\n29 view/show/p3\n28 click/search_results/view_search_results\n23 view/index/view_search_results\n16 data/similar_listings/similar_listings\n10 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":42.0,"male":0.0,"na":0.0}
+,{"id":448,"label":"8czy92j67h FEMALE 42 NDF\n3 data/personalize/wishlist_content_update\n2 click/search_results/view_search_results\n1 -empty-/show/null\n1 -unknown-/open_graph_setting/-unknown-\n1 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":1,"ndf":1.0,"age":42.0,"male":0.0,"na":0.0}
+,{"id":449,"label":"y590z81hz5 FEMALE 45 NDF\n24 view/show/p3\n11 -empty-/show/null\n11 click/ajax_refresh_subtotal/change_trip_characteristics\n11 data/personalize/wishlist_content_update\n11 data/similar_listings/similar_listings","level":4,"size":1,"ndf":1.0,"age":45.0,"male":0.0,"na":0.0}
+,{"id":450,"label":"suvbfldn2r FEMALE 43 US\n9 view/show/p3\n7 -empty-/show/null\n7 click/ajax_refresh_subtotal/change_trip_characteristics\n7 data/personalize/wishlist_content_update\n7 data/similar_listings/similar_listings","level":4,"size":1,"ndf":0.0,"age":43.0,"male":0.0,"na":0.0}
+,{"id":451,"label":"zsbl1tcynv FEMALE 45 NDF\n12 view/show/p3\n10 data/personalize/wishlist_content_update\n10 view/index/view_search_results\n9 data/similar_listings/similar_listings\n8 view/show/user_profile","level":4,"size":1,"ndf":1.0,"age":45.0,"male":0.0,"na":0.0}
+,{"id":452,"label":"gzetbvgymq FEMALE 44 NDF\n2 data/personalize/wishlist_content_update\n2 view/dashboard/dashboard\n2 view/index/view_search_results\n2 view/show/p3\n1 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":44.0,"male":0.0,"na":0.0}
+,{"id":453,"label":"665huzj6cc FEMALE 42 US\n19 view/show/p3\n17 data/personalize/wishlist_content_update\n15 view/index/view_search_results\n12 click/ajax_refresh_subtotal/change_trip_characteristics\n12 data/similar_listings/similar_listings","level":4,"size":1,"ndf":0.0,"age":42.0,"male":0.0,"na":0.0}
+]
+,"links":[
+{"sourceId":438,"targetId":450,"similarity":0.888478}
+,{"sourceId":438,"targetId":439,"similarity":0.881498}
+,{"sourceId":440,"targetId":450,"similarity":0.87807775}
+,{"sourceId":441,"targetId":446,"similarity":0.86450386}
+,{"sourceId":438,"targetId":442,"similarity":0.8642367}
+,{"sourceId":438,"targetId":443,"similarity":0.8794581}
+,{"sourceId":444,"targetId":448,"similarity":0.8657518}
+,{"sourceId":445,"targetId":446,"similarity":0.88798344}
+,{"sourceId":443,"targetId":447,"similarity":0.85875475}
+,{"sourceId":449,"targetId":450,"similarity":0.8859551}
+,{"sourceId":438,"targetId":451,"similarity":0.8803985}
+,{"sourceId":438,"targetId":452,"similarity":0.85502845}
+,{"sourceId":438,"targetId":453,"similarity":0.8710515}
+]
+}
+]
+}
+]
+}
+,{"id":454,"label":"size=138 age=0 males=0% NAs=100% NDFs=86%\n1 data/header_userpic/header_userpic\n1 message_post/-empty-/message_post\n1 submit/ask_question/contact_host","level":1,"size":138,"ndf":0.8695652,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":455,"label":"size=104 age=0 males=0% NAs=100% NDFs=90%\n1 message_post/-empty-/message_post\n1 submit/ask_question/contact_host","level":2,"size":104,"ndf":0.90384614,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":456,"label":"size=59 age=0 males=0% NAs=100% NDFs=93%\n1 data/header_userpic/header_userpic\n1 message_post/-empty-/message_post\n1 submit/ask_question/contact_host","level":3,"size":59,"ndf":0.9322034,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":457,"label":"size=40 age=0 males=0% NAs=100% NDFs=95%\n1 data/header_userpic/header_userpic\n1 message_post/-empty-/message_post\n1 submit/ask_question/contact_host","level":4,"size":40,"ndf":0.95,"age":0.0,"male":0.0,"na":1.0}
+,{"id":458,"label":"size=10 age=0 males=0% NAs=100% NDFs=90%\n2 message_post/-empty-/message_post\n2 submit/ask_question/contact_host\n1 click/ajax_check_dates/change_contact_host_dates\n1 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":10,"ndf":0.9,"age":0.0,"male":0.0,"na":1.0}
+,{"id":459,"label":"size=4 age=0 males=0% NAs=100% NDFs=100%\n1 -unknown-/recommended_listings/-unknown-\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 message_post/-empty-/message_post\n1 submit/ask_question/contact_host","level":4,"size":4,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":460,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n1 data/header_userpic/header_userpic\n1 data/show_personalize/user_profile_content_update\n1 message_post/-empty-/message_post\n1 submit/ask_question/contact_host\n1 view/show/user_profile","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":461,"label":"j9qbx0j1la NDF\n1 data/header_userpic/header_userpic\n1 message_post/-empty-/message_post\n1 submit/ask_question/contact_host\n1 submit/authenticate/login\n1 view/login_modal/login_modal","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":462,"label":"lynie35tix NDF\n1 -unknown-/ajax_get_referrals_amt/-unknown-\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 message_post/-empty-/message_post\n1 submit/ask_question/contact_host","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":463,"label":"w9ink7865a US\n2 message_post/-empty-/message_post\n1 -empty-/lookup/null\n1 click/confirm_email/confirm_email_link\n1 data/header_userpic/header_userpic\n1 data/personalize/wishlist_content_update","level":4,"size":1,"ndf":0.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":457,"targetId":459,"similarity":0.87816036}
+,{"sourceId":457,"targetId":458,"similarity":0.8542145}
+,{"sourceId":459,"targetId":462,"similarity":0.8918919}
+,{"sourceId":457,"targetId":460,"similarity":0.87816036}
+,{"sourceId":457,"targetId":461,"similarity":0.87816036}
+,{"sourceId":457,"targetId":463,"similarity":0.8542145}
+]
+}
+,{"id":464,"label":"size=33 age=0 males=0% NAs=100% NDFs=81%\n1 message_post/-empty-/message_post","level":3,"size":33,"ndf":0.8181818,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":465,"label":"size=33 age=0 males=0% NAs=100% NDFs=81%\n1 message_post/-empty-/message_post","level":4,"size":33,"ndf":0.8181818,"age":0.0,"male":0.0,"na":1.0}
+]
+}
+]
+,"links":[
+{"sourceId":456,"targetId":464,"similarity":0.7607299}
+]
+}
+]
+}
+,{"id":466,"label":"size=135 age=0 males=60% NAs=100% NDFs=94%\n155 view/show/p3\n140 click/search/view_search_results\n68 view/show/user_profile\n67 -unknown-/index/-unknown-\n63 data/recommendations/listing_recommendations","level":1,"size":135,"ndf":0.94814813,"age":0.0,"male":0.6,"na":1.0,"children":[
+{"id":467,"label":"size=93 age=0 males=0% NAs=100% NDFs=93%\n155 view/show/p3\n140 click/search/view_search_results\n68 view/show/user_profile\n67 -unknown-/index/-unknown-\n63 data/recommendations/listing_recommendations","level":2,"size":93,"ndf":0.9354839,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":468,"label":"size=59 age=0 males=0% NAs=100% NDFs=94%\n40 view/show/p3\n16 -unknown-/index/-unknown-\n12 view/show/user_profile\n10 view/collections/user_wishlists\n8 data/recommendations/listing_recommendations","level":3,"size":59,"ndf":0.9491525,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":469,"label":"size=46 age=0 males=0% NAs=100% NDFs=93%\n75 view/show/p3\n28 -unknown-/index/-unknown-\n24 data/social_connections/user_social_connections\n24 view/show/user_profile\n18 data/recommendations/listing_recommendations","level":4,"size":46,"ndf":0.9347826,"age":0.0,"male":0.0,"na":1.0}
+,{"id":470,"label":"size=10 age=0 males=0% NAs=100% NDFs=100%\n33 view/collections/user_wishlists\n31 -unknown-/index/-unknown-\n27 view/show/user_profile\n26 data/social_connections/user_social_connections\n23 view/show/p3","level":4,"size":10,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":471,"label":"size=2 age=0 males=0% NAs=100% NDFs=100%\n71 click/search/view_search_results\n52 view/show/p3\n19 -unknown-/index/-unknown-\n18 view/show/user_profile\n16 data/social_connections/user_social_connections","level":4,"size":2,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+,{"id":472,"label":"8mj2vc3728 NDF\n5 view/show/p3\n3 data/unavailabilities/unavailable_dates\n2 -unknown-/active/-unknown-\n2 -unknown-/create/-unknown-\n2 -unknown-/index/-unknown-","level":4,"size":1,"ndf":1.0,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":469,"targetId":472,"similarity":0.8680665}
+,{"sourceId":469,"targetId":470,"similarity":0.84561855}
+,{"sourceId":469,"targetId":471,"similarity":0.8451184}
+]
+}
+,{"id":473,"label":"size=31 age=0 males=0% NAs=100% NDFs=93%\n62 click/search/view_search_results\n7 view/show/user_profile\n6 view/show/p3\n5 data/reviews/listing_reviews\n5 data/social_connections/user_social_connections","level":3,"size":31,"ndf":0.9354839,"age":0.0,"male":0.0,"na":1.0,"children":[
+{"id":474,"label":"size=28 age=0 males=0% NAs=100% NDFs=96%\n199 click/search/view_search_results\n118 view/show/p3\n47 -unknown-/index/-unknown-\n44 data/recommendations/listing_recommendations\n44 view/show/user_profile","level":4,"size":28,"ndf":0.96428573,"age":0.0,"male":0.0,"na":1.0}
+,{"id":475,"label":"size=3 age=0 males=0% NAs=100% NDFs=66%\n25 click/search/view_search_results\n14 data/reviews/listing_reviews\n13 view/show/p3\n13 view/show/user_profile\n12 data/unavailabilities/unavailable_dates","level":4,"size":3,"ndf":0.6666667,"age":0.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":474,"targetId":475,"similarity":0.86672956}
+]
+}
+]
+,"links":[
+{"sourceId":468,"targetId":473,"similarity":0.5804932}
+]
+}
+]
+}
+,{"id":476,"label":"size=116 age=28 males=30% NAs=0% NDFs=67%\n1 -unknown-/active/-unknown-\n1 -unknown-/show/-unknown-","level":1,"size":116,"ndf":0.67241377,"age":28.706896,"male":0.3043478,"na":0.00862069,"children":[
+{"id":477,"label":"size=83 age=27 males=23% NAs=1% NDFs=71%\n1 -unknown-/active/-unknown-\n1 -unknown-/show/-unknown-","level":2,"size":83,"ndf":0.7108434,"age":27.0,"male":0.23170732,"na":0.012048192,"children":[
+{"id":478,"label":"size=52 age=26 males=11% NAs=0% NDFs=69%\n1 -unknown-/active/-unknown-\n1 -unknown-/show/-unknown-","level":3,"size":52,"ndf":0.6923077,"age":26.596153,"male":0.115384616,"na":0.0,"children":[
+{"id":479,"label":"size=37 age=26 males=0% NAs=0% NDFs=64%\n1 -unknown-/active/-unknown-\n1 -unknown-/show/-unknown-","level":4,"size":37,"ndf":0.6486486,"age":26.567568,"male":0.0,"na":0.0}
+,{"id":480,"label":"size=6 age=27 males=100% NAs=0% NDFs=83%\n1 -unknown-/active/-unknown-\n1 -unknown-/show/-unknown-","level":4,"size":6,"ndf":0.8333333,"age":27.0,"male":1.0,"na":0.0}
+,{"id":481,"label":"size=4 age=22 males=0% NAs=0% NDFs=75%\n1 -unknown-/active/-unknown-\n1 -unknown-/show/-unknown-","level":4,"size":4,"ndf":0.75,"age":22.25,"male":0.0,"na":0.0}
+,{"id":482,"label":"size=3 age=31 males=0% NAs=0% NDFs=100%\n1 -unknown-/active/-unknown-\n1 -unknown-/show/-unknown-","level":4,"size":3,"ndf":1.0,"age":31.666666,"male":0.0,"na":0.0}
+,{"id":483,"label":"wanl1d81fs FEMALE 26 US\n1 -unknown-/active/-unknown-\n1 -unknown-/multi/-unknown-\n1 -unknown-/show/-unknown-","level":4,"size":1,"ndf":0.0,"age":26.0,"male":0.0,"na":0.0}
+,{"id":484,"label":"v98japrktn FEMALE 28 NDF\n1 -unknown-/active/-unknown-\n1 -unknown-/show/-unknown-\n1 message_post/-empty-/message_post","level":4,"size":1,"ndf":1.0,"age":28.0,"male":0.0,"na":0.0}
+]
+,"links":[
+{"sourceId":479,"targetId":483,"similarity":0.873782}
+,{"sourceId":479,"targetId":480,"similarity":0.864865}
+,{"sourceId":479,"targetId":481,"similarity":0.864865}
+,{"sourceId":479,"targetId":482,"similarity":0.864865}
+,{"sourceId":479,"targetId":484,"similarity":0.873782}
+]
+}
+,{"id":485,"label":"size=14 age=26 males=100% NAs=7% NDFs=78%\n1 -unknown-/active/-unknown-\n1 -unknown-/show/-unknown-","level":3,"size":14,"ndf":0.78571427,"age":26.857143,"male":1.0,"na":0.071428575,"children":[
+{"id":486,"label":"size=13 age=27 males=100% NAs=0% NDFs=76%\n1 -unknown-/active/-unknown-\n1 -unknown-/show/-unknown-","level":4,"size":13,"ndf":0.7692308,"age":27.0,"male":1.0,"na":0.0}
+,{"id":487,"label":"s8jvpj5379 25 NDF\n1 -unknown-/active/-unknown-\n1 -unknown-/show/-unknown-","level":4,"size":1,"ndf":1.0,"age":25.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":486,"targetId":487,"similarity":0.78378385}
+]
+}
+]
+,"links":[
+{"sourceId":478,"targetId":485,"similarity":0.8108109}
+]
+}
+]
+}
+,{"id":488,"label":"size=105 age=32 males=100% NAs=90% NDFs=44%\n21 click/search_results/view_search_results\n14 view/index/view_search_results\n14 view/show/p3\n10 click/ajax_refresh_subtotal/change_trip_characteristics\n10 data/similar_listings/similar_listings","level":1,"size":105,"ndf":0.44761905,"age":32.228573,"male":1.0,"na":0.9047619,"children":[
+{"id":489,"label":"size=66 age=33 males=100% NAs=98% NDFs=46%\n31 view/show/p3\n30 click/search_results/view_search_results\n21 data/personalize/wishlist_content_update\n18 -empty-/show/null\n18 click/ajax_refresh_subtotal/change_trip_characteristics","level":2,"size":66,"ndf":0.46969697,"age":33.0,"male":1.0,"na":0.9848485,"children":[
+{"id":490,"label":"size=40 age=33 males=0% NAs=100% NDFs=40%\n31 view/show/p3\n30 click/search_results/view_search_results\n21 data/personalize/wishlist_content_update\n18 -empty-/show/null\n18 click/ajax_refresh_subtotal/change_trip_characteristics","level":3,"size":40,"ndf":0.4,"age":33.275,"male":0.0,"na":1.0,"children":[
+{"id":491,"label":"size=16 age=33 males=0% NAs=100% NDFs=50%\n31 view/show/p3\n30 click/search_results/view_search_results\n21 data/personalize/wishlist_content_update\n18 -empty-/show/null\n18 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":16,"ndf":0.5,"age":33.125,"male":0.0,"na":1.0}
+,{"id":492,"label":"size=7 age=34 males=0% NAs=100% NDFs=14%\n30 view/index/view_search_results\n25 data/personalize/wishlist_content_update\n25 view/show/p3\n13 click/ajax_refresh_subtotal/change_trip_characteristics\n13 data/similar_listings/similar_listings","level":4,"size":7,"ndf":0.14285715,"age":34.285713,"male":0.0,"na":1.0}
+,{"id":493,"label":"size=3 age=34 males=0% NAs=100% NDFs=33%\n11 data/personalize/wishlist_content_update\n10 click/ajax_refresh_subtotal/change_trip_characteristics\n9 -empty-/show/null\n6 click/search_results/view_search_results\n6 data/similar_listings/similar_listings","level":4,"size":3,"ndf":0.33333334,"age":34.666668,"male":0.0,"na":1.0}
+,{"id":494,"label":"size=3 age=32 males=0% NAs=100% NDFs=0%\n4 click/search_results/view_search_results\n4 view/index/view_search_results\n2 data/header_userpic/header_userpic\n2 view/dashboard/dashboard\n2 view/show/p3","level":4,"size":3,"ndf":0.0,"age":32.333332,"male":0.0,"na":1.0}
+,{"id":495,"label":"x3uhfackq0 33 US\n45 data/personalize/wishlist_content_update\n40 -empty-/show/null\n40 view/show/p3\n38 view/index/message_thread\n29 view/qt2/message_thread","level":4,"size":1,"ndf":0.0,"age":33.0,"male":0.0,"na":1.0}
+,{"id":496,"label":"j7l9lpbukk 31 NDF\n31 view/show/p3\n29 data/personalize/wishlist_content_update\n26 view/index/view_search_results\n17 data/similar_listings/similar_listings\n16 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":31.0,"male":0.0,"na":1.0}
+,{"id":497,"label":"4to337v8yf 32 NDF\n47 click/search_results/view_search_results\n38 -empty-/lookup/null\n37 data/personalize/wishlist_content_update\n36 -empty-/show/null\n36 view/show/p3","level":4,"size":1,"ndf":1.0,"age":32.0,"male":0.0,"na":1.0}
+,{"id":498,"label":"jpzseqr8fb 32 US\n23 view/show/p3\n20 data/personalize/wishlist_content_update\n18 view/index/view_search_results\n11 -empty-/show/null\n11 data/similar_listings/similar_listings","level":4,"size":1,"ndf":0.0,"age":32.0,"male":0.0,"na":1.0}
+,{"id":499,"label":"59gys7l6bt 33 US\n47 click/search_results/view_search_results\n32 -unknown-/calendar_tab_inner2/-unknown-\n32 data/personalize/wishlist_content_update\n27 -empty-/show/null\n20 click/ajax_refresh_subtotal/change_trip_characteristics","level":4,"size":1,"ndf":0.0,"age":33.0,"male":0.0,"na":1.0}
+,{"id":500,"label":"jwmjqaomg3 32 NDF\n18 data/personalize/wishlist_content_update\n13 click/search_results/view_search_results\n10 view/index/view_search_results\n8 -empty-/track_page_view/null\n8 view/show/p3","level":4,"size":1,"ndf":1.0,"age":32.0,"male":0.0,"na":1.0}
+,{"id":501,"label":"yovn1ek4h5 33 US\n10 view/show/p3\n6 data/personalize/wishlist_content_update\n5 -empty-/track_page_view/null\n5 data/similar_listings/similar_listings\n4 -empty-/show/null","level":4,"size":1,"ndf":0.0,"age":33.0,"male":0.0,"na":1.0}
+,{"id":502,"label":"i9va17b12r 32 NDF\n19 click/ajax_refresh_subtotal/change_trip_characteristics\n18 data/personalize/wishlist_content_update\n17 -empty-/show/null\n14 view/show/p3\n8 click/search_results/view_search_results","level":4,"size":1,"ndf":1.0,"age":32.0,"male":0.0,"na":1.0}
+,{"id":503,"label":"hbsrme4ktt 33 NDF\n34 click/ajax_refresh_subtotal/change_trip_characteristics\n33 click/search_results/view_search_results\n27 -empty-/lookup/null\n20 data/personalize/wishlist_content_update\n19 -empty-/show/null","level":4,"size":1,"ndf":1.0,"age":33.0,"male":0.0,"na":1.0}
+,{"id":504,"label":"5qbzmxthd0 34 US\n31 click/search_results/view_search_results\n10 data/personalize/wishlist_content_update\n8 -empty-/show/null\n8 click/ajax_refresh_subtotal/change_trip_characteristics\n7 data/similar_listings/similar_listings","level":4,"size":1,"ndf":0.0,"age":34.0,"male":0.0,"na":1.0}
+,{"id":505,"label":"73jw0paz4e 35 NDF\n6 click/search_results/view_search_results\n6 data/personalize/wishlist_content_update\n6 view/index/view_search_results\n5 view/show/p3\n4 view/dashboard/dashboard","level":4,"size":1,"ndf":1.0,"age":35.0,"male":0.0,"na":1.0}
+]
+,"links":[
+{"sourceId":491,"targetId":500,"similarity":0.8996768}
+,{"sourceId":492,"targetId":496,"similarity":0.89126825}
+,{"sourceId":493,"targetId":505,"similarity":0.8814899}
+,{"sourceId":491,"targetId":494,"similarity":0.85319954}
+,{"sourceId":491,"targetId":495,"similarity":0.8636573}
+,{"sourceId":496,"targetId":498,"similarity":0.89376634}
+,{"sourceId":491,"targetId":497,"similarity":0.8734885}
+,{"sourceId":491,"targetId":499,"similarity":0.8857405}
+,{"sourceId":492,"targetId":501,"similarity":0.8837522}
+,{"sourceId":493,"targetId":502,"similarity":0.86395836}
+,{"sourceId":491,"targetId":503,"similarity":0.89463764}
+,{"sourceId":491,"targetId":504,"similarity":0.88734466}
+]
+}
+]
+}
+]
+}
+]
+,"links":[
+{"sourceId":2,"targetId":488,"similarity":0.6602169}
+,{"sourceId":142,"targetId":466,"similarity":0.72240055}
+,{"sourceId":196,"targetId":488,"similarity":0.72537714}
+,{"sourceId":263,"targetId":407,"similarity":0.7145687}
+,{"sourceId":306,"targetId":351,"similarity":0.7138563}
+,{"sourceId":196,"targetId":351,"similarity":0.7210277}
+,{"sourceId":351,"targetId":388,"similarity":0.46370885}
+,{"sourceId":263,"targetId":417,"similarity":0.6965399}
+,{"sourceId":196,"targetId":435,"similarity":0.68365365}
+,{"sourceId":263,"targetId":454,"similarity":0.68653196}
+,{"sourceId":196,"targetId":476,"similarity":0.43783787}
+]
+}
+}
