@@ -1,0 +1,3411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.6.2" />
+<title>BulletinStructuringEngine documentation</title>
+<meta name="description" content="BulletinParser: Framework to standardize the job descriptions present in text format
+to structured object. Uses reusable functions and no external …" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase;cursor:pointer}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>Bulletin Structuring Engine</code></h1>
+</header>
+<section id="section-intro">
+<p>BulletinParser: Framework to standardize the job descriptions present in text format
+to structured object. Uses reusable functions and no external library </p>
+<p><b>Challenge:</b> Data Science for Good - City of Los Angeles <br><br>
+Kaggle: <a href="https://www.kaggle.com/c/data-science-for-good-city-of-los-angeles">https://www.kaggle.com/c/data-science-for-good-city-of-los-angeles</a><br>
+Kernel: <a href="https://www.kaggle.com/shivamb/1-bulletin-structuring-engine-cola/">https://www.kaggle.com/shivamb/1-bulletin-structuring-engine-cola/</a> </p>
+
+<p><strong>author</strong> = 'shivam bansal' <br>
+<strong>email</strong> = 'shivam5992@gmail.com' <br>
+<strong>version</strong> == "1.47"</p>
+
+
+<div align="center"><br><img src='https://i.imgur.com/oZ9csXm.png' width="600"></div>
+
+
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">&#34;&#34;&#34;
+BulletinParser: Framework to standardize the job descriptions present in text format 
+to structured object. Uses reusable functions and no external library 
+
+Challenge: Data Science for Good - City of Los Angeles
+Kaggle: https://www.kaggle.com/c/data-science-for-good-city-of-los-angeles
+Kernel: https://www.kaggle.com/shivamb/1-bulletin-structuring-engine-cola/ 
+
+__author__  == &#39;shivam bansal&#39;
+__email__   == &#39;shivam5992@gmail.com&#39;
+__version__ == &#34;1.47&#34;
+&#34;&#34;&#34;
+
+import re, string, os
+import pandas as pd 
+
+class BulletinParser:
+
+    &#34;&#34;&#34;
+    python class to standardize the job descriptions present in text format 
+    to structured object, the final results are produced in a csv file format
+    
+    inputs  : the input can be a single file, or a complete folder
+    outputs : single json object for one file, structured csv file for a folder
+    &#34;&#34;&#34;
+    
+    def __init__(self, config):
+        
+        &#34;&#34;&#34; config : root path of the file and name of the file &#34;&#34;&#34;
+        self.filename, self.path = config[&#39;filename&#39;], config[&#39;path&#39;]      
+        self.text = open(self.path + self.filename).read()
+        
+        &#34;&#34;&#34; a global list of all pointers used in bulletins &#34;&#34;&#34;
+        self.chrs = &#34;abcdefghijklmnopqrstuvwxyz&#34;
+        self.nums = &#34;123456789&#34;
+        self.sybl = &#34;-*&#34;
+        
+        &#34;&#34;&#34; lookup dictionary for numbers text and values &#34;&#34;&#34;
+        self._ns = {&#34;one&#34;:&#34;1&#34;, &#34;two&#34;:&#34;2&#34;, &#34;three&#34;:&#34;3&#34;, &#34;four&#34;:&#34;4&#34;, &#34;five&#34;:&#34;5&#34;, &#34;six&#34;:&#34;6&#34;, 
+        &#34;seven&#34;:&#34;7&#34;, &#34;eight&#34;:&#34;8&#34;, &#34;nine&#34;:&#34;9&#34;, &#34;ten&#34;:&#34;10&#34;, &#34;twelve&#34;:&#34;12&#34;, &#34;fourteen&#34;:&#34;14&#34;,
+        &#34;fifteen&#34;:&#34;15&#34;, &#39;sixteen&#39;:&#39;16&#39;, &#34;eighteen&#34;:&#34;18&#34;, &#34;twenty&#34;:&#34;20&#34;,
+        &#34;twenty-three&#34;:&#34;23&#34;,&#34;twenty-four&#34;:&#34;24&#34;,&#34;twenty-seven&#34;:&#34;27&#34;,&#34;thirty&#34;:&#34;30&#34;,
+        &#34;thirty-six&#34;:&#34;36&#34;, &#34;fourty-five&#34;:&#34;45&#34;, &#34;sixty&#34;:&#34;60&#34;, &#34;ninety&#34;:&#34;90&#34;, &#34;135&#34;:&#34;135&#34;}
+
+        &#34;&#34;&#34; lookup dictionaries that contain key-value pair (keywords) for identification &#34;&#34;&#34;
+        self.lookups  = {
+        &#34;full_part&#34; : {&#34;full time&#34;:[&#34;full time&#34;,&#34;full-time&#34;],
+                       &#34;part time&#34;:[&#34;part time&#34;,&#34;part-time&#34;]},
+        &#34;education&#34; : [&#34;college or university&#34;,&#34;education&#34;,&#34;school&#34;, &#34;semester&#34;,&#34;quarter&#34;, 
+                       &#34;degree&#34;,&#34;coursework&#34;],
+        &#34;experience&#34;: [&#34;full time&#34;, &#34;full-time&#34;, &#34;experience&#34;, &#34;part time&#34;, &#34;part-time&#34;],
+        &#34;semester&#34;  : [&#34;semester&#34;, &#34;quarter&#34;, &#39;course&#39;],
+        &#34;exam_type&#34; : [&#34;OPEN&#34;, &#34;INT_DEPT_PROM&#34;, &#34;DEPT_PROM&#34;, &#34;OPEN_INT_PROM&#34;],
+        &#34;major&#34;     : [&#39;degree in &#39;, &#39;major in &#39;, &#39;majoring&#39;],
+        &#34;exp_flags&#34; : [&#34; as a &#34;, &#34; at the level of &#34;, &#34; as an &#34;],
+        &#34;school&#34;    : {&#34;college or university&#34;:[&#34;college or university&#34;,&#34;university or college&#34;], 
+        &#34;college&#34;   : [&#34;college&#34;],&#34;high school&#34;:[&#34;high school&#34;],&#34;trade school&#34;:[&#39;trade school&#39;], 
+        &#34;apprenticeship&#34;: [&#34;apprenticeship&#34;],&#34;law school&#34; : [&#39;law school&#39;], 
+        &#34;technical school&#34;:[&#39;technical school&#39;]}}
+        
+        &#34;&#34;&#34; common splitters used in text parsing and cleaning in different functions &#34;&#34;&#34;
+        self.split1, self.split2 = [&#34;\n&#34;, &#34;and&#34;, &#34;;&#34;], [&#39;\n&#39;, &#39;;&#39;, &#39;. &#39;]
+        self.split3 = [&#34;; &#34;,&#34; with &#34;,&#34; and &#34;,&#34; or &#34;,&#34;. &#34;,&#34; in &#34;,&#34; issued &#34;]
+        self.split4 = [&#39;from an&#39;, &#39;from a&#39;, &#39; may &#39;, &#39; for &#39;, &#39;; and&#39;]
+        self.split5 = [&#34;is required&#34;,&#34;approved&#34;,&#34;required&#34;,&#34;. &#34;,&#34;may&#34;,&#34;with&#34;,&#34;prior&#34;]        
+        self.split5 += [&#34;upon&#34;, &#34;;&#34;]
+        
+        &#34;&#34;&#34; keywords required to clean / correct some entities &#34;&#34;&#34;
+        self.spellings = { &#34;COMPETITVE&#34; : &#34;COMPETITIVE&#34;, &#34;PARMENTAL&#34; : &#34;PARTMENTAL&#34;}
+        
+        &#34;&#34;&#34; file complete text and non empty lines &#34;&#34;&#34;
+        self.text   = self.text.replace(&#34;CAMPUS INTERVIEWS ONLY&#34;,&#34;&#34;)
+        self.lines  = [l for l in self.text.split(&#34;\n&#34;) if l.strip()]
+        
+        
+        
+    &#34;&#34;&#34; utility function to find a portion of text using an identifier keyword &#34;&#34;&#34;
+    def portion(self, flag, txt=None, limit=10, next_word=True, indx=False):
+        &#34;&#34;&#34;
+        a generic python function to obtain the entites using an identifier flag 
+        this function is used to extract class code, requirements, duties, date.
+
+        :params:
+        input : flag keyword (example - requirement, notes, duties), limit (optional) specify 
+        number of characters to be extracted around the flag, next_word : True if only one 
+        (immediate) word is output, indx : flag which identifies index of the relevant lines
+        output: the relevant portion related to the input flag keyword
+        &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; create the list of lines variable &#34;&#34;&#34;
+        entity = &#34;&#34;
+        lines = self.lines
+        if txt != None:            
+            lines = txt.split(&#34;\n&#34;)
+        
+        &#34;&#34;&#34; filter the lines which contain the identifier flag &#34;&#34;&#34;
+        lines = [&#34; &#34;.join(line.split()).lower() for line in lines]
+        lines = [line for line in lines if flag in line]
+        
+        &#34;&#34;&#34; find relevant index if indx is set True &#34;&#34;&#34;
+        if indx:
+            lines=[i for i,l in enumerate(self.lines) 
+                   if l.strip().lower().startswith(flag.lower())]
+        if len(lines) == 0:
+            return entity 
+        
+        &#34;&#34;&#34; find the required portion of text &#34;&#34;&#34;
+        start_ix = lines[0]    
+        if indx:
+            end = [i for i,l in enumerate(self.lines[start_ix+1:]) if l.isupper()][0]
+            entity = &#34;\n&#34;.join(self.lines[start_ix+1:start_ix+end+1])
+        else:
+            &#34;&#34;&#34; obtain the entity text till next words (limit parameter) &#34;&#34;&#34;
+            index = start_ix.find(flag)        
+            entity = start_ix[index:].replace(flag, &#34;&#34;)
+            entity = entity.strip()[:limit]
+            if next_word:
+                entity = entity.split()[0]    
+            else:
+                for split in self.split2:
+                    entity = entity.split(split)[0]  
+        return entity
+    
+    &#34;&#34;&#34; similar function as portion, but it executes with multiple identifiers &#34;&#34;&#34;
+    def portions(self, flag, txt, limit=10, next_word=True):
+        &#34;&#34;&#34;
+        this function accept same parameters as portion, flags is a list.
+        used to extract major / degree related entities from the bulletins
+        &#34;&#34;&#34;
+        
+        entities = []
+        for flag in self.lookups[flag]:
+            entity = self.portion(flag, txt, limit, next_word)
+            if entity:
+                entities.append(entity)
+        return &#34;, &#34;.join(entities)
+
+    &#34;&#34;&#34; utility function to check the presence of an identifier and related keywords &#34;&#34;&#34;
+    def presence_check(self, identifier, txt):
+        &#34;&#34;&#34;
+        checks if a certain keyword or a list of keywords are present in the text, the function 
+        performs exact and compact match, can be extend to perform more flexible text matching 
+ 
+        :params:
+        input  : identifier and the relevant portion of the text to be searched
+        output : a string of identifiers which were found in the text 
+        &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; obtain the list/dict of relevant tokens from the lookup dictionary &#34;&#34;&#34;
+        lookup = self.lookups[identifier] 
+        
+        &#34;&#34;&#34; iterate in lookup tokens and check if present &#34;&#34;&#34;
+        entities = []
+        if type(lookup) == dict:    
+            &#34;&#34;&#34; iterate key-value pairs, check if any value is present in the text &#34;&#34;&#34;
+            for key, values in lookup.items():    
+                for val in values:
+                    if val.lower() in txt.lower():
+                        entities.append(key)
+        else: 
+            &#34;&#34;&#34; iterate in list, check if any element is present in the text &#34;&#34;&#34;
+            for val in lookup:
+                if val.lower() in txt.lower():
+                    entities.append(val)
+        
+        &#34;&#34;&#34; remove duplicates and join them by pipe &#34;&#34;&#34;
+        entities = &#34;|&#34;.join(list(set(entities)))
+        return entities
+    
+    &#34;&#34;&#34; utility function to standardize the numbers text into a numerical value &#34;&#34;&#34;
+    def standardize_numbers(self, entity):
+        &#34;&#34;&#34;
+        it uses _ns lookup dictionary which defines the standardized form of a number
+
+        :params:
+        the input is uncleaned text which is probably about a number 
+        the output is a numerical value
+        &#34;&#34;&#34;
+        
+        number = &#34;&#34;
+        if entity.lower() in self._ns:
+            number = self._ns[entity.lower()]
+        elif entity in list(self._ns.values()):
+            number = entity
+        return number
+
+    &#34;&#34;&#34; utility function to get the years/months associated with an identifer &#34;&#34;&#34;
+    def year_month(self, flag, req_text, span = &#39;year&#39;):
+        &#34;&#34;&#34;
+        :params:
+        flag: key which is used to obtain the relevant values from the lookup dictionary 
+        span: number context to be extracted, (year, month, semester, quarter)
+        output: years/month associated in the text; months are converted into floats.
+        &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; obtain the list of related keywords from the lookup dictionary &#34;&#34;&#34;
+        lookup = self.lookups[flag]
+        
+        &#34;&#34;&#34; iterate by lines, check if the span-value is present &#34;&#34;&#34;
+        collected = []
+        for line in req_text.split(&#34;\n&#34;):
+            line = line.replace(&#34;one-year&#34;, &#34;one year&#34;)
+            &#34;&#34;&#34; find index of all occurances of the span in the line &#34;&#34;&#34;
+            indexes = [m.start() for m in re.finditer(span, line)]            
+            
+            &#34;&#34;&#34; slice a portion around the index within lower and upper bound &#34;&#34;&#34;
+            lower_bound, upper_bound = 30, 40
+            for index in indexes:
+                if index-lower_bound &lt; 0:
+                    portion = line[:index+upper_bound].lower()
+                else:
+                    portion = line[index-lower_bound:index+upper_bound].lower()
+                
+                &#34;&#34;&#34; next, identify if the portion of text is relevant of not, &#34;&#34;&#34;
+                &#34;&#34;&#34; four main conditions to identify not not important portion &#34;&#34;&#34;
+                is_relevant = False
+                for keyword in lookup:                    
+
+                    &#34;&#34;&#34; cond1 : keyword is not present in relevant portion &#34;&#34;&#34;
+                    if keyword not in portion:
+                        continue
+                    
+                    &#34;&#34;&#34; cond2 : span is mentioned after the lookup keyword &#34;&#34;&#34;
+                    yr_ix = portion.find(span)
+                    idf_ix = portion.find(keyword)
+                    if yr_ix &gt; idf_ix:
+                        continue
+                    
+                    &#34;&#34;&#34; cond3 : presence of ignore words in the text portion &#34;&#34;&#34;
+                    ignore_words = [&#34;=&#34;, &#34;equal&#34;, &#34;equivalent&#34;, &#39;lack&#39;, &#39;valent&#39;]
+                    if any(eq in portion for eq in ignore_words):
+                        continue
+                    
+                    &#34;&#34;&#34; cond4 : presence of substitute in experience text &#34;&#34;&#34;
+                    if keyword == &#34;experience&#34;:
+                        if &#34;titute&#34; in portion:
+                            continue
+                    
+                    &#34;&#34;&#34; for other cases, the portion is relevant &#34;&#34;&#34;
+                    is_relevant = True
+                
+                &#34;&#34;&#34; if relevant, then identify the numerical span value &#34;&#34;&#34;
+                if is_relevant:
+                    special_checks = [&#34;two or four&#34;, &#34;two-year or four-year&#34;]
+                    if any(two_four in portion for two_four in special_checks):
+                        collected.append(&#34;4&#34;)
+                    if &#34;two and one-half&#34; in portion:
+                        collected.append(&#34;2.5&#34;)
+                    else:
+                        obtained = False
+                        
+                        &#34;&#34;&#34; check entities with two words: (ex - twenty-four etc.)&#34;&#34;&#34;
+                        for k,v in self._ns.items():
+                            if &#34;-&#34; in k:
+                                if k in portion.split(span)[0].replace(&#34; &#34;, &#34;-&#34;):
+                                    collected.append(v)
+                                    obtained = True
+                        
+                        &#34;&#34;&#34; for other cases, obtain the immediate previous word &#34;&#34;&#34;
+                        if obtained == False:
+                            val = portion[:yr_ix].split()[-1]
+                            val = val.replace(&#34;-&#34;,&#34;&#34;).replace(&#34;(&#34;,&#34;&#34;).replace(&#34;)&#34;,&#34;&#34;)
+                            val = self.standardize_numbers(val)
+                            if val != &#34;&#34;:
+                                collected.append(val)
+
+        &#34;&#34;&#34; return the deduplicated list of month / year &#34;&#34;&#34;
+        collected = list(set(collected))
+        if span == &#39;month&#39;:
+            collected = [str(round(float(_)/12, 2)) for _ in collected]
+        if len(collected) &gt; 0:
+            collected = [float(_) for _ in collected]
+        return collected
+
+    &#34;&#34;&#34; Custom function to identify exam type required in given job &#34;&#34;&#34;
+    def exam_type(self):
+        &#34;&#34;&#34;
+        identify and cleans the required text; tags the exam type according to rules
+        possible outputs for this function are open, open_int, int_dept, and dept 
+        &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; Meta data related to exam types &#34;&#34;&#34;
+        bad_entities = [&#39;an&#39;, &#39;on&#39;, &#39;both&#39;, &#39;only&#39;, &#39;a&#39;, &#39;to&#39;, &#39;nvvc&#39;, &#39;basis&#39;]
+        bad_entities = [&#34; &#34;+_.upper()+&#34; &#34; for _ in bad_entities]
+        
+        &#34;&#34;&#34; identify and clean the main portion related to exam type &#34;&#34;&#34;
+        portion = &#34;&#34;
+        for i, line in enumerate(self.lines):
+            &#34;&#34;&#34; identify the relevant line &#34;&#34;&#34;
+            if &#34;THIS EXAM&#34; in line:
+                portion = line + &#34; &#34; + self.lines[i+1]
+                portion = &#34; &#34;+portion.split(&#34;GIVEN&#34;)[1]
+                portion = portion.split(&#34;The City&#34;)[0].strip()+&#34; &#34;
+                
+                &#34;&#34;&#34; cleanup bad entities and spelling mistakes &#34;&#34;&#34;
+                for ent in bad_entities:
+                    portion = portion.replace(ent, &#34; &#34;)
+                for k,v in self.spellings.items():
+                    portion = portion.replace(k,v)
+                portion = &#34; &#34;.join(portion.split()).split(&#34; AND &#34;)              
+                break
+                
+        &#34;&#34;&#34; join and further standardize the exam type &#34;&#34;&#34;
+        cons = [&#39;ONLY &#39;, &#39;ON &#39;, &#39;BOTH &#39;]
+        exam_t = &#34; AND &#34;.join(portion)
+        exam_t = &#34; &#34;.join(w for w in exam_t.split() if w not in cons)
+        exam_t = exam_t.lower()
+        
+        &#34;&#34;&#34; generate the final tag of exam type &#34;&#34;&#34;
+        tag = &#34;OPEN&#34;
+        if &#34;open&#34; in exam_t and &#34;interdepartmental&#34; in exam_t:
+            tag = &#34;OPEN_INT_PROM&#34;
+        elif &#34;interdepartmental&#34; in exam_t:
+            tag = &#34;INT_DEPT_PROM&#34;
+        elif &#34;department&#34; in exam_t:
+            tag = &#34;DEPT_PROM&#34;
+        return tag
+    
+    &#34;&#34;&#34; Custom function to obtain course counts required for the job &#34;&#34;&#34;
+    def course_count(self, req_text, flag=&#39;course&#39;, limit=50):
+        &#34;&#34;&#34;
+        :params:
+        req_text: complete requirement text and output: number of courses required
+        output: number of courses required as the minimum requirement of the job
+        &#34;&#34;&#34;
+
+        &#34;&#34;&#34; find the numerical / textual span values in the text &#34;&#34;&#34;
+        spans = list(self._ns.keys()) + list(self._ns.values())
+        idx = [m.start() for m in re.finditer(flag, req_text.lower())]
+        
+        &#34;&#34;&#34; iterate and check if relevant &#34;&#34;&#34;
+        collect = []
+        for each in idx:
+            if each-limit &lt; 0:
+                lines = req_text[:each+limit].split(&#34;\n&#34;)
+            else:
+                lines = req_text[each-limit:each+limit].split(&#34;\n&#34;)
+            
+            &#34;&#34;&#34; check which spans are mentioned in the text and store &#34;&#34;&#34;
+            for l in [l for l in lines if flag in l]: 
+                for span in spans:
+                    if span+&#34; &#34;+flag in l:       
+                        if span in self._ns:
+                            span = self._ns[span]
+                        collect.append(int(span))
+
+        &#34;&#34;&#34; return the obtained value &#34;&#34;&#34;
+        if len(collect) == 0:
+            return &#34;&#34;
+        return max(collect)
+
+    &#34;&#34;&#34; Custom function to obtain salary amount and DWP salary amount &#34;&#34;&#34;
+    def salary_details(self):
+        &#34;&#34;&#34;
+        Identifies the salary amount mentioned in the text; also finds for DWP 
+        for multiple salary amounts, only first salary is given as output
+        &#34;&#34;&#34;
+
+        &#34;&#34;&#34; first identify the relevant portion &#34;&#34;&#34;
+        identifier, next_chars = &#34;SALARY&#34;, 250
+        ix = self.text.find(identifier)
+        portion_x = self.text[ix:ix+next_chars]
+        portion_x = portion_x.replace(identifier, &#34;&#34;).strip()
+        
+        &#34;&#34;&#34; find the salary amount &#34;&#34;&#34;
+        salary = portion_x
+        for split in self.split1:
+            salary = salary.split(split)[0]
+        salary = &#34;$&#34; + &#34;$&#34;.join(salary.split(&#34;$&#34;)[1:])
+        salary = salary.split(&#34;(&#34;)[0].split(&#34;, $&#34;)[0]
+        salary = salary.split(&#34;The&#34;)[0].split(&#34;. Some&#34;)[0]
+        
+        &#34;&#34;&#34; find the DWP salary &#34;&#34;&#34;
+        dwp = &#34;&#34;
+        rep = [&#34;(&#34;, &#34;flat&#34;, &#34;$ &#34;]
+        identifier = &#34;Department of Water and Power is &#34;
+        for line in portion_x.split(&#34;\n&#34;):
+            if identifier.lower() in line.lower():
+                dwp = line.lower().split(identifier.lower())[1]
+                &#34;&#34;&#34; basic cleanup &#34;&#34;&#34;
+                for split in self.split2 + [&#34;. &#34;]:
+                    dwp = dwp.split(split)[0]
+                for r in rep:
+                    dwp = dwp.replace(r, &#34;&#34;).rstrip(&#34;.&#34;)
+                dwp = dwp.replace(&#34;-rated)&#34;,&#34;&#34;).replace(&#34;-rated&#34;,&#34;&#34;)
+                dwp = dwp.rstrip(&#34;.&#34;).replace(&#34;rated)&#34;,&#34;&#34;).replace(&#34;at&#34;,&#34;&#34;)
+                dwp = dwp.split(&#34;and&#34;)[0].strip()
+        return salary, dwp
+    
+    &#34;&#34;&#34; custom function to obtain the experience title &#34;&#34;&#34;
+    def experience_title(self, req_text):
+        &#34;&#34;&#34;
+        function to identify the experience title from the requirement text 
+        input is only the requirement text of a job bulletin
+        &#34;&#34;&#34;
+
+        exp_title = []
+        possed = [] 
+        &#34;&#34;&#34; iterate in experience flags &#34;&#34;&#34;
+        for identifier in self.lookups[&#39;exp_flags&#39;]:
+            for i,line in enumerate(req_text.split(&#34;\n&#34;)):
+                
+                &#34;&#34;&#34; clean and collect the relevant portions &#34;&#34;&#34;
+                if identifier in line:
+                    lx = line.split(identifier)[1]
+                    poss = lx
+                    possed.append(poss)
+                    for spliter in self.split3:
+                        lx = lx.split(spliter)[0]
+                    exp_title.append(lx)
+                    break
+        
+        exp_title = &#34;; &#34;.join(exp_title)
+        
+        &#34;&#34;&#34; next find the function / role &#34;&#34;&#34;
+        for l in possed:
+            for split in self.lookups[&#39;exp_flags&#39;]:
+                if l in split:
+                    l = l.split(split)[1]
+                if &#34;or in a class&#34; in l:
+                    l = l.split(&#34;or in a class&#34;)[0]       
+        return exp_title
+    
+    &#34;&#34;&#34; Custom function to obtain class title from the job-description text &#34;&#34;&#34;
+    def class_title(self):
+        &#34;&#34;&#34;
+        extracts and cleans the job title from the bulletin text
+        &#34;&#34;&#34;
+        
+        entity = self.lines[0].strip().lower()
+        if &#34;revised&#34; in entity:
+            entity = entity.replace(&#34;revised&#34;, &#34;&#34;)
+        if &#34;class code&#34; in entity:
+            entity = entity.split(&#34;class code&#34;)[0]
+        return entity.title()
+    
+    &#34;&#34;&#34; custom function to identify the course subjects &#34;&#34;&#34;
+    def course_subjects(self, req_text):
+        &#34;&#34;&#34;
+        this function identifes the relevant course subjects using a list of keywords 
+        &#34;&#34;&#34;
+
+        kws = self.lookups[&#34;semester&#34;]
+
+        &#34;&#34;&#34; obtain the relevant lines &#34;&#34;&#34;
+        lines = req_text.split(&#34;\n&#34;)
+        relevant_lines = [l for l in lines if any(wd in l for wd in kws)]
+        relevant_lines = [l.lower() for l in relevant_lines]
+
+        &#34;&#34;&#34; iterate and locate the position of relevant text &#34;&#34;&#34;
+        courses = []
+        for each in relevant_lines:
+            course = &#34;&#34;
+            if all(k in each for k in kws):
+                ix = each.find(&#34;quarter&#34;)
+            elif &#34;quarter&#34; in each:
+                ix = each.find(&#34;quarter&#34;)
+            else:
+                ix = each.find(&#34;semester&#34;)
+
+            &#34;&#34;&#34; using the obtained index, split the text &#34;&#34;&#34;
+            relt = each[ix:ix+300]
+            if &#34; units in &#34; in relt:
+                course = relt.split(&#34; units in &#34;)[1]
+                course = course.split(&#34;;&#34;)[0].split(&#34; at &#34;)[0]
+            elif &#34; courses in &#34; in relt:
+                course = relt.split(&#34; courses in &#34;)[1]
+                course = course.split(&#34;;&#34;)[0].split(&#34; at &#34;)[0]
+            elif &#34; units of &#34; in relt:
+                course = relt.split(&#34; units of &#34;)[1]
+                course = course.split(&#34;;&#34;)[0].split(&#34; at &#34;)[0]
+            elif &#34; units &#34; in relt:
+                if &#34; in &#34; in relt:
+                    right = relt.split(&#34; in &#34;)[1]                    
+                    if right.startswith(&#34;requ&#34;) or right.startswith(&#34;which&#34;):
+                        continue
+                    if right.startswith(&#34;the&#34;):                    
+                        right = right.replace(&#34;the production&#34;, &#34;production&#34;)
+                        right = right.replace(&#34;the areas of&#34;, &#34;&#34;)
+                    if right.startswith(&#34;the&#34;):
+                        continue
+                    course = right
+            else:
+                &#34;&#34;&#34; perform cleanup &#34;&#34;&#34;
+                for ent in [&#39;university, in&#39;, &#39;or trade school&#39;]:
+                    relt = relt.replace(ent, &#34;&#34;)
+
+                if &#34;university in &#34; in relt:
+                    course = relt.split(&#34;university in &#34;)[1].split(&#34;;&#34;)[0]
+                    course = course.split(&#34; at &#34;)[0]
+
+            &#34;&#34;&#34; more custom cleanup &#34;&#34;&#34;
+            for split in self.split4:
+                course = course.split(split)[0]
+            if course:
+                courses.append(course)
+        courses = list(set(courses))
+        courses = &#34; &#34;.join(courses)
+        
+        &#34;&#34;&#34; further split by &lt;num&gt;_year &#34;&#34;&#34;
+        splitters = [&#39;one&#39;, &#39;two&#39;, &#39;three&#39;, &#39;four&#39;, &#39;five&#39;, &#39;including&#39;]
+        for i,split in enumerate(splitters):
+            if i &lt; 5:
+                split = split + &#34; year&#34;
+            courses = courses.split(split)[0]        
+        return courses
+
+    &#34;&#34;&#34; function to check the driver license tag &#34;&#34;&#34;
+    def driver_license(self, limit = 50):
+        &#34;&#34;&#34;
+        this function finds if driving license is required or not
+        
+        :params:
+        limit: used to define the lower and upper bound set the text portion 
+        &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; find the index where driver keyword is mentioned &#34;&#34;&#34;
+        i = re.finditer(&#34;driver&#34;, self.text.lower())
+        i = [m.start() for m in i]
+        
+        &#34;&#34;&#34; iterate and further check if &#39;license&#39; is mentioned &#34;&#34;&#34;
+        tags = []
+        for each in i:
+            por = self.text[each-limit:each+limit*2].lower()
+            tag = &#34;&#34;
+            if &#34;license&#34; in por:
+                tag = &#34;R&#34;
+                if &#34; may &#34; in por:
+                    tag = &#34;P&#34;
+            tags.append(tag)
+        if len(tags) &gt; 0:
+            return tags[0]
+        return &#34;&#34;
+
+    &#34;&#34;&#34; function to properly parse requirement set and subsets &#34;&#34;&#34;
+    def requirement_IDs(self, req_text):
+        &#34;&#34;&#34;
+        this function extracts out the pointer associated with ever requirment
+        1, 2, 3 .. are set_id, and set_text is the corresponding text 
+        a, b, c .. are subset_id, and subset_text is the corresponding text
+        special symbols such as * or - are also tracked; the function formats the text 
+        to generate required format; Also it identifies special cases with no pointers
+        &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; obtain the requirement text lines &#34;&#34;&#34;
+        lines_ = [l.strip().rstrip(&#34;,&#34;) for l in req_text.split(&#34;\n&#34;)]
+        &#34;&#34;&#34; custom break condition &#34;&#34;&#34;
+        lines = []
+        for l in lines_:
+            if &#34;substitute&#34; in l:
+                if l[0] not in [&#34;1&#34;,&#34;2&#34;,&#34;3&#34;,&#34;4&#34;,&#34;5&#34;]:
+                    break
+            lines.append(l)
+        
+        &#34;&#34;&#34; fix some of the lines &#34;&#34;&#34;
+        flats = [l for l in lines if not any(l[0] == w for w in self.nums)]
+        if len(lines) != 1 and len(lines) == len(flats):
+            lines = [&#34; &#34;.join(lines)]
+        
+        &#34;&#34;&#34; special case : single line requirement &#34;&#34;&#34;
+        ignore = False
+        if len(lines) == 1:
+            &#34;&#34;&#34; check the presense of numbers or alphabets &#34;&#34;&#34;
+            for x in self.nums+self.chrs:
+                starter = req_text[:2].strip().lower()
+                if any(patt == starter for patt in [x+&#34;.&#34;, x+&#34;)&#34;, &#34;(&#34;+x]):
+                    ignore = True
+                    
+            &#34;&#34;&#34; check the presense of symbols &#34;&#34;&#34;
+            for x in self.sybl:
+                starter = l[:1].strip().lower()
+                if x == starter:
+                    ignore = True
+                    
+            &#34;&#34;&#34; retun single line requirement, if of number / alphabet &#34;&#34;&#34;
+            if ignore == False:
+                return [&#34;1.&#34;], [&#34;&#34;], [req_text], [&#34;&#34;]
+
+        &#34;&#34;&#34; for all other cases, iterate and extarct pointer &#34;&#34;&#34;
+        set_id, subset_id, set_text, subset_text  = [], [], [], []
+        for i, l in enumerate(lines):
+            pointer = &#34;&#34;
+            &#34;&#34;&#34; check the presense of numbers or alphabets &#34;&#34;&#34;
+            for x in self.nums+self.chrs:
+                starter = l[:2].strip().lower()
+                if any(patt == starter for patt in [x+&#34;.&#34;, x+&#34;)&#34;, &#34;(&#34;+x]):
+                    pointer = x
+                    break
+                elif x == starter[0]:
+                    pointer = x 
+                    break
+            &#34;&#34;&#34; check the presense of symbols &#34;&#34;&#34;
+            for x in self.sybl:
+                starter = l[:1].strip().lower()
+                if x == starter:
+                    pointer = x
+                    break
+            
+            &#34;&#34;&#34; if the pointer is obtained then slice it and the text &#34;&#34;&#34;
+            if pointer != &#34;&#34;:             
+                if pointer.rstrip(&#34;.&#34;) in self.nums:
+                    sid, stext = pointer, l[2:]
+                    ssid, sstext = &#34;&#34;, &#34;&#34;
+                else:
+                    pointer = &#34;&#34;.join(c for c in pointer if c not in &#34;.()&#34;)
+                    if pointer in self.chrs:
+                        ssid, sstext = pointer, l[2:]
+                set_id.append(sid)
+                subset_id.append(ssid)
+                set_text.append(stext)
+                subset_text.append(sstext)   
+        
+        &#34;&#34;&#34; following code formats the lists in the required format &#34;&#34;&#34;
+        count_dict, remove_ind = {}, []
+        for i in range(len(set_text)):
+            main = list(reversed(set_text))[i]
+            sub = list(reversed(subset_text))[i]
+            if main not in count_dict:
+                count_dict[main] = 0
+            count_dict[main] += 1
+        for i in range(len(set_text)):
+            main, sub = set_text[i], subset_text[i]
+            if count_dict[main] &gt; 1 and sub == &#34;&#34;:
+                remove_ind.append(i)
+                
+        &#34;&#34;&#34; cleanup and structure according to required format &#34;&#34;&#34;
+        uset_id, usubset_id, uset_text, usubset_text  = [], [], [], []
+        for i, val in enumerate(set_id):
+            if i not in remove_ind:
+                uset_id.append(set_id[i])
+                usubset_id.append(subset_id[i])
+                uset_text.append(set_text[i])
+                usubset_text.append(subset_text[i])   
+        
+        &#34;&#34;&#34; finally return the set_id, sub_ids along with their text &#34;&#34;&#34;
+        return uset_id, usubset_id, uset_text, usubset_text
+    
+    &#34;&#34;&#34; function to check the license type required &#34;&#34;&#34;
+    def license_type(self, flags = [&#39;license&#39;]):
+        &#34;&#34;&#34;
+            this function serves two purposes : identify the type of license required, 
+            and other licenses required for a particular job role. possible - A, B, C
+        &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; iterate and find the portion where identifier is present &#34;&#34;&#34;
+        ltypes, DL_type = [], []
+        for flag in flags:
+            ix = re.finditer(flag, self.text.lower())
+            ix = [m.start() for m in ix]
+            
+            &#34;&#34;&#34; for search results check presense of driver keyword &#34;&#34;&#34;
+            is_dl = False
+            for i in ix:
+                lines = self.text[i-50:i+100].split(&#34;\n&#34;)
+                line = &#34; &#34;.join([l for l in lines if flag in l.lower()])
+                
+                &#34;&#34;&#34; identify if driving license &#34;&#34;&#34;
+                if &#34;driver&#34; in line.lower():
+                    is_dl = True
+                if not line.strip():
+                    continue
+                    
+                &#34;&#34;&#34; identify the license class &#34;&#34;&#34;
+                if &#34;valid&#34; in line:
+                    iv = line.find(&#34;valid&#34;)
+                    lx = line[iv:].replace(&#34;valid &#34;,&#34;&#34;).split(&#34;issued&#34;)[0]
+                    for split in self.split5:
+                        lx = lx.split(split)[0]
+                    ltype = lx
+                else:
+                    words = line.split(flag)[0].split(flag.title())[0]
+                    words = words.split(flag.upper())[0].split()
+                    up_words = [w for w in words if w[0].isupper()]
+                    if len(up_words) == 0:
+                        continue
+                    
+                    &#34;&#34;&#34; basic cleaning of the relevant text &#34;&#34;&#34;
+                    types = []
+                    for x in reversed(words):
+                        if x.islower():
+                            break
+                        types.append(x)
+                    types = &#34; &#34;.join(reversed(types))
+                    
+                    &#34;&#34;&#34; replace noisy entity &#34;&#34;&#34;
+                    for r in [&#39;1. &#39;, &#39;2. &#39;, &#39;3. &#39;]:
+                        types = types.replace(r, &#34;&#34;).strip()
+                    if types in [&#34;A&#34;, &#34;B&#34;]:
+                        types = &#34;&#34;
+                    ltype = types
+                
+                &#34;&#34;&#34; save the results - DL or other licenses &#34;&#34;&#34;
+                if is_dl == True:
+                    if ltype not in DL_type:
+                        DL_type.append(ltype)
+                else:
+                    if ltype not in ltypes:
+                        ltypes.append(ltype)
+        
+        &#34;&#34;&#34; deduplicate the obtained results &#34;&#34;&#34;
+        ltypes = list(set([x for x in ltypes if x.strip()]))
+        ltypes = [_.strip() for _ in ltypes]
+        
+        &#34;&#34;&#34; identify the class of the driving license &#34;&#34;&#34;
+        dl_type = []
+        classes = [&#34;A&#34;, &#34;B&#34;, &#34;C&#34;]
+        for l in DL_type:
+            l1 = &#34;&#34;.join(_ for _ in l if _ not in string.punctuation)
+            for dl_class in classes:
+                if &#34; &#34;+dl_class+&#34; &#34; in l1:
+                    dl_type.append(dl_class)            
+            if l in ltypes:
+                ltypes.remove(l)
+        
+        &#34;&#34;&#34; deduplicate and combine multiple results &#34;&#34;&#34;
+        dl_type = sorted(list(set(dl_type)))
+        dl_type = &#34; OR &#34;.join(dl_type)
+        return dl_type, ltypes
+
+    &#34;&#34;&#34; function to obtain the text related to job class function &#34;&#34;&#34;
+    def job_class_function(self, txt):
+        &#34;&#34;&#34;
+        function to obtain the text related to job class function. 
+        &#34;&#34;&#34;
+
+        _ = [&#34; or in a class&#34;, &#34; or at the level&#34;, &#34; or in a position&#34;, &#34; or as a member&#34;]
+        lines = txt.split(&#34;\n&#34;)
+        for line in lines:
+            if &#34; or &#34; not in line:
+                continue
+            index = None
+            for connector in _:
+                if connector in line:
+                    index = connector
+                    break
+            if index != None:
+                return line.split(index)[1]
+        return &#34;&#34;
+    
+    &#34;&#34;&#34; function to dig deeper into requirement text and obtain if any major is missed &#34;&#34;&#34;
+    def deep_major(self, txt):
+        &#34;&#34;&#34; function to dig deeper into requirement text and obtain if any 
+            major related entity is missed from the first step &#34;&#34;&#34;
+
+        major = &#34;&#34;
+        for line in txt:
+            if &#34;university in &#34; not in line.lower():
+                continue
+            if &#34;in order&#34; in line.lower():
+                continue
+            if &#34;degree&#34; in line.lower():
+                major = line.split(&#34; in &#34;)[1].split(&#34;related&#34;)[0]
+        return major
+    
+    &#34;&#34;&#34; utility function to add up semester and quarter together &#34;&#34;&#34;
+    def add_course(self, sem, quar):
+        &#34;&#34;&#34;
+        this function is part of the restructuring component, it combines semester and quarter 
+        together to give a combined value of course length in the format xSyQ
+        &#34;&#34;&#34;
+        
+        month, quarter = &#34;&#34;, &#34;&#34;
+        if len(sem) &gt; 0:
+            month = str(max(sem))+&#34;S&#34;
+        if len(quar) &gt; 0:
+            quarter = str(max(quar))+&#34;Q&#34;
+        course_len = month + &#34;,&#34; + quarter
+        if course_len == &#34;,&#34;:
+            course_len = &#34;&#34;
+        return course_len
+    
+    &#34;&#34;&#34; utility function to obtain the misc details about the course &#34;&#34;&#34;
+    def misc_details(self, txt):
+        &#34;&#34;&#34;
+        parses the requirement text, identifies additional course details 
+        
+        :params: 
+        txt: requirement text where misc details about course are captured
+        &#34;&#34;&#34;
+        
+        misc_details = &#34;&#34;
+        course_lists = self.lookups[&#39;education&#39;] + self.lookups[&#39;semester&#39;]
+        ignore = [&#39;experience&#39;, &#39;college&#39;, &#39;high school&#39;, &#39;trade school&#39;]
+        for l in txt.split(&#34;\n&#34;):   
+            if any (w in l for w in ignore):
+                continue
+            if any(w in l.lower() for w in course_lists):
+                misc_details += l+&#34;\n&#34;
+        return misc_details
+
+    &#34;&#34;&#34; master function to call all the other functions and generate the output &#34;&#34;&#34;
+    def standardize(self):
+        &#34;&#34;&#34;
+        master function &#39;standardize&#39; is the main function which calls all the 
+        other functions in order to obtain structured information
+        &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; create an empty list to store the results &#34;&#34;&#34;
+        rows = []
+        form = Formatter()
+        
+        &#34;&#34;&#34; first obtain the requirement text &#34;&#34;&#34;
+        requirement_text = self.portion(&#34;requirement&#34;, indx = True)  
+        requirement_list = self.requirement_IDs(requirement_text)
+        
+        &#34;&#34;&#34; iterate in every requirement line, and call the other functions &#34;&#34;&#34;
+        for j in range(0, len(requirement_list[0])):            
+            doc = {}
+            doc[&#39;FILE_NAME&#39;] = &#34; &#34;.join(self.filename.split())
+            
+            &#34;&#34;&#34; store the set-id, set-text, subset-id, subset-text &#34;&#34;&#34;
+            doc[&#34;REQUIREMENT_SET_ID&#34;] = requirement_list[0][j]
+            doc[&#34;REQUIREMENT_SET_TEXT&#34;] = requirement_list[2][j]
+            doc[&#34;REQUIREMENT_SUBSET_ID&#34;] = requirement_list[1][j]
+            doc[&#34;REQUIREMENT_SUBSET_TEXT&#34;] = requirement_list[3][j]
+            
+            &#34;&#34;&#34; add classcode, duties, open date using generic functions &#34;&#34;&#34;
+            doc[&#39;JOB_CLASS_NO&#39;] = self.portion(&#34;class code:&#34;)
+            doc[&#39;JOB_DUTIES&#39;] = self.portion(&#34;duties&#34;, indx=True)        
+            doc[&#39;OPEN_DATE&#39;] = self.portion(&#34;open date:&#34;)
+
+            &#34;&#34;&#34; create a combined requirement text row, to be used for other entities &#34;&#34;&#34;
+            rtext = doc[&#34;REQUIREMENT_SET_TEXT&#34;] +&#34;\n&#34;+ doc[&#39;REQUIREMENT_SUBSET_TEXT&#39;]
+            rtext = re.sub(r&#39;\([^)]*\)&#39;, &#39;&#39;, rtext)            
+
+            &#34;&#34;&#34; add schooltype, experience type date using generic functions &#34;&#34;&#34;
+            doc[&#34;SCHOOL_TYPE&#34;] = self.presence_check(&#34;school&#34;, txt=rtext)
+            doc[&#34;FULL_TIME_PART_TIME&#34;] = self.presence_check(&#34;full_part&#34;, txt=rtext)
+                        
+            &#34;&#34;&#34; custom functions that uses requirement text &#34;&#34;&#34;
+            doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = self.job_class_function(rtext)
+            doc[&#34;EXP_JOB_CLASS_TITLE&#34;] = self.experience_title(rtext)
+            doc[&#34;COURSE_SUBJECT&#34;] = self.course_subjects(rtext) 
+            doc[&#34;COURSE_COUNT&#34;] = self.course_count(rtext)
+            doc[&#34;ENTRY_SALARY_GEN&#34;] = self.salary_details()[0]
+            doc[&#34;ENTRY_SALARY_DWP&#34;] = self.salary_details()[1]
+            doc[&#34;DRIVERS_LICENSE_REQ&#34;] = self.driver_license()
+            doc[&#34;MISC_COURSE_DETAILS&#34;] = self.misc_details(rtext)
+            doc[&#34;EXP_JOB_CLASS_FUNCTION&#34;] = &#34;&#34;
+            
+            &#34;&#34;&#34; custom general functions &#34;&#34;&#34;
+            doc[&#34;DRIV_LIC_TYPE&#34;] = self.license_type()[0]
+            doc[&#39;JOB_CLASS_TITLE&#39;] = self.class_title()
+            doc[&#34;ADDTL_LIC&#34;] = self.license_type()[1]
+            doc[&#34;EXAM_TYPE&#34;] = self.exam_type()      
+                        
+            &#34;&#34;&#34; identify year / months / number using generic functions &#34;&#34;&#34;
+            doc[&#34;Exp_y&#34;] = self.year_month(&#34;experience&#34;, rtext, span = &#39;year&#39;)
+            doc[&#34;Exp_m&#34;] = self.year_month(&#34;experience&#34;, rtext, span = &#39;month&#39;)
+            doc[&#34;Cor_s&#34;] = self.year_month(&#34;semester&#34;, rtext, span=&#39;semester&#39;)
+            doc[&#34;Cor_q&#34;] = self.year_month(&#34;semester&#34;, rtext, span=&#39;quarter&#39;)
+            doc[&#34;Edu_y&#34;] = self.year_month(&#34;education&#34;, rtext, span = &#39;year&#39;)
+            
+            &#34;&#34;&#34; add course and experience length by aggregating years and months &#34;&#34;&#34;
+            doc[&#34;COURSE_LENGTH&#34;] = self.add_course(doc[&#39;Cor_s&#39;], doc[&#39;Cor_q&#39;])
+            doc[&#34;EDUCATION_MAJOR&#34;] = self.portions(&#39;major&#39;,rtext,limit=180,next_word=False)
+            doc[&#34;EXPERIENCE_LENGTH&#34;], doc[&#34;EDUCATION_YEARS&#34;]   = &#34;&#34;, &#34;&#34;
+            
+            &#34;&#34;&#34; cleanup and restructuring &#34;&#34;&#34;
+            if len(doc[&#34;Exp_y&#34;] + doc[&#34;Exp_m&#34;]) &gt; 0:
+                doc[&#34;EXPERIENCE_LENGTH&#34;] = max(doc[&#34;Exp_y&#34;] + doc[&#34;Exp_m&#34;])            
+            if len(doc[&#39;Edu_y&#39;]) &gt; 0:
+                doc[&#34;EDUCATION_YEARS&#34;] = doc[&#34;Edu_y&#34;][0]
+            if doc[&#39;EDUCATION_MAJOR&#39;] == &#34;&#34;:
+                mix = requirement_list[2][j].split(&#34;\n&#34;)+requirement_list[3][j].split(&#34;\n&#34;)
+                doc[&#39;EDUCATION_MAJOR&#39;] = self.deep_major(mix)
+            if &#34;college or university&#34; in doc[&#34;SCHOOL_TYPE&#34;].lower():
+                doc[&#34;SCHOOL_TYPE&#34;] = doc[&#34;SCHOOL_TYPE&#34;].replace(&#34;|college&#34;,&#34;&#34;)
+
+            &#34;&#34;&#34; perform further cleaning and standardizing on some fields &#34;&#34;&#34;
+            exp_title, alt_exp = doc[&#34;EXP_JOB_CLASS_TITLE&#34;], doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;]
+            doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = form.cleanup(alt_exp, tag=&#39;exp&#39;)
+            doc[&#34;EXP_JOB_CLASS_TITLE&#34;] = form.cleanup(exp_title, tag=&#39;exp&#39;)
+            doc[&#34;EDUCATION_MAJOR&#34;] = form.cleanup(doc[&#34;EDUCATION_MAJOR&#34;], tag=&#39;major&#39;)  
+            doc[&#34;ADDTL_LIC&#34;] = form.cleanup(doc[&#34;ADDTL_LIC&#34;], tag=&#39;add_lic&#39;)
+            doc[&#34;OPEN_DATE&#34;] = form.cleanup(doc[&#34;OPEN_DATE&#34;], tag=&#39;date&#39;)  
+            
+            &#34;&#34;&#34; append the key-value pairs in the global list &#34;&#34;&#34;
+            rows.append({k:v for k,v in doc.items() if not k.startswith(&#34;_&#34;)})
+        return rows
+
+
+class Formatter:
+    &#34;&#34;&#34;
+    python class to format, restructure, and clean the extracted entities from different 
+    functions of the BulletinParser class. 
+    &#34;&#34;&#34;
+    
+    def __init__(self):
+        self.split6 = [&#34; and &#34;, &#34;which&#34;, &#34; with &#34;, &#34;, or any&#34;, &#34;(as&#34;,&#39;such as&#39;, &#39;from &#39;, 
+        &#39;may be&#39;, &#39;or a closely&#39;,  &#39;, or upon&#39;, &#39;, and one&#39;, &#39;, which&#39;, &#39;, or closely&#39;, &#39;(as&#39;]
+        self.major_reps = [&#39;, , includi&#39;, &#39;, or other&#39;, &#39;, or in a closely related field&#39;, 
+        &#39;or a closely related field&#39;, &#39;a related field&#39;,&#39;, or a&#39;, &#39;, or a related field&#39;] 
+        self.exp_starts = [&#39;at the &#39;, &#39;at that &#39;, &#39;which is at least at the &#39;, &#39;which is &#39;,
+        &#39;which is at that &#39;, &#39;which is at the &#39;, &#39;atleast at the &#39;, &#39;at least at the &#39;]
+        self.ignore_exp = [&#34;uniformed&#34;, &#34;helper&#34;, &#34;buyer&#34;, &#34;civil&#34;, &#34;engaged&#34;, 
+        &#34;lead&#34;, &#34;construction&#34;, &#34;crime&#34;, &#34;heating&#34;, &#34;maintenance&#34;, &#34;insulator&#34;]
+        self.exp_starts += [&#39;atleast at that &#39;, &#39;at least at that &#39;]
+        self.major_reps += [&#39;the text box which will appear&#39;]
+        
+    &#34;&#34;&#34; custom function used to cleanup the text/entites obtained from different functions &#34;&#34;&#34;
+    def cleanup(self, txt, tag):
+        &#34;&#34;&#34;
+        this function is used to clean the extracted according to different rules, this function
+        removes the noise captured along with the entity. Custom rules are used for this purpose. 
+        
+        :params:
+        tag: identifies what type of cleaning is required
+        &#34;&#34;&#34;
+        
+        cleaned = &#34;&#34;
+        if tag == &#39;date&#39;:
+            &#34;&#34;&#34; cleaning the date &#34;&#34;&#34;
+            if &#34;-&#34; in txt:
+                txt = txt.split(&#34;-&#34;)
+                m, d, y = txt[0], txt[1], txt[2]
+                if len(m) == 1:
+                    m = &#34;0&#34;+m
+                if len(y) == 4:
+                    y = y[2:]
+                cleaned = m+&#34;-&#34;+d+&#34;-&#34;+y
+                
+        elif tag == &#39;major&#39;:
+            &#34;&#34;&#34; cleaning the major &#34;&#34;&#34;
+            if not txt.startswith(&#34;the education section&#34;):
+                cleaned = txt.replace(&#34;major in &#34;,&#34;&#34;)
+                for split in self.split6:
+                    cleaned = cleaned.split(split)[0]
+                for r in self.major_reps:
+                    cleaned = cleaned.replace(r, &#34;&#34;)
+                cleaned = cleaned.lstrip(&#34;,&#34;).rstrip(&#34;,&#34;).strip()
+                for st in [&#39;such as&#39;, &#39;a &#39;, &#39;an &#39;]:
+                    if cleaned.startswith(st):
+                        cleaned = cleaned.replace(st, &#34;&#34;)
+                for st in [&#39;, or&#39;, &#39;, and&#39;]:
+                    if cleaned.endswith(st):
+                        cleaned = cleaned.split(st)[0]                    
+                if cleaned.startswith(&#34;in &#34;):
+                    cleaned = cleaned[3:].strip()
+                if cleaned.endswith(&#34; or&#34;):
+                    cleaned = cleaned[:-3]
+                cleaned = cleaned.strip().rstrip(&#34;,&#34;)
+        
+        elif tag == &#39;add_lic&#39;:
+            &#34;&#34;&#34; cleaning the additional license required &#34;&#34;&#34;
+            cleaned = []
+            for line in txt:
+                line = line.lower()
+                line = line.replace(&#34;&#39;s&#34;, &#34;&#34;)
+                if line.startswith(&#34;a &#34;):
+                    line = line[2:].strip()
+                if line.endswith(&#34;license&#34;):
+                    line = line.replace(&#34;license&#34;, &#34;&#34;)
+                if &#34; as a &#34; in line:
+                    line = line.split(&#34; as a&#34;)[1].strip()
+                line = line.replace(&#34; (pe)&#34;,&#34;&#34;)
+                if any(line == x for x in [&#39;special&#39;, &#39;the&#39;, &#39;this&#39;]):
+                    line = &#34;&#34;
+                line = line + &#34; License&#34;
+                cleaned.append(line)
+            cleaned = &#34;, &#34;.join(cleaned)
+
+        elif tag == &#39;exp&#39;:
+            &#34;&#34;&#34; cleaning the experience &#34;&#34;&#34;
+            cleaned = []
+            txt = txt.rstrip(&#34;,&#34;).replace(&#34;engaged &#34;,&#34;&#34;).replace(&#34;either &#34;, &#34;&#34;)
+            for split in [&#34;which&#34;, &#34;one year of&#34;, &#34;for &#34;]:
+                txt = txt.split(split)[0]
+            if len(txt.split()) == 1:
+                if txt.lower().split()[0] in self.ignore_exp:
+                    txt = &#34;&#34;        
+            for i,_ in enumerate(txt.split()):
+                if _[0].isupper() == True:
+                    pass
+                elif i == 0:
+                    pass
+                elif _.replace(&#34;,&#34;,&#34;&#34;).endswith(&#34;ing&#34;):
+                    break
+                cleaned.append(_)
+            cleaned = &#34; &#34;.join(cleaned)
+            
+            if cleaned.endswith(&#34;engaged&#34;):
+                cleaned = cleaned.replace(&#34;engaged&#34;, &#34;&#34;)
+            if &#34;(&#34; in cleaned:
+                cleaned = cleaned.split(&#34;(&#34;)[0]
+            elif &#34; by &#34; in cleaned:
+                cleaned = cleaned.split(&#34; by &#34;)[0]
+            elif cleaned.startswith(&#34;a &#34;):
+                cleaned = cleaned[2:].strip()
+            elif cleaned.startswith(&#34;an &#34;):
+                cleaned = cleaned[3:].strip()
+                
+            cleaned = cleaned.rstrip(&#34;,&#34;).rstrip(&#34;.&#34;).replace(&#34;, two years of&#34;,&#34;&#34;)
+            cleaned = cleaned.split(&#34;Class Code&#34;)[0]
+            if &#34; the level of &#34; in cleaned:
+                cleaned = cleaned.split(&#34; the level of &#34;)[1]
+            cleaned = cleaned.replace(&#34;, or&#34;,&#34;&#34;).split(&#34;within&#34;)[0]
+            if cleaned.lower().endswith(&#34;construction&#34;):
+                cleaned = cleaned.lower().replace(&#34;construction&#34;, &#34;&#34;).title()
+            if cleaned.endswith(&#34;responsible&#34;):
+                cleaned = cleaned.replace(&#34;responsible&#34;, &#34;&#34;)
+            cleaned = cleaned.rstrip(&#34;,&#34;).rstrip(&#34;.&#34;)
+            
+        if tag == &#39;alt_exp&#39;:
+            &#34;&#34;&#34; cleaning the alternate experience &#34;&#34;&#34;
+            cleaned = txt.strip()
+            if cleaned:            
+                for e in self.exp_starts:
+                    cleaned = cleaned.replace(e,&#34;&#34;)
+                if cleaned.endswith(&#34;or&#34;):
+                    cleaned = cleaned[:-2]
+                if cleaned.endswith(&#34;and&#34;):
+                    cleaned = cleaned[:-3]
+        return cleaned
+
+
+class Extractor:
+    &#34;&#34;&#34;
+    Controller Class, which executes the key piece of code required to obtain entities and 
+    information for different files, and producing a structured file as output
+    &#34;&#34;&#34;
+    
+    def __init__(self, path):
+        &#34;&#34;&#34;
+        python class to format, restructure and remove noise from obtained entities
+        most of the noise is handelled during the entity extraction but sometimes there is 
+        still presence of noisy keywords. 
+        &#34;&#34;&#34;
+        
+        self.path   = path
+        self.column = [&#39;FILE_NAME&#39;, &#39;JOB_CLASS_TITLE&#39;, &#39;JOB_CLASS_NO&#39;, &#39;REQUIREMENT_SET_ID&#39;, 
+        &#39;REQUIREMENT_SUBSET_ID&#39;, &#39;JOB_DUTIES&#39;, &#39;EDUCATION_YEARS&#39;, &#39;SCHOOL_TYPE&#39;, 
+        &#39;EDUCATION_MAJOR&#39;, &#39;EXPERIENCE_LENGTH&#39;, &#39;FULL_TIME_PART_TIME&#39;, 
+        &#39;EXP_JOB_CLASS_TITLE&#39;, &#39;EXP_JOB_CLASS_ALT_RESP&#39;, &#39;EXP_JOB_CLASS_FUNCTION&#39;, 
+        &#39;COURSE_COUNT&#39;, &#39;COURSE_LENGTH&#39;, &#39;COURSE_SUBJECT&#39;, &#39;MISC_COURSE_DETAILS&#39;, 
+        &#39;DRIVERS_LICENSE_REQ&#39;, &#39;DRIV_LIC_TYPE&#39;, &#39;ADDTL_LIC&#39;, &#39;EXAM_TYPE&#39;, &#39;ENTRY_SALARY_GEN&#39;, 
+        &#39;ENTRY_SALARY_DWP&#39;, &#39;OPEN_DATE&#39;, &#39;REQUIREMENT_SET_TEXT&#39;, &#39;REQUIREMENT_SUBSET_TEXT&#39;]
+
+        self.ignore = [&#39;POLICE COMMANDER 2251 092917.txt&#39;, 
+                       &#39;Vocational Worker  DEPARTMENT OF PUBLIC WORKS.txt&#39;, 
+                       &#39;SENIOR LOAD DISPATCHER 5235 060118.txt&#39;, 
+                       &#39;SENIOR PHOTOGRAPHER 1795 041516 REVISED 042816.txt&#39;]
+    
+
+    
+    &#34;&#34;&#34; function to iterate in files and generate a structured csv file &#34;&#34;&#34;
+    def extraction(self):
+        &#34;&#34;&#34; 
+            master function that iterates in the root folder for every file 
+            and obtains the structured information, final output is a csv file
+        &#34;&#34;&#34;
+        
+        print (&#34;&gt;&gt; Starting Extraction for the Given Folder&#34;)
+        rows = []
+        files = sorted(os.listdir(path))
+        files = [f for f in files if f not in self.ignore]
+        for filename in files:
+            config = {&#34;path&#34; : self.path, &#34;filename&#34; : filename}
+            bp = BulletinParser(config)
+            rows.extend(bp.standardize())
+        df = pd.DataFrame(rows)[self.column]
+        df.to_csv(&#34;structured_file.csv&#34;, index = False)
+        print (&#34;&gt;&gt; Extraction Complete for Entire Folder&#34;)
+        return df</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="BulletinStructuringEngine.BulletinParser"><code class="flex name class">
+<span>class <span class="ident">BulletinParser</span></span>
+<span>(</span><span>config)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>python class to standardize the job descriptions present in text format
+to structured object, the final results are produced in a csv file format</p>
+<p>inputs
+: the input can be a single file, or a complete folder
+outputs : single json object for one file, structured csv file for a folder</p>
+<p>config : root path of the file and name of the file</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">class BulletinParser:
+
+    &#34;&#34;&#34;
+    python class to standardize the job descriptions present in text format 
+    to structured object, the final results are produced in a csv file format
+    
+    inputs  : the input can be a single file, or a complete folder
+    outputs : single json object for one file, structured csv file for a folder
+    &#34;&#34;&#34;
+    
+    def __init__(self, config):
+        
+        &#34;&#34;&#34; config : root path of the file and name of the file &#34;&#34;&#34;
+        self.filename, self.path = config[&#39;filename&#39;], config[&#39;path&#39;]      
+        self.text = open(self.path + self.filename).read()
+        
+        &#34;&#34;&#34; a global list of all pointers used in bulletins &#34;&#34;&#34;
+        self.chrs = &#34;abcdefghijklmnopqrstuvwxyz&#34;
+        self.nums = &#34;123456789&#34;
+        self.sybl = &#34;-*&#34;
+        
+        &#34;&#34;&#34; lookup dictionary for numbers text and values &#34;&#34;&#34;
+        self._ns = {&#34;one&#34;:&#34;1&#34;, &#34;two&#34;:&#34;2&#34;, &#34;three&#34;:&#34;3&#34;, &#34;four&#34;:&#34;4&#34;, &#34;five&#34;:&#34;5&#34;, &#34;six&#34;:&#34;6&#34;, 
+        &#34;seven&#34;:&#34;7&#34;, &#34;eight&#34;:&#34;8&#34;, &#34;nine&#34;:&#34;9&#34;, &#34;ten&#34;:&#34;10&#34;, &#34;twelve&#34;:&#34;12&#34;, &#34;fourteen&#34;:&#34;14&#34;,
+        &#34;fifteen&#34;:&#34;15&#34;, &#39;sixteen&#39;:&#39;16&#39;, &#34;eighteen&#34;:&#34;18&#34;, &#34;twenty&#34;:&#34;20&#34;,
+        &#34;twenty-three&#34;:&#34;23&#34;,&#34;twenty-four&#34;:&#34;24&#34;,&#34;twenty-seven&#34;:&#34;27&#34;,&#34;thirty&#34;:&#34;30&#34;,
+        &#34;thirty-six&#34;:&#34;36&#34;, &#34;fourty-five&#34;:&#34;45&#34;, &#34;sixty&#34;:&#34;60&#34;, &#34;ninety&#34;:&#34;90&#34;, &#34;135&#34;:&#34;135&#34;}
+
+        &#34;&#34;&#34; lookup dictionaries that contain key-value pair (keywords) for identification &#34;&#34;&#34;
+        self.lookups  = {
+        &#34;full_part&#34; : {&#34;full time&#34;:[&#34;full time&#34;,&#34;full-time&#34;],
+                       &#34;part time&#34;:[&#34;part time&#34;,&#34;part-time&#34;]},
+        &#34;education&#34; : [&#34;college or university&#34;,&#34;education&#34;,&#34;school&#34;, &#34;semester&#34;,&#34;quarter&#34;, 
+                       &#34;degree&#34;,&#34;coursework&#34;],
+        &#34;experience&#34;: [&#34;full time&#34;, &#34;full-time&#34;, &#34;experience&#34;, &#34;part time&#34;, &#34;part-time&#34;],
+        &#34;semester&#34;  : [&#34;semester&#34;, &#34;quarter&#34;, &#39;course&#39;],
+        &#34;exam_type&#34; : [&#34;OPEN&#34;, &#34;INT_DEPT_PROM&#34;, &#34;DEPT_PROM&#34;, &#34;OPEN_INT_PROM&#34;],
+        &#34;major&#34;     : [&#39;degree in &#39;, &#39;major in &#39;, &#39;majoring&#39;],
+        &#34;exp_flags&#34; : [&#34; as a &#34;, &#34; at the level of &#34;, &#34; as an &#34;],
+        &#34;school&#34;    : {&#34;college or university&#34;:[&#34;college or university&#34;,&#34;university or college&#34;], 
+        &#34;college&#34;   : [&#34;college&#34;],&#34;high school&#34;:[&#34;high school&#34;],&#34;trade school&#34;:[&#39;trade school&#39;], 
+        &#34;apprenticeship&#34;: [&#34;apprenticeship&#34;],&#34;law school&#34; : [&#39;law school&#39;], 
+        &#34;technical school&#34;:[&#39;technical school&#39;]}}
+        
+        &#34;&#34;&#34; common splitters used in text parsing and cleaning in different functions &#34;&#34;&#34;
+        self.split1, self.split2 = [&#34;\n&#34;, &#34;and&#34;, &#34;;&#34;], [&#39;\n&#39;, &#39;;&#39;, &#39;. &#39;]
+        self.split3 = [&#34;; &#34;,&#34; with &#34;,&#34; and &#34;,&#34; or &#34;,&#34;. &#34;,&#34; in &#34;,&#34; issued &#34;]
+        self.split4 = [&#39;from an&#39;, &#39;from a&#39;, &#39; may &#39;, &#39; for &#39;, &#39;; and&#39;]
+        self.split5 = [&#34;is required&#34;,&#34;approved&#34;,&#34;required&#34;,&#34;. &#34;,&#34;may&#34;,&#34;with&#34;,&#34;prior&#34;]        
+        self.split5 += [&#34;upon&#34;, &#34;;&#34;]
+        
+        &#34;&#34;&#34; keywords required to clean / correct some entities &#34;&#34;&#34;
+        self.spellings = { &#34;COMPETITVE&#34; : &#34;COMPETITIVE&#34;, &#34;PARMENTAL&#34; : &#34;PARTMENTAL&#34;}
+        
+        &#34;&#34;&#34; file complete text and non empty lines &#34;&#34;&#34;
+        self.text   = self.text.replace(&#34;CAMPUS INTERVIEWS ONLY&#34;,&#34;&#34;)
+        self.lines  = [l for l in self.text.split(&#34;\n&#34;) if l.strip()]
+        
+        
+        
+    &#34;&#34;&#34; utility function to find a portion of text using an identifier keyword &#34;&#34;&#34;
+    def portion(self, flag, txt=None, limit=10, next_word=True, indx=False):
+        &#34;&#34;&#34;
+        a generic python function to obtain the entites using an identifier flag 
+        this function is used to extract class code, requirements, duties, date.
+
+        :params:
+        input : flag keyword (example - requirement, notes, duties), limit (optional) specify 
+        number of characters to be extracted around the flag, next_word : True if only one 
+        (immediate) word is output, indx : flag which identifies index of the relevant lines
+        output: the relevant portion related to the input flag keyword
+        &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; create the list of lines variable &#34;&#34;&#34;
+        entity = &#34;&#34;
+        lines = self.lines
+        if txt != None:            
+            lines = txt.split(&#34;\n&#34;)
+        
+        &#34;&#34;&#34; filter the lines which contain the identifier flag &#34;&#34;&#34;
+        lines = [&#34; &#34;.join(line.split()).lower() for line in lines]
+        lines = [line for line in lines if flag in line]
+        
+        &#34;&#34;&#34; find relevant index if indx is set True &#34;&#34;&#34;
+        if indx:
+            lines=[i for i,l in enumerate(self.lines) 
+                   if l.strip().lower().startswith(flag.lower())]
+        if len(lines) == 0:
+            return entity 
+        
+        &#34;&#34;&#34; find the required portion of text &#34;&#34;&#34;
+        start_ix = lines[0]    
+        if indx:
+            end = [i for i,l in enumerate(self.lines[start_ix+1:]) if l.isupper()][0]
+            entity = &#34;\n&#34;.join(self.lines[start_ix+1:start_ix+end+1])
+        else:
+            &#34;&#34;&#34; obtain the entity text till next words (limit parameter) &#34;&#34;&#34;
+            index = start_ix.find(flag)        
+            entity = start_ix[index:].replace(flag, &#34;&#34;)
+            entity = entity.strip()[:limit]
+            if next_word:
+                entity = entity.split()[0]    
+            else:
+                for split in self.split2:
+                    entity = entity.split(split)[0]  
+        return entity
+    
+    &#34;&#34;&#34; similar function as portion, but it executes with multiple identifiers &#34;&#34;&#34;
+    def portions(self, flag, txt, limit=10, next_word=True):
+        &#34;&#34;&#34;
+        this function accept same parameters as portion, flags is a list.
+        used to extract major / degree related entities from the bulletins
+        &#34;&#34;&#34;
+        
+        entities = []
+        for flag in self.lookups[flag]:
+            entity = self.portion(flag, txt, limit, next_word)
+            if entity:
+                entities.append(entity)
+        return &#34;, &#34;.join(entities)
+
+    &#34;&#34;&#34; utility function to check the presence of an identifier and related keywords &#34;&#34;&#34;
+    def presence_check(self, identifier, txt):
+        &#34;&#34;&#34;
+        checks if a certain keyword or a list of keywords are present in the text, the function 
+        performs exact and compact match, can be extend to perform more flexible text matching 
+ 
+        :params:
+        input  : identifier and the relevant portion of the text to be searched
+        output : a string of identifiers which were found in the text 
+        &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; obtain the list/dict of relevant tokens from the lookup dictionary &#34;&#34;&#34;
+        lookup = self.lookups[identifier] 
+        
+        &#34;&#34;&#34; iterate in lookup tokens and check if present &#34;&#34;&#34;
+        entities = []
+        if type(lookup) == dict:    
+            &#34;&#34;&#34; iterate key-value pairs, check if any value is present in the text &#34;&#34;&#34;
+            for key, values in lookup.items():    
+                for val in values:
+                    if val.lower() in txt.lower():
+                        entities.append(key)
+        else: 
+            &#34;&#34;&#34; iterate in list, check if any element is present in the text &#34;&#34;&#34;
+            for val in lookup:
+                if val.lower() in txt.lower():
+                    entities.append(val)
+        
+        &#34;&#34;&#34; remove duplicates and join them by pipe &#34;&#34;&#34;
+        entities = &#34;|&#34;.join(list(set(entities)))
+        return entities
+    
+    &#34;&#34;&#34; utility function to standardize the numbers text into a numerical value &#34;&#34;&#34;
+    def standardize_numbers(self, entity):
+        &#34;&#34;&#34;
+        it uses _ns lookup dictionary which defines the standardized form of a number
+
+        :params:
+        the input is uncleaned text which is probably about a number 
+        the output is a numerical value
+        &#34;&#34;&#34;
+        
+        number = &#34;&#34;
+        if entity.lower() in self._ns:
+            number = self._ns[entity.lower()]
+        elif entity in list(self._ns.values()):
+            number = entity
+        return number
+
+    &#34;&#34;&#34; utility function to get the years/months associated with an identifer &#34;&#34;&#34;
+    def year_month(self, flag, req_text, span = &#39;year&#39;):
+        &#34;&#34;&#34;
+        :params:
+        flag: key which is used to obtain the relevant values from the lookup dictionary 
+        span: number context to be extracted, (year, month, semester, quarter)
+        output: years/month associated in the text; months are converted into floats.
+        &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; obtain the list of related keywords from the lookup dictionary &#34;&#34;&#34;
+        lookup = self.lookups[flag]
+        
+        &#34;&#34;&#34; iterate by lines, check if the span-value is present &#34;&#34;&#34;
+        collected = []
+        for line in req_text.split(&#34;\n&#34;):
+            line = line.replace(&#34;one-year&#34;, &#34;one year&#34;)
+            &#34;&#34;&#34; find index of all occurances of the span in the line &#34;&#34;&#34;
+            indexes = [m.start() for m in re.finditer(span, line)]            
+            
+            &#34;&#34;&#34; slice a portion around the index within lower and upper bound &#34;&#34;&#34;
+            lower_bound, upper_bound = 30, 40
+            for index in indexes:
+                if index-lower_bound &lt; 0:
+                    portion = line[:index+upper_bound].lower()
+                else:
+                    portion = line[index-lower_bound:index+upper_bound].lower()
+                
+                &#34;&#34;&#34; next, identify if the portion of text is relevant of not, &#34;&#34;&#34;
+                &#34;&#34;&#34; four main conditions to identify not not important portion &#34;&#34;&#34;
+                is_relevant = False
+                for keyword in lookup:                    
+
+                    &#34;&#34;&#34; cond1 : keyword is not present in relevant portion &#34;&#34;&#34;
+                    if keyword not in portion:
+                        continue
+                    
+                    &#34;&#34;&#34; cond2 : span is mentioned after the lookup keyword &#34;&#34;&#34;
+                    yr_ix = portion.find(span)
+                    idf_ix = portion.find(keyword)
+                    if yr_ix &gt; idf_ix:
+                        continue
+                    
+                    &#34;&#34;&#34; cond3 : presence of ignore words in the text portion &#34;&#34;&#34;
+                    ignore_words = [&#34;=&#34;, &#34;equal&#34;, &#34;equivalent&#34;, &#39;lack&#39;, &#39;valent&#39;]
+                    if any(eq in portion for eq in ignore_words):
+                        continue
+                    
+                    &#34;&#34;&#34; cond4 : presence of substitute in experience text &#34;&#34;&#34;
+                    if keyword == &#34;experience&#34;:
+                        if &#34;titute&#34; in portion:
+                            continue
+                    
+                    &#34;&#34;&#34; for other cases, the portion is relevant &#34;&#34;&#34;
+                    is_relevant = True
+                
+                &#34;&#34;&#34; if relevant, then identify the numerical span value &#34;&#34;&#34;
+                if is_relevant:
+                    special_checks = [&#34;two or four&#34;, &#34;two-year or four-year&#34;]
+                    if any(two_four in portion for two_four in special_checks):
+                        collected.append(&#34;4&#34;)
+                    if &#34;two and one-half&#34; in portion:
+                        collected.append(&#34;2.5&#34;)
+                    else:
+                        obtained = False
+                        
+                        &#34;&#34;&#34; check entities with two words: (ex - twenty-four etc.)&#34;&#34;&#34;
+                        for k,v in self._ns.items():
+                            if &#34;-&#34; in k:
+                                if k in portion.split(span)[0].replace(&#34; &#34;, &#34;-&#34;):
+                                    collected.append(v)
+                                    obtained = True
+                        
+                        &#34;&#34;&#34; for other cases, obtain the immediate previous word &#34;&#34;&#34;
+                        if obtained == False:
+                            val = portion[:yr_ix].split()[-1]
+                            val = val.replace(&#34;-&#34;,&#34;&#34;).replace(&#34;(&#34;,&#34;&#34;).replace(&#34;)&#34;,&#34;&#34;)
+                            val = self.standardize_numbers(val)
+                            if val != &#34;&#34;:
+                                collected.append(val)
+
+        &#34;&#34;&#34; return the deduplicated list of month / year &#34;&#34;&#34;
+        collected = list(set(collected))
+        if span == &#39;month&#39;:
+            collected = [str(round(float(_)/12, 2)) for _ in collected]
+        if len(collected) &gt; 0:
+            collected = [float(_) for _ in collected]
+        return collected
+
+    &#34;&#34;&#34; Custom function to identify exam type required in given job &#34;&#34;&#34;
+    def exam_type(self):
+        &#34;&#34;&#34;
+        identify and cleans the required text; tags the exam type according to rules
+        possible outputs for this function are open, open_int, int_dept, and dept 
+        &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; Meta data related to exam types &#34;&#34;&#34;
+        bad_entities = [&#39;an&#39;, &#39;on&#39;, &#39;both&#39;, &#39;only&#39;, &#39;a&#39;, &#39;to&#39;, &#39;nvvc&#39;, &#39;basis&#39;]
+        bad_entities = [&#34; &#34;+_.upper()+&#34; &#34; for _ in bad_entities]
+        
+        &#34;&#34;&#34; identify and clean the main portion related to exam type &#34;&#34;&#34;
+        portion = &#34;&#34;
+        for i, line in enumerate(self.lines):
+            &#34;&#34;&#34; identify the relevant line &#34;&#34;&#34;
+            if &#34;THIS EXAM&#34; in line:
+                portion = line + &#34; &#34; + self.lines[i+1]
+                portion = &#34; &#34;+portion.split(&#34;GIVEN&#34;)[1]
+                portion = portion.split(&#34;The City&#34;)[0].strip()+&#34; &#34;
+                
+                &#34;&#34;&#34; cleanup bad entities and spelling mistakes &#34;&#34;&#34;
+                for ent in bad_entities:
+                    portion = portion.replace(ent, &#34; &#34;)
+                for k,v in self.spellings.items():
+                    portion = portion.replace(k,v)
+                portion = &#34; &#34;.join(portion.split()).split(&#34; AND &#34;)              
+                break
+                
+        &#34;&#34;&#34; join and further standardize the exam type &#34;&#34;&#34;
+        cons = [&#39;ONLY &#39;, &#39;ON &#39;, &#39;BOTH &#39;]
+        exam_t = &#34; AND &#34;.join(portion)
+        exam_t = &#34; &#34;.join(w for w in exam_t.split() if w not in cons)
+        exam_t = exam_t.lower()
+        
+        &#34;&#34;&#34; generate the final tag of exam type &#34;&#34;&#34;
+        tag = &#34;OPEN&#34;
+        if &#34;open&#34; in exam_t and &#34;interdepartmental&#34; in exam_t:
+            tag = &#34;OPEN_INT_PROM&#34;
+        elif &#34;interdepartmental&#34; in exam_t:
+            tag = &#34;INT_DEPT_PROM&#34;
+        elif &#34;department&#34; in exam_t:
+            tag = &#34;DEPT_PROM&#34;
+        return tag
+    
+    &#34;&#34;&#34; Custom function to obtain course counts required for the job &#34;&#34;&#34;
+    def course_count(self, req_text, flag=&#39;course&#39;, limit=50):
+        &#34;&#34;&#34;
+        :params:
+        req_text: complete requirement text and output: number of courses required
+        output: number of courses required as the minimum requirement of the job
+        &#34;&#34;&#34;
+
+        &#34;&#34;&#34; find the numerical / textual span values in the text &#34;&#34;&#34;
+        spans = list(self._ns.keys()) + list(self._ns.values())
+        idx = [m.start() for m in re.finditer(flag, req_text.lower())]
+        
+        &#34;&#34;&#34; iterate and check if relevant &#34;&#34;&#34;
+        collect = []
+        for each in idx:
+            if each-limit &lt; 0:
+                lines = req_text[:each+limit].split(&#34;\n&#34;)
+            else:
+                lines = req_text[each-limit:each+limit].split(&#34;\n&#34;)
+            
+            &#34;&#34;&#34; check which spans are mentioned in the text and store &#34;&#34;&#34;
+            for l in [l for l in lines if flag in l]: 
+                for span in spans:
+                    if span+&#34; &#34;+flag in l:       
+                        if span in self._ns:
+                            span = self._ns[span]
+                        collect.append(int(span))
+
+        &#34;&#34;&#34; return the obtained value &#34;&#34;&#34;
+        if len(collect) == 0:
+            return &#34;&#34;
+        return max(collect)
+
+    &#34;&#34;&#34; Custom function to obtain salary amount and DWP salary amount &#34;&#34;&#34;
+    def salary_details(self):
+        &#34;&#34;&#34;
+        Identifies the salary amount mentioned in the text; also finds for DWP 
+        for multiple salary amounts, only first salary is given as output
+        &#34;&#34;&#34;
+
+        &#34;&#34;&#34; first identify the relevant portion &#34;&#34;&#34;
+        identifier, next_chars = &#34;SALARY&#34;, 250
+        ix = self.text.find(identifier)
+        portion_x = self.text[ix:ix+next_chars]
+        portion_x = portion_x.replace(identifier, &#34;&#34;).strip()
+        
+        &#34;&#34;&#34; find the salary amount &#34;&#34;&#34;
+        salary = portion_x
+        for split in self.split1:
+            salary = salary.split(split)[0]
+        salary = &#34;$&#34; + &#34;$&#34;.join(salary.split(&#34;$&#34;)[1:])
+        salary = salary.split(&#34;(&#34;)[0].split(&#34;, $&#34;)[0]
+        salary = salary.split(&#34;The&#34;)[0].split(&#34;. Some&#34;)[0]
+        
+        &#34;&#34;&#34; find the DWP salary &#34;&#34;&#34;
+        dwp = &#34;&#34;
+        rep = [&#34;(&#34;, &#34;flat&#34;, &#34;$ &#34;]
+        identifier = &#34;Department of Water and Power is &#34;
+        for line in portion_x.split(&#34;\n&#34;):
+            if identifier.lower() in line.lower():
+                dwp = line.lower().split(identifier.lower())[1]
+                &#34;&#34;&#34; basic cleanup &#34;&#34;&#34;
+                for split in self.split2 + [&#34;. &#34;]:
+                    dwp = dwp.split(split)[0]
+                for r in rep:
+                    dwp = dwp.replace(r, &#34;&#34;).rstrip(&#34;.&#34;)
+                dwp = dwp.replace(&#34;-rated)&#34;,&#34;&#34;).replace(&#34;-rated&#34;,&#34;&#34;)
+                dwp = dwp.rstrip(&#34;.&#34;).replace(&#34;rated)&#34;,&#34;&#34;).replace(&#34;at&#34;,&#34;&#34;)
+                dwp = dwp.split(&#34;and&#34;)[0].strip()
+        return salary, dwp
+    
+    &#34;&#34;&#34; custom function to obtain the experience title &#34;&#34;&#34;
+    def experience_title(self, req_text):
+        &#34;&#34;&#34;
+        function to identify the experience title from the requirement text 
+        input is only the requirement text of a job bulletin
+        &#34;&#34;&#34;
+
+        exp_title = []
+        possed = [] 
+        &#34;&#34;&#34; iterate in experience flags &#34;&#34;&#34;
+        for identifier in self.lookups[&#39;exp_flags&#39;]:
+            for i,line in enumerate(req_text.split(&#34;\n&#34;)):
+                
+                &#34;&#34;&#34; clean and collect the relevant portions &#34;&#34;&#34;
+                if identifier in line:
+                    lx = line.split(identifier)[1]
+                    poss = lx
+                    possed.append(poss)
+                    for spliter in self.split3:
+                        lx = lx.split(spliter)[0]
+                    exp_title.append(lx)
+                    break
+        
+        exp_title = &#34;; &#34;.join(exp_title)
+        
+        &#34;&#34;&#34; next find the function / role &#34;&#34;&#34;
+        for l in possed:
+            for split in self.lookups[&#39;exp_flags&#39;]:
+                if l in split:
+                    l = l.split(split)[1]
+                if &#34;or in a class&#34; in l:
+                    l = l.split(&#34;or in a class&#34;)[0]       
+        return exp_title
+    
+    &#34;&#34;&#34; Custom function to obtain class title from the job-description text &#34;&#34;&#34;
+    def class_title(self):
+        &#34;&#34;&#34;
+        extracts and cleans the job title from the bulletin text
+        &#34;&#34;&#34;
+        
+        entity = self.lines[0].strip().lower()
+        if &#34;revised&#34; in entity:
+            entity = entity.replace(&#34;revised&#34;, &#34;&#34;)
+        if &#34;class code&#34; in entity:
+            entity = entity.split(&#34;class code&#34;)[0]
+        return entity.title()
+    
+    &#34;&#34;&#34; custom function to identify the course subjects &#34;&#34;&#34;
+    def course_subjects(self, req_text):
+        &#34;&#34;&#34;
+        this function identifes the relevant course subjects using a list of keywords 
+        &#34;&#34;&#34;
+
+        kws = self.lookups[&#34;semester&#34;]
+
+        &#34;&#34;&#34; obtain the relevant lines &#34;&#34;&#34;
+        lines = req_text.split(&#34;\n&#34;)
+        relevant_lines = [l for l in lines if any(wd in l for wd in kws)]
+        relevant_lines = [l.lower() for l in relevant_lines]
+
+        &#34;&#34;&#34; iterate and locate the position of relevant text &#34;&#34;&#34;
+        courses = []
+        for each in relevant_lines:
+            course = &#34;&#34;
+            if all(k in each for k in kws):
+                ix = each.find(&#34;quarter&#34;)
+            elif &#34;quarter&#34; in each:
+                ix = each.find(&#34;quarter&#34;)
+            else:
+                ix = each.find(&#34;semester&#34;)
+
+            &#34;&#34;&#34; using the obtained index, split the text &#34;&#34;&#34;
+            relt = each[ix:ix+300]
+            if &#34; units in &#34; in relt:
+                course = relt.split(&#34; units in &#34;)[1]
+                course = course.split(&#34;;&#34;)[0].split(&#34; at &#34;)[0]
+            elif &#34; courses in &#34; in relt:
+                course = relt.split(&#34; courses in &#34;)[1]
+                course = course.split(&#34;;&#34;)[0].split(&#34; at &#34;)[0]
+            elif &#34; units of &#34; in relt:
+                course = relt.split(&#34; units of &#34;)[1]
+                course = course.split(&#34;;&#34;)[0].split(&#34; at &#34;)[0]
+            elif &#34; units &#34; in relt:
+                if &#34; in &#34; in relt:
+                    right = relt.split(&#34; in &#34;)[1]                    
+                    if right.startswith(&#34;requ&#34;) or right.startswith(&#34;which&#34;):
+                        continue
+                    if right.startswith(&#34;the&#34;):                    
+                        right = right.replace(&#34;the production&#34;, &#34;production&#34;)
+                        right = right.replace(&#34;the areas of&#34;, &#34;&#34;)
+                    if right.startswith(&#34;the&#34;):
+                        continue
+                    course = right
+            else:
+                &#34;&#34;&#34; perform cleanup &#34;&#34;&#34;
+                for ent in [&#39;university, in&#39;, &#39;or trade school&#39;]:
+                    relt = relt.replace(ent, &#34;&#34;)
+
+                if &#34;university in &#34; in relt:
+                    course = relt.split(&#34;university in &#34;)[1].split(&#34;;&#34;)[0]
+                    course = course.split(&#34; at &#34;)[0]
+
+            &#34;&#34;&#34; more custom cleanup &#34;&#34;&#34;
+            for split in self.split4:
+                course = course.split(split)[0]
+            if course:
+                courses.append(course)
+        courses = list(set(courses))
+        courses = &#34; &#34;.join(courses)
+        
+        &#34;&#34;&#34; further split by &lt;num&gt;_year &#34;&#34;&#34;
+        splitters = [&#39;one&#39;, &#39;two&#39;, &#39;three&#39;, &#39;four&#39;, &#39;five&#39;, &#39;including&#39;]
+        for i,split in enumerate(splitters):
+            if i &lt; 5:
+                split = split + &#34; year&#34;
+            courses = courses.split(split)[0]        
+        return courses
+
+    &#34;&#34;&#34; function to check the driver license tag &#34;&#34;&#34;
+    def driver_license(self, limit = 50):
+        &#34;&#34;&#34;
+        this function finds if driving license is required or not
+        
+        :params:
+        limit: used to define the lower and upper bound set the text portion 
+        &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; find the index where driver keyword is mentioned &#34;&#34;&#34;
+        i = re.finditer(&#34;driver&#34;, self.text.lower())
+        i = [m.start() for m in i]
+        
+        &#34;&#34;&#34; iterate and further check if &#39;license&#39; is mentioned &#34;&#34;&#34;
+        tags = []
+        for each in i:
+            por = self.text[each-limit:each+limit*2].lower()
+            tag = &#34;&#34;
+            if &#34;license&#34; in por:
+                tag = &#34;R&#34;
+                if &#34; may &#34; in por:
+                    tag = &#34;P&#34;
+            tags.append(tag)
+        if len(tags) &gt; 0:
+            return tags[0]
+        return &#34;&#34;
+
+    &#34;&#34;&#34; function to properly parse requirement set and subsets &#34;&#34;&#34;
+    def requirement_IDs(self, req_text):
+        &#34;&#34;&#34;
+        this function extracts out the pointer associated with ever requirment
+        1, 2, 3 .. are set_id, and set_text is the corresponding text 
+        a, b, c .. are subset_id, and subset_text is the corresponding text
+        special symbols such as * or - are also tracked; the function formats the text 
+        to generate required format; Also it identifies special cases with no pointers
+        &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; obtain the requirement text lines &#34;&#34;&#34;
+        lines_ = [l.strip().rstrip(&#34;,&#34;) for l in req_text.split(&#34;\n&#34;)]
+        &#34;&#34;&#34; custom break condition &#34;&#34;&#34;
+        lines = []
+        for l in lines_:
+            if &#34;substitute&#34; in l:
+                if l[0] not in [&#34;1&#34;,&#34;2&#34;,&#34;3&#34;,&#34;4&#34;,&#34;5&#34;]:
+                    break
+            lines.append(l)
+        
+        &#34;&#34;&#34; fix some of the lines &#34;&#34;&#34;
+        flats = [l for l in lines if not any(l[0] == w for w in self.nums)]
+        if len(lines) != 1 and len(lines) == len(flats):
+            lines = [&#34; &#34;.join(lines)]
+        
+        &#34;&#34;&#34; special case : single line requirement &#34;&#34;&#34;
+        ignore = False
+        if len(lines) == 1:
+            &#34;&#34;&#34; check the presense of numbers or alphabets &#34;&#34;&#34;
+            for x in self.nums+self.chrs:
+                starter = req_text[:2].strip().lower()
+                if any(patt == starter for patt in [x+&#34;.&#34;, x+&#34;)&#34;, &#34;(&#34;+x]):
+                    ignore = True
+                    
+            &#34;&#34;&#34; check the presense of symbols &#34;&#34;&#34;
+            for x in self.sybl:
+                starter = l[:1].strip().lower()
+                if x == starter:
+                    ignore = True
+                    
+            &#34;&#34;&#34; retun single line requirement, if of number / alphabet &#34;&#34;&#34;
+            if ignore == False:
+                return [&#34;1.&#34;], [&#34;&#34;], [req_text], [&#34;&#34;]
+
+        &#34;&#34;&#34; for all other cases, iterate and extarct pointer &#34;&#34;&#34;
+        set_id, subset_id, set_text, subset_text  = [], [], [], []
+        for i, l in enumerate(lines):
+            pointer = &#34;&#34;
+            &#34;&#34;&#34; check the presense of numbers or alphabets &#34;&#34;&#34;
+            for x in self.nums+self.chrs:
+                starter = l[:2].strip().lower()
+                if any(patt == starter for patt in [x+&#34;.&#34;, x+&#34;)&#34;, &#34;(&#34;+x]):
+                    pointer = x
+                    break
+                elif x == starter[0]:
+                    pointer = x 
+                    break
+            &#34;&#34;&#34; check the presense of symbols &#34;&#34;&#34;
+            for x in self.sybl:
+                starter = l[:1].strip().lower()
+                if x == starter:
+                    pointer = x
+                    break
+            
+            &#34;&#34;&#34; if the pointer is obtained then slice it and the text &#34;&#34;&#34;
+            if pointer != &#34;&#34;:             
+                if pointer.rstrip(&#34;.&#34;) in self.nums:
+                    sid, stext = pointer, l[2:]
+                    ssid, sstext = &#34;&#34;, &#34;&#34;
+                else:
+                    pointer = &#34;&#34;.join(c for c in pointer if c not in &#34;.()&#34;)
+                    if pointer in self.chrs:
+                        ssid, sstext = pointer, l[2:]
+                set_id.append(sid)
+                subset_id.append(ssid)
+                set_text.append(stext)
+                subset_text.append(sstext)   
+        
+        &#34;&#34;&#34; following code formats the lists in the required format &#34;&#34;&#34;
+        count_dict, remove_ind = {}, []
+        for i in range(len(set_text)):
+            main = list(reversed(set_text))[i]
+            sub = list(reversed(subset_text))[i]
+            if main not in count_dict:
+                count_dict[main] = 0
+            count_dict[main] += 1
+        for i in range(len(set_text)):
+            main, sub = set_text[i], subset_text[i]
+            if count_dict[main] &gt; 1 and sub == &#34;&#34;:
+                remove_ind.append(i)
+                
+        &#34;&#34;&#34; cleanup and structure according to required format &#34;&#34;&#34;
+        uset_id, usubset_id, uset_text, usubset_text  = [], [], [], []
+        for i, val in enumerate(set_id):
+            if i not in remove_ind:
+                uset_id.append(set_id[i])
+                usubset_id.append(subset_id[i])
+                uset_text.append(set_text[i])
+                usubset_text.append(subset_text[i])   
+        
+        &#34;&#34;&#34; finally return the set_id, sub_ids along with their text &#34;&#34;&#34;
+        return uset_id, usubset_id, uset_text, usubset_text
+    
+    &#34;&#34;&#34; function to check the license type required &#34;&#34;&#34;
+    def license_type(self, flags = [&#39;license&#39;]):
+        &#34;&#34;&#34;
+            this function serves two purposes : identify the type of license required, 
+            and other licenses required for a particular job role. possible - A, B, C
+        &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; iterate and find the portion where identifier is present &#34;&#34;&#34;
+        ltypes, DL_type = [], []
+        for flag in flags:
+            ix = re.finditer(flag, self.text.lower())
+            ix = [m.start() for m in ix]
+            
+            &#34;&#34;&#34; for search results check presense of driver keyword &#34;&#34;&#34;
+            is_dl = False
+            for i in ix:
+                lines = self.text[i-50:i+100].split(&#34;\n&#34;)
+                line = &#34; &#34;.join([l for l in lines if flag in l.lower()])
+                
+                &#34;&#34;&#34; identify if driving license &#34;&#34;&#34;
+                if &#34;driver&#34; in line.lower():
+                    is_dl = True
+                if not line.strip():
+                    continue
+                    
+                &#34;&#34;&#34; identify the license class &#34;&#34;&#34;
+                if &#34;valid&#34; in line:
+                    iv = line.find(&#34;valid&#34;)
+                    lx = line[iv:].replace(&#34;valid &#34;,&#34;&#34;).split(&#34;issued&#34;)[0]
+                    for split in self.split5:
+                        lx = lx.split(split)[0]
+                    ltype = lx
+                else:
+                    words = line.split(flag)[0].split(flag.title())[0]
+                    words = words.split(flag.upper())[0].split()
+                    up_words = [w for w in words if w[0].isupper()]
+                    if len(up_words) == 0:
+                        continue
+                    
+                    &#34;&#34;&#34; basic cleaning of the relevant text &#34;&#34;&#34;
+                    types = []
+                    for x in reversed(words):
+                        if x.islower():
+                            break
+                        types.append(x)
+                    types = &#34; &#34;.join(reversed(types))
+                    
+                    &#34;&#34;&#34; replace noisy entity &#34;&#34;&#34;
+                    for r in [&#39;1. &#39;, &#39;2. &#39;, &#39;3. &#39;]:
+                        types = types.replace(r, &#34;&#34;).strip()
+                    if types in [&#34;A&#34;, &#34;B&#34;]:
+                        types = &#34;&#34;
+                    ltype = types
+                
+                &#34;&#34;&#34; save the results - DL or other licenses &#34;&#34;&#34;
+                if is_dl == True:
+                    if ltype not in DL_type:
+                        DL_type.append(ltype)
+                else:
+                    if ltype not in ltypes:
+                        ltypes.append(ltype)
+        
+        &#34;&#34;&#34; deduplicate the obtained results &#34;&#34;&#34;
+        ltypes = list(set([x for x in ltypes if x.strip()]))
+        ltypes = [_.strip() for _ in ltypes]
+        
+        &#34;&#34;&#34; identify the class of the driving license &#34;&#34;&#34;
+        dl_type = []
+        classes = [&#34;A&#34;, &#34;B&#34;, &#34;C&#34;]
+        for l in DL_type:
+            l1 = &#34;&#34;.join(_ for _ in l if _ not in string.punctuation)
+            for dl_class in classes:
+                if &#34; &#34;+dl_class+&#34; &#34; in l1:
+                    dl_type.append(dl_class)            
+            if l in ltypes:
+                ltypes.remove(l)
+        
+        &#34;&#34;&#34; deduplicate and combine multiple results &#34;&#34;&#34;
+        dl_type = sorted(list(set(dl_type)))
+        dl_type = &#34; OR &#34;.join(dl_type)
+        return dl_type, ltypes
+
+    &#34;&#34;&#34; function to obtain the text related to job class function &#34;&#34;&#34;
+    def job_class_function(self, txt):
+        &#34;&#34;&#34;
+        function to obtain the text related to job class function. 
+        &#34;&#34;&#34;
+
+        _ = [&#34; or in a class&#34;, &#34; or at the level&#34;, &#34; or in a position&#34;, &#34; or as a member&#34;]
+        lines = txt.split(&#34;\n&#34;)
+        for line in lines:
+            if &#34; or &#34; not in line:
+                continue
+            index = None
+            for connector in _:
+                if connector in line:
+                    index = connector
+                    break
+            if index != None:
+                return line.split(index)[1]
+        return &#34;&#34;
+    
+    &#34;&#34;&#34; function to dig deeper into requirement text and obtain if any major is missed &#34;&#34;&#34;
+    def deep_major(self, txt):
+        &#34;&#34;&#34; function to dig deeper into requirement text and obtain if any 
+            major related entity is missed from the first step &#34;&#34;&#34;
+
+        major = &#34;&#34;
+        for line in txt:
+            if &#34;university in &#34; not in line.lower():
+                continue
+            if &#34;in order&#34; in line.lower():
+                continue
+            if &#34;degree&#34; in line.lower():
+                major = line.split(&#34; in &#34;)[1].split(&#34;related&#34;)[0]
+        return major
+    
+    &#34;&#34;&#34; utility function to add up semester and quarter together &#34;&#34;&#34;
+    def add_course(self, sem, quar):
+        &#34;&#34;&#34;
+        this function is part of the restructuring component, it combines semester and quarter 
+        together to give a combined value of course length in the format xSyQ
+        &#34;&#34;&#34;
+        
+        month, quarter = &#34;&#34;, &#34;&#34;
+        if len(sem) &gt; 0:
+            month = str(max(sem))+&#34;S&#34;
+        if len(quar) &gt; 0:
+            quarter = str(max(quar))+&#34;Q&#34;
+        course_len = month + &#34;,&#34; + quarter
+        if course_len == &#34;,&#34;:
+            course_len = &#34;&#34;
+        return course_len
+    
+    &#34;&#34;&#34; utility function to obtain the misc details about the course &#34;&#34;&#34;
+    def misc_details(self, txt):
+        &#34;&#34;&#34;
+        parses the requirement text, identifies additional course details 
+        
+        :params: 
+        txt: requirement text where misc details about course are captured
+        &#34;&#34;&#34;
+        
+        misc_details = &#34;&#34;
+        course_lists = self.lookups[&#39;education&#39;] + self.lookups[&#39;semester&#39;]
+        ignore = [&#39;experience&#39;, &#39;college&#39;, &#39;high school&#39;, &#39;trade school&#39;]
+        for l in txt.split(&#34;\n&#34;):   
+            if any (w in l for w in ignore):
+                continue
+            if any(w in l.lower() for w in course_lists):
+                misc_details += l+&#34;\n&#34;
+        return misc_details
+
+    &#34;&#34;&#34; master function to call all the other functions and generate the output &#34;&#34;&#34;
+    def standardize(self):
+        &#34;&#34;&#34;
+        master function &#39;standardize&#39; is the main function which calls all the 
+        other functions in order to obtain structured information
+        &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; create an empty list to store the results &#34;&#34;&#34;
+        rows = []
+        form = Formatter()
+        
+        &#34;&#34;&#34; first obtain the requirement text &#34;&#34;&#34;
+        requirement_text = self.portion(&#34;requirement&#34;, indx = True)  
+        requirement_list = self.requirement_IDs(requirement_text)
+        
+        &#34;&#34;&#34; iterate in every requirement line, and call the other functions &#34;&#34;&#34;
+        for j in range(0, len(requirement_list[0])):            
+            doc = {}
+            doc[&#39;FILE_NAME&#39;] = &#34; &#34;.join(self.filename.split())
+            
+            &#34;&#34;&#34; store the set-id, set-text, subset-id, subset-text &#34;&#34;&#34;
+            doc[&#34;REQUIREMENT_SET_ID&#34;] = requirement_list[0][j]
+            doc[&#34;REQUIREMENT_SET_TEXT&#34;] = requirement_list[2][j]
+            doc[&#34;REQUIREMENT_SUBSET_ID&#34;] = requirement_list[1][j]
+            doc[&#34;REQUIREMENT_SUBSET_TEXT&#34;] = requirement_list[3][j]
+            
+            &#34;&#34;&#34; add classcode, duties, open date using generic functions &#34;&#34;&#34;
+            doc[&#39;JOB_CLASS_NO&#39;] = self.portion(&#34;class code:&#34;)
+            doc[&#39;JOB_DUTIES&#39;] = self.portion(&#34;duties&#34;, indx=True)        
+            doc[&#39;OPEN_DATE&#39;] = self.portion(&#34;open date:&#34;)
+
+            &#34;&#34;&#34; create a combined requirement text row, to be used for other entities &#34;&#34;&#34;
+            rtext = doc[&#34;REQUIREMENT_SET_TEXT&#34;] +&#34;\n&#34;+ doc[&#39;REQUIREMENT_SUBSET_TEXT&#39;]
+            rtext = re.sub(r&#39;\([^)]*\)&#39;, &#39;&#39;, rtext)            
+
+            &#34;&#34;&#34; add schooltype, experience type date using generic functions &#34;&#34;&#34;
+            doc[&#34;SCHOOL_TYPE&#34;] = self.presence_check(&#34;school&#34;, txt=rtext)
+            doc[&#34;FULL_TIME_PART_TIME&#34;] = self.presence_check(&#34;full_part&#34;, txt=rtext)
+                        
+            &#34;&#34;&#34; custom functions that uses requirement text &#34;&#34;&#34;
+            doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = self.job_class_function(rtext)
+            doc[&#34;EXP_JOB_CLASS_TITLE&#34;] = self.experience_title(rtext)
+            doc[&#34;COURSE_SUBJECT&#34;] = self.course_subjects(rtext) 
+            doc[&#34;COURSE_COUNT&#34;] = self.course_count(rtext)
+            doc[&#34;ENTRY_SALARY_GEN&#34;] = self.salary_details()[0]
+            doc[&#34;ENTRY_SALARY_DWP&#34;] = self.salary_details()[1]
+            doc[&#34;DRIVERS_LICENSE_REQ&#34;] = self.driver_license()
+            doc[&#34;MISC_COURSE_DETAILS&#34;] = self.misc_details(rtext)
+            doc[&#34;EXP_JOB_CLASS_FUNCTION&#34;] = &#34;&#34;
+            
+            &#34;&#34;&#34; custom general functions &#34;&#34;&#34;
+            doc[&#34;DRIV_LIC_TYPE&#34;] = self.license_type()[0]
+            doc[&#39;JOB_CLASS_TITLE&#39;] = self.class_title()
+            doc[&#34;ADDTL_LIC&#34;] = self.license_type()[1]
+            doc[&#34;EXAM_TYPE&#34;] = self.exam_type()      
+                        
+            &#34;&#34;&#34; identify year / months / number using generic functions &#34;&#34;&#34;
+            doc[&#34;Exp_y&#34;] = self.year_month(&#34;experience&#34;, rtext, span = &#39;year&#39;)
+            doc[&#34;Exp_m&#34;] = self.year_month(&#34;experience&#34;, rtext, span = &#39;month&#39;)
+            doc[&#34;Cor_s&#34;] = self.year_month(&#34;semester&#34;, rtext, span=&#39;semester&#39;)
+            doc[&#34;Cor_q&#34;] = self.year_month(&#34;semester&#34;, rtext, span=&#39;quarter&#39;)
+            doc[&#34;Edu_y&#34;] = self.year_month(&#34;education&#34;, rtext, span = &#39;year&#39;)
+            
+            &#34;&#34;&#34; add course and experience length by aggregating years and months &#34;&#34;&#34;
+            doc[&#34;COURSE_LENGTH&#34;] = self.add_course(doc[&#39;Cor_s&#39;], doc[&#39;Cor_q&#39;])
+            doc[&#34;EDUCATION_MAJOR&#34;] = self.portions(&#39;major&#39;,rtext,limit=180,next_word=False)
+            doc[&#34;EXPERIENCE_LENGTH&#34;], doc[&#34;EDUCATION_YEARS&#34;]   = &#34;&#34;, &#34;&#34;
+            
+            &#34;&#34;&#34; cleanup and restructuring &#34;&#34;&#34;
+            if len(doc[&#34;Exp_y&#34;] + doc[&#34;Exp_m&#34;]) &gt; 0:
+                doc[&#34;EXPERIENCE_LENGTH&#34;] = max(doc[&#34;Exp_y&#34;] + doc[&#34;Exp_m&#34;])            
+            if len(doc[&#39;Edu_y&#39;]) &gt; 0:
+                doc[&#34;EDUCATION_YEARS&#34;] = doc[&#34;Edu_y&#34;][0]
+            if doc[&#39;EDUCATION_MAJOR&#39;] == &#34;&#34;:
+                mix = requirement_list[2][j].split(&#34;\n&#34;)+requirement_list[3][j].split(&#34;\n&#34;)
+                doc[&#39;EDUCATION_MAJOR&#39;] = self.deep_major(mix)
+            if &#34;college or university&#34; in doc[&#34;SCHOOL_TYPE&#34;].lower():
+                doc[&#34;SCHOOL_TYPE&#34;] = doc[&#34;SCHOOL_TYPE&#34;].replace(&#34;|college&#34;,&#34;&#34;)
+
+            &#34;&#34;&#34; perform further cleaning and standardizing on some fields &#34;&#34;&#34;
+            exp_title, alt_exp = doc[&#34;EXP_JOB_CLASS_TITLE&#34;], doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;]
+            doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = form.cleanup(alt_exp, tag=&#39;exp&#39;)
+            doc[&#34;EXP_JOB_CLASS_TITLE&#34;] = form.cleanup(exp_title, tag=&#39;exp&#39;)
+            doc[&#34;EDUCATION_MAJOR&#34;] = form.cleanup(doc[&#34;EDUCATION_MAJOR&#34;], tag=&#39;major&#39;)  
+            doc[&#34;ADDTL_LIC&#34;] = form.cleanup(doc[&#34;ADDTL_LIC&#34;], tag=&#39;add_lic&#39;)
+            doc[&#34;OPEN_DATE&#34;] = form.cleanup(doc[&#34;OPEN_DATE&#34;], tag=&#39;date&#39;)  
+            
+            &#34;&#34;&#34; append the key-value pairs in the global list &#34;&#34;&#34;
+            rows.append({k:v for k,v in doc.items() if not k.startswith(&#34;_&#34;)})
+        return rows</code></pre>
+</details>
+<h3>Instance variables</h3>
+<dl>
+<dt id="BulletinStructuringEngine.BulletinParser.lookups"><code class="name">var <span class="ident">lookups</span></code></dt>
+<dd>
+<section class="desc"><p>common splitters used in text parsing and cleaning in different functions</p></section>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.spellings"><code class="name">var <span class="ident">spellings</span></code></dt>
+<dd>
+<section class="desc"><p>file complete text and non empty lines</p></section>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.sybl"><code class="name">var <span class="ident">sybl</span></code></dt>
+<dd>
+<section class="desc"><p>lookup dictionary for numbers text and values</p></section>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.text"><code class="name">var <span class="ident">text</span></code></dt>
+<dd>
+<section class="desc"><p>a global list of all pointers used in bulletins</p></section>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="BulletinStructuringEngine.BulletinParser.add_course"><code class="name flex">
+<span>def <span class="ident">add_course</span></span>(<span>self, sem, quar)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>this function is part of the restructuring component, it combines semester and quarter
+together to give a combined value of course length in the format xSyQ</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def add_course(self, sem, quar):
+    &#34;&#34;&#34;
+    this function is part of the restructuring component, it combines semester and quarter 
+    together to give a combined value of course length in the format xSyQ
+    &#34;&#34;&#34;
+    
+    month, quarter = &#34;&#34;, &#34;&#34;
+    if len(sem) &gt; 0:
+        month = str(max(sem))+&#34;S&#34;
+    if len(quar) &gt; 0:
+        quarter = str(max(quar))+&#34;Q&#34;
+    course_len = month + &#34;,&#34; + quarter
+    if course_len == &#34;,&#34;:
+        course_len = &#34;&#34;
+    return course_len</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.class_title"><code class="name flex">
+<span>def <span class="ident">class_title</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>extracts and cleans the job title from the bulletin text</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def class_title(self):
+    &#34;&#34;&#34;
+    extracts and cleans the job title from the bulletin text
+    &#34;&#34;&#34;
+    
+    entity = self.lines[0].strip().lower()
+    if &#34;revised&#34; in entity:
+        entity = entity.replace(&#34;revised&#34;, &#34;&#34;)
+    if &#34;class code&#34; in entity:
+        entity = entity.split(&#34;class code&#34;)[0]
+    return entity.title()</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.course_count"><code class="name flex">
+<span>def <span class="ident">course_count</span></span>(<span>self, req_text, flag='course', limit=50)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>:params:
+req_text: complete requirement text and output: number of courses required
+output: number of courses required as the minimum requirement of the job</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def course_count(self, req_text, flag=&#39;course&#39;, limit=50):
+    &#34;&#34;&#34;
+    :params:
+    req_text: complete requirement text and output: number of courses required
+    output: number of courses required as the minimum requirement of the job
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34; find the numerical / textual span values in the text &#34;&#34;&#34;
+    spans = list(self._ns.keys()) + list(self._ns.values())
+    idx = [m.start() for m in re.finditer(flag, req_text.lower())]
+    
+    &#34;&#34;&#34; iterate and check if relevant &#34;&#34;&#34;
+    collect = []
+    for each in idx:
+        if each-limit &lt; 0:
+            lines = req_text[:each+limit].split(&#34;\n&#34;)
+        else:
+            lines = req_text[each-limit:each+limit].split(&#34;\n&#34;)
+        
+        &#34;&#34;&#34; check which spans are mentioned in the text and store &#34;&#34;&#34;
+        for l in [l for l in lines if flag in l]: 
+            for span in spans:
+                if span+&#34; &#34;+flag in l:       
+                    if span in self._ns:
+                        span = self._ns[span]
+                    collect.append(int(span))
+
+    &#34;&#34;&#34; return the obtained value &#34;&#34;&#34;
+    if len(collect) == 0:
+        return &#34;&#34;
+    return max(collect)</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.course_subjects"><code class="name flex">
+<span>def <span class="ident">course_subjects</span></span>(<span>self, req_text)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>this function identifes the relevant course subjects using a list of keywords</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def course_subjects(self, req_text):
+    &#34;&#34;&#34;
+    this function identifes the relevant course subjects using a list of keywords 
+    &#34;&#34;&#34;
+
+    kws = self.lookups[&#34;semester&#34;]
+
+    &#34;&#34;&#34; obtain the relevant lines &#34;&#34;&#34;
+    lines = req_text.split(&#34;\n&#34;)
+    relevant_lines = [l for l in lines if any(wd in l for wd in kws)]
+    relevant_lines = [l.lower() for l in relevant_lines]
+
+    &#34;&#34;&#34; iterate and locate the position of relevant text &#34;&#34;&#34;
+    courses = []
+    for each in relevant_lines:
+        course = &#34;&#34;
+        if all(k in each for k in kws):
+            ix = each.find(&#34;quarter&#34;)
+        elif &#34;quarter&#34; in each:
+            ix = each.find(&#34;quarter&#34;)
+        else:
+            ix = each.find(&#34;semester&#34;)
+
+        &#34;&#34;&#34; using the obtained index, split the text &#34;&#34;&#34;
+        relt = each[ix:ix+300]
+        if &#34; units in &#34; in relt:
+            course = relt.split(&#34; units in &#34;)[1]
+            course = course.split(&#34;;&#34;)[0].split(&#34; at &#34;)[0]
+        elif &#34; courses in &#34; in relt:
+            course = relt.split(&#34; courses in &#34;)[1]
+            course = course.split(&#34;;&#34;)[0].split(&#34; at &#34;)[0]
+        elif &#34; units of &#34; in relt:
+            course = relt.split(&#34; units of &#34;)[1]
+            course = course.split(&#34;;&#34;)[0].split(&#34; at &#34;)[0]
+        elif &#34; units &#34; in relt:
+            if &#34; in &#34; in relt:
+                right = relt.split(&#34; in &#34;)[1]                    
+                if right.startswith(&#34;requ&#34;) or right.startswith(&#34;which&#34;):
+                    continue
+                if right.startswith(&#34;the&#34;):                    
+                    right = right.replace(&#34;the production&#34;, &#34;production&#34;)
+                    right = right.replace(&#34;the areas of&#34;, &#34;&#34;)
+                if right.startswith(&#34;the&#34;):
+                    continue
+                course = right
+        else:
+            &#34;&#34;&#34; perform cleanup &#34;&#34;&#34;
+            for ent in [&#39;university, in&#39;, &#39;or trade school&#39;]:
+                relt = relt.replace(ent, &#34;&#34;)
+
+            if &#34;university in &#34; in relt:
+                course = relt.split(&#34;university in &#34;)[1].split(&#34;;&#34;)[0]
+                course = course.split(&#34; at &#34;)[0]
+
+        &#34;&#34;&#34; more custom cleanup &#34;&#34;&#34;
+        for split in self.split4:
+            course = course.split(split)[0]
+        if course:
+            courses.append(course)
+    courses = list(set(courses))
+    courses = &#34; &#34;.join(courses)
+    
+    &#34;&#34;&#34; further split by &lt;num&gt;_year &#34;&#34;&#34;
+    splitters = [&#39;one&#39;, &#39;two&#39;, &#39;three&#39;, &#39;four&#39;, &#39;five&#39;, &#39;including&#39;]
+    for i,split in enumerate(splitters):
+        if i &lt; 5:
+            split = split + &#34; year&#34;
+        courses = courses.split(split)[0]        
+    return courses</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.deep_major"><code class="name flex">
+<span>def <span class="ident">deep_major</span></span>(<span>self, txt)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>function to dig deeper into requirement text and obtain if any
+major related entity is missed from the first step</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def deep_major(self, txt):
+    &#34;&#34;&#34; function to dig deeper into requirement text and obtain if any 
+        major related entity is missed from the first step &#34;&#34;&#34;
+
+    major = &#34;&#34;
+    for line in txt:
+        if &#34;university in &#34; not in line.lower():
+            continue
+        if &#34;in order&#34; in line.lower():
+            continue
+        if &#34;degree&#34; in line.lower():
+            major = line.split(&#34; in &#34;)[1].split(&#34;related&#34;)[0]
+    return major</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.driver_license"><code class="name flex">
+<span>def <span class="ident">driver_license</span></span>(<span>self, limit=50)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>this function finds if driving license is required or not</p>
+<p>:params:
+limit: used to define the lower and upper bound set the text portion</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def driver_license(self, limit = 50):
+    &#34;&#34;&#34;
+    this function finds if driving license is required or not
+    
+    :params:
+    limit: used to define the lower and upper bound set the text portion 
+    &#34;&#34;&#34;
+    
+    &#34;&#34;&#34; find the index where driver keyword is mentioned &#34;&#34;&#34;
+    i = re.finditer(&#34;driver&#34;, self.text.lower())
+    i = [m.start() for m in i]
+    
+    &#34;&#34;&#34; iterate and further check if &#39;license&#39; is mentioned &#34;&#34;&#34;
+    tags = []
+    for each in i:
+        por = self.text[each-limit:each+limit*2].lower()
+        tag = &#34;&#34;
+        if &#34;license&#34; in por:
+            tag = &#34;R&#34;
+            if &#34; may &#34; in por:
+                tag = &#34;P&#34;
+        tags.append(tag)
+    if len(tags) &gt; 0:
+        return tags[0]
+    return &#34;&#34;</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.exam_type"><code class="name flex">
+<span>def <span class="ident">exam_type</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>identify and cleans the required text; tags the exam type according to rules
+possible outputs for this function are open, open_int, int_dept, and dept</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def exam_type(self):
+    &#34;&#34;&#34;
+    identify and cleans the required text; tags the exam type according to rules
+    possible outputs for this function are open, open_int, int_dept, and dept 
+    &#34;&#34;&#34;
+    
+    &#34;&#34;&#34; Meta data related to exam types &#34;&#34;&#34;
+    bad_entities = [&#39;an&#39;, &#39;on&#39;, &#39;both&#39;, &#39;only&#39;, &#39;a&#39;, &#39;to&#39;, &#39;nvvc&#39;, &#39;basis&#39;]
+    bad_entities = [&#34; &#34;+_.upper()+&#34; &#34; for _ in bad_entities]
+    
+    &#34;&#34;&#34; identify and clean the main portion related to exam type &#34;&#34;&#34;
+    portion = &#34;&#34;
+    for i, line in enumerate(self.lines):
+        &#34;&#34;&#34; identify the relevant line &#34;&#34;&#34;
+        if &#34;THIS EXAM&#34; in line:
+            portion = line + &#34; &#34; + self.lines[i+1]
+            portion = &#34; &#34;+portion.split(&#34;GIVEN&#34;)[1]
+            portion = portion.split(&#34;The City&#34;)[0].strip()+&#34; &#34;
+            
+            &#34;&#34;&#34; cleanup bad entities and spelling mistakes &#34;&#34;&#34;
+            for ent in bad_entities:
+                portion = portion.replace(ent, &#34; &#34;)
+            for k,v in self.spellings.items():
+                portion = portion.replace(k,v)
+            portion = &#34; &#34;.join(portion.split()).split(&#34; AND &#34;)              
+            break
+            
+    &#34;&#34;&#34; join and further standardize the exam type &#34;&#34;&#34;
+    cons = [&#39;ONLY &#39;, &#39;ON &#39;, &#39;BOTH &#39;]
+    exam_t = &#34; AND &#34;.join(portion)
+    exam_t = &#34; &#34;.join(w for w in exam_t.split() if w not in cons)
+    exam_t = exam_t.lower()
+    
+    &#34;&#34;&#34; generate the final tag of exam type &#34;&#34;&#34;
+    tag = &#34;OPEN&#34;
+    if &#34;open&#34; in exam_t and &#34;interdepartmental&#34; in exam_t:
+        tag = &#34;OPEN_INT_PROM&#34;
+    elif &#34;interdepartmental&#34; in exam_t:
+        tag = &#34;INT_DEPT_PROM&#34;
+    elif &#34;department&#34; in exam_t:
+        tag = &#34;DEPT_PROM&#34;
+    return tag</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.experience_title"><code class="name flex">
+<span>def <span class="ident">experience_title</span></span>(<span>self, req_text)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>function to identify the experience title from the requirement text
+input is only the requirement text of a job bulletin</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def experience_title(self, req_text):
+    &#34;&#34;&#34;
+    function to identify the experience title from the requirement text 
+    input is only the requirement text of a job bulletin
+    &#34;&#34;&#34;
+
+    exp_title = []
+    possed = [] 
+    &#34;&#34;&#34; iterate in experience flags &#34;&#34;&#34;
+    for identifier in self.lookups[&#39;exp_flags&#39;]:
+        for i,line in enumerate(req_text.split(&#34;\n&#34;)):
+            
+            &#34;&#34;&#34; clean and collect the relevant portions &#34;&#34;&#34;
+            if identifier in line:
+                lx = line.split(identifier)[1]
+                poss = lx
+                possed.append(poss)
+                for spliter in self.split3:
+                    lx = lx.split(spliter)[0]
+                exp_title.append(lx)
+                break
+    
+    exp_title = &#34;; &#34;.join(exp_title)
+    
+    &#34;&#34;&#34; next find the function / role &#34;&#34;&#34;
+    for l in possed:
+        for split in self.lookups[&#39;exp_flags&#39;]:
+            if l in split:
+                l = l.split(split)[1]
+            if &#34;or in a class&#34; in l:
+                l = l.split(&#34;or in a class&#34;)[0]       
+    return exp_title</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.job_class_function"><code class="name flex">
+<span>def <span class="ident">job_class_function</span></span>(<span>self, txt)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>function to obtain the text related to job class function.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def job_class_function(self, txt):
+    &#34;&#34;&#34;
+    function to obtain the text related to job class function. 
+    &#34;&#34;&#34;
+
+    _ = [&#34; or in a class&#34;, &#34; or at the level&#34;, &#34; or in a position&#34;, &#34; or as a member&#34;]
+    lines = txt.split(&#34;\n&#34;)
+    for line in lines:
+        if &#34; or &#34; not in line:
+            continue
+        index = None
+        for connector in _:
+            if connector in line:
+                index = connector
+                break
+        if index != None:
+            return line.split(index)[1]
+    return &#34;&#34;</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.license_type"><code class="name flex">
+<span>def <span class="ident">license_type</span></span>(<span>self, flags=['license'])</span>
+</code></dt>
+<dd>
+<section class="desc"><p>this function serves two purposes : identify the type of license required,
+and other licenses required for a particular job role. possible - A, B, C</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def license_type(self, flags = [&#39;license&#39;]):
+    &#34;&#34;&#34;
+        this function serves two purposes : identify the type of license required, 
+        and other licenses required for a particular job role. possible - A, B, C
+    &#34;&#34;&#34;
+    
+    &#34;&#34;&#34; iterate and find the portion where identifier is present &#34;&#34;&#34;
+    ltypes, DL_type = [], []
+    for flag in flags:
+        ix = re.finditer(flag, self.text.lower())
+        ix = [m.start() for m in ix]
+        
+        &#34;&#34;&#34; for search results check presense of driver keyword &#34;&#34;&#34;
+        is_dl = False
+        for i in ix:
+            lines = self.text[i-50:i+100].split(&#34;\n&#34;)
+            line = &#34; &#34;.join([l for l in lines if flag in l.lower()])
+            
+            &#34;&#34;&#34; identify if driving license &#34;&#34;&#34;
+            if &#34;driver&#34; in line.lower():
+                is_dl = True
+            if not line.strip():
+                continue
+                
+            &#34;&#34;&#34; identify the license class &#34;&#34;&#34;
+            if &#34;valid&#34; in line:
+                iv = line.find(&#34;valid&#34;)
+                lx = line[iv:].replace(&#34;valid &#34;,&#34;&#34;).split(&#34;issued&#34;)[0]
+                for split in self.split5:
+                    lx = lx.split(split)[0]
+                ltype = lx
+            else:
+                words = line.split(flag)[0].split(flag.title())[0]
+                words = words.split(flag.upper())[0].split()
+                up_words = [w for w in words if w[0].isupper()]
+                if len(up_words) == 0:
+                    continue
+                
+                &#34;&#34;&#34; basic cleaning of the relevant text &#34;&#34;&#34;
+                types = []
+                for x in reversed(words):
+                    if x.islower():
+                        break
+                    types.append(x)
+                types = &#34; &#34;.join(reversed(types))
+                
+                &#34;&#34;&#34; replace noisy entity &#34;&#34;&#34;
+                for r in [&#39;1. &#39;, &#39;2. &#39;, &#39;3. &#39;]:
+                    types = types.replace(r, &#34;&#34;).strip()
+                if types in [&#34;A&#34;, &#34;B&#34;]:
+                    types = &#34;&#34;
+                ltype = types
+            
+            &#34;&#34;&#34; save the results - DL or other licenses &#34;&#34;&#34;
+            if is_dl == True:
+                if ltype not in DL_type:
+                    DL_type.append(ltype)
+            else:
+                if ltype not in ltypes:
+                    ltypes.append(ltype)
+    
+    &#34;&#34;&#34; deduplicate the obtained results &#34;&#34;&#34;
+    ltypes = list(set([x for x in ltypes if x.strip()]))
+    ltypes = [_.strip() for _ in ltypes]
+    
+    &#34;&#34;&#34; identify the class of the driving license &#34;&#34;&#34;
+    dl_type = []
+    classes = [&#34;A&#34;, &#34;B&#34;, &#34;C&#34;]
+    for l in DL_type:
+        l1 = &#34;&#34;.join(_ for _ in l if _ not in string.punctuation)
+        for dl_class in classes:
+            if &#34; &#34;+dl_class+&#34; &#34; in l1:
+                dl_type.append(dl_class)            
+        if l in ltypes:
+            ltypes.remove(l)
+    
+    &#34;&#34;&#34; deduplicate and combine multiple results &#34;&#34;&#34;
+    dl_type = sorted(list(set(dl_type)))
+    dl_type = &#34; OR &#34;.join(dl_type)
+    return dl_type, ltypes</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.misc_details"><code class="name flex">
+<span>def <span class="ident">misc_details</span></span>(<span>self, txt)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>parses the requirement text, identifies additional course details </p>
+<p>:params:
+txt: requirement text where misc details about course are captured</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def misc_details(self, txt):
+    &#34;&#34;&#34;
+    parses the requirement text, identifies additional course details 
+    
+    :params: 
+    txt: requirement text where misc details about course are captured
+    &#34;&#34;&#34;
+    
+    misc_details = &#34;&#34;
+    course_lists = self.lookups[&#39;education&#39;] + self.lookups[&#39;semester&#39;]
+    ignore = [&#39;experience&#39;, &#39;college&#39;, &#39;high school&#39;, &#39;trade school&#39;]
+    for l in txt.split(&#34;\n&#34;):   
+        if any (w in l for w in ignore):
+            continue
+        if any(w in l.lower() for w in course_lists):
+            misc_details += l+&#34;\n&#34;
+    return misc_details</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.portion"><code class="name flex">
+<span>def <span class="ident">portion</span></span>(<span>self, flag, txt=None, limit=10, next_word=True, indx=False)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>a generic python function to obtain the entites using an identifier flag
+this function is used to extract class code, requirements, duties, date.</p>
+<p>:params:
+input : flag keyword (example - requirement, notes, duties), limit (optional) specify
+number of characters to be extracted around the flag, next_word : True if only one
+(immediate) word is output, indx : flag which identifies index of the relevant lines
+output: the relevant portion related to the input flag keyword</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def portion(self, flag, txt=None, limit=10, next_word=True, indx=False):
+    &#34;&#34;&#34;
+    a generic python function to obtain the entites using an identifier flag 
+    this function is used to extract class code, requirements, duties, date.
+
+    :params:
+    input : flag keyword (example - requirement, notes, duties), limit (optional) specify 
+    number of characters to be extracted around the flag, next_word : True if only one 
+    (immediate) word is output, indx : flag which identifies index of the relevant lines
+    output: the relevant portion related to the input flag keyword
+    &#34;&#34;&#34;
+    
+    &#34;&#34;&#34; create the list of lines variable &#34;&#34;&#34;
+    entity = &#34;&#34;
+    lines = self.lines
+    if txt != None:            
+        lines = txt.split(&#34;\n&#34;)
+    
+    &#34;&#34;&#34; filter the lines which contain the identifier flag &#34;&#34;&#34;
+    lines = [&#34; &#34;.join(line.split()).lower() for line in lines]
+    lines = [line for line in lines if flag in line]
+    
+    &#34;&#34;&#34; find relevant index if indx is set True &#34;&#34;&#34;
+    if indx:
+        lines=[i for i,l in enumerate(self.lines) 
+               if l.strip().lower().startswith(flag.lower())]
+    if len(lines) == 0:
+        return entity 
+    
+    &#34;&#34;&#34; find the required portion of text &#34;&#34;&#34;
+    start_ix = lines[0]    
+    if indx:
+        end = [i for i,l in enumerate(self.lines[start_ix+1:]) if l.isupper()][0]
+        entity = &#34;\n&#34;.join(self.lines[start_ix+1:start_ix+end+1])
+    else:
+        &#34;&#34;&#34; obtain the entity text till next words (limit parameter) &#34;&#34;&#34;
+        index = start_ix.find(flag)        
+        entity = start_ix[index:].replace(flag, &#34;&#34;)
+        entity = entity.strip()[:limit]
+        if next_word:
+            entity = entity.split()[0]    
+        else:
+            for split in self.split2:
+                entity = entity.split(split)[0]  
+    return entity</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.portions"><code class="name flex">
+<span>def <span class="ident">portions</span></span>(<span>self, flag, txt, limit=10, next_word=True)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>this function accept same parameters as portion, flags is a list.
+used to extract major / degree related entities from the bulletins</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def portions(self, flag, txt, limit=10, next_word=True):
+    &#34;&#34;&#34;
+    this function accept same parameters as portion, flags is a list.
+    used to extract major / degree related entities from the bulletins
+    &#34;&#34;&#34;
+    
+    entities = []
+    for flag in self.lookups[flag]:
+        entity = self.portion(flag, txt, limit, next_word)
+        if entity:
+            entities.append(entity)
+    return &#34;, &#34;.join(entities)</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.presence_check"><code class="name flex">
+<span>def <span class="ident">presence_check</span></span>(<span>self, identifier, txt)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>checks if a certain keyword or a list of keywords are present in the text, the function
+performs exact and compact match, can be extend to perform more flexible text matching </p>
+<p>:params:
+input
+: identifier and the relevant portion of the text to be searched
+output : a string of identifiers which were found in the text</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def presence_check(self, identifier, txt):
+    &#34;&#34;&#34;
+    checks if a certain keyword or a list of keywords are present in the text, the function 
+    performs exact and compact match, can be extend to perform more flexible text matching 
+
+    :params:
+    input  : identifier and the relevant portion of the text to be searched
+    output : a string of identifiers which were found in the text 
+    &#34;&#34;&#34;
+    
+    &#34;&#34;&#34; obtain the list/dict of relevant tokens from the lookup dictionary &#34;&#34;&#34;
+    lookup = self.lookups[identifier] 
+    
+    &#34;&#34;&#34; iterate in lookup tokens and check if present &#34;&#34;&#34;
+    entities = []
+    if type(lookup) == dict:    
+        &#34;&#34;&#34; iterate key-value pairs, check if any value is present in the text &#34;&#34;&#34;
+        for key, values in lookup.items():    
+            for val in values:
+                if val.lower() in txt.lower():
+                    entities.append(key)
+    else: 
+        &#34;&#34;&#34; iterate in list, check if any element is present in the text &#34;&#34;&#34;
+        for val in lookup:
+            if val.lower() in txt.lower():
+                entities.append(val)
+    
+    &#34;&#34;&#34; remove duplicates and join them by pipe &#34;&#34;&#34;
+    entities = &#34;|&#34;.join(list(set(entities)))
+    return entities</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.requirement_IDs"><code class="name flex">
+<span>def <span class="ident">requirement_IDs</span></span>(<span>self, req_text)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>this function extracts out the pointer associated with ever requirment
+1, 2, 3 .. are set_id, and set_text is the corresponding text
+a, b, c .. are subset_id, and subset_text is the corresponding text
+special symbols such as * or - are also tracked; the function formats the text
+to generate required format; Also it identifies special cases with no pointers</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def requirement_IDs(self, req_text):
+    &#34;&#34;&#34;
+    this function extracts out the pointer associated with ever requirment
+    1, 2, 3 .. are set_id, and set_text is the corresponding text 
+    a, b, c .. are subset_id, and subset_text is the corresponding text
+    special symbols such as * or - are also tracked; the function formats the text 
+    to generate required format; Also it identifies special cases with no pointers
+    &#34;&#34;&#34;
+    
+    &#34;&#34;&#34; obtain the requirement text lines &#34;&#34;&#34;
+    lines_ = [l.strip().rstrip(&#34;,&#34;) for l in req_text.split(&#34;\n&#34;)]
+    &#34;&#34;&#34; custom break condition &#34;&#34;&#34;
+    lines = []
+    for l in lines_:
+        if &#34;substitute&#34; in l:
+            if l[0] not in [&#34;1&#34;,&#34;2&#34;,&#34;3&#34;,&#34;4&#34;,&#34;5&#34;]:
+                break
+        lines.append(l)
+    
+    &#34;&#34;&#34; fix some of the lines &#34;&#34;&#34;
+    flats = [l for l in lines if not any(l[0] == w for w in self.nums)]
+    if len(lines) != 1 and len(lines) == len(flats):
+        lines = [&#34; &#34;.join(lines)]
+    
+    &#34;&#34;&#34; special case : single line requirement &#34;&#34;&#34;
+    ignore = False
+    if len(lines) == 1:
+        &#34;&#34;&#34; check the presense of numbers or alphabets &#34;&#34;&#34;
+        for x in self.nums+self.chrs:
+            starter = req_text[:2].strip().lower()
+            if any(patt == starter for patt in [x+&#34;.&#34;, x+&#34;)&#34;, &#34;(&#34;+x]):
+                ignore = True
+                
+        &#34;&#34;&#34; check the presense of symbols &#34;&#34;&#34;
+        for x in self.sybl:
+            starter = l[:1].strip().lower()
+            if x == starter:
+                ignore = True
+                
+        &#34;&#34;&#34; retun single line requirement, if of number / alphabet &#34;&#34;&#34;
+        if ignore == False:
+            return [&#34;1.&#34;], [&#34;&#34;], [req_text], [&#34;&#34;]
+
+    &#34;&#34;&#34; for all other cases, iterate and extarct pointer &#34;&#34;&#34;
+    set_id, subset_id, set_text, subset_text  = [], [], [], []
+    for i, l in enumerate(lines):
+        pointer = &#34;&#34;
+        &#34;&#34;&#34; check the presense of numbers or alphabets &#34;&#34;&#34;
+        for x in self.nums+self.chrs:
+            starter = l[:2].strip().lower()
+            if any(patt == starter for patt in [x+&#34;.&#34;, x+&#34;)&#34;, &#34;(&#34;+x]):
+                pointer = x
+                break
+            elif x == starter[0]:
+                pointer = x 
+                break
+        &#34;&#34;&#34; check the presense of symbols &#34;&#34;&#34;
+        for x in self.sybl:
+            starter = l[:1].strip().lower()
+            if x == starter:
+                pointer = x
+                break
+        
+        &#34;&#34;&#34; if the pointer is obtained then slice it and the text &#34;&#34;&#34;
+        if pointer != &#34;&#34;:             
+            if pointer.rstrip(&#34;.&#34;) in self.nums:
+                sid, stext = pointer, l[2:]
+                ssid, sstext = &#34;&#34;, &#34;&#34;
+            else:
+                pointer = &#34;&#34;.join(c for c in pointer if c not in &#34;.()&#34;)
+                if pointer in self.chrs:
+                    ssid, sstext = pointer, l[2:]
+            set_id.append(sid)
+            subset_id.append(ssid)
+            set_text.append(stext)
+            subset_text.append(sstext)   
+    
+    &#34;&#34;&#34; following code formats the lists in the required format &#34;&#34;&#34;
+    count_dict, remove_ind = {}, []
+    for i in range(len(set_text)):
+        main = list(reversed(set_text))[i]
+        sub = list(reversed(subset_text))[i]
+        if main not in count_dict:
+            count_dict[main] = 0
+        count_dict[main] += 1
+    for i in range(len(set_text)):
+        main, sub = set_text[i], subset_text[i]
+        if count_dict[main] &gt; 1 and sub == &#34;&#34;:
+            remove_ind.append(i)
+            
+    &#34;&#34;&#34; cleanup and structure according to required format &#34;&#34;&#34;
+    uset_id, usubset_id, uset_text, usubset_text  = [], [], [], []
+    for i, val in enumerate(set_id):
+        if i not in remove_ind:
+            uset_id.append(set_id[i])
+            usubset_id.append(subset_id[i])
+            uset_text.append(set_text[i])
+            usubset_text.append(subset_text[i])   
+    
+    &#34;&#34;&#34; finally return the set_id, sub_ids along with their text &#34;&#34;&#34;
+    return uset_id, usubset_id, uset_text, usubset_text</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.salary_details"><code class="name flex">
+<span>def <span class="ident">salary_details</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Identifies the salary amount mentioned in the text; also finds for DWP
+for multiple salary amounts, only first salary is given as output</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def salary_details(self):
+    &#34;&#34;&#34;
+    Identifies the salary amount mentioned in the text; also finds for DWP 
+    for multiple salary amounts, only first salary is given as output
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34; first identify the relevant portion &#34;&#34;&#34;
+    identifier, next_chars = &#34;SALARY&#34;, 250
+    ix = self.text.find(identifier)
+    portion_x = self.text[ix:ix+next_chars]
+    portion_x = portion_x.replace(identifier, &#34;&#34;).strip()
+    
+    &#34;&#34;&#34; find the salary amount &#34;&#34;&#34;
+    salary = portion_x
+    for split in self.split1:
+        salary = salary.split(split)[0]
+    salary = &#34;$&#34; + &#34;$&#34;.join(salary.split(&#34;$&#34;)[1:])
+    salary = salary.split(&#34;(&#34;)[0].split(&#34;, $&#34;)[0]
+    salary = salary.split(&#34;The&#34;)[0].split(&#34;. Some&#34;)[0]
+    
+    &#34;&#34;&#34; find the DWP salary &#34;&#34;&#34;
+    dwp = &#34;&#34;
+    rep = [&#34;(&#34;, &#34;flat&#34;, &#34;$ &#34;]
+    identifier = &#34;Department of Water and Power is &#34;
+    for line in portion_x.split(&#34;\n&#34;):
+        if identifier.lower() in line.lower():
+            dwp = line.lower().split(identifier.lower())[1]
+            &#34;&#34;&#34; basic cleanup &#34;&#34;&#34;
+            for split in self.split2 + [&#34;. &#34;]:
+                dwp = dwp.split(split)[0]
+            for r in rep:
+                dwp = dwp.replace(r, &#34;&#34;).rstrip(&#34;.&#34;)
+            dwp = dwp.replace(&#34;-rated)&#34;,&#34;&#34;).replace(&#34;-rated&#34;,&#34;&#34;)
+            dwp = dwp.rstrip(&#34;.&#34;).replace(&#34;rated)&#34;,&#34;&#34;).replace(&#34;at&#34;,&#34;&#34;)
+            dwp = dwp.split(&#34;and&#34;)[0].strip()
+    return salary, dwp</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.standardize"><code class="name flex">
+<span>def <span class="ident">standardize</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>master function 'standardize' is the main function which calls all the
+other functions in order to obtain structured information</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def standardize(self):
+    &#34;&#34;&#34;
+    master function &#39;standardize&#39; is the main function which calls all the 
+    other functions in order to obtain structured information
+    &#34;&#34;&#34;
+    
+    &#34;&#34;&#34; create an empty list to store the results &#34;&#34;&#34;
+    rows = []
+    form = Formatter()
+    
+    &#34;&#34;&#34; first obtain the requirement text &#34;&#34;&#34;
+    requirement_text = self.portion(&#34;requirement&#34;, indx = True)  
+    requirement_list = self.requirement_IDs(requirement_text)
+    
+    &#34;&#34;&#34; iterate in every requirement line, and call the other functions &#34;&#34;&#34;
+    for j in range(0, len(requirement_list[0])):            
+        doc = {}
+        doc[&#39;FILE_NAME&#39;] = &#34; &#34;.join(self.filename.split())
+        
+        &#34;&#34;&#34; store the set-id, set-text, subset-id, subset-text &#34;&#34;&#34;
+        doc[&#34;REQUIREMENT_SET_ID&#34;] = requirement_list[0][j]
+        doc[&#34;REQUIREMENT_SET_TEXT&#34;] = requirement_list[2][j]
+        doc[&#34;REQUIREMENT_SUBSET_ID&#34;] = requirement_list[1][j]
+        doc[&#34;REQUIREMENT_SUBSET_TEXT&#34;] = requirement_list[3][j]
+        
+        &#34;&#34;&#34; add classcode, duties, open date using generic functions &#34;&#34;&#34;
+        doc[&#39;JOB_CLASS_NO&#39;] = self.portion(&#34;class code:&#34;)
+        doc[&#39;JOB_DUTIES&#39;] = self.portion(&#34;duties&#34;, indx=True)        
+        doc[&#39;OPEN_DATE&#39;] = self.portion(&#34;open date:&#34;)
+
+        &#34;&#34;&#34; create a combined requirement text row, to be used for other entities &#34;&#34;&#34;
+        rtext = doc[&#34;REQUIREMENT_SET_TEXT&#34;] +&#34;\n&#34;+ doc[&#39;REQUIREMENT_SUBSET_TEXT&#39;]
+        rtext = re.sub(r&#39;\([^)]*\)&#39;, &#39;&#39;, rtext)            
+
+        &#34;&#34;&#34; add schooltype, experience type date using generic functions &#34;&#34;&#34;
+        doc[&#34;SCHOOL_TYPE&#34;] = self.presence_check(&#34;school&#34;, txt=rtext)
+        doc[&#34;FULL_TIME_PART_TIME&#34;] = self.presence_check(&#34;full_part&#34;, txt=rtext)
+                    
+        &#34;&#34;&#34; custom functions that uses requirement text &#34;&#34;&#34;
+        doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = self.job_class_function(rtext)
+        doc[&#34;EXP_JOB_CLASS_TITLE&#34;] = self.experience_title(rtext)
+        doc[&#34;COURSE_SUBJECT&#34;] = self.course_subjects(rtext) 
+        doc[&#34;COURSE_COUNT&#34;] = self.course_count(rtext)
+        doc[&#34;ENTRY_SALARY_GEN&#34;] = self.salary_details()[0]
+        doc[&#34;ENTRY_SALARY_DWP&#34;] = self.salary_details()[1]
+        doc[&#34;DRIVERS_LICENSE_REQ&#34;] = self.driver_license()
+        doc[&#34;MISC_COURSE_DETAILS&#34;] = self.misc_details(rtext)
+        doc[&#34;EXP_JOB_CLASS_FUNCTION&#34;] = &#34;&#34;
+        
+        &#34;&#34;&#34; custom general functions &#34;&#34;&#34;
+        doc[&#34;DRIV_LIC_TYPE&#34;] = self.license_type()[0]
+        doc[&#39;JOB_CLASS_TITLE&#39;] = self.class_title()
+        doc[&#34;ADDTL_LIC&#34;] = self.license_type()[1]
+        doc[&#34;EXAM_TYPE&#34;] = self.exam_type()      
+                    
+        &#34;&#34;&#34; identify year / months / number using generic functions &#34;&#34;&#34;
+        doc[&#34;Exp_y&#34;] = self.year_month(&#34;experience&#34;, rtext, span = &#39;year&#39;)
+        doc[&#34;Exp_m&#34;] = self.year_month(&#34;experience&#34;, rtext, span = &#39;month&#39;)
+        doc[&#34;Cor_s&#34;] = self.year_month(&#34;semester&#34;, rtext, span=&#39;semester&#39;)
+        doc[&#34;Cor_q&#34;] = self.year_month(&#34;semester&#34;, rtext, span=&#39;quarter&#39;)
+        doc[&#34;Edu_y&#34;] = self.year_month(&#34;education&#34;, rtext, span = &#39;year&#39;)
+        
+        &#34;&#34;&#34; add course and experience length by aggregating years and months &#34;&#34;&#34;
+        doc[&#34;COURSE_LENGTH&#34;] = self.add_course(doc[&#39;Cor_s&#39;], doc[&#39;Cor_q&#39;])
+        doc[&#34;EDUCATION_MAJOR&#34;] = self.portions(&#39;major&#39;,rtext,limit=180,next_word=False)
+        doc[&#34;EXPERIENCE_LENGTH&#34;], doc[&#34;EDUCATION_YEARS&#34;]   = &#34;&#34;, &#34;&#34;
+        
+        &#34;&#34;&#34; cleanup and restructuring &#34;&#34;&#34;
+        if len(doc[&#34;Exp_y&#34;] + doc[&#34;Exp_m&#34;]) &gt; 0:
+            doc[&#34;EXPERIENCE_LENGTH&#34;] = max(doc[&#34;Exp_y&#34;] + doc[&#34;Exp_m&#34;])            
+        if len(doc[&#39;Edu_y&#39;]) &gt; 0:
+            doc[&#34;EDUCATION_YEARS&#34;] = doc[&#34;Edu_y&#34;][0]
+        if doc[&#39;EDUCATION_MAJOR&#39;] == &#34;&#34;:
+            mix = requirement_list[2][j].split(&#34;\n&#34;)+requirement_list[3][j].split(&#34;\n&#34;)
+            doc[&#39;EDUCATION_MAJOR&#39;] = self.deep_major(mix)
+        if &#34;college or university&#34; in doc[&#34;SCHOOL_TYPE&#34;].lower():
+            doc[&#34;SCHOOL_TYPE&#34;] = doc[&#34;SCHOOL_TYPE&#34;].replace(&#34;|college&#34;,&#34;&#34;)
+
+        &#34;&#34;&#34; perform further cleaning and standardizing on some fields &#34;&#34;&#34;
+        exp_title, alt_exp = doc[&#34;EXP_JOB_CLASS_TITLE&#34;], doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;]
+        doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = form.cleanup(alt_exp, tag=&#39;exp&#39;)
+        doc[&#34;EXP_JOB_CLASS_TITLE&#34;] = form.cleanup(exp_title, tag=&#39;exp&#39;)
+        doc[&#34;EDUCATION_MAJOR&#34;] = form.cleanup(doc[&#34;EDUCATION_MAJOR&#34;], tag=&#39;major&#39;)  
+        doc[&#34;ADDTL_LIC&#34;] = form.cleanup(doc[&#34;ADDTL_LIC&#34;], tag=&#39;add_lic&#39;)
+        doc[&#34;OPEN_DATE&#34;] = form.cleanup(doc[&#34;OPEN_DATE&#34;], tag=&#39;date&#39;)  
+        
+        &#34;&#34;&#34; append the key-value pairs in the global list &#34;&#34;&#34;
+        rows.append({k:v for k,v in doc.items() if not k.startswith(&#34;_&#34;)})
+    return rows</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.standardize_numbers"><code class="name flex">
+<span>def <span class="ident">standardize_numbers</span></span>(<span>self, entity)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>it uses _ns lookup dictionary which defines the standardized form of a number</p>
+<p>:params:
+the input is uncleaned text which is probably about a number
+the output is a numerical value</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def standardize_numbers(self, entity):
+    &#34;&#34;&#34;
+    it uses _ns lookup dictionary which defines the standardized form of a number
+
+    :params:
+    the input is uncleaned text which is probably about a number 
+    the output is a numerical value
+    &#34;&#34;&#34;
+    
+    number = &#34;&#34;
+    if entity.lower() in self._ns:
+        number = self._ns[entity.lower()]
+    elif entity in list(self._ns.values()):
+        number = entity
+    return number</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.year_month"><code class="name flex">
+<span>def <span class="ident">year_month</span></span>(<span>self, flag, req_text, span='year')</span>
+</code></dt>
+<dd>
+<section class="desc"><p>:params:
+flag: key which is used to obtain the relevant values from the lookup dictionary
+span: number context to be extracted, (year, month, semester, quarter)
+output: years/month associated in the text; months are converted into floats.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def year_month(self, flag, req_text, span = &#39;year&#39;):
+    &#34;&#34;&#34;
+    :params:
+    flag: key which is used to obtain the relevant values from the lookup dictionary 
+    span: number context to be extracted, (year, month, semester, quarter)
+    output: years/month associated in the text; months are converted into floats.
+    &#34;&#34;&#34;
+    
+    &#34;&#34;&#34; obtain the list of related keywords from the lookup dictionary &#34;&#34;&#34;
+    lookup = self.lookups[flag]
+    
+    &#34;&#34;&#34; iterate by lines, check if the span-value is present &#34;&#34;&#34;
+    collected = []
+    for line in req_text.split(&#34;\n&#34;):
+        line = line.replace(&#34;one-year&#34;, &#34;one year&#34;)
+        &#34;&#34;&#34; find index of all occurances of the span in the line &#34;&#34;&#34;
+        indexes = [m.start() for m in re.finditer(span, line)]            
+        
+        &#34;&#34;&#34; slice a portion around the index within lower and upper bound &#34;&#34;&#34;
+        lower_bound, upper_bound = 30, 40
+        for index in indexes:
+            if index-lower_bound &lt; 0:
+                portion = line[:index+upper_bound].lower()
+            else:
+                portion = line[index-lower_bound:index+upper_bound].lower()
+            
+            &#34;&#34;&#34; next, identify if the portion of text is relevant of not, &#34;&#34;&#34;
+            &#34;&#34;&#34; four main conditions to identify not not important portion &#34;&#34;&#34;
+            is_relevant = False
+            for keyword in lookup:                    
+
+                &#34;&#34;&#34; cond1 : keyword is not present in relevant portion &#34;&#34;&#34;
+                if keyword not in portion:
+                    continue
+                
+                &#34;&#34;&#34; cond2 : span is mentioned after the lookup keyword &#34;&#34;&#34;
+                yr_ix = portion.find(span)
+                idf_ix = portion.find(keyword)
+                if yr_ix &gt; idf_ix:
+                    continue
+                
+                &#34;&#34;&#34; cond3 : presence of ignore words in the text portion &#34;&#34;&#34;
+                ignore_words = [&#34;=&#34;, &#34;equal&#34;, &#34;equivalent&#34;, &#39;lack&#39;, &#39;valent&#39;]
+                if any(eq in portion for eq in ignore_words):
+                    continue
+                
+                &#34;&#34;&#34; cond4 : presence of substitute in experience text &#34;&#34;&#34;
+                if keyword == &#34;experience&#34;:
+                    if &#34;titute&#34; in portion:
+                        continue
+                
+                &#34;&#34;&#34; for other cases, the portion is relevant &#34;&#34;&#34;
+                is_relevant = True
+            
+            &#34;&#34;&#34; if relevant, then identify the numerical span value &#34;&#34;&#34;
+            if is_relevant:
+                special_checks = [&#34;two or four&#34;, &#34;two-year or four-year&#34;]
+                if any(two_four in portion for two_four in special_checks):
+                    collected.append(&#34;4&#34;)
+                if &#34;two and one-half&#34; in portion:
+                    collected.append(&#34;2.5&#34;)
+                else:
+                    obtained = False
+                    
+                    &#34;&#34;&#34; check entities with two words: (ex - twenty-four etc.)&#34;&#34;&#34;
+                    for k,v in self._ns.items():
+                        if &#34;-&#34; in k:
+                            if k in portion.split(span)[0].replace(&#34; &#34;, &#34;-&#34;):
+                                collected.append(v)
+                                obtained = True
+                    
+                    &#34;&#34;&#34; for other cases, obtain the immediate previous word &#34;&#34;&#34;
+                    if obtained == False:
+                        val = portion[:yr_ix].split()[-1]
+                        val = val.replace(&#34;-&#34;,&#34;&#34;).replace(&#34;(&#34;,&#34;&#34;).replace(&#34;)&#34;,&#34;&#34;)
+                        val = self.standardize_numbers(val)
+                        if val != &#34;&#34;:
+                            collected.append(val)
+
+    &#34;&#34;&#34; return the deduplicated list of month / year &#34;&#34;&#34;
+    collected = list(set(collected))
+    if span == &#39;month&#39;:
+        collected = [str(round(float(_)/12, 2)) for _ in collected]
+    if len(collected) &gt; 0:
+        collected = [float(_) for _ in collected]
+    return collected</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="BulletinStructuringEngine.Extractor"><code class="flex name class">
+<span>class <span class="ident">Extractor</span></span>
+<span>(</span><span>path)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Controller Class, which executes the key piece of code required to obtain entities and
+information for different files, and producing a structured file as output</p>
+<p>python class to format, restructure and remove noise from obtained entities
+most of the noise is handelled during the entity extraction but sometimes there is
+still presence of noisy keywords.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">class Extractor:
+    &#34;&#34;&#34;
+    Controller Class, which executes the key piece of code required to obtain entities and 
+    information for different files, and producing a structured file as output
+    &#34;&#34;&#34;
+    
+    def __init__(self, path):
+        &#34;&#34;&#34;
+        python class to format, restructure and remove noise from obtained entities
+        most of the noise is handelled during the entity extraction but sometimes there is 
+        still presence of noisy keywords. 
+        &#34;&#34;&#34;
+        
+        self.path   = path
+        self.column = [&#39;FILE_NAME&#39;, &#39;JOB_CLASS_TITLE&#39;, &#39;JOB_CLASS_NO&#39;, &#39;REQUIREMENT_SET_ID&#39;, 
+        &#39;REQUIREMENT_SUBSET_ID&#39;, &#39;JOB_DUTIES&#39;, &#39;EDUCATION_YEARS&#39;, &#39;SCHOOL_TYPE&#39;, 
+        &#39;EDUCATION_MAJOR&#39;, &#39;EXPERIENCE_LENGTH&#39;, &#39;FULL_TIME_PART_TIME&#39;, 
+        &#39;EXP_JOB_CLASS_TITLE&#39;, &#39;EXP_JOB_CLASS_ALT_RESP&#39;, &#39;EXP_JOB_CLASS_FUNCTION&#39;, 
+        &#39;COURSE_COUNT&#39;, &#39;COURSE_LENGTH&#39;, &#39;COURSE_SUBJECT&#39;, &#39;MISC_COURSE_DETAILS&#39;, 
+        &#39;DRIVERS_LICENSE_REQ&#39;, &#39;DRIV_LIC_TYPE&#39;, &#39;ADDTL_LIC&#39;, &#39;EXAM_TYPE&#39;, &#39;ENTRY_SALARY_GEN&#39;, 
+        &#39;ENTRY_SALARY_DWP&#39;, &#39;OPEN_DATE&#39;, &#39;REQUIREMENT_SET_TEXT&#39;, &#39;REQUIREMENT_SUBSET_TEXT&#39;]
+
+        self.ignore = [&#39;POLICE COMMANDER 2251 092917.txt&#39;, 
+                       &#39;Vocational Worker  DEPARTMENT OF PUBLIC WORKS.txt&#39;, 
+                       &#39;SENIOR LOAD DISPATCHER 5235 060118.txt&#39;, 
+                       &#39;SENIOR PHOTOGRAPHER 1795 041516 REVISED 042816.txt&#39;]
+    
+
+    
+    &#34;&#34;&#34; function to iterate in files and generate a structured csv file &#34;&#34;&#34;
+    def extraction(self):
+        &#34;&#34;&#34; 
+            master function that iterates in the root folder for every file 
+            and obtains the structured information, final output is a csv file
+        &#34;&#34;&#34;
+        
+        print (&#34;&gt;&gt; Starting Extraction for the Given Folder&#34;)
+        rows = []
+        files = sorted(os.listdir(path))
+        files = [f for f in files if f not in self.ignore]
+        for filename in files:
+            config = {&#34;path&#34; : self.path, &#34;filename&#34; : filename}
+            bp = BulletinParser(config)
+            rows.extend(bp.standardize())
+        df = pd.DataFrame(rows)[self.column]
+        df.to_csv(&#34;structured_file.csv&#34;, index = False)
+        print (&#34;&gt;&gt; Extraction Complete for Entire Folder&#34;)
+        return df</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="BulletinStructuringEngine.Extractor.extraction"><code class="name flex">
+<span>def <span class="ident">extraction</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>master function that iterates in the root folder for every file
+and obtains the structured information, final output is a csv file</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def extraction(self):
+    &#34;&#34;&#34; 
+        master function that iterates in the root folder for every file 
+        and obtains the structured information, final output is a csv file
+    &#34;&#34;&#34;
+    
+    print (&#34;&gt;&gt; Starting Extraction for the Given Folder&#34;)
+    rows = []
+    files = sorted(os.listdir(path))
+    files = [f for f in files if f not in self.ignore]
+    for filename in files:
+        config = {&#34;path&#34; : self.path, &#34;filename&#34; : filename}
+        bp = BulletinParser(config)
+        rows.extend(bp.standardize())
+    df = pd.DataFrame(rows)[self.column]
+    df.to_csv(&#34;structured_file.csv&#34;, index = False)
+    print (&#34;&gt;&gt; Extraction Complete for Entire Folder&#34;)
+    return df</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="BulletinStructuringEngine.Formatter"><code class="flex name class">
+<span>class <span class="ident">Formatter</span></span>
+</code></dt>
+<dd>
+<section class="desc"><p>python class to format, restructure, and clean the extracted entities from different
+functions of the BulletinParser class.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">class Formatter:
+    &#34;&#34;&#34;
+    python class to format, restructure, and clean the extracted entities from different 
+    functions of the BulletinParser class. 
+    &#34;&#34;&#34;
+    
+    def __init__(self):
+        self.split6 = [&#34; and &#34;, &#34;which&#34;, &#34; with &#34;, &#34;, or any&#34;, &#34;(as&#34;,&#39;such as&#39;, &#39;from &#39;, 
+        &#39;may be&#39;, &#39;or a closely&#39;,  &#39;, or upon&#39;, &#39;, and one&#39;, &#39;, which&#39;, &#39;, or closely&#39;, &#39;(as&#39;]
+        self.major_reps = [&#39;, , includi&#39;, &#39;, or other&#39;, &#39;, or in a closely related field&#39;, 
+        &#39;or a closely related field&#39;, &#39;a related field&#39;,&#39;, or a&#39;, &#39;, or a related field&#39;] 
+        self.exp_starts = [&#39;at the &#39;, &#39;at that &#39;, &#39;which is at least at the &#39;, &#39;which is &#39;,
+        &#39;which is at that &#39;, &#39;which is at the &#39;, &#39;atleast at the &#39;, &#39;at least at the &#39;]
+        self.ignore_exp = [&#34;uniformed&#34;, &#34;helper&#34;, &#34;buyer&#34;, &#34;civil&#34;, &#34;engaged&#34;, 
+        &#34;lead&#34;, &#34;construction&#34;, &#34;crime&#34;, &#34;heating&#34;, &#34;maintenance&#34;, &#34;insulator&#34;]
+        self.exp_starts += [&#39;atleast at that &#39;, &#39;at least at that &#39;]
+        self.major_reps += [&#39;the text box which will appear&#39;]
+        
+    &#34;&#34;&#34; custom function used to cleanup the text/entites obtained from different functions &#34;&#34;&#34;
+    def cleanup(self, txt, tag):
+        &#34;&#34;&#34;
+        this function is used to clean the extracted according to different rules, this function
+        removes the noise captured along with the entity. Custom rules are used for this purpose. 
+        
+        :params:
+        tag: identifies what type of cleaning is required
+        &#34;&#34;&#34;
+        
+        cleaned = &#34;&#34;
+        if tag == &#39;date&#39;:
+            &#34;&#34;&#34; cleaning the date &#34;&#34;&#34;
+            if &#34;-&#34; in txt:
+                txt = txt.split(&#34;-&#34;)
+                m, d, y = txt[0], txt[1], txt[2]
+                if len(m) == 1:
+                    m = &#34;0&#34;+m
+                if len(y) == 4:
+                    y = y[2:]
+                cleaned = m+&#34;-&#34;+d+&#34;-&#34;+y
+                
+        elif tag == &#39;major&#39;:
+            &#34;&#34;&#34; cleaning the major &#34;&#34;&#34;
+            if not txt.startswith(&#34;the education section&#34;):
+                cleaned = txt.replace(&#34;major in &#34;,&#34;&#34;)
+                for split in self.split6:
+                    cleaned = cleaned.split(split)[0]
+                for r in self.major_reps:
+                    cleaned = cleaned.replace(r, &#34;&#34;)
+                cleaned = cleaned.lstrip(&#34;,&#34;).rstrip(&#34;,&#34;).strip()
+                for st in [&#39;such as&#39;, &#39;a &#39;, &#39;an &#39;]:
+                    if cleaned.startswith(st):
+                        cleaned = cleaned.replace(st, &#34;&#34;)
+                for st in [&#39;, or&#39;, &#39;, and&#39;]:
+                    if cleaned.endswith(st):
+                        cleaned = cleaned.split(st)[0]                    
+                if cleaned.startswith(&#34;in &#34;):
+                    cleaned = cleaned[3:].strip()
+                if cleaned.endswith(&#34; or&#34;):
+                    cleaned = cleaned[:-3]
+                cleaned = cleaned.strip().rstrip(&#34;,&#34;)
+        
+        elif tag == &#39;add_lic&#39;:
+            &#34;&#34;&#34; cleaning the additional license required &#34;&#34;&#34;
+            cleaned = []
+            for line in txt:
+                line = line.lower()
+                line = line.replace(&#34;&#39;s&#34;, &#34;&#34;)
+                if line.startswith(&#34;a &#34;):
+                    line = line[2:].strip()
+                if line.endswith(&#34;license&#34;):
+                    line = line.replace(&#34;license&#34;, &#34;&#34;)
+                if &#34; as a &#34; in line:
+                    line = line.split(&#34; as a&#34;)[1].strip()
+                line = line.replace(&#34; (pe)&#34;,&#34;&#34;)
+                if any(line == x for x in [&#39;special&#39;, &#39;the&#39;, &#39;this&#39;]):
+                    line = &#34;&#34;
+                line = line + &#34; License&#34;
+                cleaned.append(line)
+            cleaned = &#34;, &#34;.join(cleaned)
+
+        elif tag == &#39;exp&#39;:
+            &#34;&#34;&#34; cleaning the experience &#34;&#34;&#34;
+            cleaned = []
+            txt = txt.rstrip(&#34;,&#34;).replace(&#34;engaged &#34;,&#34;&#34;).replace(&#34;either &#34;, &#34;&#34;)
+            for split in [&#34;which&#34;, &#34;one year of&#34;, &#34;for &#34;]:
+                txt = txt.split(split)[0]
+            if len(txt.split()) == 1:
+                if txt.lower().split()[0] in self.ignore_exp:
+                    txt = &#34;&#34;        
+            for i,_ in enumerate(txt.split()):
+                if _[0].isupper() == True:
+                    pass
+                elif i == 0:
+                    pass
+                elif _.replace(&#34;,&#34;,&#34;&#34;).endswith(&#34;ing&#34;):
+                    break
+                cleaned.append(_)
+            cleaned = &#34; &#34;.join(cleaned)
+            
+            if cleaned.endswith(&#34;engaged&#34;):
+                cleaned = cleaned.replace(&#34;engaged&#34;, &#34;&#34;)
+            if &#34;(&#34; in cleaned:
+                cleaned = cleaned.split(&#34;(&#34;)[0]
+            elif &#34; by &#34; in cleaned:
+                cleaned = cleaned.split(&#34; by &#34;)[0]
+            elif cleaned.startswith(&#34;a &#34;):
+                cleaned = cleaned[2:].strip()
+            elif cleaned.startswith(&#34;an &#34;):
+                cleaned = cleaned[3:].strip()
+                
+            cleaned = cleaned.rstrip(&#34;,&#34;).rstrip(&#34;.&#34;).replace(&#34;, two years of&#34;,&#34;&#34;)
+            cleaned = cleaned.split(&#34;Class Code&#34;)[0]
+            if &#34; the level of &#34; in cleaned:
+                cleaned = cleaned.split(&#34; the level of &#34;)[1]
+            cleaned = cleaned.replace(&#34;, or&#34;,&#34;&#34;).split(&#34;within&#34;)[0]
+            if cleaned.lower().endswith(&#34;construction&#34;):
+                cleaned = cleaned.lower().replace(&#34;construction&#34;, &#34;&#34;).title()
+            if cleaned.endswith(&#34;responsible&#34;):
+                cleaned = cleaned.replace(&#34;responsible&#34;, &#34;&#34;)
+            cleaned = cleaned.rstrip(&#34;,&#34;).rstrip(&#34;.&#34;)
+            
+        if tag == &#39;alt_exp&#39;:
+            &#34;&#34;&#34; cleaning the alternate experience &#34;&#34;&#34;
+            cleaned = txt.strip()
+            if cleaned:            
+                for e in self.exp_starts:
+                    cleaned = cleaned.replace(e,&#34;&#34;)
+                if cleaned.endswith(&#34;or&#34;):
+                    cleaned = cleaned[:-2]
+                if cleaned.endswith(&#34;and&#34;):
+                    cleaned = cleaned[:-3]
+        return cleaned</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="BulletinStructuringEngine.Formatter.cleanup"><code class="name flex">
+<span>def <span class="ident">cleanup</span></span>(<span>self, txt, tag)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>this function is used to clean the extracted according to different rules, this function
+removes the noise captured along with the entity. Custom rules are used for this purpose. </p>
+<p>:params:
+tag: identifies what type of cleaning is required</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def cleanup(self, txt, tag):
+    &#34;&#34;&#34;
+    this function is used to clean the extracted according to different rules, this function
+    removes the noise captured along with the entity. Custom rules are used for this purpose. 
+    
+    :params:
+    tag: identifies what type of cleaning is required
+    &#34;&#34;&#34;
+    
+    cleaned = &#34;&#34;
+    if tag == &#39;date&#39;:
+        &#34;&#34;&#34; cleaning the date &#34;&#34;&#34;
+        if &#34;-&#34; in txt:
+            txt = txt.split(&#34;-&#34;)
+            m, d, y = txt[0], txt[1], txt[2]
+            if len(m) == 1:
+                m = &#34;0&#34;+m
+            if len(y) == 4:
+                y = y[2:]
+            cleaned = m+&#34;-&#34;+d+&#34;-&#34;+y
+            
+    elif tag == &#39;major&#39;:
+        &#34;&#34;&#34; cleaning the major &#34;&#34;&#34;
+        if not txt.startswith(&#34;the education section&#34;):
+            cleaned = txt.replace(&#34;major in &#34;,&#34;&#34;)
+            for split in self.split6:
+                cleaned = cleaned.split(split)[0]
+            for r in self.major_reps:
+                cleaned = cleaned.replace(r, &#34;&#34;)
+            cleaned = cleaned.lstrip(&#34;,&#34;).rstrip(&#34;,&#34;).strip()
+            for st in [&#39;such as&#39;, &#39;a &#39;, &#39;an &#39;]:
+                if cleaned.startswith(st):
+                    cleaned = cleaned.replace(st, &#34;&#34;)
+            for st in [&#39;, or&#39;, &#39;, and&#39;]:
+                if cleaned.endswith(st):
+                    cleaned = cleaned.split(st)[0]                    
+            if cleaned.startswith(&#34;in &#34;):
+                cleaned = cleaned[3:].strip()
+            if cleaned.endswith(&#34; or&#34;):
+                cleaned = cleaned[:-3]
+            cleaned = cleaned.strip().rstrip(&#34;,&#34;)
+    
+    elif tag == &#39;add_lic&#39;:
+        &#34;&#34;&#34; cleaning the additional license required &#34;&#34;&#34;
+        cleaned = []
+        for line in txt:
+            line = line.lower()
+            line = line.replace(&#34;&#39;s&#34;, &#34;&#34;)
+            if line.startswith(&#34;a &#34;):
+                line = line[2:].strip()
+            if line.endswith(&#34;license&#34;):
+                line = line.replace(&#34;license&#34;, &#34;&#34;)
+            if &#34; as a &#34; in line:
+                line = line.split(&#34; as a&#34;)[1].strip()
+            line = line.replace(&#34; (pe)&#34;,&#34;&#34;)
+            if any(line == x for x in [&#39;special&#39;, &#39;the&#39;, &#39;this&#39;]):
+                line = &#34;&#34;
+            line = line + &#34; License&#34;
+            cleaned.append(line)
+        cleaned = &#34;, &#34;.join(cleaned)
+
+    elif tag == &#39;exp&#39;:
+        &#34;&#34;&#34; cleaning the experience &#34;&#34;&#34;
+        cleaned = []
+        txt = txt.rstrip(&#34;,&#34;).replace(&#34;engaged &#34;,&#34;&#34;).replace(&#34;either &#34;, &#34;&#34;)
+        for split in [&#34;which&#34;, &#34;one year of&#34;, &#34;for &#34;]:
+            txt = txt.split(split)[0]
+        if len(txt.split()) == 1:
+            if txt.lower().split()[0] in self.ignore_exp:
+                txt = &#34;&#34;        
+        for i,_ in enumerate(txt.split()):
+            if _[0].isupper() == True:
+                pass
+            elif i == 0:
+                pass
+            elif _.replace(&#34;,&#34;,&#34;&#34;).endswith(&#34;ing&#34;):
+                break
+            cleaned.append(_)
+        cleaned = &#34; &#34;.join(cleaned)
+        
+        if cleaned.endswith(&#34;engaged&#34;):
+            cleaned = cleaned.replace(&#34;engaged&#34;, &#34;&#34;)
+        if &#34;(&#34; in cleaned:
+            cleaned = cleaned.split(&#34;(&#34;)[0]
+        elif &#34; by &#34; in cleaned:
+            cleaned = cleaned.split(&#34; by &#34;)[0]
+        elif cleaned.startswith(&#34;a &#34;):
+            cleaned = cleaned[2:].strip()
+        elif cleaned.startswith(&#34;an &#34;):
+            cleaned = cleaned[3:].strip()
+            
+        cleaned = cleaned.rstrip(&#34;,&#34;).rstrip(&#34;.&#34;).replace(&#34;, two years of&#34;,&#34;&#34;)
+        cleaned = cleaned.split(&#34;Class Code&#34;)[0]
+        if &#34; the level of &#34; in cleaned:
+            cleaned = cleaned.split(&#34; the level of &#34;)[1]
+        cleaned = cleaned.replace(&#34;, or&#34;,&#34;&#34;).split(&#34;within&#34;)[0]
+        if cleaned.lower().endswith(&#34;construction&#34;):
+            cleaned = cleaned.lower().replace(&#34;construction&#34;, &#34;&#34;).title()
+        if cleaned.endswith(&#34;responsible&#34;):
+            cleaned = cleaned.replace(&#34;responsible&#34;, &#34;&#34;)
+        cleaned = cleaned.rstrip(&#34;,&#34;).rstrip(&#34;.&#34;)
+        
+    if tag == &#39;alt_exp&#39;:
+        &#34;&#34;&#34; cleaning the alternate experience &#34;&#34;&#34;
+        cleaned = txt.strip()
+        if cleaned:            
+            for e in self.exp_starts:
+                cleaned = cleaned.replace(e,&#34;&#34;)
+            if cleaned.endswith(&#34;or&#34;):
+                cleaned = cleaned[:-2]
+            if cleaned.endswith(&#34;and&#34;):
+                cleaned = cleaned[:-3]
+    return cleaned</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="BulletinStructuringEngine.BulletinParser" href="#BulletinStructuringEngine.BulletinParser">BulletinParser</a></code></h4>
+<ul class="two-column">
+<li><code><a title="BulletinStructuringEngine.BulletinParser.add_course" href="#BulletinStructuringEngine.BulletinParser.add_course">add_course</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.class_title" href="#BulletinStructuringEngine.BulletinParser.class_title">class_title</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.course_count" href="#BulletinStructuringEngine.BulletinParser.course_count">course_count</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.course_subjects" href="#BulletinStructuringEngine.BulletinParser.course_subjects">course_subjects</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.deep_major" href="#BulletinStructuringEngine.BulletinParser.deep_major">deep_major</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.driver_license" href="#BulletinStructuringEngine.BulletinParser.driver_license">driver_license</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.exam_type" href="#BulletinStructuringEngine.BulletinParser.exam_type">exam_type</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.experience_title" href="#BulletinStructuringEngine.BulletinParser.experience_title">experience_title</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.job_class_function" href="#BulletinStructuringEngine.BulletinParser.job_class_function">job_class_function</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.license_type" href="#BulletinStructuringEngine.BulletinParser.license_type">license_type</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.lookups" href="#BulletinStructuringEngine.BulletinParser.lookups">lookups</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.misc_details" href="#BulletinStructuringEngine.BulletinParser.misc_details">misc_details</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.portion" href="#BulletinStructuringEngine.BulletinParser.portion">portion</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.portions" href="#BulletinStructuringEngine.BulletinParser.portions">portions</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.presence_check" href="#BulletinStructuringEngine.BulletinParser.presence_check">presence_check</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.requirement_IDs" href="#BulletinStructuringEngine.BulletinParser.requirement_IDs">requirement_IDs</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.salary_details" href="#BulletinStructuringEngine.BulletinParser.salary_details">salary_details</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.spellings" href="#BulletinStructuringEngine.BulletinParser.spellings">spellings</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.standardize" href="#BulletinStructuringEngine.BulletinParser.standardize">standardize</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.standardize_numbers" href="#BulletinStructuringEngine.BulletinParser.standardize_numbers">standardize_numbers</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.sybl" href="#BulletinStructuringEngine.BulletinParser.sybl">sybl</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.text" href="#BulletinStructuringEngine.BulletinParser.text">text</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.year_month" href="#BulletinStructuringEngine.BulletinParser.year_month">year_month</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="BulletinStructuringEngine.Extractor" href="#BulletinStructuringEngine.Extractor">Extractor</a></code></h4>
+<ul class="">
+<li><code><a title="BulletinStructuringEngine.Extractor.extraction" href="#BulletinStructuringEngine.Extractor.extraction">extraction</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="BulletinStructuringEngine.Formatter" href="#BulletinStructuringEngine.Formatter">Formatter</a></code></h4>
+<ul class="">
+<li><code><a title="BulletinStructuringEngine.Formatter.cleanup" href="#BulletinStructuringEngine.Formatter.cleanup">cleanup</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
