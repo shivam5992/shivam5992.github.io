@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.6.2" />
-<title>BulletinStructuringEngine documentation</title>
+<title>BulletinStructuringEngine API documentation</title>
 <meta name="description" content="BulletinParser: Framework to standardize the job descriptions present in text format
 to structured object. Uses reusable functions and no external …" />
 <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
@@ -23,17 +23,16 @@ to structured object. Uses reusable functions and no external …" />
 <section id="section-intro">
 <p>BulletinParser: Framework to standardize the job descriptions present in text format
 to structured object. Uses reusable functions and no external library </p>
-<p><b>Challenge:</b> Data Science for Good - City of Los Angeles <br><br>
+<p>Challenge: Data Science for Good - City of Los Angeles<br>
 Kaggle: <a href="https://www.kaggle.com/c/data-science-for-good-city-of-los-angeles">https://www.kaggle.com/c/data-science-for-good-city-of-los-angeles</a><br>
 Kernel: <a href="https://www.kaggle.com/shivamb/1-bulletin-structuring-engine-cola/">https://www.kaggle.com/shivamb/1-bulletin-structuring-engine-cola/</a> </p>
+<p><strong>author</strong>
+== 'shivam bansal'<br>
+<strong>email</strong>
+== 'shivam5992@gmail.com'<br>
+<strong>version</strong> == "1.57"</p>
 
-<p><strong>author</strong> = 'shivam bansal' <br>
-<strong>email</strong> = 'shivam5992@gmail.com' <br>
-<strong>version</strong> == "1.47"</p>
-
-
-<div align="center"><br><img src='https://i.imgur.com/oZ9csXm.png' width="600"></div>
-
+<div align='center'><img src='https://i.imgur.com/oZ9csXm.png' width="450"></div>
 
 <details class="source">
 <summary>Source code</summary>
@@ -47,11 +46,10 @@ Kernel: https://www.kaggle.com/shivamb/1-bulletin-structuring-engine-cola/
 
 __author__  == &#39;shivam bansal&#39;
 __email__   == &#39;shivam5992@gmail.com&#39;
-__version__ == &#34;1.47&#34;
+__version__ == &#34;1.57&#34;
 &#34;&#34;&#34;
 
 import re, string, os
-import pandas as pd 
 
 class BulletinParser:
 
@@ -67,17 +65,19 @@ class BulletinParser:
         
         &#34;&#34;&#34; config : root path of the file and name of the file &#34;&#34;&#34;
         self.filename, self.path = config[&#39;filename&#39;], config[&#39;path&#39;]      
-        self.text = open(self.path + self.filename).read()
-        
+        with open(self.path + self.filename, errors=&#39;ignore&#39;) as file_object:
+            self.lines = file_object.readlines()
+            self.text = &#34;\n&#34;.join(self.lines)
+            
         &#34;&#34;&#34; a global list of all pointers used in bulletins &#34;&#34;&#34;
-        self.chrs = &#34;abcdefghijklmnopqrstuvwxyz&#34;
-        self.nums = &#34;123456789&#34;
+        self.chrs = &#34;abcdefghij&#34;
+        self.nums = &#34;0123456789&#34;
         self.sybl = &#34;-*&#34;
         
         &#34;&#34;&#34; lookup dictionary for numbers text and values &#34;&#34;&#34;
         self._ns = {&#34;one&#34;:&#34;1&#34;, &#34;two&#34;:&#34;2&#34;, &#34;three&#34;:&#34;3&#34;, &#34;four&#34;:&#34;4&#34;, &#34;five&#34;:&#34;5&#34;, &#34;six&#34;:&#34;6&#34;, 
         &#34;seven&#34;:&#34;7&#34;, &#34;eight&#34;:&#34;8&#34;, &#34;nine&#34;:&#34;9&#34;, &#34;ten&#34;:&#34;10&#34;, &#34;twelve&#34;:&#34;12&#34;, &#34;fourteen&#34;:&#34;14&#34;,
-        &#34;fifteen&#34;:&#34;15&#34;, &#39;sixteen&#39;:&#39;16&#39;, &#34;eighteen&#34;:&#34;18&#34;, &#34;twenty&#34;:&#34;20&#34;,
+        &#34;fifteen&#34;:&#34;15&#34;, &#39;sixteen&#39;:&#39;16&#39;, &#34;eighteen&#34;:&#34;18&#34;, &#34;twenty&#34;:&#34;20&#34;,&#34;thirty-two&#34; : &#34;32&#34;,
         &#34;twenty-three&#34;:&#34;23&#34;,&#34;twenty-four&#34;:&#34;24&#34;,&#34;twenty-seven&#34;:&#34;27&#34;,&#34;thirty&#34;:&#34;30&#34;,
         &#34;thirty-six&#34;:&#34;36&#34;, &#34;fourty-five&#34;:&#34;45&#34;, &#34;sixty&#34;:&#34;60&#34;, &#34;ninety&#34;:&#34;90&#34;, &#34;135&#34;:&#34;135&#34;}
 
@@ -92,24 +92,27 @@ class BulletinParser:
         &#34;exam_type&#34; : [&#34;OPEN&#34;, &#34;INT_DEPT_PROM&#34;, &#34;DEPT_PROM&#34;, &#34;OPEN_INT_PROM&#34;],
         &#34;major&#34;     : [&#39;degree in &#39;, &#39;major in &#39;, &#39;majoring&#39;],
         &#34;exp_flags&#34; : [&#34; as a &#34;, &#34; at the level of &#34;, &#34; as an &#34;],
-        &#34;school&#34;    : {&#34;college or university&#34;:[&#34;college or university&#34;,&#34;university or college&#34;], 
-        &#34;college&#34;   : [&#34;college&#34;],&#34;high school&#34;:[&#34;high school&#34;],&#34;trade school&#34;:[&#39;trade school&#39;], 
+        &#34;school&#34; : {&#34;college or university&#34;:[&#34;college or university&#34;,&#34;university or college&#34;], 
+        &#34;college&#34; : [&#34;college&#34;],&#34;high school&#34;:[&#34;high school&#34;],&#34;trade school&#34;:[&#39;trade school&#39;], 
         &#34;apprenticeship&#34;: [&#34;apprenticeship&#34;],&#34;law school&#34; : [&#39;law school&#39;], 
         &#34;technical school&#34;:[&#39;technical school&#39;]}}
         
         &#34;&#34;&#34; common splitters used in text parsing and cleaning in different functions &#34;&#34;&#34;
         self.split1, self.split2 = [&#34;\n&#34;, &#34;and&#34;, &#34;;&#34;], [&#39;\n&#39;, &#39;;&#39;, &#39;. &#39;]
-        self.split3 = [&#34;; &#34;,&#34; with &#34;,&#34; and &#34;,&#34; or &#34;,&#34;. &#34;,&#34; in &#34;,&#34; issued &#34;]
+        self.split3 = [&#34;; &#34;,&#34; with &#34;,&#34; and &#34;,&#34; or &#34;,&#34;. &#34;,&#34; in &#34;,&#34; issued &#34;,&#34;attached&#34;,&#34;whose&#34;]
         self.split4 = [&#39;from an&#39;, &#39;from a&#39;, &#39; may &#39;, &#39; for &#39;, &#39;; and&#39;]
         self.split5 = [&#34;is required&#34;,&#34;approved&#34;,&#34;required&#34;,&#34;. &#34;,&#34;may&#34;,&#34;with&#34;,&#34;prior&#34;]        
         self.split5 += [&#34;upon&#34;, &#34;;&#34;]
         
         &#34;&#34;&#34; keywords required to clean / correct some entities &#34;&#34;&#34;
         self.spellings = { &#34;COMPETITVE&#34; : &#34;COMPETITIVE&#34;, &#34;PARMENTAL&#34; : &#34;PARTMENTAL&#34;}
+        spells = {&#34;CAMPUS INTERVIEWS ONLY&#34; : &#34;&#34;, &#34;MINIMUM REQUIREMENTS&#34; : &#34;REQUIREMENTS&#34;,
+                  &#34;REQUIREMENTS\n\n\n\nFive&#34; : &#34;REQUIREMENTS\n0.Five years&#34;}
         
         &#34;&#34;&#34; file complete text and non empty lines &#34;&#34;&#34;
-        self.text   = self.text.replace(&#34;CAMPUS INTERVIEWS ONLY&#34;,&#34;&#34;)
-        self.lines  = [l for l in self.text.split(&#34;\n&#34;) if l.strip()]
+        for k,v in spells.items():
+            self.text = self.text.replace(k, v)
+        self.lines = [l for l in self.text.split(&#34;\n&#34;) if l.strip()]
         
         
         
@@ -254,7 +257,6 @@ class BulletinParser:
                 &#34;&#34;&#34; four main conditions to identify not not important portion &#34;&#34;&#34;
                 is_relevant = False
                 for keyword in lookup:                    
-
                     &#34;&#34;&#34; cond1 : keyword is not present in relevant portion &#34;&#34;&#34;
                     if keyword not in portion:
                         continue
@@ -266,7 +268,7 @@ class BulletinParser:
                         continue
                     
                     &#34;&#34;&#34; cond3 : presence of ignore words in the text portion &#34;&#34;&#34;
-                    ignore_words = [&#34;=&#34;, &#34;equal&#34;, &#34;equivalent&#34;, &#39;lack&#39;, &#39;valent&#39;]
+                    ignore_words = [&#34;=&#34;, &#34;equal&#34;, &#34;equivalent&#34;, &#39;lack&#39;, &#39;valent&#39;, &#39;ent to &#39;]
                     if any(eq in portion for eq in ignore_words):
                         continue
                     
@@ -408,6 +410,8 @@ class BulletinParser:
         salary = &#34;$&#34; + &#34;$&#34;.join(salary.split(&#34;$&#34;)[1:])
         salary = salary.split(&#34;(&#34;)[0].split(&#34;, $&#34;)[0]
         salary = salary.split(&#34;The&#34;)[0].split(&#34;. Some&#34;)[0]
+        if salary.strip() == &#34;$&#34;:
+            salary = &#34;&#34;
         
         &#34;&#34;&#34; find the DWP salary &#34;&#34;&#34;
         dwp = &#34;&#34;
@@ -445,19 +449,17 @@ class BulletinParser:
                     poss = lx
                     possed.append(poss)
                     for spliter in self.split3:
-                        lx = lx.split(spliter)[0]
+                        if spliter in [&#34; or &#34;, &#34; and &#34;]:
+                            &#34;&#34;&#34; special check for small lines &#34;&#34;&#34;
+                            if spliter in lx and len(lx) &lt; 60:
+                                pass
+                            else:
+                                lx = lx.split(spliter)[0]
+                        else:
+                            lx = lx.split(spliter)[0]
                     exp_title.append(lx)
                     break
-        
         exp_title = &#34;; &#34;.join(exp_title)
-        
-        &#34;&#34;&#34; next find the function / role &#34;&#34;&#34;
-        for l in possed:
-            for split in self.lookups[&#39;exp_flags&#39;]:
-                if l in split:
-                    l = l.split(split)[1]
-                if &#34;or in a class&#34; in l:
-                    l = l.split(&#34;or in a class&#34;)[0]       
         return exp_title
     
     &#34;&#34;&#34; Custom function to obtain class title from the job-description text &#34;&#34;&#34;
@@ -541,7 +543,15 @@ class BulletinParser:
         for i,split in enumerate(splitters):
             if i &lt; 5:
                 split = split + &#34; year&#34;
-            courses = courses.split(split)[0]        
+            courses = courses.split(split)[0]    
+        if &#34;coursework&#34; in courses:
+            courses = courses.split(&#34;coursework&#34;)[0]
+        if courses.strip() == &#34;it&#34;:
+            courses = &#34;IT&#34;
+        courses = courses.replace(&#34;the fields listed&#34;, &#34;&#34;)
+        courses = courses.replace(&#34;an accredited college or university.&#34;,&#34;&#34;)
+        courses = courses.split(&#34;or 12 &#34;)[0].replace(&#34;the required coursework.&#34;,&#34;&#34;)
+        courses = courses.replace(&#34;any of the following areas: &#34;,&#34;&#34;)
         return courses
 
     &#34;&#34;&#34; function to check the driver license tag &#34;&#34;&#34;
@@ -571,6 +581,43 @@ class BulletinParser:
             return tags[0]
         return &#34;&#34;
 
+    &#34;&#34;&#34;  function to fix breaks in requirments in which a line is broken &#34;&#34;&#34;
+    def fix_requirement_line_breaks(self, content):
+        &#34;&#34;&#34;
+        Sometimes the requirement text&#39;s flat lines are broken due to inaccuracy of 
+        pdf-parsing. This function is used to fix such cases before parsing the text
+        &#34;&#34;&#34;
+
+        remove = []
+        points = [&#34;a.&#34;,&#34;b.&#34;,&#34;c.&#34;,&#34;d.&#34;,&#34;e.&#34;, &#34;1.&#34;, &#34;2.&#34;, &#34;3.&#34;, &#34;4.&#34;, &#34;5.&#34;]
+        lines = content.split(&#34;\n&#34;)
+        &#34;&#34;&#34; first iterate and identify the lines having no pointer &#34;&#34;&#34;
+        for i,x in enumerate(lines):
+            x = x.strip()
+            if not any(x[:2] == p for p in points):
+                remove.append(i - 1)
+
+        &#34;&#34;&#34; identfiy the index of rows and join between consecutive lines &#34;&#34;&#34;
+        rremove = [i+1 for i in remove]
+        new_lines = []
+        covered = []
+        for j,x in enumerate(lines):
+            x = x.strip()
+            if j in covered:
+                continue
+            &#34;&#34;&#34; consecutive rows join operation &#34;&#34;&#34;
+            if j in remove:
+                if any(x[:2] == p for p in points):
+                    extra = lines[j+1].strip()
+                    if extra not in x:
+                        u_line = x + &#34; &#34; + extra
+                        new_lines.append (u_line)
+                        covered.append(j+1)
+            else:
+                new_lines.append(x)
+        return &#34;\n&#34;.join(new_lines)
+
+    
     &#34;&#34;&#34; function to properly parse requirement set and subsets &#34;&#34;&#34;
     def requirement_IDs(self, req_text):
         &#34;&#34;&#34;
@@ -581,22 +628,44 @@ class BulletinParser:
         to generate required format; Also it identifies special cases with no pointers
         &#34;&#34;&#34;
         
-        &#34;&#34;&#34; obtain the requirement text lines &#34;&#34;&#34;
+        &#34;&#34;&#34; special case 1: breakage in requirement lines pointers &#34;&#34;&#34;
+        obtained = []
+        exclude = [&#39;POST-Certified Candidates&#39;, &#39;Under the policy&#39;]
+        for i, l1 in enumerate(req_text.split(&#34;\n&#34;)):
+            l1 = l1.strip()
+            if not l1:
+                continue
+            if any(l1.startswith(_) for _ in exclude):
+                break
+            if l1[0].lower() in &#34;12345678abcdefghi&#34;:
+                obtained.append(i)
+        diff = [x - obtained[i - 1] for i, x in enumerate(obtained)][1:]
+        if 1 in diff:
+            diff.remove(1)
+        if any(x in diff for x in [2, 3, 4, 5, 6, 7, 8]):
+            for i in range(8):
+                content = self.fix_requirement_line_breaks(req_text)
+            lines = content.split(&#34;\n&#34;)
+        
+        &#34;&#34;&#34; step2: obtain the requirement text lines &#34;&#34;&#34;
         lines_ = [l.strip().rstrip(&#34;,&#34;) for l in req_text.split(&#34;\n&#34;)]
-        &#34;&#34;&#34; custom break condition &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; step3: custom break condition &#34;&#34;&#34;
         lines = []
         for l in lines_:
             if &#34;substitute&#34; in l:
                 if l[0] not in [&#34;1&#34;,&#34;2&#34;,&#34;3&#34;,&#34;4&#34;,&#34;5&#34;]:
                     break
+            elif l.startswith(exclude[0]):
+                break
             lines.append(l)
-        
-        &#34;&#34;&#34; fix some of the lines &#34;&#34;&#34;
-        flats = [l for l in lines if not any(l[0] == w for w in self.nums)]
+                    
+        &#34;&#34;&#34; sepcial case 2: no bullets  &#34;&#34;&#34;
+        flats = [l for l in lines if not any(l[0]==w and l[1]!=&#34;,&#34; for w in self.nums)]
         if len(lines) != 1 and len(lines) == len(flats):
             lines = [&#34; &#34;.join(lines)]
-        
-        &#34;&#34;&#34; special case : single line requirement &#34;&#34;&#34;
+
+        &#34;&#34;&#34; special case 3: single line requirement &#34;&#34;&#34;
         ignore = False
         if len(lines) == 1:
             &#34;&#34;&#34; check the presense of numbers or alphabets &#34;&#34;&#34;
@@ -614,7 +683,8 @@ class BulletinParser:
             &#34;&#34;&#34; retun single line requirement, if of number / alphabet &#34;&#34;&#34;
             if ignore == False:
                 return [&#34;1.&#34;], [&#34;&#34;], [req_text], [&#34;&#34;]
-
+            
+        
         &#34;&#34;&#34; for all other cases, iterate and extarct pointer &#34;&#34;&#34;
         set_id, subset_id, set_text, subset_text  = [], [], [], []
         for i, l in enumerate(lines):
@@ -644,6 +714,8 @@ class BulletinParser:
                     pointer = &#34;&#34;.join(c for c in pointer if c not in &#34;.()&#34;)
                     if pointer in self.chrs:
                         ssid, sstext = pointer, l[2:]
+
+                &#34;&#34;&#34; append ids and text for set and subset &#34;&#34;&#34;
                 set_id.append(sid)
                 subset_id.append(ssid)
                 set_text.append(stext)
@@ -756,15 +828,16 @@ class BulletinParser:
         dl_type = &#34; OR &#34;.join(dl_type)
         return dl_type, ltypes
 
-    &#34;&#34;&#34; function to obtain the text related to job class function &#34;&#34;&#34;
-    def job_class_function(self, txt):
+    &#34;&#34;&#34; function to obtain the text related to alternate job class function &#34;&#34;&#34;
+    def job_class_alt_function(self, txt):
         &#34;&#34;&#34;
-        function to obtain the text related to job class function. 
+        function to obtain the text related to alternate job class function. 
         &#34;&#34;&#34;
 
         _ = [&#34; or in a class&#34;, &#34; or at the level&#34;, &#34; or in a position&#34;, &#34; or as a member&#34;]
         lines = txt.split(&#34;\n&#34;)
         for line in lines:
+            line = line.strip()
             if &#34; or &#34; not in line:
                 continue
             index = None
@@ -776,6 +849,107 @@ class BulletinParser:
                 return line.split(index)[1]
         return &#34;&#34;
     
+    &#34;&#34;&#34; function to extract the function of the job role &#34;&#34;&#34;
+    def get_function(self, l):
+        &#34;&#34;&#34;
+        function to obtain the text related to job class function. 
+        &#34;&#34;&#34;
+        
+        functions = []
+
+        &#34;&#34;&#34; perform basic cleanup and proper splitting &#34;&#34;&#34;
+        l = l.split(&#34; or in a class &#34;)[0].replace(&#34;with the City of Los Angeles&#34;,&#34;&#34;)
+        l = l.replace(&#34;; or&#34;,&#34;&#34;).strip().replace(&#34; .&#34;,&#34;&#34;)
+        
+        &#34;&#34;&#34; handle cases which contain experience keywords &#34;&#34;&#34;
+        if &#34;experience&#34; in l:
+            
+            &#34;&#34;&#34; handle cases which do not contain identfier of a job role &#34;&#34;&#34;
+            if not any(w in l for w in [&#34; as a &#34;, &#34; at the level of &#34;, &#34; as an &#34;]):
+                pr = l.split(&#34;experience&#34;)[1].split(&#34; or in &#34;)[0]
+                pr = pr.strip().lstrip(&#34;.&#34;).lstrip(&#34;,&#34;).strip().lstrip(&#34;;&#34;)
+                pr = pr.strip().lstrip(&#34;,&#34;).strip()
+                if pr:
+                    fw = pr.split()[0]
+                    if fw in [&#39;in&#39;,&#39;at&#39;, &#39;with&#39;, &#39;within&#39;]:
+                        functions.append(&#34;experience &#34; + pr.strip())
+                    elif &#34;ing&#34; in fw:
+                        functions.append(pr)
+                    else:
+                        pr = pr.strip()
+                        if &#34;responsib&#34; in pr:
+                            functions.append(pr.replace(&#34;which include the &#34;,&#34;&#34;))
+            else:
+                &#34;&#34;&#34; handle cases which contain experience and the identifier cases &#34;&#34;&#34;
+                if &#34; as a &#34; in l:
+                    l = l.split(&#34; as a &#34;)[1]
+                    if len(l.split()) &lt;= 8:
+                        pass
+                    elif &#34;experience&#34; in l:
+                        pr = l.split(&#34;experience&#34;)[1].strip()
+                        pr = pr.lstrip(&#34;in the&#34;).strip()
+                        pr = pr.lstrip(&#34;in &#34;).strip()
+                        functions.append(&#34;experience in &#34; + pr)
+                    elif &#34;ing &#34; in l:
+                        got = &#34;&#34;
+                        for w in l.split():
+                            if w.endswith(&#34;ing&#34;)and w[0].islower():
+                                got = w
+                                break
+                        if got != &#34;&#34;:
+                            got = got + &#34;&#34; + l.split(got)[1]
+                            functions.append(got)
+                elif &#34; as an &#34; in l:
+                    l = l.split(&#34; as an &#34;)[1]
+                    if len(l.split()) &lt;= 8:
+                        pass 
+                    elif &#34;experience&#34; in l:
+                        pr = l.split(&#34;experience&#34;)[1].strip()
+                        pr = pr.lstrip(&#34;in the&#34;).strip()
+                        pr = pr.lstrip(&#34;in &#34;).strip()
+                        functions.append(&#34;experience in &#34; + pr)
+                    elif &#34;ing &#34; in l:
+                        got = &#34;&#34;
+                        for w in l.split():
+                            if w.endswith(&#34;ing&#34;) and w[0].islower():
+                                got = w
+                                break
+                        if got != &#34;&#34;:
+                            got = got + &#34;&#34; + l.split(got)[1]
+                            functions.append(got)
+                elif &#34; at the level of &#34; in l:
+                    l = l.split(&#34; at the level of &#34;)[1]
+                    if len(l.split()) &lt;= 8:
+                        pass # ignore
+                    elif &#34;experience&#34; in l:
+                        pr = l.split(&#34;experience&#34;)[1].strip()
+                        pr = pr.lstrip(&#34;in the&#34;).strip()
+                        pr = pr.lstrip(&#34;in &#34;).strip()
+                        functions.append(&#34;experience in &#34; + pr)
+                    elif &#34;ing &#34; in l:
+                        got = &#34;&#34;
+                        for w in l.split():
+                            if w.endswith(&#34;ing&#34;) and w[0].islower():
+                                got = w
+                                break
+                        if got != &#34;&#34;:
+                            got = got + &#34;&#34; + l.split(got)[1]
+                            functions.append(got)
+        else:
+            &#34;&#34;&#34; alternate to experience, also handle cases for employment &#34;&#34;&#34;
+            if &#34;employment as a&#34; in l:
+                if &#34;position&#34; in l:
+                    functions.append(l.split(&#34;position&#34;)[1])
+        
+        &#34;&#34;&#34; find final entity &#34;&#34;&#34;
+        func = &#34;&#34;
+        if len(functions) &gt; 0:
+            func = functions[0].strip().rstrip(&#34; and&#34;).rstrip(&#34; or&#34;).rstrip(&#34;:&#34;).rstrip(&#34;;&#34;)        
+            words = func.split()
+            if &#34;following&#34; in words[-3:]:
+                func = &#34;&#34;
+        return func
+        
     &#34;&#34;&#34; function to dig deeper into requirement text and obtain if any major is missed &#34;&#34;&#34;
     def deep_major(self, txt):
         &#34;&#34;&#34; function to dig deeper into requirement text and obtain if any 
@@ -825,6 +999,7 @@ class BulletinParser:
                 continue
             if any(w in l.lower() for w in course_lists):
                 misc_details += l+&#34;\n&#34;
+        misc_details = misc_details.strip().rstrip(&#34;or&#34;).rstrip(&#34;and&#34;)
         return misc_details
 
     &#34;&#34;&#34; master function to call all the other functions and generate the output &#34;&#34;&#34;
@@ -853,6 +1028,21 @@ class BulletinParser:
             doc[&#34;REQUIREMENT_SUBSET_ID&#34;] = requirement_list[1][j]
             doc[&#34;REQUIREMENT_SUBSET_TEXT&#34;] = requirement_list[3][j]
             
+            &#34;&#34;&#34; requirement conjuction &#34;&#34;&#34;
+            t1 = requirement_list[2][j].strip()
+            t2 = requirement_list[3][j].strip()
+            
+            conjunction = []
+            if t1.endswith(&#34;or&#34;):
+                conjunction.append(&#34;or&#34;)
+            elif t1.endswith(&#34;and&#34;):
+                conjunction.append(&#34;and&#34;)
+            elif t2.endswith(&#34;and&#34;):
+                conjunction.append(&#34;and&#34;)
+            elif t2.endswith(&#34;or&#34;):
+                conjunction.append(&#34;or&#34;)
+            doc[&#39;REQUIREMENT_CONJUNCTION&#39;] = &#34;;&#34;.join(conjunction).rstrip(&#34;;&#34;)
+            
             &#34;&#34;&#34; add classcode, duties, open date using generic functions &#34;&#34;&#34;
             doc[&#39;JOB_CLASS_NO&#39;] = self.portion(&#34;class code:&#34;)
             doc[&#39;JOB_DUTIES&#39;] = self.portion(&#34;duties&#34;, indx=True)        
@@ -867,7 +1057,7 @@ class BulletinParser:
             doc[&#34;FULL_TIME_PART_TIME&#34;] = self.presence_check(&#34;full_part&#34;, txt=rtext)
                         
             &#34;&#34;&#34; custom functions that uses requirement text &#34;&#34;&#34;
-            doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = self.job_class_function(rtext)
+            doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = self.job_class_alt_function(rtext)
             doc[&#34;EXP_JOB_CLASS_TITLE&#34;] = self.experience_title(rtext)
             doc[&#34;COURSE_SUBJECT&#34;] = self.course_subjects(rtext) 
             doc[&#34;COURSE_COUNT&#34;] = self.course_count(rtext)
@@ -875,7 +1065,7 @@ class BulletinParser:
             doc[&#34;ENTRY_SALARY_DWP&#34;] = self.salary_details()[1]
             doc[&#34;DRIVERS_LICENSE_REQ&#34;] = self.driver_license()
             doc[&#34;MISC_COURSE_DETAILS&#34;] = self.misc_details(rtext)
-            doc[&#34;EXP_JOB_CLASS_FUNCTION&#34;] = &#34;&#34;
+            doc[&#34;EXP_JOB_CLASS_FUNCTION&#34;] = self.get_function(rtext)
             
             &#34;&#34;&#34; custom general functions &#34;&#34;&#34;
             doc[&#34;DRIV_LIC_TYPE&#34;] = self.license_type()[0]
@@ -908,7 +1098,7 @@ class BulletinParser:
 
             &#34;&#34;&#34; perform further cleaning and standardizing on some fields &#34;&#34;&#34;
             exp_title, alt_exp = doc[&#34;EXP_JOB_CLASS_TITLE&#34;], doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;]
-            doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = form.cleanup(alt_exp, tag=&#39;exp&#39;)
+            doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = form.cleanup(alt_exp, tag=&#39;alt_exp&#39;)
             doc[&#34;EXP_JOB_CLASS_TITLE&#34;] = form.cleanup(exp_title, tag=&#39;exp&#39;)
             doc[&#34;EDUCATION_MAJOR&#34;] = form.cleanup(doc[&#34;EDUCATION_MAJOR&#34;], tag=&#39;major&#39;)  
             doc[&#34;ADDTL_LIC&#34;] = form.cleanup(doc[&#34;ADDTL_LIC&#34;], tag=&#39;add_lic&#39;)
@@ -917,6 +1107,7 @@ class BulletinParser:
             &#34;&#34;&#34; append the key-value pairs in the global list &#34;&#34;&#34;
             rows.append({k:v for k,v in doc.items() if not k.startswith(&#34;_&#34;)})
         return rows
+
 
 
 class Formatter:
@@ -932,7 +1123,9 @@ class Formatter:
         &#39;or a closely related field&#39;, &#39;a related field&#39;,&#39;, or a&#39;, &#39;, or a related field&#39;] 
         self.exp_starts = [&#39;at the &#39;, &#39;at that &#39;, &#39;which is at least at the &#39;, &#39;which is &#39;,
         &#39;which is at that &#39;, &#39;which is at the &#39;, &#39;atleast at the &#39;, &#39;at least at the &#39;]
-        self.ignore_exp = [&#34;uniformed&#34;, &#34;helper&#34;, &#34;buyer&#34;, &#34;civil&#34;, &#34;engaged&#34;, 
+        self.exp_starts1 = [&#39;level&#39;, &#39;atleast&#39;, &#39;in&#39;, &#39;the&#39;, &#39;which&#39;, &#39;at&#39;, &#39;least&#39;, &#39;of&#39;,&#39;as &#39;,
+                           &#39;a &#39;, &#39;that&#39;, &#39;with&#39;]
+        self.ignore_exp = [&#34;uniformed&#34;, &#34;helper&#34;, &#34;buyer&#34;, &#34;civil&#34;, &#34;engaged&#34;, &#34;exempt&#34;, 
         &#34;lead&#34;, &#34;construction&#34;, &#34;crime&#34;, &#34;heating&#34;, &#34;maintenance&#34;, &#34;insulator&#34;]
         self.exp_starts += [&#39;atleast at that &#39;, &#39;at least at that &#39;]
         self.major_reps += [&#39;the text box which will appear&#39;]
@@ -995,8 +1188,13 @@ class Formatter:
                 line = line.replace(&#34; (pe)&#34;,&#34;&#34;)
                 if any(line == x for x in [&#39;special&#39;, &#39;the&#39;, &#39;this&#39;]):
                     line = &#34;&#34;
-                line = line + &#34; License&#34;
-                cleaned.append(line)
+                line = line.strip() + &#34; License&#34;
+                line = &#34; &#34;+line+&#34; &#34;
+                line = line.replace(&#34; pe &#34;, &#34; PE &#34;).strip()
+                if line == &#34;License&#34;:
+                    line = &#34;&#34;
+                else:
+                    cleaned.append(line)
             cleaned = &#34;, &#34;.join(cleaned)
 
         elif tag == &#39;exp&#39;:
@@ -1013,10 +1211,13 @@ class Formatter:
                     pass
                 elif i == 0:
                     pass
+                elif _.lower()[:5] in [&#34;build&#34;, &#34;plumb&#34;, &#34;condi&#34;, &#34;housi&#34;]:
+                    pass
                 elif _.replace(&#34;,&#34;,&#34;&#34;).endswith(&#34;ing&#34;):
                     break
                 cleaned.append(_)
             cleaned = &#34; &#34;.join(cleaned)
+            
             
             if cleaned.endswith(&#34;engaged&#34;):
                 cleaned = cleaned.replace(&#34;engaged&#34;, &#34;&#34;)
@@ -1039,18 +1240,34 @@ class Formatter:
             if cleaned.endswith(&#34;responsible&#34;):
                 cleaned = cleaned.replace(&#34;responsible&#34;, &#34;&#34;)
             cleaned = cleaned.rstrip(&#34;,&#34;).rstrip(&#34;.&#34;)
+            if cleaned.strip().endswith(&#34; of&#34;):
+                cleaned = cleaned[:-2].strip()
+            if cleaned.strip().endswith(&#34; or&#34;):
+                cleaned = cleaned[:-2].strip()
+            if cleaned.strip().endswith(&#34; and&#34;):
+                cleaned = cleaned[:-3].strip()
             
         if tag == &#39;alt_exp&#39;:
             &#34;&#34;&#34; cleaning the alternate experience &#34;&#34;&#34;
             cleaned = txt.strip()
-            if cleaned:            
+            if cleaned:          
+                cleaned = cleaned.replace(&#34;with the City of Los Angeles;&#34;,&#34;&#34;)
                 for e in self.exp_starts:
-                    cleaned = cleaned.replace(e,&#34;&#34;)
+                    cleaned = cleaned.replace(e,&#34;&#34;).strip()
+                for e in self.exp_starts1:
+                    if cleaned.startswith(e):
+                        cleaned = cleaned[len(e):].strip()
+                        cleaned = cleaned.lstrip(&#34;,&#34;).strip()
+                for e in self.exp_starts1:
+                    if cleaned.startswith(e):
+                        cleaned = cleaned[len(e):].strip()
+                        cleaned = cleaned.lstrip(&#34;,&#34;).strip()
                 if cleaned.endswith(&#34;or&#34;):
                     cleaned = cleaned[:-2]
                 if cleaned.endswith(&#34;and&#34;):
                     cleaned = cleaned[:-3]
         return cleaned
+
 
 
 class Extractor:
@@ -1073,15 +1290,9 @@ class Extractor:
         &#39;EXP_JOB_CLASS_TITLE&#39;, &#39;EXP_JOB_CLASS_ALT_RESP&#39;, &#39;EXP_JOB_CLASS_FUNCTION&#39;, 
         &#39;COURSE_COUNT&#39;, &#39;COURSE_LENGTH&#39;, &#39;COURSE_SUBJECT&#39;, &#39;MISC_COURSE_DETAILS&#39;, 
         &#39;DRIVERS_LICENSE_REQ&#39;, &#39;DRIV_LIC_TYPE&#39;, &#39;ADDTL_LIC&#39;, &#39;EXAM_TYPE&#39;, &#39;ENTRY_SALARY_GEN&#39;, 
-        &#39;ENTRY_SALARY_DWP&#39;, &#39;OPEN_DATE&#39;, &#39;REQUIREMENT_SET_TEXT&#39;, &#39;REQUIREMENT_SUBSET_TEXT&#39;]
+        &#39;ENTRY_SALARY_DWP&#39;, &#39;OPEN_DATE&#39;, &#39;REQUIREMENT_SET_TEXT&#39;, &#39;REQUIREMENT_SUBSET_TEXT&#39;, 
+        &#39;REQUIREMENT_CONJUNCTION&#39;]
 
-        self.ignore = [&#39;POLICE COMMANDER 2251 092917.txt&#39;, 
-                       &#39;Vocational Worker  DEPARTMENT OF PUBLIC WORKS.txt&#39;, 
-                       &#39;SENIOR LOAD DISPATCHER 5235 060118.txt&#39;, 
-                       &#39;SENIOR PHOTOGRAPHER 1795 041516 REVISED 042816.txt&#39;]
-    
-
-    
     &#34;&#34;&#34; function to iterate in files and generate a structured csv file &#34;&#34;&#34;
     def extraction(self):
         &#34;&#34;&#34; 
@@ -1089,14 +1300,18 @@ class Extractor:
             and obtains the structured information, final output is a csv file
         &#34;&#34;&#34;
         
-        print (&#34;&gt;&gt; Starting Extraction for the Given Folder&#34;)
+        print (&#34;&gt; Starting Extraction for the Given Folder&#34;)
         rows = []
         files = sorted(os.listdir(path))
-        files = [f for f in files if f not in self.ignore]
         for filename in files:
-            config = {&#34;path&#34; : self.path, &#34;filename&#34; : filename}
-            bp = BulletinParser(config)
-            rows.extend(bp.standardize())
+            try:
+                config = {&#34;path&#34; : self.path, &#34;filename&#34; : filename}
+                bp = BulletinParser(config)
+                rows.extend(bp.standardize())
+            except Exception as E:
+                print (E)
+                continue
+
         df = pd.DataFrame(rows)[self.column]
         df.to_csv(&#34;structured_file.csv&#34;, index = False)
         print (&#34;&gt;&gt; Extraction Complete for Entire Folder&#34;)
@@ -1139,17 +1354,19 @@ outputs : single json object for one file, structured csv file for a folder</p>
         
         &#34;&#34;&#34; config : root path of the file and name of the file &#34;&#34;&#34;
         self.filename, self.path = config[&#39;filename&#39;], config[&#39;path&#39;]      
-        self.text = open(self.path + self.filename).read()
-        
+        with open(self.path + self.filename, errors=&#39;ignore&#39;) as file_object:
+            self.lines = file_object.readlines()
+            self.text = &#34;\n&#34;.join(self.lines)
+            
         &#34;&#34;&#34; a global list of all pointers used in bulletins &#34;&#34;&#34;
-        self.chrs = &#34;abcdefghijklmnopqrstuvwxyz&#34;
-        self.nums = &#34;123456789&#34;
+        self.chrs = &#34;abcdefghij&#34;
+        self.nums = &#34;0123456789&#34;
         self.sybl = &#34;-*&#34;
         
         &#34;&#34;&#34; lookup dictionary for numbers text and values &#34;&#34;&#34;
         self._ns = {&#34;one&#34;:&#34;1&#34;, &#34;two&#34;:&#34;2&#34;, &#34;three&#34;:&#34;3&#34;, &#34;four&#34;:&#34;4&#34;, &#34;five&#34;:&#34;5&#34;, &#34;six&#34;:&#34;6&#34;, 
         &#34;seven&#34;:&#34;7&#34;, &#34;eight&#34;:&#34;8&#34;, &#34;nine&#34;:&#34;9&#34;, &#34;ten&#34;:&#34;10&#34;, &#34;twelve&#34;:&#34;12&#34;, &#34;fourteen&#34;:&#34;14&#34;,
-        &#34;fifteen&#34;:&#34;15&#34;, &#39;sixteen&#39;:&#39;16&#39;, &#34;eighteen&#34;:&#34;18&#34;, &#34;twenty&#34;:&#34;20&#34;,
+        &#34;fifteen&#34;:&#34;15&#34;, &#39;sixteen&#39;:&#39;16&#39;, &#34;eighteen&#34;:&#34;18&#34;, &#34;twenty&#34;:&#34;20&#34;,&#34;thirty-two&#34; : &#34;32&#34;,
         &#34;twenty-three&#34;:&#34;23&#34;,&#34;twenty-four&#34;:&#34;24&#34;,&#34;twenty-seven&#34;:&#34;27&#34;,&#34;thirty&#34;:&#34;30&#34;,
         &#34;thirty-six&#34;:&#34;36&#34;, &#34;fourty-five&#34;:&#34;45&#34;, &#34;sixty&#34;:&#34;60&#34;, &#34;ninety&#34;:&#34;90&#34;, &#34;135&#34;:&#34;135&#34;}
 
@@ -1164,24 +1381,27 @@ outputs : single json object for one file, structured csv file for a folder</p>
         &#34;exam_type&#34; : [&#34;OPEN&#34;, &#34;INT_DEPT_PROM&#34;, &#34;DEPT_PROM&#34;, &#34;OPEN_INT_PROM&#34;],
         &#34;major&#34;     : [&#39;degree in &#39;, &#39;major in &#39;, &#39;majoring&#39;],
         &#34;exp_flags&#34; : [&#34; as a &#34;, &#34; at the level of &#34;, &#34; as an &#34;],
-        &#34;school&#34;    : {&#34;college or university&#34;:[&#34;college or university&#34;,&#34;university or college&#34;], 
-        &#34;college&#34;   : [&#34;college&#34;],&#34;high school&#34;:[&#34;high school&#34;],&#34;trade school&#34;:[&#39;trade school&#39;], 
+        &#34;school&#34; : {&#34;college or university&#34;:[&#34;college or university&#34;,&#34;university or college&#34;], 
+        &#34;college&#34; : [&#34;college&#34;],&#34;high school&#34;:[&#34;high school&#34;],&#34;trade school&#34;:[&#39;trade school&#39;], 
         &#34;apprenticeship&#34;: [&#34;apprenticeship&#34;],&#34;law school&#34; : [&#39;law school&#39;], 
         &#34;technical school&#34;:[&#39;technical school&#39;]}}
         
         &#34;&#34;&#34; common splitters used in text parsing and cleaning in different functions &#34;&#34;&#34;
         self.split1, self.split2 = [&#34;\n&#34;, &#34;and&#34;, &#34;;&#34;], [&#39;\n&#39;, &#39;;&#39;, &#39;. &#39;]
-        self.split3 = [&#34;; &#34;,&#34; with &#34;,&#34; and &#34;,&#34; or &#34;,&#34;. &#34;,&#34; in &#34;,&#34; issued &#34;]
+        self.split3 = [&#34;; &#34;,&#34; with &#34;,&#34; and &#34;,&#34; or &#34;,&#34;. &#34;,&#34; in &#34;,&#34; issued &#34;,&#34;attached&#34;,&#34;whose&#34;]
         self.split4 = [&#39;from an&#39;, &#39;from a&#39;, &#39; may &#39;, &#39; for &#39;, &#39;; and&#39;]
         self.split5 = [&#34;is required&#34;,&#34;approved&#34;,&#34;required&#34;,&#34;. &#34;,&#34;may&#34;,&#34;with&#34;,&#34;prior&#34;]        
         self.split5 += [&#34;upon&#34;, &#34;;&#34;]
         
         &#34;&#34;&#34; keywords required to clean / correct some entities &#34;&#34;&#34;
         self.spellings = { &#34;COMPETITVE&#34; : &#34;COMPETITIVE&#34;, &#34;PARMENTAL&#34; : &#34;PARTMENTAL&#34;}
+        spells = {&#34;CAMPUS INTERVIEWS ONLY&#34; : &#34;&#34;, &#34;MINIMUM REQUIREMENTS&#34; : &#34;REQUIREMENTS&#34;,
+                  &#34;REQUIREMENTS\n\n\n\nFive&#34; : &#34;REQUIREMENTS\n0.Five years&#34;}
         
         &#34;&#34;&#34; file complete text and non empty lines &#34;&#34;&#34;
-        self.text   = self.text.replace(&#34;CAMPUS INTERVIEWS ONLY&#34;,&#34;&#34;)
-        self.lines  = [l for l in self.text.split(&#34;\n&#34;) if l.strip()]
+        for k,v in spells.items():
+            self.text = self.text.replace(k, v)
+        self.lines = [l for l in self.text.split(&#34;\n&#34;) if l.strip()]
         
         
         
@@ -1326,7 +1546,6 @@ outputs : single json object for one file, structured csv file for a folder</p>
                 &#34;&#34;&#34; four main conditions to identify not not important portion &#34;&#34;&#34;
                 is_relevant = False
                 for keyword in lookup:                    
-
                     &#34;&#34;&#34; cond1 : keyword is not present in relevant portion &#34;&#34;&#34;
                     if keyword not in portion:
                         continue
@@ -1338,7 +1557,7 @@ outputs : single json object for one file, structured csv file for a folder</p>
                         continue
                     
                     &#34;&#34;&#34; cond3 : presence of ignore words in the text portion &#34;&#34;&#34;
-                    ignore_words = [&#34;=&#34;, &#34;equal&#34;, &#34;equivalent&#34;, &#39;lack&#39;, &#39;valent&#39;]
+                    ignore_words = [&#34;=&#34;, &#34;equal&#34;, &#34;equivalent&#34;, &#39;lack&#39;, &#39;valent&#39;, &#39;ent to &#39;]
                     if any(eq in portion for eq in ignore_words):
                         continue
                     
@@ -1480,6 +1699,8 @@ outputs : single json object for one file, structured csv file for a folder</p>
         salary = &#34;$&#34; + &#34;$&#34;.join(salary.split(&#34;$&#34;)[1:])
         salary = salary.split(&#34;(&#34;)[0].split(&#34;, $&#34;)[0]
         salary = salary.split(&#34;The&#34;)[0].split(&#34;. Some&#34;)[0]
+        if salary.strip() == &#34;$&#34;:
+            salary = &#34;&#34;
         
         &#34;&#34;&#34; find the DWP salary &#34;&#34;&#34;
         dwp = &#34;&#34;
@@ -1517,19 +1738,17 @@ outputs : single json object for one file, structured csv file for a folder</p>
                     poss = lx
                     possed.append(poss)
                     for spliter in self.split3:
-                        lx = lx.split(spliter)[0]
+                        if spliter in [&#34; or &#34;, &#34; and &#34;]:
+                            &#34;&#34;&#34; special check for small lines &#34;&#34;&#34;
+                            if spliter in lx and len(lx) &lt; 60:
+                                pass
+                            else:
+                                lx = lx.split(spliter)[0]
+                        else:
+                            lx = lx.split(spliter)[0]
                     exp_title.append(lx)
                     break
-        
         exp_title = &#34;; &#34;.join(exp_title)
-        
-        &#34;&#34;&#34; next find the function / role &#34;&#34;&#34;
-        for l in possed:
-            for split in self.lookups[&#39;exp_flags&#39;]:
-                if l in split:
-                    l = l.split(split)[1]
-                if &#34;or in a class&#34; in l:
-                    l = l.split(&#34;or in a class&#34;)[0]       
         return exp_title
     
     &#34;&#34;&#34; Custom function to obtain class title from the job-description text &#34;&#34;&#34;
@@ -1613,7 +1832,15 @@ outputs : single json object for one file, structured csv file for a folder</p>
         for i,split in enumerate(splitters):
             if i &lt; 5:
                 split = split + &#34; year&#34;
-            courses = courses.split(split)[0]        
+            courses = courses.split(split)[0]    
+        if &#34;coursework&#34; in courses:
+            courses = courses.split(&#34;coursework&#34;)[0]
+        if courses.strip() == &#34;it&#34;:
+            courses = &#34;IT&#34;
+        courses = courses.replace(&#34;the fields listed&#34;, &#34;&#34;)
+        courses = courses.replace(&#34;an accredited college or university.&#34;,&#34;&#34;)
+        courses = courses.split(&#34;or 12 &#34;)[0].replace(&#34;the required coursework.&#34;,&#34;&#34;)
+        courses = courses.replace(&#34;any of the following areas: &#34;,&#34;&#34;)
         return courses
 
     &#34;&#34;&#34; function to check the driver license tag &#34;&#34;&#34;
@@ -1643,6 +1870,43 @@ outputs : single json object for one file, structured csv file for a folder</p>
             return tags[0]
         return &#34;&#34;
 
+    &#34;&#34;&#34;  function to fix breaks in requirments in which a line is broken &#34;&#34;&#34;
+    def fix_requirement_line_breaks(self, content):
+        &#34;&#34;&#34;
+        Sometimes the requirement text&#39;s flat lines are broken due to inaccuracy of 
+        pdf-parsing. This function is used to fix such cases before parsing the text
+        &#34;&#34;&#34;
+
+        remove = []
+        points = [&#34;a.&#34;,&#34;b.&#34;,&#34;c.&#34;,&#34;d.&#34;,&#34;e.&#34;, &#34;1.&#34;, &#34;2.&#34;, &#34;3.&#34;, &#34;4.&#34;, &#34;5.&#34;]
+        lines = content.split(&#34;\n&#34;)
+        &#34;&#34;&#34; first iterate and identify the lines having no pointer &#34;&#34;&#34;
+        for i,x in enumerate(lines):
+            x = x.strip()
+            if not any(x[:2] == p for p in points):
+                remove.append(i - 1)
+
+        &#34;&#34;&#34; identfiy the index of rows and join between consecutive lines &#34;&#34;&#34;
+        rremove = [i+1 for i in remove]
+        new_lines = []
+        covered = []
+        for j,x in enumerate(lines):
+            x = x.strip()
+            if j in covered:
+                continue
+            &#34;&#34;&#34; consecutive rows join operation &#34;&#34;&#34;
+            if j in remove:
+                if any(x[:2] == p for p in points):
+                    extra = lines[j+1].strip()
+                    if extra not in x:
+                        u_line = x + &#34; &#34; + extra
+                        new_lines.append (u_line)
+                        covered.append(j+1)
+            else:
+                new_lines.append(x)
+        return &#34;\n&#34;.join(new_lines)
+
+    
     &#34;&#34;&#34; function to properly parse requirement set and subsets &#34;&#34;&#34;
     def requirement_IDs(self, req_text):
         &#34;&#34;&#34;
@@ -1653,22 +1917,44 @@ outputs : single json object for one file, structured csv file for a folder</p>
         to generate required format; Also it identifies special cases with no pointers
         &#34;&#34;&#34;
         
-        &#34;&#34;&#34; obtain the requirement text lines &#34;&#34;&#34;
+        &#34;&#34;&#34; special case 1: breakage in requirement lines pointers &#34;&#34;&#34;
+        obtained = []
+        exclude = [&#39;POST-Certified Candidates&#39;, &#39;Under the policy&#39;]
+        for i, l1 in enumerate(req_text.split(&#34;\n&#34;)):
+            l1 = l1.strip()
+            if not l1:
+                continue
+            if any(l1.startswith(_) for _ in exclude):
+                break
+            if l1[0].lower() in &#34;12345678abcdefghi&#34;:
+                obtained.append(i)
+        diff = [x - obtained[i - 1] for i, x in enumerate(obtained)][1:]
+        if 1 in diff:
+            diff.remove(1)
+        if any(x in diff for x in [2, 3, 4, 5, 6, 7, 8]):
+            for i in range(8):
+                content = self.fix_requirement_line_breaks(req_text)
+            lines = content.split(&#34;\n&#34;)
+        
+        &#34;&#34;&#34; step2: obtain the requirement text lines &#34;&#34;&#34;
         lines_ = [l.strip().rstrip(&#34;,&#34;) for l in req_text.split(&#34;\n&#34;)]
-        &#34;&#34;&#34; custom break condition &#34;&#34;&#34;
+        
+        &#34;&#34;&#34; step3: custom break condition &#34;&#34;&#34;
         lines = []
         for l in lines_:
             if &#34;substitute&#34; in l:
                 if l[0] not in [&#34;1&#34;,&#34;2&#34;,&#34;3&#34;,&#34;4&#34;,&#34;5&#34;]:
                     break
+            elif l.startswith(exclude[0]):
+                break
             lines.append(l)
-        
-        &#34;&#34;&#34; fix some of the lines &#34;&#34;&#34;
-        flats = [l for l in lines if not any(l[0] == w for w in self.nums)]
+                    
+        &#34;&#34;&#34; sepcial case 2: no bullets  &#34;&#34;&#34;
+        flats = [l for l in lines if not any(l[0]==w and l[1]!=&#34;,&#34; for w in self.nums)]
         if len(lines) != 1 and len(lines) == len(flats):
             lines = [&#34; &#34;.join(lines)]
-        
-        &#34;&#34;&#34; special case : single line requirement &#34;&#34;&#34;
+
+        &#34;&#34;&#34; special case 3: single line requirement &#34;&#34;&#34;
         ignore = False
         if len(lines) == 1:
             &#34;&#34;&#34; check the presense of numbers or alphabets &#34;&#34;&#34;
@@ -1686,7 +1972,8 @@ outputs : single json object for one file, structured csv file for a folder</p>
             &#34;&#34;&#34; retun single line requirement, if of number / alphabet &#34;&#34;&#34;
             if ignore == False:
                 return [&#34;1.&#34;], [&#34;&#34;], [req_text], [&#34;&#34;]
-
+            
+        
         &#34;&#34;&#34; for all other cases, iterate and extarct pointer &#34;&#34;&#34;
         set_id, subset_id, set_text, subset_text  = [], [], [], []
         for i, l in enumerate(lines):
@@ -1716,6 +2003,8 @@ outputs : single json object for one file, structured csv file for a folder</p>
                     pointer = &#34;&#34;.join(c for c in pointer if c not in &#34;.()&#34;)
                     if pointer in self.chrs:
                         ssid, sstext = pointer, l[2:]
+
+                &#34;&#34;&#34; append ids and text for set and subset &#34;&#34;&#34;
                 set_id.append(sid)
                 subset_id.append(ssid)
                 set_text.append(stext)
@@ -1828,15 +2117,16 @@ outputs : single json object for one file, structured csv file for a folder</p>
         dl_type = &#34; OR &#34;.join(dl_type)
         return dl_type, ltypes
 
-    &#34;&#34;&#34; function to obtain the text related to job class function &#34;&#34;&#34;
-    def job_class_function(self, txt):
+    &#34;&#34;&#34; function to obtain the text related to alternate job class function &#34;&#34;&#34;
+    def job_class_alt_function(self, txt):
         &#34;&#34;&#34;
-        function to obtain the text related to job class function. 
+        function to obtain the text related to alternate job class function. 
         &#34;&#34;&#34;
 
         _ = [&#34; or in a class&#34;, &#34; or at the level&#34;, &#34; or in a position&#34;, &#34; or as a member&#34;]
         lines = txt.split(&#34;\n&#34;)
         for line in lines:
+            line = line.strip()
             if &#34; or &#34; not in line:
                 continue
             index = None
@@ -1848,6 +2138,107 @@ outputs : single json object for one file, structured csv file for a folder</p>
                 return line.split(index)[1]
         return &#34;&#34;
     
+    &#34;&#34;&#34; function to extract the function of the job role &#34;&#34;&#34;
+    def get_function(self, l):
+        &#34;&#34;&#34;
+        function to obtain the text related to job class function. 
+        &#34;&#34;&#34;
+        
+        functions = []
+
+        &#34;&#34;&#34; perform basic cleanup and proper splitting &#34;&#34;&#34;
+        l = l.split(&#34; or in a class &#34;)[0].replace(&#34;with the City of Los Angeles&#34;,&#34;&#34;)
+        l = l.replace(&#34;; or&#34;,&#34;&#34;).strip().replace(&#34; .&#34;,&#34;&#34;)
+        
+        &#34;&#34;&#34; handle cases which contain experience keywords &#34;&#34;&#34;
+        if &#34;experience&#34; in l:
+            
+            &#34;&#34;&#34; handle cases which do not contain identfier of a job role &#34;&#34;&#34;
+            if not any(w in l for w in [&#34; as a &#34;, &#34; at the level of &#34;, &#34; as an &#34;]):
+                pr = l.split(&#34;experience&#34;)[1].split(&#34; or in &#34;)[0]
+                pr = pr.strip().lstrip(&#34;.&#34;).lstrip(&#34;,&#34;).strip().lstrip(&#34;;&#34;)
+                pr = pr.strip().lstrip(&#34;,&#34;).strip()
+                if pr:
+                    fw = pr.split()[0]
+                    if fw in [&#39;in&#39;,&#39;at&#39;, &#39;with&#39;, &#39;within&#39;]:
+                        functions.append(&#34;experience &#34; + pr.strip())
+                    elif &#34;ing&#34; in fw:
+                        functions.append(pr)
+                    else:
+                        pr = pr.strip()
+                        if &#34;responsib&#34; in pr:
+                            functions.append(pr.replace(&#34;which include the &#34;,&#34;&#34;))
+            else:
+                &#34;&#34;&#34; handle cases which contain experience and the identifier cases &#34;&#34;&#34;
+                if &#34; as a &#34; in l:
+                    l = l.split(&#34; as a &#34;)[1]
+                    if len(l.split()) &lt;= 8:
+                        pass
+                    elif &#34;experience&#34; in l:
+                        pr = l.split(&#34;experience&#34;)[1].strip()
+                        pr = pr.lstrip(&#34;in the&#34;).strip()
+                        pr = pr.lstrip(&#34;in &#34;).strip()
+                        functions.append(&#34;experience in &#34; + pr)
+                    elif &#34;ing &#34; in l:
+                        got = &#34;&#34;
+                        for w in l.split():
+                            if w.endswith(&#34;ing&#34;)and w[0].islower():
+                                got = w
+                                break
+                        if got != &#34;&#34;:
+                            got = got + &#34;&#34; + l.split(got)[1]
+                            functions.append(got)
+                elif &#34; as an &#34; in l:
+                    l = l.split(&#34; as an &#34;)[1]
+                    if len(l.split()) &lt;= 8:
+                        pass 
+                    elif &#34;experience&#34; in l:
+                        pr = l.split(&#34;experience&#34;)[1].strip()
+                        pr = pr.lstrip(&#34;in the&#34;).strip()
+                        pr = pr.lstrip(&#34;in &#34;).strip()
+                        functions.append(&#34;experience in &#34; + pr)
+                    elif &#34;ing &#34; in l:
+                        got = &#34;&#34;
+                        for w in l.split():
+                            if w.endswith(&#34;ing&#34;) and w[0].islower():
+                                got = w
+                                break
+                        if got != &#34;&#34;:
+                            got = got + &#34;&#34; + l.split(got)[1]
+                            functions.append(got)
+                elif &#34; at the level of &#34; in l:
+                    l = l.split(&#34; at the level of &#34;)[1]
+                    if len(l.split()) &lt;= 8:
+                        pass # ignore
+                    elif &#34;experience&#34; in l:
+                        pr = l.split(&#34;experience&#34;)[1].strip()
+                        pr = pr.lstrip(&#34;in the&#34;).strip()
+                        pr = pr.lstrip(&#34;in &#34;).strip()
+                        functions.append(&#34;experience in &#34; + pr)
+                    elif &#34;ing &#34; in l:
+                        got = &#34;&#34;
+                        for w in l.split():
+                            if w.endswith(&#34;ing&#34;) and w[0].islower():
+                                got = w
+                                break
+                        if got != &#34;&#34;:
+                            got = got + &#34;&#34; + l.split(got)[1]
+                            functions.append(got)
+        else:
+            &#34;&#34;&#34; alternate to experience, also handle cases for employment &#34;&#34;&#34;
+            if &#34;employment as a&#34; in l:
+                if &#34;position&#34; in l:
+                    functions.append(l.split(&#34;position&#34;)[1])
+        
+        &#34;&#34;&#34; find final entity &#34;&#34;&#34;
+        func = &#34;&#34;
+        if len(functions) &gt; 0:
+            func = functions[0].strip().rstrip(&#34; and&#34;).rstrip(&#34; or&#34;).rstrip(&#34;:&#34;).rstrip(&#34;;&#34;)        
+            words = func.split()
+            if &#34;following&#34; in words[-3:]:
+                func = &#34;&#34;
+        return func
+        
     &#34;&#34;&#34; function to dig deeper into requirement text and obtain if any major is missed &#34;&#34;&#34;
     def deep_major(self, txt):
         &#34;&#34;&#34; function to dig deeper into requirement text and obtain if any 
@@ -1897,6 +2288,7 @@ outputs : single json object for one file, structured csv file for a folder</p>
                 continue
             if any(w in l.lower() for w in course_lists):
                 misc_details += l+&#34;\n&#34;
+        misc_details = misc_details.strip().rstrip(&#34;or&#34;).rstrip(&#34;and&#34;)
         return misc_details
 
     &#34;&#34;&#34; master function to call all the other functions and generate the output &#34;&#34;&#34;
@@ -1925,6 +2317,21 @@ outputs : single json object for one file, structured csv file for a folder</p>
             doc[&#34;REQUIREMENT_SUBSET_ID&#34;] = requirement_list[1][j]
             doc[&#34;REQUIREMENT_SUBSET_TEXT&#34;] = requirement_list[3][j]
             
+            &#34;&#34;&#34; requirement conjuction &#34;&#34;&#34;
+            t1 = requirement_list[2][j].strip()
+            t2 = requirement_list[3][j].strip()
+            
+            conjunction = []
+            if t1.endswith(&#34;or&#34;):
+                conjunction.append(&#34;or&#34;)
+            elif t1.endswith(&#34;and&#34;):
+                conjunction.append(&#34;and&#34;)
+            elif t2.endswith(&#34;and&#34;):
+                conjunction.append(&#34;and&#34;)
+            elif t2.endswith(&#34;or&#34;):
+                conjunction.append(&#34;or&#34;)
+            doc[&#39;REQUIREMENT_CONJUNCTION&#39;] = &#34;;&#34;.join(conjunction).rstrip(&#34;;&#34;)
+            
             &#34;&#34;&#34; add classcode, duties, open date using generic functions &#34;&#34;&#34;
             doc[&#39;JOB_CLASS_NO&#39;] = self.portion(&#34;class code:&#34;)
             doc[&#39;JOB_DUTIES&#39;] = self.portion(&#34;duties&#34;, indx=True)        
@@ -1939,7 +2346,7 @@ outputs : single json object for one file, structured csv file for a folder</p>
             doc[&#34;FULL_TIME_PART_TIME&#34;] = self.presence_check(&#34;full_part&#34;, txt=rtext)
                         
             &#34;&#34;&#34; custom functions that uses requirement text &#34;&#34;&#34;
-            doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = self.job_class_function(rtext)
+            doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = self.job_class_alt_function(rtext)
             doc[&#34;EXP_JOB_CLASS_TITLE&#34;] = self.experience_title(rtext)
             doc[&#34;COURSE_SUBJECT&#34;] = self.course_subjects(rtext) 
             doc[&#34;COURSE_COUNT&#34;] = self.course_count(rtext)
@@ -1947,7 +2354,7 @@ outputs : single json object for one file, structured csv file for a folder</p>
             doc[&#34;ENTRY_SALARY_DWP&#34;] = self.salary_details()[1]
             doc[&#34;DRIVERS_LICENSE_REQ&#34;] = self.driver_license()
             doc[&#34;MISC_COURSE_DETAILS&#34;] = self.misc_details(rtext)
-            doc[&#34;EXP_JOB_CLASS_FUNCTION&#34;] = &#34;&#34;
+            doc[&#34;EXP_JOB_CLASS_FUNCTION&#34;] = self.get_function(rtext)
             
             &#34;&#34;&#34; custom general functions &#34;&#34;&#34;
             doc[&#34;DRIV_LIC_TYPE&#34;] = self.license_type()[0]
@@ -1980,7 +2387,7 @@ outputs : single json object for one file, structured csv file for a folder</p>
 
             &#34;&#34;&#34; perform further cleaning and standardizing on some fields &#34;&#34;&#34;
             exp_title, alt_exp = doc[&#34;EXP_JOB_CLASS_TITLE&#34;], doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;]
-            doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = form.cleanup(alt_exp, tag=&#39;exp&#39;)
+            doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = form.cleanup(alt_exp, tag=&#39;alt_exp&#39;)
             doc[&#34;EXP_JOB_CLASS_TITLE&#34;] = form.cleanup(exp_title, tag=&#39;exp&#39;)
             doc[&#34;EDUCATION_MAJOR&#34;] = form.cleanup(doc[&#34;EDUCATION_MAJOR&#34;], tag=&#39;major&#39;)  
             doc[&#34;ADDTL_LIC&#34;] = form.cleanup(doc[&#34;ADDTL_LIC&#34;], tag=&#39;add_lic&#39;)
@@ -1996,17 +2403,9 @@ outputs : single json object for one file, structured csv file for a folder</p>
 <dd>
 <section class="desc"><p>common splitters used in text parsing and cleaning in different functions</p></section>
 </dd>
-<dt id="BulletinStructuringEngine.BulletinParser.spellings"><code class="name">var <span class="ident">spellings</span></code></dt>
-<dd>
-<section class="desc"><p>file complete text and non empty lines</p></section>
-</dd>
 <dt id="BulletinStructuringEngine.BulletinParser.sybl"><code class="name">var <span class="ident">sybl</span></code></dt>
 <dd>
 <section class="desc"><p>lookup dictionary for numbers text and values</p></section>
-</dd>
-<dt id="BulletinStructuringEngine.BulletinParser.text"><code class="name">var <span class="ident">text</span></code></dt>
-<dd>
-<section class="desc"><p>a global list of all pointers used in bulletins</p></section>
 </dd>
 </dl>
 <h3>Methods</h3>
@@ -2172,7 +2571,15 @@ output: number of courses required as the minimum requirement of the job</p></se
     for i,split in enumerate(splitters):
         if i &lt; 5:
             split = split + &#34; year&#34;
-        courses = courses.split(split)[0]        
+        courses = courses.split(split)[0]    
+    if &#34;coursework&#34; in courses:
+        courses = courses.split(&#34;coursework&#34;)[0]
+    if courses.strip() == &#34;it&#34;:
+        courses = &#34;IT&#34;
+    courses = courses.replace(&#34;the fields listed&#34;, &#34;&#34;)
+    courses = courses.replace(&#34;an accredited college or university.&#34;,&#34;&#34;)
+    courses = courses.split(&#34;or 12 &#34;)[0].replace(&#34;the required coursework.&#34;,&#34;&#34;)
+    courses = courses.replace(&#34;any of the following areas: &#34;,&#34;&#34;)
     return courses</code></pre>
 </details>
 </dd>
@@ -2313,37 +2720,188 @@ input is only the requirement text of a job bulletin</p></section>
                 poss = lx
                 possed.append(poss)
                 for spliter in self.split3:
-                    lx = lx.split(spliter)[0]
+                    if spliter in [&#34; or &#34;, &#34; and &#34;]:
+                        &#34;&#34;&#34; special check for small lines &#34;&#34;&#34;
+                        if spliter in lx and len(lx) &lt; 60:
+                            pass
+                        else:
+                            lx = lx.split(spliter)[0]
+                    else:
+                        lx = lx.split(spliter)[0]
                 exp_title.append(lx)
                 break
-    
     exp_title = &#34;; &#34;.join(exp_title)
-    
-    &#34;&#34;&#34; next find the function / role &#34;&#34;&#34;
-    for l in possed:
-        for split in self.lookups[&#39;exp_flags&#39;]:
-            if l in split:
-                l = l.split(split)[1]
-            if &#34;or in a class&#34; in l:
-                l = l.split(&#34;or in a class&#34;)[0]       
     return exp_title</code></pre>
 </details>
 </dd>
-<dt id="BulletinStructuringEngine.BulletinParser.job_class_function"><code class="name flex">
-<span>def <span class="ident">job_class_function</span></span>(<span>self, txt)</span>
+<dt id="BulletinStructuringEngine.BulletinParser.fix_requirement_line_breaks"><code class="name flex">
+<span>def <span class="ident">fix_requirement_line_breaks</span></span>(<span>self, content)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Sometimes the requirement text's flat lines are broken due to inaccuracy of
+pdf-parsing. This function is used to fix such cases before parsing the text</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def fix_requirement_line_breaks(self, content):
+    &#34;&#34;&#34;
+    Sometimes the requirement text&#39;s flat lines are broken due to inaccuracy of 
+    pdf-parsing. This function is used to fix such cases before parsing the text
+    &#34;&#34;&#34;
+
+    remove = []
+    points = [&#34;a.&#34;,&#34;b.&#34;,&#34;c.&#34;,&#34;d.&#34;,&#34;e.&#34;, &#34;1.&#34;, &#34;2.&#34;, &#34;3.&#34;, &#34;4.&#34;, &#34;5.&#34;]
+    lines = content.split(&#34;\n&#34;)
+    &#34;&#34;&#34; first iterate and identify the lines having no pointer &#34;&#34;&#34;
+    for i,x in enumerate(lines):
+        x = x.strip()
+        if not any(x[:2] == p for p in points):
+            remove.append(i - 1)
+
+    &#34;&#34;&#34; identfiy the index of rows and join between consecutive lines &#34;&#34;&#34;
+    rremove = [i+1 for i in remove]
+    new_lines = []
+    covered = []
+    for j,x in enumerate(lines):
+        x = x.strip()
+        if j in covered:
+            continue
+        &#34;&#34;&#34; consecutive rows join operation &#34;&#34;&#34;
+        if j in remove:
+            if any(x[:2] == p for p in points):
+                extra = lines[j+1].strip()
+                if extra not in x:
+                    u_line = x + &#34; &#34; + extra
+                    new_lines.append (u_line)
+                    covered.append(j+1)
+        else:
+            new_lines.append(x)
+    return &#34;\n&#34;.join(new_lines)</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.get_function"><code class="name flex">
+<span>def <span class="ident">get_function</span></span>(<span>self, l)</span>
 </code></dt>
 <dd>
 <section class="desc"><p>function to obtain the text related to job class function.</p></section>
 <details class="source">
 <summary>Source code</summary>
-<pre><code class="python">def job_class_function(self, txt):
+<pre><code class="python">def get_function(self, l):
     &#34;&#34;&#34;
     function to obtain the text related to job class function. 
+    &#34;&#34;&#34;
+    
+    functions = []
+
+    &#34;&#34;&#34; perform basic cleanup and proper splitting &#34;&#34;&#34;
+    l = l.split(&#34; or in a class &#34;)[0].replace(&#34;with the City of Los Angeles&#34;,&#34;&#34;)
+    l = l.replace(&#34;; or&#34;,&#34;&#34;).strip().replace(&#34; .&#34;,&#34;&#34;)
+    
+    &#34;&#34;&#34; handle cases which contain experience keywords &#34;&#34;&#34;
+    if &#34;experience&#34; in l:
+        
+        &#34;&#34;&#34; handle cases which do not contain identfier of a job role &#34;&#34;&#34;
+        if not any(w in l for w in [&#34; as a &#34;, &#34; at the level of &#34;, &#34; as an &#34;]):
+            pr = l.split(&#34;experience&#34;)[1].split(&#34; or in &#34;)[0]
+            pr = pr.strip().lstrip(&#34;.&#34;).lstrip(&#34;,&#34;).strip().lstrip(&#34;;&#34;)
+            pr = pr.strip().lstrip(&#34;,&#34;).strip()
+            if pr:
+                fw = pr.split()[0]
+                if fw in [&#39;in&#39;,&#39;at&#39;, &#39;with&#39;, &#39;within&#39;]:
+                    functions.append(&#34;experience &#34; + pr.strip())
+                elif &#34;ing&#34; in fw:
+                    functions.append(pr)
+                else:
+                    pr = pr.strip()
+                    if &#34;responsib&#34; in pr:
+                        functions.append(pr.replace(&#34;which include the &#34;,&#34;&#34;))
+        else:
+            &#34;&#34;&#34; handle cases which contain experience and the identifier cases &#34;&#34;&#34;
+            if &#34; as a &#34; in l:
+                l = l.split(&#34; as a &#34;)[1]
+                if len(l.split()) &lt;= 8:
+                    pass
+                elif &#34;experience&#34; in l:
+                    pr = l.split(&#34;experience&#34;)[1].strip()
+                    pr = pr.lstrip(&#34;in the&#34;).strip()
+                    pr = pr.lstrip(&#34;in &#34;).strip()
+                    functions.append(&#34;experience in &#34; + pr)
+                elif &#34;ing &#34; in l:
+                    got = &#34;&#34;
+                    for w in l.split():
+                        if w.endswith(&#34;ing&#34;)and w[0].islower():
+                            got = w
+                            break
+                    if got != &#34;&#34;:
+                        got = got + &#34;&#34; + l.split(got)[1]
+                        functions.append(got)
+            elif &#34; as an &#34; in l:
+                l = l.split(&#34; as an &#34;)[1]
+                if len(l.split()) &lt;= 8:
+                    pass 
+                elif &#34;experience&#34; in l:
+                    pr = l.split(&#34;experience&#34;)[1].strip()
+                    pr = pr.lstrip(&#34;in the&#34;).strip()
+                    pr = pr.lstrip(&#34;in &#34;).strip()
+                    functions.append(&#34;experience in &#34; + pr)
+                elif &#34;ing &#34; in l:
+                    got = &#34;&#34;
+                    for w in l.split():
+                        if w.endswith(&#34;ing&#34;) and w[0].islower():
+                            got = w
+                            break
+                    if got != &#34;&#34;:
+                        got = got + &#34;&#34; + l.split(got)[1]
+                        functions.append(got)
+            elif &#34; at the level of &#34; in l:
+                l = l.split(&#34; at the level of &#34;)[1]
+                if len(l.split()) &lt;= 8:
+                    pass # ignore
+                elif &#34;experience&#34; in l:
+                    pr = l.split(&#34;experience&#34;)[1].strip()
+                    pr = pr.lstrip(&#34;in the&#34;).strip()
+                    pr = pr.lstrip(&#34;in &#34;).strip()
+                    functions.append(&#34;experience in &#34; + pr)
+                elif &#34;ing &#34; in l:
+                    got = &#34;&#34;
+                    for w in l.split():
+                        if w.endswith(&#34;ing&#34;) and w[0].islower():
+                            got = w
+                            break
+                    if got != &#34;&#34;:
+                        got = got + &#34;&#34; + l.split(got)[1]
+                        functions.append(got)
+    else:
+        &#34;&#34;&#34; alternate to experience, also handle cases for employment &#34;&#34;&#34;
+        if &#34;employment as a&#34; in l:
+            if &#34;position&#34; in l:
+                functions.append(l.split(&#34;position&#34;)[1])
+    
+    &#34;&#34;&#34; find final entity &#34;&#34;&#34;
+    func = &#34;&#34;
+    if len(functions) &gt; 0:
+        func = functions[0].strip().rstrip(&#34; and&#34;).rstrip(&#34; or&#34;).rstrip(&#34;:&#34;).rstrip(&#34;;&#34;)        
+        words = func.split()
+        if &#34;following&#34; in words[-3:]:
+            func = &#34;&#34;
+    return func</code></pre>
+</details>
+</dd>
+<dt id="BulletinStructuringEngine.BulletinParser.job_class_alt_function"><code class="name flex">
+<span>def <span class="ident">job_class_alt_function</span></span>(<span>self, txt)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>function to obtain the text related to alternate job class function.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def job_class_alt_function(self, txt):
+    &#34;&#34;&#34;
+    function to obtain the text related to alternate job class function. 
     &#34;&#34;&#34;
 
     _ = [&#34; or in a class&#34;, &#34; or at the level&#34;, &#34; or in a position&#34;, &#34; or as a member&#34;]
     lines = txt.split(&#34;\n&#34;)
     for line in lines:
+        line = line.strip()
         if &#34; or &#34; not in line:
             continue
         index = None
@@ -2471,6 +3029,7 @@ txt: requirement text where misc details about course are captured</p></section>
             continue
         if any(w in l.lower() for w in course_lists):
             misc_details += l+&#34;\n&#34;
+    misc_details = misc_details.strip().rstrip(&#34;or&#34;).rstrip(&#34;and&#34;)
     return misc_details</code></pre>
 </details>
 </dd>
@@ -2620,22 +3179,44 @@ to generate required format; Also it identifies special cases with no pointers</
     to generate required format; Also it identifies special cases with no pointers
     &#34;&#34;&#34;
     
-    &#34;&#34;&#34; obtain the requirement text lines &#34;&#34;&#34;
+    &#34;&#34;&#34; special case 1: breakage in requirement lines pointers &#34;&#34;&#34;
+    obtained = []
+    exclude = [&#39;POST-Certified Candidates&#39;, &#39;Under the policy&#39;]
+    for i, l1 in enumerate(req_text.split(&#34;\n&#34;)):
+        l1 = l1.strip()
+        if not l1:
+            continue
+        if any(l1.startswith(_) for _ in exclude):
+            break
+        if l1[0].lower() in &#34;12345678abcdefghi&#34;:
+            obtained.append(i)
+    diff = [x - obtained[i - 1] for i, x in enumerate(obtained)][1:]
+    if 1 in diff:
+        diff.remove(1)
+    if any(x in diff for x in [2, 3, 4, 5, 6, 7, 8]):
+        for i in range(8):
+            content = self.fix_requirement_line_breaks(req_text)
+        lines = content.split(&#34;\n&#34;)
+    
+    &#34;&#34;&#34; step2: obtain the requirement text lines &#34;&#34;&#34;
     lines_ = [l.strip().rstrip(&#34;,&#34;) for l in req_text.split(&#34;\n&#34;)]
-    &#34;&#34;&#34; custom break condition &#34;&#34;&#34;
+    
+    &#34;&#34;&#34; step3: custom break condition &#34;&#34;&#34;
     lines = []
     for l in lines_:
         if &#34;substitute&#34; in l:
             if l[0] not in [&#34;1&#34;,&#34;2&#34;,&#34;3&#34;,&#34;4&#34;,&#34;5&#34;]:
                 break
+        elif l.startswith(exclude[0]):
+            break
         lines.append(l)
-    
-    &#34;&#34;&#34; fix some of the lines &#34;&#34;&#34;
-    flats = [l for l in lines if not any(l[0] == w for w in self.nums)]
+                
+    &#34;&#34;&#34; sepcial case 2: no bullets  &#34;&#34;&#34;
+    flats = [l for l in lines if not any(l[0]==w and l[1]!=&#34;,&#34; for w in self.nums)]
     if len(lines) != 1 and len(lines) == len(flats):
         lines = [&#34; &#34;.join(lines)]
-    
-    &#34;&#34;&#34; special case : single line requirement &#34;&#34;&#34;
+
+    &#34;&#34;&#34; special case 3: single line requirement &#34;&#34;&#34;
     ignore = False
     if len(lines) == 1:
         &#34;&#34;&#34; check the presense of numbers or alphabets &#34;&#34;&#34;
@@ -2653,7 +3234,8 @@ to generate required format; Also it identifies special cases with no pointers</
         &#34;&#34;&#34; retun single line requirement, if of number / alphabet &#34;&#34;&#34;
         if ignore == False:
             return [&#34;1.&#34;], [&#34;&#34;], [req_text], [&#34;&#34;]
-
+        
+    
     &#34;&#34;&#34; for all other cases, iterate and extarct pointer &#34;&#34;&#34;
     set_id, subset_id, set_text, subset_text  = [], [], [], []
     for i, l in enumerate(lines):
@@ -2683,6 +3265,8 @@ to generate required format; Also it identifies special cases with no pointers</
                 pointer = &#34;&#34;.join(c for c in pointer if c not in &#34;.()&#34;)
                 if pointer in self.chrs:
                     ssid, sstext = pointer, l[2:]
+
+            &#34;&#34;&#34; append ids and text for set and subset &#34;&#34;&#34;
             set_id.append(sid)
             subset_id.append(ssid)
             set_text.append(stext)
@@ -2741,6 +3325,8 @@ for multiple salary amounts, only first salary is given as output</p></section>
     salary = &#34;$&#34; + &#34;$&#34;.join(salary.split(&#34;$&#34;)[1:])
     salary = salary.split(&#34;(&#34;)[0].split(&#34;, $&#34;)[0]
     salary = salary.split(&#34;The&#34;)[0].split(&#34;. Some&#34;)[0]
+    if salary.strip() == &#34;$&#34;:
+        salary = &#34;&#34;
     
     &#34;&#34;&#34; find the DWP salary &#34;&#34;&#34;
     dwp = &#34;&#34;
@@ -2793,6 +3379,21 @@ other functions in order to obtain structured information</p></section>
         doc[&#34;REQUIREMENT_SUBSET_ID&#34;] = requirement_list[1][j]
         doc[&#34;REQUIREMENT_SUBSET_TEXT&#34;] = requirement_list[3][j]
         
+        &#34;&#34;&#34; requirement conjuction &#34;&#34;&#34;
+        t1 = requirement_list[2][j].strip()
+        t2 = requirement_list[3][j].strip()
+        
+        conjunction = []
+        if t1.endswith(&#34;or&#34;):
+            conjunction.append(&#34;or&#34;)
+        elif t1.endswith(&#34;and&#34;):
+            conjunction.append(&#34;and&#34;)
+        elif t2.endswith(&#34;and&#34;):
+            conjunction.append(&#34;and&#34;)
+        elif t2.endswith(&#34;or&#34;):
+            conjunction.append(&#34;or&#34;)
+        doc[&#39;REQUIREMENT_CONJUNCTION&#39;] = &#34;;&#34;.join(conjunction).rstrip(&#34;;&#34;)
+        
         &#34;&#34;&#34; add classcode, duties, open date using generic functions &#34;&#34;&#34;
         doc[&#39;JOB_CLASS_NO&#39;] = self.portion(&#34;class code:&#34;)
         doc[&#39;JOB_DUTIES&#39;] = self.portion(&#34;duties&#34;, indx=True)        
@@ -2807,7 +3408,7 @@ other functions in order to obtain structured information</p></section>
         doc[&#34;FULL_TIME_PART_TIME&#34;] = self.presence_check(&#34;full_part&#34;, txt=rtext)
                     
         &#34;&#34;&#34; custom functions that uses requirement text &#34;&#34;&#34;
-        doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = self.job_class_function(rtext)
+        doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = self.job_class_alt_function(rtext)
         doc[&#34;EXP_JOB_CLASS_TITLE&#34;] = self.experience_title(rtext)
         doc[&#34;COURSE_SUBJECT&#34;] = self.course_subjects(rtext) 
         doc[&#34;COURSE_COUNT&#34;] = self.course_count(rtext)
@@ -2815,7 +3416,7 @@ other functions in order to obtain structured information</p></section>
         doc[&#34;ENTRY_SALARY_DWP&#34;] = self.salary_details()[1]
         doc[&#34;DRIVERS_LICENSE_REQ&#34;] = self.driver_license()
         doc[&#34;MISC_COURSE_DETAILS&#34;] = self.misc_details(rtext)
-        doc[&#34;EXP_JOB_CLASS_FUNCTION&#34;] = &#34;&#34;
+        doc[&#34;EXP_JOB_CLASS_FUNCTION&#34;] = self.get_function(rtext)
         
         &#34;&#34;&#34; custom general functions &#34;&#34;&#34;
         doc[&#34;DRIV_LIC_TYPE&#34;] = self.license_type()[0]
@@ -2848,7 +3449,7 @@ other functions in order to obtain structured information</p></section>
 
         &#34;&#34;&#34; perform further cleaning and standardizing on some fields &#34;&#34;&#34;
         exp_title, alt_exp = doc[&#34;EXP_JOB_CLASS_TITLE&#34;], doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;]
-        doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = form.cleanup(alt_exp, tag=&#39;exp&#39;)
+        doc[&#34;EXP_JOB_CLASS_ALT_RESP&#34;] = form.cleanup(alt_exp, tag=&#39;alt_exp&#39;)
         doc[&#34;EXP_JOB_CLASS_TITLE&#34;] = form.cleanup(exp_title, tag=&#39;exp&#39;)
         doc[&#34;EDUCATION_MAJOR&#34;] = form.cleanup(doc[&#34;EDUCATION_MAJOR&#34;], tag=&#39;major&#39;)  
         doc[&#34;ADDTL_LIC&#34;] = form.cleanup(doc[&#34;ADDTL_LIC&#34;], tag=&#39;add_lic&#39;)
@@ -2926,7 +3527,6 @@ output: years/month associated in the text; months are converted into floats.</p
             &#34;&#34;&#34; four main conditions to identify not not important portion &#34;&#34;&#34;
             is_relevant = False
             for keyword in lookup:                    
-
                 &#34;&#34;&#34; cond1 : keyword is not present in relevant portion &#34;&#34;&#34;
                 if keyword not in portion:
                     continue
@@ -2938,7 +3538,7 @@ output: years/month associated in the text; months are converted into floats.</p
                     continue
                 
                 &#34;&#34;&#34; cond3 : presence of ignore words in the text portion &#34;&#34;&#34;
-                ignore_words = [&#34;=&#34;, &#34;equal&#34;, &#34;equivalent&#34;, &#39;lack&#39;, &#39;valent&#39;]
+                ignore_words = [&#34;=&#34;, &#34;equal&#34;, &#34;equivalent&#34;, &#39;lack&#39;, &#39;valent&#39;, &#39;ent to &#39;]
                 if any(eq in portion for eq in ignore_words):
                     continue
                 
@@ -3018,15 +3618,9 @@ still presence of noisy keywords.</p></section>
         &#39;EXP_JOB_CLASS_TITLE&#39;, &#39;EXP_JOB_CLASS_ALT_RESP&#39;, &#39;EXP_JOB_CLASS_FUNCTION&#39;, 
         &#39;COURSE_COUNT&#39;, &#39;COURSE_LENGTH&#39;, &#39;COURSE_SUBJECT&#39;, &#39;MISC_COURSE_DETAILS&#39;, 
         &#39;DRIVERS_LICENSE_REQ&#39;, &#39;DRIV_LIC_TYPE&#39;, &#39;ADDTL_LIC&#39;, &#39;EXAM_TYPE&#39;, &#39;ENTRY_SALARY_GEN&#39;, 
-        &#39;ENTRY_SALARY_DWP&#39;, &#39;OPEN_DATE&#39;, &#39;REQUIREMENT_SET_TEXT&#39;, &#39;REQUIREMENT_SUBSET_TEXT&#39;]
+        &#39;ENTRY_SALARY_DWP&#39;, &#39;OPEN_DATE&#39;, &#39;REQUIREMENT_SET_TEXT&#39;, &#39;REQUIREMENT_SUBSET_TEXT&#39;, 
+        &#39;REQUIREMENT_CONJUNCTION&#39;]
 
-        self.ignore = [&#39;POLICE COMMANDER 2251 092917.txt&#39;, 
-                       &#39;Vocational Worker  DEPARTMENT OF PUBLIC WORKS.txt&#39;, 
-                       &#39;SENIOR LOAD DISPATCHER 5235 060118.txt&#39;, 
-                       &#39;SENIOR PHOTOGRAPHER 1795 041516 REVISED 042816.txt&#39;]
-    
-
-    
     &#34;&#34;&#34; function to iterate in files and generate a structured csv file &#34;&#34;&#34;
     def extraction(self):
         &#34;&#34;&#34; 
@@ -3034,14 +3628,18 @@ still presence of noisy keywords.</p></section>
             and obtains the structured information, final output is a csv file
         &#34;&#34;&#34;
         
-        print (&#34;&gt;&gt; Starting Extraction for the Given Folder&#34;)
+        print (&#34;&gt; Starting Extraction for the Given Folder&#34;)
         rows = []
         files = sorted(os.listdir(path))
-        files = [f for f in files if f not in self.ignore]
         for filename in files:
-            config = {&#34;path&#34; : self.path, &#34;filename&#34; : filename}
-            bp = BulletinParser(config)
-            rows.extend(bp.standardize())
+            try:
+                config = {&#34;path&#34; : self.path, &#34;filename&#34; : filename}
+                bp = BulletinParser(config)
+                rows.extend(bp.standardize())
+            except Exception as E:
+                print (E)
+                continue
+
         df = pd.DataFrame(rows)[self.column]
         df.to_csv(&#34;structured_file.csv&#34;, index = False)
         print (&#34;&gt;&gt; Extraction Complete for Entire Folder&#34;)
@@ -3063,14 +3661,18 @@ and obtains the structured information, final output is a csv file</p></section>
         and obtains the structured information, final output is a csv file
     &#34;&#34;&#34;
     
-    print (&#34;&gt;&gt; Starting Extraction for the Given Folder&#34;)
+    print (&#34;&gt; Starting Extraction for the Given Folder&#34;)
     rows = []
     files = sorted(os.listdir(path))
-    files = [f for f in files if f not in self.ignore]
     for filename in files:
-        config = {&#34;path&#34; : self.path, &#34;filename&#34; : filename}
-        bp = BulletinParser(config)
-        rows.extend(bp.standardize())
+        try:
+            config = {&#34;path&#34; : self.path, &#34;filename&#34; : filename}
+            bp = BulletinParser(config)
+            rows.extend(bp.standardize())
+        except Exception as E:
+            print (E)
+            continue
+
     df = pd.DataFrame(rows)[self.column]
     df.to_csv(&#34;structured_file.csv&#34;, index = False)
     print (&#34;&gt;&gt; Extraction Complete for Entire Folder&#34;)
@@ -3100,7 +3702,9 @@ functions of the BulletinParser class.</p></section>
         &#39;or a closely related field&#39;, &#39;a related field&#39;,&#39;, or a&#39;, &#39;, or a related field&#39;] 
         self.exp_starts = [&#39;at the &#39;, &#39;at that &#39;, &#39;which is at least at the &#39;, &#39;which is &#39;,
         &#39;which is at that &#39;, &#39;which is at the &#39;, &#39;atleast at the &#39;, &#39;at least at the &#39;]
-        self.ignore_exp = [&#34;uniformed&#34;, &#34;helper&#34;, &#34;buyer&#34;, &#34;civil&#34;, &#34;engaged&#34;, 
+        self.exp_starts1 = [&#39;level&#39;, &#39;atleast&#39;, &#39;in&#39;, &#39;the&#39;, &#39;which&#39;, &#39;at&#39;, &#39;least&#39;, &#39;of&#39;,&#39;as &#39;,
+                           &#39;a &#39;, &#39;that&#39;, &#39;with&#39;]
+        self.ignore_exp = [&#34;uniformed&#34;, &#34;helper&#34;, &#34;buyer&#34;, &#34;civil&#34;, &#34;engaged&#34;, &#34;exempt&#34;, 
         &#34;lead&#34;, &#34;construction&#34;, &#34;crime&#34;, &#34;heating&#34;, &#34;maintenance&#34;, &#34;insulator&#34;]
         self.exp_starts += [&#39;atleast at that &#39;, &#39;at least at that &#39;]
         self.major_reps += [&#39;the text box which will appear&#39;]
@@ -3163,8 +3767,13 @@ functions of the BulletinParser class.</p></section>
                 line = line.replace(&#34; (pe)&#34;,&#34;&#34;)
                 if any(line == x for x in [&#39;special&#39;, &#39;the&#39;, &#39;this&#39;]):
                     line = &#34;&#34;
-                line = line + &#34; License&#34;
-                cleaned.append(line)
+                line = line.strip() + &#34; License&#34;
+                line = &#34; &#34;+line+&#34; &#34;
+                line = line.replace(&#34; pe &#34;, &#34; PE &#34;).strip()
+                if line == &#34;License&#34;:
+                    line = &#34;&#34;
+                else:
+                    cleaned.append(line)
             cleaned = &#34;, &#34;.join(cleaned)
 
         elif tag == &#39;exp&#39;:
@@ -3181,10 +3790,13 @@ functions of the BulletinParser class.</p></section>
                     pass
                 elif i == 0:
                     pass
+                elif _.lower()[:5] in [&#34;build&#34;, &#34;plumb&#34;, &#34;condi&#34;, &#34;housi&#34;]:
+                    pass
                 elif _.replace(&#34;,&#34;,&#34;&#34;).endswith(&#34;ing&#34;):
                     break
                 cleaned.append(_)
             cleaned = &#34; &#34;.join(cleaned)
+            
             
             if cleaned.endswith(&#34;engaged&#34;):
                 cleaned = cleaned.replace(&#34;engaged&#34;, &#34;&#34;)
@@ -3207,13 +3819,28 @@ functions of the BulletinParser class.</p></section>
             if cleaned.endswith(&#34;responsible&#34;):
                 cleaned = cleaned.replace(&#34;responsible&#34;, &#34;&#34;)
             cleaned = cleaned.rstrip(&#34;,&#34;).rstrip(&#34;.&#34;)
+            if cleaned.strip().endswith(&#34; of&#34;):
+                cleaned = cleaned[:-2].strip()
+            if cleaned.strip().endswith(&#34; or&#34;):
+                cleaned = cleaned[:-2].strip()
+            if cleaned.strip().endswith(&#34; and&#34;):
+                cleaned = cleaned[:-3].strip()
             
         if tag == &#39;alt_exp&#39;:
             &#34;&#34;&#34; cleaning the alternate experience &#34;&#34;&#34;
             cleaned = txt.strip()
-            if cleaned:            
+            if cleaned:          
+                cleaned = cleaned.replace(&#34;with the City of Los Angeles;&#34;,&#34;&#34;)
                 for e in self.exp_starts:
-                    cleaned = cleaned.replace(e,&#34;&#34;)
+                    cleaned = cleaned.replace(e,&#34;&#34;).strip()
+                for e in self.exp_starts1:
+                    if cleaned.startswith(e):
+                        cleaned = cleaned[len(e):].strip()
+                        cleaned = cleaned.lstrip(&#34;,&#34;).strip()
+                for e in self.exp_starts1:
+                    if cleaned.startswith(e):
+                        cleaned = cleaned[len(e):].strip()
+                        cleaned = cleaned.lstrip(&#34;,&#34;).strip()
                 if cleaned.endswith(&#34;or&#34;):
                     cleaned = cleaned[:-2]
                 if cleaned.endswith(&#34;and&#34;):
@@ -3289,8 +3916,13 @@ tag: identifies what type of cleaning is required</p></section>
             line = line.replace(&#34; (pe)&#34;,&#34;&#34;)
             if any(line == x for x in [&#39;special&#39;, &#39;the&#39;, &#39;this&#39;]):
                 line = &#34;&#34;
-            line = line + &#34; License&#34;
-            cleaned.append(line)
+            line = line.strip() + &#34; License&#34;
+            line = &#34; &#34;+line+&#34; &#34;
+            line = line.replace(&#34; pe &#34;, &#34; PE &#34;).strip()
+            if line == &#34;License&#34;:
+                line = &#34;&#34;
+            else:
+                cleaned.append(line)
         cleaned = &#34;, &#34;.join(cleaned)
 
     elif tag == &#39;exp&#39;:
@@ -3307,10 +3939,13 @@ tag: identifies what type of cleaning is required</p></section>
                 pass
             elif i == 0:
                 pass
+            elif _.lower()[:5] in [&#34;build&#34;, &#34;plumb&#34;, &#34;condi&#34;, &#34;housi&#34;]:
+                pass
             elif _.replace(&#34;,&#34;,&#34;&#34;).endswith(&#34;ing&#34;):
                 break
             cleaned.append(_)
         cleaned = &#34; &#34;.join(cleaned)
+        
         
         if cleaned.endswith(&#34;engaged&#34;):
             cleaned = cleaned.replace(&#34;engaged&#34;, &#34;&#34;)
@@ -3333,13 +3968,28 @@ tag: identifies what type of cleaning is required</p></section>
         if cleaned.endswith(&#34;responsible&#34;):
             cleaned = cleaned.replace(&#34;responsible&#34;, &#34;&#34;)
         cleaned = cleaned.rstrip(&#34;,&#34;).rstrip(&#34;.&#34;)
+        if cleaned.strip().endswith(&#34; of&#34;):
+            cleaned = cleaned[:-2].strip()
+        if cleaned.strip().endswith(&#34; or&#34;):
+            cleaned = cleaned[:-2].strip()
+        if cleaned.strip().endswith(&#34; and&#34;):
+            cleaned = cleaned[:-3].strip()
         
     if tag == &#39;alt_exp&#39;:
         &#34;&#34;&#34; cleaning the alternate experience &#34;&#34;&#34;
         cleaned = txt.strip()
-        if cleaned:            
+        if cleaned:          
+            cleaned = cleaned.replace(&#34;with the City of Los Angeles;&#34;,&#34;&#34;)
             for e in self.exp_starts:
-                cleaned = cleaned.replace(e,&#34;&#34;)
+                cleaned = cleaned.replace(e,&#34;&#34;).strip()
+            for e in self.exp_starts1:
+                if cleaned.startswith(e):
+                    cleaned = cleaned[len(e):].strip()
+                    cleaned = cleaned.lstrip(&#34;,&#34;).strip()
+            for e in self.exp_starts1:
+                if cleaned.startswith(e):
+                    cleaned = cleaned[len(e):].strip()
+                    cleaned = cleaned.lstrip(&#34;,&#34;).strip()
             if cleaned.endswith(&#34;or&#34;):
                 cleaned = cleaned[:-2]
             if cleaned.endswith(&#34;and&#34;):
@@ -3353,6 +4003,7 @@ tag: identifies what type of cleaning is required</p></section>
 </section>
 </article>
 <nav id="sidebar">
+<img src='https://mypd.joinlapd.com/CitySeal' width="100">
 <h1>Index</h1>
 <div class="toc">
 <ul></ul>
@@ -3362,7 +4013,7 @@ tag: identifies what type of cleaning is required</p></section>
 <ul>
 <li>
 <h4><code><a title="BulletinStructuringEngine.BulletinParser" href="#BulletinStructuringEngine.BulletinParser">BulletinParser</a></code></h4>
-<ul class="two-column">
+<ul class="">
 <li><code><a title="BulletinStructuringEngine.BulletinParser.add_course" href="#BulletinStructuringEngine.BulletinParser.add_course">add_course</a></code></li>
 <li><code><a title="BulletinStructuringEngine.BulletinParser.class_title" href="#BulletinStructuringEngine.BulletinParser.class_title">class_title</a></code></li>
 <li><code><a title="BulletinStructuringEngine.BulletinParser.course_count" href="#BulletinStructuringEngine.BulletinParser.course_count">course_count</a></code></li>
@@ -3371,7 +4022,9 @@ tag: identifies what type of cleaning is required</p></section>
 <li><code><a title="BulletinStructuringEngine.BulletinParser.driver_license" href="#BulletinStructuringEngine.BulletinParser.driver_license">driver_license</a></code></li>
 <li><code><a title="BulletinStructuringEngine.BulletinParser.exam_type" href="#BulletinStructuringEngine.BulletinParser.exam_type">exam_type</a></code></li>
 <li><code><a title="BulletinStructuringEngine.BulletinParser.experience_title" href="#BulletinStructuringEngine.BulletinParser.experience_title">experience_title</a></code></li>
-<li><code><a title="BulletinStructuringEngine.BulletinParser.job_class_function" href="#BulletinStructuringEngine.BulletinParser.job_class_function">job_class_function</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.fix_requirement_line_breaks" href="#BulletinStructuringEngine.BulletinParser.fix_requirement_line_breaks">fix_requirement_line_breaks</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.get_function" href="#BulletinStructuringEngine.BulletinParser.get_function">get_function</a></code></li>
+<li><code><a title="BulletinStructuringEngine.BulletinParser.job_class_alt_function" href="#BulletinStructuringEngine.BulletinParser.job_class_alt_function">job_class_alt_function</a></code></li>
 <li><code><a title="BulletinStructuringEngine.BulletinParser.license_type" href="#BulletinStructuringEngine.BulletinParser.license_type">license_type</a></code></li>
 <li><code><a title="BulletinStructuringEngine.BulletinParser.lookups" href="#BulletinStructuringEngine.BulletinParser.lookups">lookups</a></code></li>
 <li><code><a title="BulletinStructuringEngine.BulletinParser.misc_details" href="#BulletinStructuringEngine.BulletinParser.misc_details">misc_details</a></code></li>
@@ -3380,11 +4033,9 @@ tag: identifies what type of cleaning is required</p></section>
 <li><code><a title="BulletinStructuringEngine.BulletinParser.presence_check" href="#BulletinStructuringEngine.BulletinParser.presence_check">presence_check</a></code></li>
 <li><code><a title="BulletinStructuringEngine.BulletinParser.requirement_IDs" href="#BulletinStructuringEngine.BulletinParser.requirement_IDs">requirement_IDs</a></code></li>
 <li><code><a title="BulletinStructuringEngine.BulletinParser.salary_details" href="#BulletinStructuringEngine.BulletinParser.salary_details">salary_details</a></code></li>
-<li><code><a title="BulletinStructuringEngine.BulletinParser.spellings" href="#BulletinStructuringEngine.BulletinParser.spellings">spellings</a></code></li>
 <li><code><a title="BulletinStructuringEngine.BulletinParser.standardize" href="#BulletinStructuringEngine.BulletinParser.standardize">standardize</a></code></li>
 <li><code><a title="BulletinStructuringEngine.BulletinParser.standardize_numbers" href="#BulletinStructuringEngine.BulletinParser.standardize_numbers">standardize_numbers</a></code></li>
 <li><code><a title="BulletinStructuringEngine.BulletinParser.sybl" href="#BulletinStructuringEngine.BulletinParser.sybl">sybl</a></code></li>
-<li><code><a title="BulletinStructuringEngine.BulletinParser.text" href="#BulletinStructuringEngine.BulletinParser.text">text</a></code></li>
 <li><code><a title="BulletinStructuringEngine.BulletinParser.year_month" href="#BulletinStructuringEngine.BulletinParser.year_month">year_month</a></code></li>
 </ul>
 </li>
@@ -3405,6 +4056,9 @@ tag: identifies what type of cleaning is required</p></section>
 </ul>
 </nav>
 </main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.6.2</a>.</p>
+</footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad()</script>
 </body>
